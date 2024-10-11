@@ -1,0 +1,35 @@
+{
+  "name": "eigakun",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "cross-env-shell \"husky install && cd ./frontend && npm install && cd ../backend && npm install\"",
+    "db:migrate": "cd ./backend && node migrate.js",
+    "db:seed": "cd ./backend && node seed.js",
+    "dev": "cross-env-shell 'concurrently -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm:dev-*\"'",
+    "dev-front": "cross-env-shell \"cd ./frontend && npm run dev\"",
+    "dev-back": "cross-env-shell \"cd ./backend && npm run dev\"",
+    "lint": "lint-staged",
+    "prebuild": "npm install",
+    "build": "cross-env-shell \"cd ./frontend && npm run build && cd ../backend && npm run build\"",
+    "start": "cross-env-shell \"cd ./backend && npm run start\"",
+    "clean": "cross-env-shell \"rm -rf ./node_modules ./package-lock.json ./backend/node_modules ./backend/package-lock.json ./frontend/node_modules ./frontend/package-lock.json\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/YounesSefiani/EigaKun.git"
+  },
+  "author": "Younes SEFIANI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YounesSefiani/EigaKun/issues"
+  },
+  "homepage": "https://github.com/YounesSefiani/EigaKun#readme",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10"
+  }
+}
