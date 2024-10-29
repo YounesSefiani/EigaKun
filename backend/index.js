@@ -1,11 +1,13 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+require('dotenv').config();
 
-app.get('/', (req, res) => {
-    res.send('Bienvenue sur cette application');
-});
+const app = require('./src/app');
 
-app.listen(port, () => {
-    console.log(`Serveur en cours d'exécution sur http://localhost:${port}`);
-});
+const port = process.env.APP_PORT;
+
+app
+  .listen(port, () => {
+    console.info(`Server is listening on port ${port}`);
+  })
+  .on('error', (err) => {
+    console.error('Error:', err.message);
+  });

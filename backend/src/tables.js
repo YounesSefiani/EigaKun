@@ -1,3 +1,5 @@
+const managers = [];
+
 const tables = {};
 
 managers.forEach((ManagerClass) => {

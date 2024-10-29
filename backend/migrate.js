@@ -1,22 +1,22 @@
 // Load environment variables from .env file
-require("dotenv").config();
+require('dotenv').config();
 
-const fs = require("node:fs");
-const path = require("node:path");
+const fs = require('node:fs');
+const path = require('node:path');
 
 // Build the path to the schema SQL file
-const schema = path.join(__dirname, "database", "schema.sql");
+const schema = path.join(__dirname, 'database', 'schema.sql');
 
 // Get database connection details from .env file
 const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME } = process.env;
 
 // Update the database schema
-const mysql = require("mysql2/promise");
+const mysql = require('mysql2/promise');
 
 const migrate = async () => {
   try {
     // Read the SQL statements from the schema file
-    const sql = fs.readFileSync(schema, "utf8");
+    const sql = fs.readFileSync(schema, 'utf8');
 
     // Create a specific connection to the database
     const database = await mysql.createConnection({
@@ -44,7 +44,7 @@ const migrate = async () => {
 
     console.info(`${DB_NAME} updated from ${schema} 🆙`);
   } catch (err) {
-    console.error("Error updating the database:", err.message);
+    console.error('Error updating the database:', err.message);
   }
 };
 
