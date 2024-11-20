@@ -4,6 +4,8 @@ const app = express();
 
 const cors = require('cors');
 
+const path = require('path');
+
 app.use(
   cors({
     origin: [process.env.FRONTEND_URL],
@@ -23,9 +25,25 @@ const router = require('./router');
 app.use('/api', router);
 
 app.use((req, res, next) => {
-  // console.log(`URL: ${req.originalUrl}`);
+  // eslint-disable-next-line no-restricted-syntax
+  console.log(`URL: ${req.originalUrl}`);
   next();
 });
+
+app.use(
+  '/src/assets/Movies/posters',
+  express.static(path.join(__dirname, '../src/assets/Movies/posters'))
+);
+
+app.use(
+  '/src/assets/Movies/logos',
+  express.static(path.join(__dirname, '../src/assets/Movies/logos'))
+);
+
+app.use(
+  '/src/assets/Movies/backgrounds',
+  express.static(path.join(__dirname, '../src/assets/Movies/backgrounds'))
+);
 
 const logErrors = (err, req, res, next) => {
   console.error(err);
