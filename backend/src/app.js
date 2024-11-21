@@ -30,6 +30,8 @@ app.use((req, res, next) => {
   next();
 });
 
+/* *********MOVIES********* */
+
 app.use(
   '/src/assets/Movies/posters',
   express.static(path.join(__dirname, '../src/assets/Movies/posters'))
@@ -43,6 +45,23 @@ app.use(
 app.use(
   '/src/assets/Movies/backgrounds',
   express.static(path.join(__dirname, '../src/assets/Movies/backgrounds'))
+);
+
+/* *********SERIES********* */
+
+app.use(
+  '/src/assets/Series/posters',
+  express.static(path.join(__dirname, '../src/assets/Series/posters'))
+);
+
+app.use(
+  '/src/assets/Series/logos',
+  express.static(path.join(__dirname, '../src/assets/Series/logos'))
+);
+
+app.use(
+  '/src/assets/Series/backgrounds',
+  express.static(path.join(__dirname, '../src/assets/Series/backgrounds'))
 );
 
 const logErrors = (err, req, res, next) => {
