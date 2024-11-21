@@ -16,3 +16,24 @@ CREATE TABLE movies (
     universe VARCHAR(255) NULL,
     subUniverse VARCHAR(255) NULL
 );
+
+CREATE TABLE series (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  poster VARCHAR(255),
+  background VARCHAR(255),
+  logo VARCHAR(255),
+  trailer VARCHAR(255),
+  synopsis TEXT,
+  genre VARCHAR(255),
+  theme VARCHAR(255),
+  universe VARCHAR(255),
+  release_date DATE,
+  ending_date DATE,
+  statut ENUM('En cours', 'Terminée', 'Fin de saison', 'Annulée') NULL,
+  seasons INT,
+  episodes INT,
+  country VARCHAR(255),
+  screen ENUM('TV', 'Streaming'),
+  streaming ENUM('Netflix', 'Disney +', 'Amazon Prime Vidéo', 'Paramount +', 'Apple TV', 'Salto', 'OCS', 'Canal +') NULL
+  );
