@@ -64,6 +64,12 @@ app.use(
   express.static(path.join(__dirname, '../src/assets/Series/backgrounds'))
 );
 
+/* *********SEASONS********* */
+
+app.use(
+  '/src/assets/Series/Seasons/posters',
+  express.static(path.join(__dirname, '../src/assets/Series/Seasons/posters'))
+);
 const logErrors = (err, req, res, next) => {
   console.error(err);
   console.error('on req:', req.method, req.path);
