@@ -37,3 +37,14 @@ CREATE TABLE series (
   screen ENUM('TV', 'Streaming'),
   streaming ENUM('Netflix', 'Disney +', 'Amazon Prime Vidéo', 'Paramount +', 'Apple TV', 'Salto', 'OCS', 'Canal +') NULL
   );
+
+  CREATE TABLE seasons (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  season_number INT NOT NULL,
+  poster VARCHAR(255),
+  first_episode_date DATE,
+  last_episode_date DATE,
+  trailer VARCHAR(255),
+  synopsis TEXT,
+  episodes INT
+);
