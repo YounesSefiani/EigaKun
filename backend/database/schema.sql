@@ -48,3 +48,13 @@ CREATE TABLE series (
   synopsis TEXT,
   episodes INT
 );
+
+CREATE TABLE episodes (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  episode_number INT NOT NULL,
+  title VARCHAR(255),
+  imgEpisode VARCHAR(255),
+  release_date DATE,
+  synopsis TEXT
+);
+
