@@ -42,22 +42,12 @@ const read = async (req, res, next) => {
 const edit = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const updateSeason = req.body;
-    const { files } = req;
-
-    const updatedSeasonDatas = {
-      season_number: updateSeason.season_number || null,
-      poster: files?.poster
-        ? files.poster[0].filename
-        : updateSeason.poster || null,
-      first_episode_date: updateSeason.first_episode_date || null,
-      last_episode_date: updateSeason.last_episode_date || null,
-      trailer: updateSeason.trailer || null,
-      synopsis: updateSeason.synopsis || null,
-      episodes: updateSeason.episodes || null,
+    const updateSeason = {
+      ...req.body,
+      poster: req.file ? req.file.filename : null,
     };
 
-    await tables.seasons.update(id, updatedSeasonDatas);
+    await tables.seasons.update(id, updateSeason);
 
     const updatedSeason = await tables.seasons.read(id);
 
@@ -81,7 +71,10 @@ const edit = async (req, res, next) => {
 // The A of BREAD - Add (Create) operation
 const add = async (req, res, next) => {
   // Extract the season data from the request body
-  const season = req.body;
+  const season = {
+    ...req.body,
+    poster: req.file ? req.file.filename : null,
+  };
 
   try {
     // Insert the season into the database

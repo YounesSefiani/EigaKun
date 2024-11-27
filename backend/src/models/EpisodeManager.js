@@ -1,84 +1,82 @@
 const AbstractManager = require('./AbstractManager');
 
-class seasonManager extends AbstractManager {
+class episodeManager extends AbstractManager {
   constructor() {
     // Call the constructor of the parent class (AbstractManager)
-    // and pass the table name "season" as configuration
+    // and pass the table name "episode" as configuration
 
-    super({ table: 'seasons' });
+    super({ table: 'episodes' });
   }
 
   // The C of CRUD - Create operation
 
-  async create(season) {
-    // Execute the SQL INSERT query to add a new season to the "season" table
+  async create(episode) {
+    // Execute the SQL INSERT query to add a new episode to the "episode" table
     const [result] = await this.database.query(
-      `insert into ${this.table} (season_number, poster, first_episode_date, last_episode_date, trailer, synopsis, episodes) VALUES (?, ?, ?, ?, ?, ?, ?)`,
+      `insert into ${this.table} (episode_number, title, imgEpisode, release_date, synopsis) VALUES (?, ?, ?, ?, ?)`,
       [
-        season.season_number,
-        season.poster,
-        season.first_episode_date,
-        season.last_episode_date,
-        season.trailer,
-        season.synopsis,
-        season.episodes,
+        episode.episode_number,
+        episode.title,
+        episode.imgEpisode,
+        episode.release_date,
+        episode.synopsis,
       ]
     );
 
-    // Return the ID of the newly inserted season
+    // Return the ID of the newly inserted episode
     return result.insertId;
   }
 
   // The Rs of CRUD - Read operations
 
   async read(id) {
-    // Execute the SQL SELECT query to retrieve a specific season by its ID
+    // Execute the SQL SELECT query to retrieve a specific episode by its ID
     const [rows] = await this.database.query(
       `select * from ${this.table} where id = ?`,
       [id]
     );
 
-    // Return the first row of the result, which represents the season
+    // Return the first row of the result, which represents the episode
     return rows[0];
   }
 
   async readAll() {
-    // Execute the SQL SELECT query to retrieve all seasons from the "season" table
+    // Execute the SQL SELECT query to retrieve all episodes from the "episode" table
     const [rows] = await this.database.query(`select * from ${this.table}`);
 
-    // Return the array of seasons
+    // Return the array of episodes
     return rows;
   }
 
   // The U of CRUD - Update operation
-  // TODO: Implement the update operation to modify an existing season
+  // TODO: Implement the update operation to modify an existing episode
 
-  async update(id, season, files) {
-    const fieldsToUpdateSeason = [];
+  async update(id, episode, files) {
+    const fieldsToUpdateEpisode = [];
     const values = [];
 
-    Object.entries(season).forEach(([key, value]) => {
+    Object.entries(episode).forEach(([key, value]) => {
       if (value !== null && value !== undefined && value !== '') {
-        fieldsToUpdateSeason.push(`${key} = ?`);
+        fieldsToUpdateEpisode.push(`${key} = ?`);
         values.push(value);
       }
     });
 
-    if (fieldsToUpdateSeason.length === 0) {
+    if (fieldsToUpdateEpisode.length === 0) {
       return { affectedRows: 0 };
     }
 
     // Ajout de l'ID à la fin des valeurs pour la clause WHERE
     values.push(id);
 
-    const query = `UPDATE ${this.table} SET ${fieldsToUpdateSeason.join(
+    const query = `UPDATE ${this.table} SET ${fieldsToUpdateEpisode.join(
       ', '
     )} WHERE id = ?`;
 
     try {
       const [result] = await this.database.query(query, values);
 
-      // Gestion des fichiers après la mise à jour du film
+      // Gestion des fichiers après la mise à jour de l'épisode
       if (files && files.length > 0) {
         // Implémenter la logique pour gérer les fichiers
         await this.updateFiles(id, files); // Par exemple, une méthode pour gérer les fichiers
@@ -86,13 +84,13 @@ class seasonManager extends AbstractManager {
 
       return result;
     } catch (error) {
-      console.error('Erreur lors de la mise à jour du film :', error);
+      console.error("Erreur lors de la mise à jour de l'épisode :", error);
       throw error; // Relancer l'erreur pour qu'elle soit gérée en amont
     }
   }
 
   //   The D of CRUD - Delete operation
-  // TODO: Implement the delete operation to remove an season by its ID
+  // TODO: Implement the delete operation to remove an episode by its ID
 
   async delete(id) {
     const [result] = await this.database.query(
@@ -103,4 +101,4 @@ class seasonManager extends AbstractManager {
   }
 }
 
-module.exports = seasonManager;
+module.exports = episodeManager;

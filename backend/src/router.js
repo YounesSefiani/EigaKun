@@ -1,7 +1,8 @@
 const express = require('express');
 const uploadMovies = require('./Middlewares/Multer/MulterMovies');
-const uploadSeries = require('./Middlewares/Multer/MulterSeasons');
+const uploadSeries = require('./Middlewares/Multer/MulterSeries');
 const uploadSeasons = require('./Middlewares/Multer/MulterSeasons');
+const uploadEpisodes = require('./Middlewares/Multer/MulterEpisodes');
 
 const router = express.Router();
 
@@ -104,5 +105,33 @@ router.put(
 
 // Route to delete a movie
 router.delete('/seasons/:id', seasonsControllers.destroy);
+
+/* *********************************EPISODES**************************************** */
+
+// Import itemControllers module for handling item-related operations
+const episodesControllers = require('./controllers/episodesControllers');
+
+// Route to get a list of items
+router.get('/episodes', episodesControllers.browse);
+
+// Route to get a specific item by ID
+router.get('/episodes/:id', episodesControllers.read);
+
+// Route to add a new movie
+router.post(
+  '/episodes',
+  uploadEpisodes.single('imgEpisode'),
+  episodesControllers.add
+);
+
+// Route to update a movie
+router.put(
+  '/episodes/:id',
+  uploadEpisodes.single('imgEpisode'),
+  episodesControllers.edit
+);
+
+// Route to delete a movie
+router.delete('/episodes/:id', episodesControllers.destroy);
 
 module.exports = router;
