@@ -53,6 +53,9 @@ const edit = async (req, res, next) => {
         ? files.poster[0].filename
         : updateMovie.poster || null,
       logo: files?.logo ? files.logo[0].filename : updateMovie.logo || null,
+      background: files?.background
+        ? files.background[0].filename
+        : updateMovie.background || null,
       trailer: updateMovie.trailer || null,
       country: updateMovie.country || null,
       duration: updateMovie.duration || null,
