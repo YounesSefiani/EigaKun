@@ -39,8 +39,8 @@ const read = async (req, res, next) => {
 // The E of BREAD - Edit (Update) operation
 const edit = async (req, res, next) => {
   try {
-    console.log("Données reçues", req.body);
-    console.log("Fichier reçu :", req.file);
+    // console.log("Données reçues", req.body);
+    // console.log("Fichier reçu :", req.file);
     const { id } = req.params;
     const updatedData = req.body;
 
@@ -64,7 +64,6 @@ const edit = async (req, res, next) => {
       { expiresIn: '1h' }
     );
     res.status(200).json({ token, user: updatedUser });
-    console.log("token", token);
   } catch (err) {
     next(err);
   }
