@@ -78,6 +78,13 @@ app.use(
   express.static(path.join(__dirname, '../src/assets/Episodes'))
 );
 
+/* *********USERS********* */
+
+app.use(
+  '/src/assets/Users',
+  express.static(path.join(__dirname, '../src/assets/Users'))
+);
+
 const logErrors = (err, req, res, next) => {
   console.error(err);
   console.error('on req:', req.method, req.path);

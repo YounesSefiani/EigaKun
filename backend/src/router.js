@@ -3,9 +3,11 @@ const uploadMovies = require('./Middlewares/Multer/MulterMovies');
 const uploadSeries = require('./Middlewares/Multer/MulterSeries');
 const uploadSeasons = require('./Middlewares/Multer/MulterSeasons');
 const uploadEpisodes = require('./Middlewares/Multer/MulterEpisodes');
+const uploadUsers = require('./Middlewares/Multer/MulterUsers');
 
 const router = express.Router();
 
+const { hashPassword, verifyToken } = require('./Middlewares/auth');
 /* ************************************************************************* */
 // Define Your API Routes Here
 /* ************************************************************************* */
@@ -134,4 +136,36 @@ router.put(
 // Route to delete a movie
 router.delete('/episodes/:id', episodesControllers.destroy);
 
+/* *********************************USERS**************************************** */
+
+// Import itemControllers module for handling item-related operations
+const usersControllers = require('./controllers/usersControllers');
+
+// Route to get a list of items
+router.get('/users', usersControllers.browse);
+
+// Route to get a specific item by ID
+router.get('/users/:id', verifyToken, usersControllers.read);
+
+// Route to add a new movie
+router.post(
+  '/users',
+  uploadUsers.single('avatar'),
+  hashPassword,
+  usersControllers.add
+);
+
+// Route to update a movie
+router.put(
+  '/users/:id',
+  uploadUsers.single('avatar'),
+  hashPassword,
+  verifyToken,
+  usersControllers.edit
+);
+
+// Route to delete a movie
+router.delete('/users/:id', usersControllers.destroy);
+
+router.post('/login', usersControllers.login);
 module.exports = router;
