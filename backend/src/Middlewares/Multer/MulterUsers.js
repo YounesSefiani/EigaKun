@@ -4,7 +4,7 @@ const path = require('path');
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     const folderMap = {
-      image: '../../assets/Series/Episodes',
+      avatar: '../../assets/Users',
     };
 
     const destination = folderMap[file.fieldname];
@@ -23,6 +23,6 @@ const storage = multer.diskStorage({
   },
 });
 
-const uploadEpisodes = multer({ storage });
+const uploadUsers = multer({ storage });
 
-module.exports = uploadEpisodes;
+module.exports = uploadUsers;

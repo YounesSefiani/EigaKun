@@ -11,20 +11,102 @@ class episodeManager extends AbstractManager {
   // The C of CRUD - Create operation
 
   async create(episode) {
-    // Execute the SQL INSERT query to add a new episode to the "episode" table
-    const [result] = await this.database.query(
-      `insert into ${this.table} (episode_number, title, imgEpisode, release_date, synopsis) VALUES (?, ?, ?, ?, ?)`,
-      [
-        episode.episode_number,
-        episode.title,
-        episode.imgEpisode,
-        episode.release_date,
-        episode.synopsis,
-      ]
-    );
+    try {
+      const [season] = await this.database.query(
+        `SELECT * FROM seasons WHERE id = ? AND serie_id = ?`,
+        [episode.season_id, episode.serie_id]
+      );
 
-    // Return the ID of the newly inserted episode
-    return result.insertId;
+      const [serie] = await this.database.query(
+        `SELECT * FROM series WHERE id = ?`,
+        [episode.serie_id]
+      );
+
+      if (season.length === 0) {
+        throw new Error('Saison non trouvée dans cette série');
+      }
+
+      if (serie.length === 0) {
+        throw new Error('Série non trouvée');
+      }
+
+      const [existingEpisode] = await this.database.query(
+        `SELECT * FROM episodes WHERE serie_id = ? AND season_id = ? AND episode_number = ?`,
+        [episode.serie_id, episode.season_id, episode.episode_number]
+      );
+
+      if (existingEpisode.length > 0) {
+        throw new Error('Cet épisode existe déjà pour cette saison');
+      }
+
+      if (episode.episode_number > 1) {
+        const [previousEpisodes] = await this.database.query(
+          `SELECT episode_number FROM episodes WHERE serie_id = ? AND season_id = ? AND episode_number < ?`,
+          [episode.serie_id, episode.season_id, episode.episode_number]
+        );
+
+        if (previousEpisodes.length < episode.episode_number - 1) {
+          return {
+            success: false,
+            message:
+              "Un ou plusieurs épisodes précédant celui-ci n'existe(nt) pas, veuillez insérez cet épisode ou ces épisodes avant !",
+          };
+        }
+      }
+
+      const [tooManyEpisodes] = await this.database.query(
+        `SELECT episodes FROM seasons WHERE id = ?`,
+        [episode.season_id]
+      );
+
+      const maxEpisodes = tooManyEpisodes[0].episodes;
+
+      const [currentEpisodes] = await this.database.query(
+        `SELECT COUNT(*) as count FROM episodes where serie_id = ? AND season_id = ?`,
+        [episode.serie_id, episode.season_id]
+      );
+
+      const episodeCount = currentEpisodes[0].count;
+
+      if (episodeCount >= maxEpisodes) {
+        return {
+          success: false,
+          message: `Selon les infos de cette saison, le nombre d'épisodes de celle-ci est de (${maxEpisodes}). Vous avez inséré un épisode de trop, veuillez mettre à jour vos données et réessayez.`,
+        };
+      }
+
+      const [result] = await this.database.query(
+        `INSERT INTO ${this.table} (serie_id, season_id, episode_number, title, image, release_date, synopsis) VALUES (?, ?, ?, ?, ?, ?, ?)`,
+        [
+          episode.serie_id,
+          episode.season_id,
+          episode.episode_number,
+          episode.title,
+          episode.image,
+          episode.release_date,
+          episode.synopsis,
+        ]
+      );
+
+      return {
+        success: true,
+        message: 'Episode crée avec succès',
+        episode: {
+          id: result.insertId,
+          serie_id: episode.serie_id,
+          season_id: episode.season_id,
+          episode_number: episode.episode_number,
+          title: episode.title,
+          image: episode.image,
+          release_date: episode.release_date,
+          synopsis: episode.synopsis,
+        },
+      };
+    } catch (err) {
+      throw new Error(
+        `Erreur lors de l'insertion de l'épisode : ${err.message}`
+      );
+    }
   }
 
   // The Rs of CRUD - Read operations
@@ -38,6 +120,20 @@ class episodeManager extends AbstractManager {
 
     // Return the first row of the result, which represents the episode
     return rows[0];
+  }
+
+  async readBySerieId(serieId) {
+    const [rows] = await this.database.query(
+      `SELECT series.id AS serie_id, series.title AS serie_title, seasons.id AS season_id, seasons.season_number AS season_number, e.id AS episode_id, e.title AS episode_title, e.image AS episode_image, e.release_date AS episode_release_date, e.synopsis AS episode_synopsis
+  
+          FROM ${this.table}
+          JOIN series ON ${this.table}.serie_id = series.id
+          JOIN seasons ON ${this.table}.season_id = seasons.id
+          JOIN episodes AS e ON seasons.id = e.season_id
+          WHERE ${this.table}.serie_id = ?`,
+      [serieId]
+    );
+    return rows;
   }
 
   async readAll() {
