@@ -68,7 +68,7 @@ app.use(
 
 app.use(
   '/src/assets/Seasons/posters',
-  express.static(path.join(__dirname, '../src/assets/Seasons/posters'))
+  express.static(path.join(__dirname, '../src/assets/Seasons'))
 );
 
 /* *********EPISODES********* */
@@ -76,6 +76,13 @@ app.use(
 app.use(
   '/src/assets/Episodes',
   express.static(path.join(__dirname, '../src/assets/Episodes'))
+);
+
+/* *********PERSONALITIES********* */
+
+app.use(
+  '/src/assets/Personalities',
+  express.static(path.join(__dirname, '../src/assets/Personalities'))
 );
 
 /* *********USERS********* */
