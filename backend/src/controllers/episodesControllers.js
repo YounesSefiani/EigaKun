@@ -34,13 +34,30 @@ const read = async (req, res, next) => {
   }
 };
 
+const wholeSerie = async (req, res, next) => {
+  try {
+    const serieId = req.params.id;
+    const serie = await tables.series.read(serieId);
+
+    if (!serie) {
+      return res.status(404).json({ message: 'Serie not found' });
+    }
+    const seasons = await movieCastingManager.readByMovieId(serieId);
+    serie.seasons = seasons;
+    return res.json(serie);
+  } catch (err) {
+    return next(err);
+  }
+};
+
+
 // The E of BREAD - Edit (Update) operation
 const edit = async (req, res, next) => {
   try {
     const { id } = req.params;
     const updateEpisode = {
       ...req.body,
-      imgEpisode: req.file ? req.file.filename : null,
+      image: req.file ? req.file.filename : null,
     };
 
     await tables.episodes.update(id, updateEpisode);
@@ -69,7 +86,7 @@ const add = async (req, res, next) => {
   // Extract the episode data from the request body
   const episode = {
     ...req.body,
-    imgEpisode: req.file ? req.file.filename : null,
+    image: req.file ? req.file.filename : null,
   };
 
   try {
