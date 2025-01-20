@@ -1,6 +1,10 @@
 // Import access to database tables
 const tables = require('../tables');
 
+const SerieCastingManager = require('../models/SerieCastingManager');
+
+const serieCastingManager = new SerieCastingManager();
+
 // The B of BREAD - Browse (Read All) operation
 const browse = async (req, res, next) => {
   try {
@@ -31,6 +35,28 @@ const read = async (req, res, next) => {
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);
+  }
+};
+
+const fullSerie = async (req, res, next) => {
+  try {
+    const serieId = req.params.id;
+    const serie = await tables.series.read(serieId);
+
+    if (!serie) {
+      return res.status(404).json({ message: 'Movie not found' });
+    }
+    const casting = await serieCastingManager.castingBySerieId(serieId);
+    serie.casting = casting;
+
+    const seasons = await tables.seasons.readBySerieId(serieId);
+    serie.seasons = seasons;
+
+    const episodes = await tables.episodes.readBySerieId(serieId);
+    serie.episodes = episodes;
+    return res.json(serie);
+  } catch (err) {
+    return next(err);
   }
 };
 
@@ -125,6 +151,7 @@ const destroy = async (req, res, next) => {
 module.exports = {
   browse,
   read,
+  fullSerie,
   edit,
   add,
   destroy,
