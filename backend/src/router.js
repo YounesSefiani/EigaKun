@@ -8,7 +8,11 @@ const uploadUsers = require('./Middlewares/Multer/MulterUsers');
 
 const router = express.Router();
 
-const { hashPassword, verifyToken } = require('./Middlewares/auth');
+const {
+  hashPassword,
+  updateHashPassword,
+  verifyToken,
+} = require('./Middlewares/auth');
 /* ************************************************************************* */
 // Define Your API Routes Here
 /* ************************************************************************* */
@@ -240,7 +244,7 @@ router.post(
 router.put(
   '/users/:id',
   uploadUsers.single('avatar'),
-  hashPassword,
+  updateHashPassword,
   verifyToken,
   usersControllers.edit
 );
@@ -249,4 +253,8 @@ router.put(
 router.delete('/users/:id', usersControllers.destroy);
 
 router.post('/login', usersControllers.login);
+router.get('/verify/:token', usersControllers.verifyEmail);
+router.get('/user/validate/:token', usersControllers.validateUser);
+router.post('/users/forgot-password', usersControllers.forgotPassword);
+router.post('/users/reset-password', usersControllers.resetPassword);
 module.exports = router;
