@@ -2,16 +2,19 @@ const express = require('express');
 
 const app = express();
 
-const cors = require('cors');
-
 const path = require('path');
 
-app.use(
-  cors({
-    origin: [process.env.FRONTEND_URL],
-    credentials: true,
-  })
-);
+const cors = require('cors');
+
+// Configuration CORS pour autoriser les requêtes de votre domaine frontend
+const corsOptions = {
+  origin: 'http://localhost:5173', // Assurez-vous que cette URL correspond à l'URL de votre frontend
+  credentials: true, // Permet les cookies cross-origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Méthodes autorisées pour les requêtes CORS
+  allowedHeaders: ['Content-Type', 'Authorization'], // En-têtes autorisés
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
