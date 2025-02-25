@@ -1,0 +1,245 @@
+/* VERSION PC */
+@media (min-width: 1441px) {
+  .header {
+    width: 100%;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px 15px;
+    border-bottom: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    z-index: 1;
+  }
+
+  .header ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+}
+
+  .header li {
+    list-style-type: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .header li:hover {
+    color: purple;
+  }
+
+  .header a {
+    list-style-type: none;
+    color: #ffb20c;
+    text-decoration: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .header a:hover {
+    color: purple;
+  }
+
+  .logo {
+    width: 15vw;
+  }
+
+  .header input {
+    width: 30rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    border: 2px solid #ffb20c;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content button {
+    color: #ffb20c;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    background-color: black;
+    border: none;
+    font-size: 1rem;
+    border: 1px solid #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .dropdown-content button:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropbtn {
+    background-color: black;
+    color: #ffb20c;
+    padding: 16px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transform: 0.5s ease;
+  }
+
+  .dropbtn:hover {
+    color: purple;
+  }
+
+  .headerPhone {
+    display: none;
+  }
+
+  .footerPhone {
+    display: none;
+  }
+
+}
+
+/* VERSION DESKTOP */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .header {
+    width: 100%;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px 15px;
+    border-bottom: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    z-index: 1;
+  }
+
+  .header ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+}
+
+  .header li {
+    list-style-type: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .header li:hover {
+    color: purple;
+  }
+
+  .header a {
+    list-style-type: none;
+    color: #ffb20c;
+    text-decoration: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .header a:hover {
+    color: purple;
+  }
+
+  .logo {
+    width: 15vw;
+  }
+
+  .header input {
+    width: 30rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    border: 2px solid #ffb20c;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-content button {
+    color: #ffb20c;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    background-color: black;
+    border: none;
+    font-size: 1rem;
+    border: 1px solid #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .dropdown-content button:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropbtn {
+    background-color: black;
+    color: #ffb20c;
+    padding: 16px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transform: 0.5s ease;
+  }
+
+  .dropbtn:hover {
+    color: purple;
+  }
+
+  .headerPhone {
+    display: none;
+  }
+
+  .footerPhone {
+    display: none;
+  }
+
+}
+
+/* VERSION TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .header {
+    display: none;
+  }
+}
+
+/* VERSION PHONE */
+@media (max-width: 600px) {
+  /* Cache le header desktop */
+  .header {
+    display: none;
+  }
+}
+

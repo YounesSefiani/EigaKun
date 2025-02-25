@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
 import connexion from "../../../services/connexion";
+import "./ValidationPage.css";
 
 function ValidationPage() {
   const { token } = useParams(); // Récupère le token depuis l'URL

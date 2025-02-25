@@ -1,0 +1,110 @@
+/* VERSION PC */
+@media (min-width: 1441px) {
+  .footerPhone {
+    display: none;
+  }
+}
+
+/* VERSION DESKTOP */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .footerPhone {
+    display: none;
+  }
+}
+
+/* VERSION TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .footerPhone {
+        border-top: 4px solid #ffb20c;
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+        background-color: black;
+        color: #ffb20c;
+        padding: 10px 0;
+      }
+    
+      .footerPhone ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+    
+      .footerPhone li {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: 0.5s ease;
+        gap: 10px;
+      }
+
+      .footerPhone li:active {
+        color: purple;
+      }
+    
+      .footerPhone li svg {
+        font-size: 1.5rem;
+        transition: 0.5s ease;
+      }
+    
+      .footerPhone li svg:active {
+        color: purple;
+        scale: 1.5;
+      }
+}
+
+/* VERSION PHONE */
+@media (max-width: 600px) {
+  .footerPhone {
+    border-top: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px 0;
+  }
+
+  .footerPhone ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footerPhone li {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+    gap: 10px;
+  }
+
+  .footerPhone svg {
+    font-size: 1.5rem;
+    transform: 0.5s ease;
+  }
+}
