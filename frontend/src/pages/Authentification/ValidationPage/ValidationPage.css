@@ -1,0 +1,147 @@
+/* VERSION PC */
+@media (min-width: 1441px) {
+    .validation-container {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #ffb20c;
+        gap: 10px;
+        font-size: 25px;
+    }
+
+    .validation-container p {
+        text-align: center;
+        color: #ffb20c;
+    }
+
+    .validation-container button {
+        border: 4px solid #ffb20c;
+        background-color: black;
+        color: #ffb20c;
+        font-size: 25px;
+        padding: 10px;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+
+    .validation-container button:hover {
+        background-color: #ffb20c;
+        color: black;
+        scale: 1.1;
+    }
+}
+
+/* VERSION DESKTOP */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .validation-container {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #ffb20c;
+        gap: 10px;
+        font-size: 25px;
+    }
+
+    .validation-container p {
+        text-align: center;
+        color: #ffb20c;
+    }
+
+    .validation-container button {
+        border: 4px solid #ffb20c;
+        background-color: black;
+        color: #ffb20c;
+        font-size: 25px;
+        padding: 10px;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+
+    .validation-container button:hover {
+        background-color: #ffb20c;
+        color: black;
+        scale: 1.1;
+    }
+}
+
+/* VERSION TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .validation-container {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #ffb20c;
+        gap: 10px;
+        font-size: 20px;
+    }
+
+    .validation-container p {
+        text-align: center;
+        color: #ffb20c;
+    }
+
+    .validation-container button {
+        border: 4px solid #ffb20c;
+        background-color: black;
+        color: #ffb20c;
+        font-size: 20px;
+        padding: 10px;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+
+    .validation-container button:hover {
+        background-color: #ffb20c;
+        color: black;
+        scale: 1.1;
+    }
+}
+/* VERSION MOBILE */
+@media (max-width: 600px) {
+    .validation-container {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #ffb20c;
+        gap: 10px;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .validation-container p {
+        text-align: center;
+        color: #ffb20c;
+    }
+
+    .validation-container button {
+        border: 4px solid #ffb20c;
+        background-color: black;
+        color: #ffb20c;
+        font-size: 20px;
+        padding: 10px;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+
+    .validation-container button:active {
+        background-color: #ffb20c;
+        color: black;
+        scale: 1.1;
+    }
+}
