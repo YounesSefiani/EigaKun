@@ -1,0 +1,619 @@
+/* VERSION PC */
+@media (min-width: 1441px) {
+.profilePage {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+
+.profileBar {
+  border-right: 5px solid #ffb20c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  background-color: black;
+  color: #ffb20c;
+  gap: 50px;
+}
+
+.profileBar ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+}
+
+.profileBar button {
+  width: 250px;
+  height: auto;
+  border: 2px solid #ffb20c;
+  border-radius: 10px;
+  background-color: black;
+  color: #ffb20c;
+  padding: 10px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.adminButton a {
+  text-decoration: none;
+  color: #ffb20c;
+  transition: 0.5s ease;
+}
+
+.adminButton a:hover {
+  color: black;
+}
+
+.profileBar button:hover {
+  background-color: #ffb20c;
+  color: black;
+  transform: scale(1.1);
+}
+
+.profileView {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  color: #ffb20c;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.profileHeader {
+  position: absolute;
+  top: 50px;
+  border: 3px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: auto;
+  background: linear-gradient(300deg,#f79023,#a80303,#6d0101,#ea690d,#f7c46d);
+  background-size: 300% 300%;
+  animation: gradient-animation 15s ease infinite;
+  color: #ffb20c;
+  padding: 20px;
+  gap: 50px;
+  border-radius: 25px;
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #ffb20c;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  background-color: black;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: fill;
+}
+
+.avatar svg {
+  font-size: 150px;
+}
+
+.profileHeader p {
+  text-align: center;
+  font-size: 2rem;
+  background-color: black;
+  border: 4px solid #ffb20c;
+  padding: 15px;
+  border-radius: 25px;
+}
+}
+
+/* VERSION DESKTOP */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .profilePage {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .profileBar {
+    border-right: 5px solid #ffb20c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    background-color: black;
+    color: #ffb20c;
+    gap: 50px;
+    padding: 0 20px;
+  }
+  
+  .profileBar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+  }
+  
+  .profileBar button {
+    width: 250px;
+    height: auto;
+    border: 2px solid #ffb20c;
+    border-radius: 10px;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+  
+  .profileBar button:hover {
+    background-color: #ffb20c;
+    color: black;
+    transform: scale(1.1);
+  }
+
+  .adminButton a {
+    text-decoration: none;
+    color: #ffb20c;
+    transition: 0.5s ease;
+  }
+  
+  .adminButton a:hover {
+    color: black;
+  }
+  
+  .profileView {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    color: #ffb20c;
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .profileHeader {
+    position: absolute;
+    top: 20px;
+    border: 3px solid yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: auto;
+    background: linear-gradient(300deg,#f79023,#a80303,#6d0101,#ea690d,#f7c46d);
+    background-size: 300% 300%;
+    animation: gradient-animation 15s ease infinite;
+    color: #ffb20c;
+    padding: 15px;
+    gap: 20px;
+    border-radius: 25px;
+  }
+  
+  @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  
+  .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #ffb20c;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+  }
+  
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: fill;
+  }
+  
+  .avatar svg {
+    font-size: 150px;
+  }
+  
+  .profileHeader p {
+    text-align: center;
+    font-size: 2rem;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    padding: 15px;
+    border-radius: 25px;
+  }
+  
+}
+
+/* VERSION TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .profilePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    height: 100%;
+    color: #ffb20c;
+  }
+
+  .profileBar {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    background-color: black;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+  .profileBar button {
+    border: 2px solid #ffb20c;
+    border-radius: 10px;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .profileBar button:active {
+    background-color: #ffb20c;
+    color: black;
+    transform: scale(1.1);
+  }
+
+  .adminButton a {
+    text-decoration: none;
+    color: #ffb20c;
+    transition: 0.5s ease;
+  }
+  
+  .adminButton:active {
+    background-color: #ffb20c;
+    color: black;
+    transform: scale(1.1);
+  }
+
+  .adminButton a:active {
+    color: black;
+  }
+  
+
+  .profileView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: 100vh;
+    padding: 15px 0;
+    background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite; 
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .profileHeader {
+    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: auto;
+    background-color: black;
+    padding: 15px;
+    border-radius: 15px;
+    gap: 15px;
+    margin-top: 50px;
+    background: linear-gradient(300deg,#f79023,#a80303,#6d0101,#ea690d,#f7c46d);
+    background-size: 300% 300%;
+    animation: gradient-animation 15s ease infinite;  
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .profileHeader p {
+    border: 2px solid #ffb20c;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 25px;
+    background-color: black;
+  }
+
+  .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #ffb20c;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    background-color: black;
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: fill;
+  }
+
+  .avatar svg {
+    font-size: 100px;
+  }
+
+  .profileBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+  }
+
+  .profileBar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    padding: 0 5px;
+    list-style-type: none;
+    margin: 30px 0;
+  }
+
+}
+
+/* VERSION PHONE */
+@media (max-width: 600px) {
+  .profilePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    height: 100%;
+    color: #ffb20c;
+  }
+
+  .profileBar {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    background-color: black;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+  .profileBar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    padding: 0 5px;
+    list-style-type: none;
+  }
+
+  .profileBar button {
+    border: 2px solid #ffb20c;
+    border-radius: 10px;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .profileBar button:active {
+    background-color: #ffb20c;
+    color: black;
+    transform: scale(1.1);
+  }
+
+  .adminButton a {
+    text-decoration: none;
+    color: #ffb20c;
+    transition: 0.5s ease;
+  }
+  
+  .adminButton:active {
+    background-color: #ffb20c;
+    color: black;
+    transform: scale(1.1);
+  }
+
+  .adminButton a:active {
+    color: black;
+  }
+
+
+  .profileView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite; 
+    padding: 10px 0;
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .profileHeader {
+    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: auto;
+    background-color: black;
+    padding: 10px;
+    border-radius: 15px;
+    gap: 15px;
+    margin-top: 50px;
+    background: linear-gradient(300deg,#f79023,#a80303,#6d0101,#ea690d,#f7c46d);
+    background-size: 300% 300%;
+    animation: gradient-animation 15s ease infinite;
+  
+  }
+
+  .profileHeader p {
+    border: 2px solid #ffb20c;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: black;
+  }
+
+  .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #ffb20c;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    background-color: black;
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: fill;
+  }
+
+  .avatar svg {
+    font-size: 80px;
+  }
+
+  .profileBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+  }
+
+  .profileBar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    padding: 0 5px;
+    list-style-type: none;
+    margin: 10px 0;
+  }
+}
