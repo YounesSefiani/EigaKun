@@ -1,0 +1,373 @@
+/* VERSION PC */
+@media (min-width: 1441px) {
+  .connexion {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  .connexion form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    padding: 25px;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 15px;
+    color: #ffb20c;
+  }
+
+  .connexionForm label a {
+    color: #ffb20c;
+    text-decoration: none;
+  }
+
+  .connexion input {
+    width: 25rem;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+    transition: 0.5s ease;
+  }
+
+  .connexion button {
+    width: 15rem;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .connexion button:hover {
+    background-color: #ffb20c;
+    color: black;
+    transform: scale(1.1);
+  }
+
+  .loginBackButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 5rem !important;
+    height: 60px !important;
+    text-align: center;
+    transform: 0.5s ease;
+  }
+
+  .loginBackButton svg {
+    font-size: 2.5rem;
+    transform: 0.5s ease;
+  }
+
+  .loginBackButton svg:hover {
+    color: black;
+  }
+
+  .loginBackButton:hover {
+    transform: scale(1.1);
+    background-color: #ffb20c;
+    color: black;
+    border: 2px solid black;
+  }
+}
+
+/* VERSION DESKTOP */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .connexion {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  .connexion form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    padding: 25px;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 15px;
+    color: #ffb20c;
+  }
+
+  .connexionForm label a {
+    color: #ffb20c;
+    text-decoration: none;
+  }
+
+  .connexion input {
+    width: 25rem;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+    transition: 0.5s ease;
+  }
+
+  .connexion button {
+    width: 15rem;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .connexion button:hover {
+    background-color: #ffb20c;
+    color: black;
+    transform: scale(1.1);
+  }
+
+  .loginBackButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 5rem !important;
+    height: 60px !important;
+    text-align: center;
+    transform: 0.5s ease;
+  }
+
+  .loginBackButton svg {
+    font-size: 2.5rem;
+    transform: 0.5s ease;
+  }
+
+  .loginBackButton svg:hover {
+    color: black;
+  }
+
+  .loginBackButton:hover {
+    transform: scale(1.1);
+    background-color: #ffb20c;
+    color: black;
+    border: 2px solid black;
+  }
+}
+
+/* VERSION TABLETTE */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .connexion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    padding: 10px;
+  }
+
+  .connexionForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+  }
+
+  .connexionLabel {
+    text-align: center;
+    width: 80%;
+  }
+  .connexionInput {
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    border: 2px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    font-size: 13px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .connexionForm label a {
+    display: flex;
+    color: #ffb20c;
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  .connexionLabel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+  }
+
+  .connexion button {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    padding: 5px;
+  }
+
+  .connexion button:active {
+    background-color: #ffb20c;
+    color: black;
+    transform: scale(1.1);
+  }
+
+  .loginBackButton {
+    cursor: pointer;
+    width: 20% !important;
+    height: 5% !important;
+    transition: 0.5s ease;
+  }
+
+  .loginBackButton svg {
+    font-size: 2rem;
+    transform: 0.5s ease;
+  }
+
+  .loginBackButton svg:active {
+    color: black;
+  }
+}
+
+/* VERSION PHONE */
+@media (max-width: 600px) {
+  .connexion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    gap: 10px;
+    position: relative;
+  }
+
+  .connexionForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    background-color: black;
+    color: #ffb20c;
+    padding: 20px;
+  }
+
+  .connexionInput {
+    width: 80%;
+    height: 25px;
+    border-radius: 10px;
+    border: 2px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .connexionForm label a {
+    display: flex;
+    color: #ffb20c;
+    text-align: center;
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  .connexionLabel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .connexion button {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    padding: 5px;
+  }
+
+  .connexion button:active {
+    background-color: #ffb20c;
+    color: black;
+    transform: scale(1.1);
+  }
+
+  .loginBackButton {
+    cursor: pointer;
+    width: 30% !important;
+    height: 6% !important;
+    transition: 0.5s ease;
+  }
+
+  .loginBackButton svg {
+    font-size: 1.5rem;
+    transform: 0.5s ease;
+  }
+
+  .loginBackButton svg:active {
+    color: black;
+  }
+}
