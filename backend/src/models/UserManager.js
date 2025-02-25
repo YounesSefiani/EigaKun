@@ -52,44 +52,74 @@ class userManager extends AbstractManager {
   // The U of CRUD - Update operation
   // TODO: Implement the update operation to modify an existing user
 
-  async update(id, user, files) {
-    const fieldsToUpdateUser = [];
+  async update(id, user, file) {
+    // Initialise les champs à mettre à jour et les valeurs
+    const fieldsToUpdate = [];
     const values = [];
 
-    Object.entries(user).forEach(([key, value]) => {
-      if (value !== null && value !== undefined && value !== '') {
-        fieldsToUpdateUser.push(`${key} = ?`);
-        values.push(value);
-      }
-    });
-
-    if (fieldsToUpdateUser.length === 0) {
-      return { affectedRows: 0 };
+    // Ajoute les champs à mettre à jour seulement s'ils sont présents dans l'objet user
+    if (user.pseudo) {
+      fieldsToUpdate.push('pseudo = ?');
+      values.push(user.pseudo);
     }
 
-    // Ajout de l'ID à la fin des valeurs pour la clause WHERE
-    values.push(id);
+    if (user.mail) {
+      fieldsToUpdate.push('mail = ?');
+      values.push(user.mail);
+    }
 
-    const query = `UPDATE ${this.table} SET ${fieldsToUpdateUser.join(
+    if (user.avatar) {
+      fieldsToUpdate.push('avatar = ?');
+      values.push(user.avatar);
+    }
+
+    if (user.role) {
+      fieldsToUpdate.push('role = ?');
+      values.push(user.role);
+    }
+
+    if (user.isValidated) {
+      fieldsToUpdate.push('isValidated = ?');
+      values.push(user.isValidated);
+    }
+
+    if (user.password) {
+      // Vérifie si le mot de passe est différent de celui de l'utilisateur existant
+      const [existingPassword] = await this.database.query(
+        `SELECT password FROM users WHERE id = ?`,
+        [id]
+      );
+
+      if (
+        existingPassword.length > 0 &&
+        existingPassword[0].password === user.password
+      ) {
+        throw new Error(
+          'Ce mot de passe est le même mot de passe pour se connecter. Veuillez en créer un autre.'
+        );
+      }
+
+      fieldsToUpdate.push('password = ?');
+      values.push(user.password);
+    }
+
+    // Si aucun champ n'est fourni, renvoie une erreur
+    if (fieldsToUpdate.length === 0) {
+      throw new Error('Aucune donnée à mettre à jour.');
+    }
+
+    // Ajoute l'ID à la fin du tableau des valeurs pour la condition WHERE
+    values.push(id, file);
+
+    // Construit la requête SQL dynamiquement
+    const query = `UPDATE ${this.table} SET ${fieldsToUpdate.join(
       ', '
     )} WHERE id = ?`;
 
-    try {
-      const [result] = await this.database.query(query, values);
-
-      // Gestion des fichiers après la mise à jour de l'utilisateur
-      if (files && files.length > 0) {
-        // Implémenter la logique pour gérer les fichiers
-        await this.updateFiles(id, files); // Par exemple, une méthode pour gérer les fichiers
-      }
-
-      return result;
-    } catch (error) {
-      console.error("Erreur lors de la mise à jour de l'utilisateur :", error);
-      throw error; // Relancer l'erreur pour qu'elle soit gérée en amont
-    }
+    // Exécute la requête avec les valeurs dynamiques
+    const [result] = await this.database.query(query, values, file);
+    return result;
   }
-
   //   The D of CRUD - Delete operation
   // TODO: Implement the delete operation to remove an user by its ID
 
