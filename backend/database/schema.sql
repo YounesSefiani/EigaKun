@@ -106,7 +106,8 @@ CREATE TABLE users (
   mail VARCHAR(255) NOT NULL UNIQUE,
   birthdate DATE NOT NULL,
   avatar VARCHAR(255),
-  role ENUM("User", "Admin") DEFAULT "User"
+  role ENUM("User", "Admin") DEFAULT "User",
+  isValidated BOOLEAN DEFAULT 0
 );
 
 INSERT INTO users (pseudo, password, mail, birthdate, avatar)
