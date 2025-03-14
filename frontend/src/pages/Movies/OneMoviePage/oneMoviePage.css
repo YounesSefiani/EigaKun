@@ -1,0 +1,460 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .oneMoviePage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .oneMovieHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: 80%;
+    position: relative;
+    border-bottom: 4px solid #ffb20c;
+    background: linear-gradient(to right, black 40%, transparent 90%);
+  }
+
+  .oneMovieBackground {
+    width: 60%;
+    height: 100%;
+    object-fit: fill;
+    object-position: right;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+
+  .oneMovieHeaderContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 20px;
+    position: absolute;
+  }
+
+  .oneMoviePoster img {
+    width: 20rem;
+    height: 30rem;
+    border: 4px solid #ffb20c;
+    object-fit: fill;
+  }
+
+  .oneMovieHeaderInfos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    color: #ffb20c;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .oneMovieHeaderInfos img {
+    width: 30rem;
+    height: auto;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .oneMovieHeaderInfosContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    gap: 30px;
+  }
+
+  .oneMovieDetails {
+    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 200px;
+    overflow: auto;
+    gap: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .oneMovieDetails::-webkit-scrollbar {
+    background-color: black;
+    height: 100%;
+  }
+
+  .oneMovieDetails::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+  }
+
+  .oneMovieSynopsis {
+    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+    gap: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .oneMovieSynopsis::-webkit-scrollbar {
+    background-color: black;
+    height: 100%;
+  }
+
+  .oneMovieSynopsis::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+  }
+}
+
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .oneMoviePage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .oneMovieHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: 80%;
+    position: relative;
+    border-bottom: 4px solid #ffb20c;
+    background: linear-gradient(to right, black 50%, transparent 90%);
+  }
+
+  .oneMovieBackground {
+    width: 50%;
+    height: 100%;
+    object-fit: fill;
+    object-position: right;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+
+  .oneMovieHeaderContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 20px;
+    position: absolute;
+  }
+
+  .oneMoviePoster img {
+    width: 18rem;
+    height: 25rem;
+    border: 4px solid #ffb20c;
+    object-fit: fill;
+  }
+
+  .oneMovieHeaderInfos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    color: #ffb20c;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .oneMovieHeaderInfos img {
+    width: 30rem;
+    height: auto;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .oneMovieHeaderInfosContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    gap: 30px;
+  }
+
+  .oneMovieDetails {
+    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 200px;
+    overflow: auto;
+    gap: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .oneMovieDetails::-webkit-scrollbar {
+    background-color: black;
+    height: 100%;
+  }
+
+  .oneMovieDetails::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+  }
+
+  .oneMovieSynopsis {
+    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+    gap: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .oneMovieSynopsis::-webkit-scrollbar {
+    background-color: black;
+    height: 100%;
+  }
+
+  .oneMovieSynopsis::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+  }
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+  .oneMoviePage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .oneMovieHeader {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+  .oneMovieBackground {
+    width: auto;
+    height: 25rem !important;
+    object-fit: cover;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+  .oneMovieHeaderContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 15px 0;
+    gap: 10px;
+  }
+
+  .oneMoviePoster img {
+    width: 20rem;
+    height: 30rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+  }
+
+  .oneMovieHeaderInfos {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    color: #ffb20c;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    gap: 15px;
+    padding: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .oneMovieHeaderInfos img {
+    width: 20rem;
+    height: auto;
+    object-fit: fill;
+  }
+
+  .oneMovieHeaderInfos h3 {
+    font-size: 1.3rem;
+  }
+
+  .oneMovieHeaderInfosContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .oneMovieDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    font-size: 1.5rem;
+    white-space: normal;
+    align-items: center;
+  }
+
+  .oneMovieSynopsis {
+    width: auto;
+    height: 15rem;
+    font-size: 1.5rem;
+    overflow: auto;
+    padding: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .oneMovieSynopsis::-webkit-scrollbar {
+    background-color: black;
+    height: 100%;
+  }
+
+  .oneMovieSynopsis::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+  }
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 600px) {
+  .oneMoviePage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .oneMovieHeader {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+  .oneMovieBackground {
+    width: auto;
+    height: auto;
+    object-fit: fill;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+
+  .oneMovieHeader img {
+    width: auto;
+    height: 15rem;
+    object-fit: fill;
+  }
+
+  .oneMovieHeaderContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 15px 0;
+    gap: 5px;
+  }
+
+  .oneMoviePoster img {
+    width: 12rem;
+    height: 18rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+  }
+
+  .oneMovieHeaderInfos {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    color: #ffb20c;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    gap: 15px;
+    padding: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .oneMovieHeaderInfos img {
+    width: 15rem;
+    height: auto;
+    object-fit: fill;
+  }
+
+  .oneMovieHeaderInfos h3 {
+    font-size: 1.3rem;
+  }
+
+  .oneMovieHeaderInfosContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .oneMovieDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    font-size: 1.2rem;
+    white-space: normal;
+    align-items: center;
+  }
+
+  .oneMovieSynopsis {
+    width: auto;
+    height: 10rem;
+    font-size: 1.2rem;
+    overflow: auto;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+}
