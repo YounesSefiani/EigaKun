@@ -1,0 +1,265 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .moviesPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .moviesPage h3 {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    padding: 10px;
+    width: fit-content;
+  }
+
+  .moviesContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 50px;
+  }
+
+  .moviesList {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    overflow-y: hidden;
+  }
+
+  .moviesList h2 {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    padding: 10px;
+    width: fit-content;
+  }
+
+  .moviesListContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .moviesList::-webkit-scrollbar {
+    display: none;
+  }
+
+  .movieCard {
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .movieCard img {
+    width: 10rem;
+    height: 15rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+}
+
+/* VERSION DESKTOP */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .moviesPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .moviesPage h3 {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    padding: 10px;
+    width: fit-content;
+  }
+
+  .moviesContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 50px;
+  }
+
+  .moviesList {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    overflow-y: hidden;
+  }
+
+  .moviesList h2 {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    padding: 10px;
+    width: fit-content;
+  }
+
+  .moviesListContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .moviesList::-webkit-scrollbar {
+    display: none;
+  }
+
+  .movieCard {
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .movieCard img {
+    width: 10rem;
+    height: 15rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .moviesPage {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 100%;
+        padding: 0 10px;
+        gap: 10px;
+        overflow: hidden;
+      }
+    
+      .moviesContainer {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        gap: 50px;
+      }
+    
+      .moviesListContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    
+      .moviesList h2 {
+        background-color: black;
+        border: 3px solid #ffb20c;
+        color: #ffb20c;
+        padding: 10px;
+        width: fit-content;
+      }
+    
+      .moviesListContainer::-webkit-scrollbar {
+        display: none;
+      }
+    
+      .movieCard {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+    
+      .movieCard img {
+        width: 10rem;
+        height: 15rem;
+        object-fit: fill;
+        border: 4px solid #ffb20c;
+      }
+    }
+
+/* VERSION MOBILE */
+@media screen and (max-width: 600px) {
+  .moviesPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    padding: 0 10px;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .moviesContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 50px;
+  }
+
+  .moviesListContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .moviesList h2 {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    padding: 10px;
+    width: fit-content;
+  }
+
+  .moviesListContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .movieCard {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .movieCard img {
+    width: 8rem;
+    height: 12rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+}
