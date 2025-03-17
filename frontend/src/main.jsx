@@ -9,6 +9,9 @@ import UserLayout from "./services/UserLayout";
 import ValidationPage from "./pages/Authentification/ValidationPage/ValidationPage";
 import ForgotPassword from "./pages/Authentification/ForgotPassword/ForgotPassword";
 import ResetPassword from "./pages/Authentification/ResetPassword/ResetPassword";
+import MoviesPage from "./pages/Movies/MoviesPage/moviesPage";
+import OneMoviePage from "./pages/Movies/OneMoviePage/oneMoviePage";
+import connexion from "./services/connexion";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +43,30 @@ const router = createBrowserRouter([
         element: <ValidationPage />,
       },
     ],
+  },
+  {
+    path: "/films",
+    element: <MoviesPage />,
+    loader: async () => {
+      try {
+        const res = await connexion.get("/movies");
+        return res.data;
+      } catch (err) {
+        return console.error(err);
+      }
+    },
+  },
+  {
+    path: "/films/:id",
+    element: <OneMoviePage />,
+    loader: async ({ params }) => {
+      try {
+        const res = await connexion.get(`/movies/${params.id}`);
+        return res.data;
+      } catch (err) {
+        return console.error(err);
+      }
+    },
   },
 ]);
 
