@@ -17,13 +17,11 @@
   .headerPhone {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: auto;
     position: sticky;
     gap: 10px;
     top: 0;
-    z-index: 1;
+    z-index: 5;
     padding: 10px 0;
     background-color: black;
     border-bottom: 4px solid #ffb20c;
@@ -31,6 +29,7 @@
 
   .headerPhone img {
     width: 300px;
+    margin: 0 auto;
   }
 
   .headerPhone a {
@@ -42,7 +41,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: auto;
   }
 
   .headerContainer input {
@@ -70,23 +69,21 @@
     color: #ffb20c;
     text-align: center;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 20px;
     transition: 0.5s ease;
   }
 
   .headerDropdown {
     position: relative;
     display: inline-block;
-    width: auto;
   }
 
   .headerDropdown button {
-    width: 150px;
     background-color: black;
     color: #ffb20c;
     border: 2px solid #ffb20c;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     cursor: pointer;
     transition:
       background-color 0.3s,
@@ -178,14 +175,14 @@
     position: sticky;
     gap: 10px;
     top: 0;
-    z-index: 1;
+    z-index: 5;
     padding: 10px 0;
     background-color: black;
     border-bottom: 4px solid #ffb20c;
   }
 
   .headerPhone img {
-    width: 250px;
+    width: 300px;
     margin: 0 auto;
   }
 
