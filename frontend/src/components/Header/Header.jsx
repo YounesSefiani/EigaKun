@@ -17,13 +17,16 @@ function Header() {
       </Link>
       <ul>
         <li>
-          <Link to="/movies">Films</Link>
+          <Link to="/films">Films</Link>
         </li>
         <li>
           <Link to="/series">Séries</Link>
         </li>
         <li>
           <Link to="/blog">Blog</Link>
+        </li>
+        <li>
+          <Link to="/personnalités">Personnalités</Link>
         </li>
         <li>
           <input type="text" placeholder="Rechercher..." />
