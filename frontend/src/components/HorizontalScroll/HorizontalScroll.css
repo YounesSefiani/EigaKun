@@ -136,7 +136,6 @@
   }
 }
 
-
 /* VERSION TABLET */
 @media (min-width: 601px) and (max-width: 1024px) {
   .horizontal-scroll-container {
@@ -162,7 +161,7 @@
 
   .scroll-content {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     position: relative;
     gap: 20px;
