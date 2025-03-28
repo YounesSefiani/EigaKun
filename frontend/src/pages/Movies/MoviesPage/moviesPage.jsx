@@ -1,6 +1,6 @@
 import React from "react";
 import { useLoaderData, Link } from "react-router-dom";
-import PauseOnHover from "../../../components/Carousel/Carousel";
+import Carousel from "../../../components/Carousel/Carousel";
 import Header from "../../../components/Header/Header";
 import HeaderPhone from "../../../components/Header/HeaderPhone/HeaderPhone";
 import FooterPhone from "../../../components/Header/FooterPhone/FooterPhone";
@@ -18,7 +18,7 @@ function moviesPage() {
       <Header />
       <HeaderPhone />
       <div className="moviesPage">
-        <PauseOnHover />
+        <Carousel />
         <div className="moviesContainer">
           <div className="moviesList">
             <div className="moviesListContainer">
