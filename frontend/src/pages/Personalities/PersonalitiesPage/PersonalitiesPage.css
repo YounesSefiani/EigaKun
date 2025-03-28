@@ -1,0 +1,334 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .personalitiesPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .personalitiesPage h3 {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    padding: 10px;
+    width: fit-content;
+  }
+
+  .personalitiesContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 50px;
+  }
+
+  .personalitiesList {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    overflow-y: hidden;
+  }
+
+  .personalitiesList h2 {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    padding: 10px;
+    width: fit-content;
+  }
+
+  .personalitiesListContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .personalitiesList::-webkit-scrollbar {
+    display: none;
+  }
+
+  .personalityCard {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .personalityCard p {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .personalityCard a {
+    text-decoration: none;
+  }
+
+  .personalityCard img {
+    width: 10rem;
+    height: 15rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+}
+
+/* VERSION DESKTOP */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .personalitiesPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .personalitiesPage h3 {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    padding: 10px;
+    width: fit-content;
+  }
+
+  .personalitiesContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 50px;
+  }
+
+  .personalitiesList {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    overflow-y: hidden;
+  }
+
+  .personalitiesList h2 {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    padding: 10px;
+    width: fit-content;
+  }
+
+  .personalitiesListContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .personalitiesList::-webkit-scrollbar {
+    display: none;
+  }
+
+  .personalityCard {
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .personalityCard p {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .personalityCard a {
+    text-decoration: none;
+  }
+
+
+  .personalityCard img {
+    width: 10rem;
+    height: 15rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .personalitiesPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    padding: 10px 10px;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .personalitiesPage h3 {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    padding: 10px;
+    width: fit-content;
+  }
+
+  .personalitiesContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 50px;
+  }
+
+  .personalitiesListContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .personalitiesList h3 {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    padding: 10px;
+    width: fit-content;
+  }
+
+  .personalitiesListContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .personalityCard {
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .personalityCard img {
+    width: 10rem;
+    height: 12rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .personalityCard p {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    width: auto;
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .personalityCard a {
+    text-decoration: none;
+  }
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 600px) {
+  .personalitiesPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    padding: 10px 10px;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .personalitiesPage h3 {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    padding: 10px;
+    width: fit-content;
+  }
+
+
+  .personalitiesContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 50px;
+  }
+
+  .personalitiesListContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .personalitiesListContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .personalityCard {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .personalityCard img {
+    width: 8rem;
+    height: 12rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .personalityCard p {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .personalityCard a {
+    text-decoration: none;
+  }
+
+}
