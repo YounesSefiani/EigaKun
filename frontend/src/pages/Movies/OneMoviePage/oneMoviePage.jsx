@@ -4,6 +4,7 @@ import "./oneMoviePage.css";
 import Header from "../../../components/Header/Header";
 import HeaderPhone from "../../../components/Header/HeaderPhone/HeaderPhone";
 import FooterPhone from "../../../components/Header/FooterPhone/FooterPhone";
+import MovieCasting from "../../../components/MovieCasting/MovieCasting";
 
 function oneMoviePage() {
   const movie = useLoaderData();
@@ -55,7 +56,7 @@ function oneMoviePage() {
                     <strong>Durée :</strong> {formatDuration(movie.duration)}
                   </p>
                   <p>
-                    <strong>Genres:</strong> {movie.genre}
+                    <strong>Genres :</strong> {movie.genre}
                   </p>
                   <p>
                     <strong>Themes :</strong> {movie.theme}
@@ -70,31 +71,23 @@ function oneMoviePage() {
                     <p>
                       <strong>Univers :</strong> {movie.universe}
                     </p>
-                  ) : (
-                    <p />
-                  )}
+                  ) : null}
                   {movie.subUniverse ? (
                     <p>
                       <strong>Sous-Univers :</strong> {movie.subUniverse}
                     </p>
-                  ) : (
-                    <p />
-                  )}
+                  ) : null}
                   {movie.streaming ? (
                     <p>
                       <strong>Disponible sur :</strong> {movie.streaming}
                     </p>
-                  ) : (
-                    <p />
-                  )}
+                  ) : null}
                   {movie.original ? (
                     <p>
                       <strong>Une production exclusive de :</strong>{" "}
                       {movie.original}
                     </p>
-                  ) : (
-                    <p />
-                  )}
+                  ) : null}
                 </div>
                 <div className="oneMovieSynopsis">
                   <p>{movie.synopsis}</p>
@@ -102,6 +95,9 @@ function oneMoviePage() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="castingContainer">
+          <MovieCasting movieCasting={movie.casting} />
         </div>
       </div>
       <FooterPhone />
