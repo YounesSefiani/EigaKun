@@ -1,9 +1,9 @@
 // Import access to database tables
-const tables = require('../tables');
+const tables = require("../tables");
 
-// const SeasonManager = require('../models/SeasonManager');
+const SeasonsManager = require("../models/SeasonManager");
 
-// const seasonsManager = new SeasonManager();
+const seasonsManager = new SeasonsManager();
 
 // The B of BREAD - Browse (Read All) operation
 const browse = async (req, res, next) => {
@@ -25,7 +25,7 @@ const read = async (req, res, next) => {
     // Fetch a specific season from the database based on the provided ID
     const season = await tables.seasons.read(req.params.id);
 
-    // If the season is not found, respond with HTTP 404 (Not Found)
+    // If the seasons is not found, respond with HTTP 404 (Not Found)
     // Otherwise, respond with the season in JSON format
     if (season == null) {
       res.sendStatus(404);
@@ -38,50 +38,44 @@ const read = async (req, res, next) => {
   }
 };
 
+const getSeasonsBySerieId = async (req, res, next) => {
+  try {
+    const { serieId } = req.params;
+    const seasons = await seasonsManager.readBySerieId(serieId);
+    res.json(seasons);
+  } catch (err) {
+    next(err);
+  }
+};
+
 // The E of BREAD - Edit (Update) operation
 const edit = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const updateSeason = {
-      ...req.body,
-      poster: req.file ? req.file.filename : null,
-    };
+    const seasons = req.body;
+    const updatedRows = await seasonsManager.update(id, seasons);
 
-    await tables.seasons.update(id, updateSeason);
-
-    const updatedSeason = await tables.seasons.read(id);
-
-    if (!updatedSeason) {
-      return res
-        .status(404)
-        .json({ message: 'Saison non trouvée ou mise à jour échouée.' });
+    if (updatedRows > 0) {
+      res.sendStatus(200);
+    } else {
+      res.sendStatus(404);
     }
-
-    return res.status(200).json({
-      message: 'Saison mise à jour avec succès',
-      updateSeason: updatedSeason,
-    });
   } catch (err) {
-    console.error('Erreur lors de la mise à jour de la saison:', err);
     next(err);
-    return res.status(500).json({ message: 'Erreur interne du serveur' });
   }
 };
 
 // The A of BREAD - Add (Create) operation
 const add = async (req, res, next) => {
-  // Extract the season data from the request body
-  const season = {
-    ...req.body,
-    poster: req.file ? req.file.filename : null,
-  };
+  // Extract the seasons data from the request body
+  const season = req.body;
 
   try {
-    // Insert the season into the database
-    const insertSeasonId = await tables.seasons.create(season);
+    // Insert the seasons into the database
+    const insertId = await tables.seasons.create(season);
 
-    // Respond with HTTP 201 (Created) and the ID of the newly inserted season
-    res.status(201).json({ insertSeasonId });
+    // Respond with HTTP 201 (Created) and the ID of the newly inserted seasons
+    res.status(201).json({ insertId });
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);
@@ -97,10 +91,12 @@ const destroy = async (req, res, next) => {
     next(err);
   }
 };
+
 // Ready to export the controller functions
 module.exports = {
   browse,
   read,
+  getSeasonsBySerieId,
   edit,
   add,
   destroy,

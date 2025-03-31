@@ -88,10 +88,7 @@ const seriesControllers = require('./controllers/seriesControllers');
 // Route to get a list of items
 router.get('/series', seriesControllers.browse);
 
-// Route to get a specific item by ID
-router.get('/series/:id', seriesControllers.read);
-
-router.get('/series/:id/full', seriesControllers.fullSerie);
+router.get('/series/:id', seriesControllers.getFullSerie);
 
 // Route to add a new movie
 router.post(

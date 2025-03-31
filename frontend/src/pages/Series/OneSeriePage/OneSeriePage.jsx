@@ -4,6 +4,7 @@ import Header from "../../../components/Header/Header";
 import HeaderPhone from "../../../components/Header/HeaderPhone/HeaderPhone";
 import FooterPhone from "../../../components/Header/FooterPhone/FooterPhone";
 import Seasons from "../../../components/SeasonsContainer/SeasonsContainer";
+import SerieCasting from "../../../components/SerieCasting/SerieCasting";
 import "./OneSeriePage.css";
 
 function OneSerie() {
@@ -69,34 +70,26 @@ function OneSerie() {
                       <strong>Univers :</strong>
                       <br /> {serie.universe}
                     </p>
-                  ) : (
-                    <p />
-                  )}
+                  ) : null}
                   {serie.subUniverse ? (
                     <p>
                       <strong>Sous-Univers :</strong>
                       <br /> {serie.subUniverse}
                     </p>
-                  ) : (
-                    <p />
-                  )}
+                  ) : null}
                   {serie.streaming ? (
                     <p>
                       <strong>Disponible sur :</strong>
                       <br /> {serie.streaming}
                     </p>
-                  ) : (
-                    <p />
-                  )}
+                  ) : null}
                   {serie.original ? (
                     <p>
                       <strong>Une production exclusive de :</strong>
                       <br />
                       {serie.original}
                     </p>
-                  ) : (
-                    <p />
-                  )}
+                  ) : null}
                 </div>
                 <div className="oneSerieSynopsis">
                   <p>{serie.synopsis}</p>
@@ -107,6 +100,9 @@ function OneSerie() {
         </div>
         <div className="seasons">
           <Seasons seasons={serie.seasons} />
+        </div>
+        <div className="castingContainer">
+          <SerieCasting serieCasting={serie.casting} />
         </div>
       </div>
       <FooterPhone />
