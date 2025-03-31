@@ -1,14 +1,9 @@
 const AbstractManager = require('./AbstractManager');
 
-class episodeManager extends AbstractManager {
+class EpisodesManager extends AbstractManager {
   constructor() {
-    // Call the constructor of the parent class (AbstractManager)
-    // and pass the table name "episode" as configuration
-
     super({ table: 'episodes' });
   }
-
-  // The C of CRUD - Create operation
 
   async create(episode) {
     try {
@@ -109,87 +104,57 @@ class episodeManager extends AbstractManager {
     }
   }
 
-  // The Rs of CRUD - Read operations
-
   async read(id) {
-    // Execute the SQL SELECT query to retrieve a specific episode by its ID
     const [rows] = await this.database.query(
-      `select * from ${this.table} where id = ?`,
+      `SELECT * FROM ${this.table} WHERE id = ?`,
       [id]
     );
-
-    // Return the first row of the result, which represents the episode
     return rows[0];
   }
 
-  async readBySerieId(serieId) {
+  async readAll() {
+    const [rows] = await this.database.query(`SELECT * FROM ${this.table}`);
+    return rows;
+  }
+
+  async readBySeasonId(seasonId) {
     const [rows] = await this.database.query(
-      `SELECT series.id AS serie_id, series.title AS serie_title, seasons.id AS season_id, seasons.season_number AS season_number, e.id AS episode_id, e.title AS episode_title, e.image AS episode_image, e.release_date AS episode_release_date, e.synopsis AS episode_synopsis
-  
-          FROM ${this.table}
-          JOIN series ON ${this.table}.serie_id = series.id
-          JOIN seasons ON ${this.table}.season_id = seasons.id
-          JOIN episodes AS e ON seasons.id = e.season_id
-          WHERE ${this.table}.serie_id = ?`,
+      `SELECT seasons.id AS seasons_id, ${this.table}.*
+      FROM ${this.table} 
+      JOIN seasons on ${this.table}.season_id = seasons.id
+      WHERE season_id = ?`,
+      [seasonId]
+    );
+    return rows;
+  }
+
+  async readEpisodesBySerieId(serieId) {
+    const [rows] = await this.database.query(
+      `SELECT * FROM episodes WHERE serie_id = ?`,
       [serieId]
     );
     return rows;
   }
 
-  async readAll() {
-    // Execute the SQL SELECT query to retrieve all episodes from the "episode" table
-    const [rows] = await this.database.query(`select * from ${this.table}`);
-
-    // Return the array of episodes
-    return rows;
+  async update(id, episode) {
+    const [result] = await this.database.query(
+      `UPDATE ${this.table} SET serie_id = ?, season_id = ?, episode_number = ?, title = ?, image = ?, release_date = ?, synopsis = ? WHERE id = ?`,
+      [
+        episode.serie_id,
+        episode.season_id,
+        episode.episode_number,
+        episode.title,
+        episode.image,
+        episode.release_date,
+        episode.synopsis,
+        id,
+      ]
+    );
+    return result.affectedRows;
   }
-
-  // The U of CRUD - Update operation
-  // TODO: Implement the update operation to modify an existing episode
-
-  async update(id, episode, files) {
-    const fieldsToUpdateEpisode = [];
-    const values = [];
-
-    Object.entries(episode).forEach(([key, value]) => {
-      if (value !== null && value !== undefined && value !== '') {
-        fieldsToUpdateEpisode.push(`${key} = ?`);
-        values.push(value);
-      }
-    });
-
-    if (fieldsToUpdateEpisode.length === 0) {
-      return { affectedRows: 0 };
-    }
-
-    // Ajout de l'ID à la fin des valeurs pour la clause WHERE
-    values.push(id);
-
-    const query = `UPDATE ${this.table} SET ${fieldsToUpdateEpisode.join(
-      ', '
-    )} WHERE id = ?`;
-
-    try {
-      const [result] = await this.database.query(query, values);
-
-      // Gestion des fichiers après la mise à jour de l'épisode
-      if (files && files.length > 0) {
-        // Implémenter la logique pour gérer les fichiers
-        await this.updateFiles(id, files); // Par exemple, une méthode pour gérer les fichiers
-      }
-
-      return result;
-    } catch (error) {
-      console.error("Erreur lors de la mise à jour de l'épisode :", error);
-      throw error; // Relancer l'erreur pour qu'elle soit gérée en amont
-    }
-  }
-
-  //   The D of CRUD - Delete operation
-  // TODO: Implement the delete operation to remove an episode by its ID
 
   async delete(id) {
-    const [result] = await this.database.query(
+    const result = await this.database.query(
       `DELETE FROM ${this.table} WHERE id = ?`,
       [id]
     );
@@ -197,4 +162,4 @@ class episodeManager extends AbstractManager {
   }
 }
 
-module.exports = episodeManager;
+module.exports = EpisodesManager;

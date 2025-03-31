@@ -1,0 +1,372 @@
+/* VERSION PC */
+@media (min-width: 1441px) {
+    .serieCasting {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      height: auto;
+      gap: 10px;
+      padding: 15px;
+    }
+  
+    .serieCasting h2 {
+      background-color: black;
+      border: 3px solid #ffb20c;
+      color: #ffb20c;
+      padding: 5px;
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .castRealisation,
+    .castActing {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: space-around;
+      overflow: auto;
+      list-style-type: none;
+      gap: 15px;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 4px solid #ffb20c;
+      border-radius: 10px;
+    }
+  
+    .castRealisation a,
+    .castActing a {
+      text-decoration: none;
+    }
+  
+    .castRealisation h3,
+    .castActing h3 {
+      background-color: black;
+      border: 3px solid #ffb20c;
+      color: #ffb20c;
+      padding: 5px;
+      width: 10%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .castCard {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      border: 4px solid #ffb20c;
+      border-radius: 10px;
+    }
+  
+    .castCard img {
+      width: 15rem;
+      height: 20rem;
+      object-fit: fill;
+      border-bottom: 4px solid #ffb20c;
+    }
+  
+    .castInfos {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background-color: black;
+      color: #ffb20c;
+      padding: 5px;
+      transition: 0.5s ease;
+    }
+  
+    .castInfos:hover {
+      background-color: #ffb20c;
+      color: black;
+    }
+  
+    .castInfos p {
+      margin: 0;
+    }
+  }
+  
+  /* VERSION DESKTOP */
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    .serieCasting {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      height: auto;
+      gap: 10px;
+      padding: 15px;
+    }
+  
+    .serieCasting h2 {
+      background-color: black;
+      border: 3px solid #ffb20c;
+      color: #ffb20c;
+      padding: 5px;
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .castRealisation,
+    .castActing {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: space-around;
+      overflow: auto;
+      list-style-type: none;
+      gap: 15px;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 4px solid #ffb20c;
+      border-radius: 10px;
+    }
+  
+    .castRealisation a,
+    .castActing a {
+      text-decoration: none;
+    }
+  
+    .castRealisation h3,
+    .castActing h3 {
+      background-color: black;
+      border: 3px solid #ffb20c;
+      color: #ffb20c;
+      padding: 5px;
+      width: 15%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .castCard {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      border: 4px solid #ffb20c;
+      border-radius: 10px;
+    }
+  
+    .castCard img {
+      width: 15rem;
+      height: 20rem;
+      object-fit: fill;
+      border-bottom: 4px solid #ffb20c;
+    }
+  
+    .castInfos {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background-color: black;
+      color: #ffb20c;
+      padding: 5px;
+      transition: 0.5s ease;
+    }
+  
+    .castInfos:hover {
+      background-color: #ffb20c;
+      color: black;
+    }
+  
+    .castInfos p {
+      margin: 0;
+    }
+  }
+  
+  /* VERSION TABLET */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .serieCasting {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      height: auto;
+      gap: 10px;
+      padding: 5px;
+    }
+  
+    .serieCasting h2 {
+      background-color: black;
+      border: 3px solid #ffb20c;
+      color: #ffb20c;
+      padding: 10px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .castRealisation,
+    .castActing {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: space-around;
+      overflow: auto;
+      list-style-type: none;
+      gap: 15px;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 4px solid #ffb20c;
+      border-radius: 10px;
+    }
+  
+    .castRealisation a,
+    .castActing a {
+      text-decoration: none;
+    }
+  
+    .castRealisation h3,
+    .castActing h3 {
+      background-color: black;
+      border: 3px solid #ffb20c;
+      color: #ffb20c;
+      padding: 5px;
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .castCard {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      border: 4px solid #ffb20c;
+      border-radius: 10px;
+    }
+  
+    .castCard h4 {
+      font-size: 20px;
+    }
+  
+    .castCard img {
+      width: 12rem;
+      height: 15rem;
+      object-fit: fill;
+      border-bottom: 4px solid #ffb20c;
+    }
+  
+    .castInfos {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background-color: black;
+      color: #ffb20c;
+      padding: 5px;
+      transition: 0.5s ease;
+    }
+  
+    .castInfos:hover {
+      background-color: #ffb20c;
+      color: black;
+    }
+  
+    .castInfos p {
+      margin: 0;
+    }
+  }
+  
+  /* VERSION PHONE */
+  @media (max-width: 600px) {
+    .serieCasting {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      height: auto;
+      gap: 10px;
+      padding: 5px;
+    }
+  
+    .serieCasting h2 {
+      background-color: black;
+      border: 3px solid #ffb20c;
+      color: #ffb20c;
+      padding: 10px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .castRealisation,
+    .castActing {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: space-around;
+      overflow: auto;
+      list-style-type: none;
+      gap: 15px;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 4px solid #ffb20c;
+      border-radius: 10px;
+    }
+  
+    .castRealisation a,
+    .castActing a {
+      text-decoration: none;
+    }
+  
+    .castRealisation h3,
+    .castActing h3 {
+      background-color: black;
+      border: 3px solid #ffb20c;
+      color: #ffb20c;
+      padding: 5px;
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .castCard {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      border: 4px solid #ffb20c;
+      border-radius: 10px;
+    }
+  
+    .castCard h4 {
+      font-size: 20px;
+    }
+  
+    .castCard img {
+      width: 10rem;
+      height: 15rem;
+      object-fit: fill;
+      border-bottom: 4px solid #ffb20c;
+    }
+  
+    .castInfos {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background-color: black;
+      color: #ffb20c;
+      padding: 5px;
+      transition: 0.5s ease;
+    }
+  
+    .castInfos:hover {
+      background-color: #ffb20c;
+      color: black;
+    }
+  
+    .castInfos p {
+      margin: 0;
+    }
+  }
+  
