@@ -3,22 +3,29 @@
   .onePersonalityPage {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: auto;
     height: 100%;
-    gap: 20px;
   }
 
   .onePersonalityHeader {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    justify-content: flex-start;
+    width: auto;
     height: 100%;
-    padding: 20px;
+    padding: 15px;
     gap: 20px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #ffb20c;
     border-bottom: 4px solid #ffb20c;
+  }
+
+  .onePersonalityPicture {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
   }
 
   .onePersonalityPicture img {
@@ -209,26 +216,34 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: auto;
     height: 100%;
-    padding: 20px;
-    gap: 30px;
+    padding: 15px;
+    gap: 20px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #ffb20c;
     border-bottom: 4px solid #ffb20c;
   }
 
+  .onePersonalityPicture {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
   .onePersonalityPicture img {
     border: 4px solid #ffb20c;
-    width: 22rem;
-    height: 35rem;
+    width: 20rem;
+    height: 30rem;
     object-fit: cover;
   }
 
   .onePersonalityContent {
     display: flex;
     flex-direction: column;
-    flex-direction: space-between;
+    justify-content: space-between;
     width: 100%;
     height: auto;
     gap: 20px;
@@ -395,222 +410,19 @@
 
 /* VERSION TABLET */
 @media (min-width: 601px) and (max-width: 1023px) {
-    .onePersonalityPage {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        height: 100%;
-        gap: 20px;
-        overflow-x: hidden;
-      }
-    
-      .onePersonalityHeader {
-        display: flex;
-        flex-direction: row;
-        width: auto;
-        height: 20rem;
-        gap: 10px;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: #ffb20c;
-        border-bottom: 4px solid #ffb20c;
-      }
-    
-      .onePersonalityPicture img {
-        border: 4px solid #ffb20c;
-        width: 11rem;
-        height: 100%;
-        object-fit: cover;
-      }
-    
-      .onePersonalityContent {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: auto;
-        height: auto;
-      }
-    
-      .onePersonalityDetails {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        height: auto;
-        gap: 5px;
-      }
-    
-      .onePersonalityDetails p {
-        margin: 0;
-        font-size: 15px;
-      }
-    
-      .onePersonalityBio {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 160px;
-      }
-    
-      .onePersonalityBio p {
-        border: 4px solid #ffb20c;
-        margin: 0;
-        padding: 5px;
-        font-size: 15px;
-        overflow: auto;
-        text-align: justify;
-      }
-    
-      .onePersonalityBio p::-webkit-scrollbar {
-        border: 2px solid #ffb20c;
-        width: 10px;
-        background-color: black;
-      }
-    
-      .onePersonalityBio p::-webkit-scrollbar-thumb {
-        background-color: #ffb20c;
-      }
-    
-      .onePersonalityBio p::-webkit-scrollbar-track {
-        background-color: black;
-        border: 2px solid #ffb20c;
-      }
-      .filmography {
-        display: flex;
-        flex-direction: column;
-        padding: 5px;
-        width: auto;
-        height: auto;
-        gap: 15px;
-      }
-    
-      .filmography h3 {
-        border: 4px solid #ffb20c;
-        color: #ffb20c;
-        background-color: black;
-        padding: 5px;
-        width: auto;
-        text-align: center;
-      }
-    
-      .filmographyContainer h4 {
-        background-color: black;
-        border: 3px solid #ffb20c;
-        color: #ffb20c;
-        padding: 10px;
-        width: fit-content;
-        margin: 0;
-      }
-    
-      .filmographyContainer {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        height: auto;
-        gap: 15px;
-        padding: 15px;
-        border: 4px solid #ffb20c;
-        border-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.8);
-
-      }
-    
-      .filmoMoviesList, .filmoSeriesList {
-        display: flex;
-        flex-direction: row;
-        width: auto;
-        height: auto;
-        gap: 10px;
-      }
-    
-      .filmographyCard ul {
-        margin: 0;
-        padding: 0;
-      }
-    
-      .filmographyCard {
-        border: 4px solid #ffb20c;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: auto;
-        height: auto;
-        gap: 10px;
-        padding: 10px;
-        background-color: black;
-        font-size: 1.1rem;
-        transition: 0.5s ease;
-        text-align: center;
-      }
-    
-      .filmographyCard:active {
-        background-color: #ffb20c;
-        border: 4px solid black;
-        color: black;
-      }
-    
-    
-    
-    
-      .filmographyCard img {
-        border: 4px solid #ffb20c;
-        width: 150px;
-        height: 220px;
-        object-fit: cover;
-        margin: 0 auto;
-      }
-    
-      .filmographyCard p {
-        margin: 0;
-    }
-    
-      .filmographyCard a {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        text-decoration: none;
-        color: #ffb20c;
-        text-align: center;
-        transition: 0.5s ease;
-      }
-    
-      .filmographyCard a:active {
-        color: black;
-      }
-    
-      .filmographyNone {
-        border: 4px solid #ffb20c;
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        color: #ffb20c;
-        padding: 20px;
-      }
-    
-      .filmographyNone p {
-        margin: 0;
-        text-align: center;
-        font-size: 1.1rem;
-        font-weight: bold;
-      }
-    
-}
-
-/* VERSION MOBILE */
-@media (max-width: 600px) {
   .onePersonalityPage {
     display: flex;
     flex-direction: column;
     width: auto;
     height: 100%;
-    gap: 20px;
-    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .onePersonalityHeader {
     display: flex;
     flex-direction: row;
     width: auto;
-    height: 15rem;
+    height: 20rem;
     gap: 10px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.8);
@@ -618,9 +430,17 @@
     border-bottom: 4px solid #ffb20c;
   }
 
+  .onePersonalityPicture {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    gap: 10px;
+  }
+
   .onePersonalityPicture img {
     border: 4px solid #ffb20c;
-    width: 8rem;
+    width: 9rem;
     height: 100%;
     object-fit: cover;
   }
@@ -631,11 +451,11 @@
     justify-content: space-between;
     width: auto;
     height: auto;
-    font-size: 12px;
   }
 
   .onePersonalityContent h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin: 0;
   }
 
   .onePersonalityDetails {
@@ -648,25 +468,245 @@
 
   .onePersonalityDetails p {
     margin: 0;
-    font-size: 11px;
+    font-size: 1.1rem;
+    margin: 0;
   }
 
   .onePersonalityBio {
     display: flex;
     flex-direction: column;
     width: auto;
-    height: 100px;
+    height: auto;
   }
 
   .onePersonalityBio h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .onePersonalityBio p {
     border: 4px solid #ffb20c;
     margin: 0;
     padding: 5px;
-    font-size: 11px;
+    font-size: 12px;
+    overflow: auto;
+    text-align: justify;
+    height: 9em;
+  }
+
+  .onePersonalityBio p::-webkit-scrollbar {
+    border: 2px solid #ffb20c;
+    width: 10px;
+    background-color: black;
+  }
+
+  .onePersonalityBio p::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+  }
+
+  .onePersonalityBio p::-webkit-scrollbar-track {
+    background-color: black;
+    border: 2px solid #ffb20c;
+  }
+
+  .filmography {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    gap: 15px;
+  }
+
+  .filmography h3 {
+    border: 4px solid #ffb20c;
+    color: #ffb20c;
+    background-color: black;
+    padding: 5px;
+    width: auto;
+    text-align: center;
+  }
+
+  .filmographyContainer h4 {
+    background-color: black;
+    border: 3px solid #ffb20c;
+    color: #ffb20c;
+    padding: 10px;
+    width: fit-content;
+    margin: 0;
+  }
+
+  .filmographyContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 15px;
+    padding: 15px;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .filmoMoviesList, .filmoSeriesList {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .filmographyCard ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .filmographyCard {
+    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    background-color: black;
+    transition: 0.5s ease;
+    color: #ffb20c;
+    text-align: center;
+  }
+
+  .filmographyCard:active {
+    background-color: #ffb20c;
+    border: 4px solid black;
+    color: black;
+  }
+
+  .filmographyCard img {
+    border: 4px solid #ffb20c;
+    width: 130px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+    transition: 0.5s ease;
+  }
+
+  .filmographyCard img:active {
+    border: 4px solid black;
+  }
+
+  .filmographyCard p {
+    margin: 0;
+}
+
+  .filmographyCard a {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffb20c;
+    text-align: center;
+    transition: 0.5s ease;
+  }
+
+  .filmographyCard a:active {
+    color: black;
+  }
+
+  .filmographyNone {
+    border: 4px solid #ffb20c;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: #ffb20c;
+    padding: 20px;
+  }
+
+  .filmographyNone p {
+    margin: 0;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+}
+
+/* VERSION MOBILE */
+@media (max-width: 600px) {
+  .onePersonalityPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .onePersonalityHeader {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 20rem;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffb20c;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+  .onePersonalityPicture {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .onePersonalityPicture img {
+    border: 4px solid #ffb20c;
+    width: 9rem;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .onePersonalityContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+  }
+
+  .onePersonalityContent h2 {
+    font-size: 1.5rem;
+  }
+
+  .onePersonalityDetails {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 5px;
+  }
+
+  .onePersonalityDetails p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .onePersonalityBio {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 150px;
+  }
+
+  .onePersonalityBio h3 {
+    font-size: 1.2rem;
+  }
+
+  .onePersonalityBio p {
+    border: 4px solid #ffb20c;
+    margin: 0;
+    padding: 5px;
+    font-size: 12px;
     overflow: auto;
     text-align: justify;
   }

@@ -6,6 +6,11 @@ const PersonalityManager = require('./models/PersonalityManager');
 const MovieCastingManager = require('./models/MovieCastingManager');
 const SerieCastingManager = require('./models/SerieCastingManager');
 const UserManager = require('./models/UserManager');
+const UsersLikedManager = require('./models/UsersInteractionsManagers/UsersLikedManager');
+const UsersFavoritesManager = require('./models/UsersInteractionsManagers/UsersFavoritesManager');
+const UsersSeenManager = require('./models/UsersInteractionsManagers/UsersSeenManager');
+const UsersToWatchManager = require('./models/UsersInteractionsManagers/UsersToWatchManager');
+const UsersIsWatchingSeriesManager = require('./models/UsersInteractionsManagers/UsersIsWatchingSeriesManager');
 
 const managers = [
   MovieManager,
@@ -16,6 +21,11 @@ const managers = [
   MovieCastingManager,
   SerieCastingManager,
   UserManager,
+  UsersLikedManager,
+  UsersFavoritesManager,
+  UsersSeenManager,
+  UsersToWatchManager,
+  UsersIsWatchingSeriesManager,
 ];
 
 const tables = {};

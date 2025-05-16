@@ -1,5 +1,15 @@
 .user-layout {
     padding: 0;
-    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
     /* Autres styles spécifiques à votre layout */
   } 
+
+  /* dans ton CSS global par exemple */
+.popup-overlay {
+  border: 4px solid red;
+}
+
+.popup-content {
+  border: 4px solid blue;
+}

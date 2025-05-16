@@ -6,6 +6,9 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { AuthContext } from "../../context/AuthContext";
 import Header from "../../components/Header/Header";
 import ProfileSettings from "./ProfileSettings/ProfileSettings";
+import FavoritesMovies from "./FavoritesMovies/FavoritesMovies";
+import FavoritesSeries from "./FavoritesSeries/FavoritesSeries";
+import FavoritesPersonalities from "./FavoritesPersonalities/FavoritesPersonalities";
 import "./ProfilePage.css";
 import HeaderPhone from "../../components/Header/HeaderPhone/HeaderPhone";
 import FooterPhone from "../../components/Header/FooterPhone/FooterPhone";
@@ -57,7 +60,7 @@ function ProfilePage() {
   }
 
   if (!user) {
-    return <div>No user data available.</div>;
+    handleLogout();
   }
 
   return (
@@ -67,14 +70,13 @@ function ProfilePage() {
       <div className="profilePage">
         <div className="profileBar">
           <ul>
-            {user.role === "Admin" && (
-              <li>
+            <li>
+              {user.role === "Admin" && (
                 <button type="button" className="adminButton">
                   <Link to="/user/admin">Mode Admin</Link>
                 </button>
-              </li>
-            )}
-            <li>
+              )}
+
               <button
                 type="button"
                 onClick={() => setView("préférences")}
@@ -82,12 +84,35 @@ function ProfilePage() {
               >
                 Paramètres
               </button>
-            </li>
-            <div className="logOut">
-              <button type="button" onClick={handleLogout}>
-                Déconnexion
+              <button
+                type="button"
+                onClick={() => setView("mes-films-favoris")}
+                className={`navButton ${view === "mes-films-favoris" ? "active" : ""}`}
+              >
+                Mes films favoris
               </button>
-            </div>
+              <button
+                type="button"
+                onClick={() => setView("mes-séries-favorites")}
+                className={`navButton ${view === "mes-séries-favorites" ? "active" : ""}`}
+              >
+                Mes séries favorites
+              </button>
+              <button
+                type="button"
+                onClick={() => setView("mes-personnalités-favorites")}
+                className={`navButton ${view === "mes-personnalités-favorites" ? "active" : ""}`}
+              >
+                Mes personnalités favorites
+              </button>
+              <button
+                type="button"
+                onClick={handleLogout}
+                className="navButton"
+              >
+                Deconnexion
+              </button>
+            </li>
           </ul>
         </div>
 
@@ -113,6 +138,16 @@ function ProfilePage() {
               onUpdate={(updatedUser) => setUserData(updatedUser)}
               userData={userData}
             />
+          )}
+
+          {view === "mes-films-favoris" && (
+            <FavoritesMovies setView={setView} />
+          )}
+          {view === "mes-séries-favorites" && (
+            <FavoritesSeries setView={setView} />
+          )}
+          {view === "mes-personnalités-favorites" && (
+            <FavoritesPersonalities setView={setView} />
           )}
         </div>
       </div>

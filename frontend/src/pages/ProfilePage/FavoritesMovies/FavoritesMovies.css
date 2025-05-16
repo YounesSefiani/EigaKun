@@ -1,0 +1,391 @@
+/* VERSION PC */
+@media (min-width: 1441px) {
+  .favoritesMoviesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px;
+    overflow: auto;
+  }
+
+  .backBtn {
+    width: fit-content;
+  }
+
+  .favoritesMoviesContainer h3 {
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+  }
+
+  .userMovies {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 20px;
+  }
+
+  .userMoviesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+  }
+
+  .userMovieCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .userMovieCard img {
+    width: 12rem;
+    height: 17rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 20px;
+  }
+
+  .userMovieCard:hover img {
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .userMovieCard p {
+    text-align: center;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    font-size: 20px;
+    width: fit-content;
+    margin: auto;
+  }
+
+  .userMovieCard:hover p {
+    color: black;
+    background-color: #ffb20c;
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .userMovieCard a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .moviesBlank p {
+    border: 4px solid #ffb20c;
+    text-align: center;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+    font-size: 20px;
+    width: fit-content;
+    height: auto;
+    margin: auto;
+  }
+}
+
+/* VERSION DESKTOP */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .favoritesMoviesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    gap: 20px;
+    overflow: auto;
+  }
+
+  .backBtn {
+    width: fit-content;
+  }
+
+  .favoritesMoviesContainer h3 {
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+  }
+
+  .userMovies {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 20px;
+  }
+
+  .userMoviesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .userMovieCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .userMovieCard:hover p {
+    color: black;
+    background-color: #ffb20c;
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .userMovieCard img {
+    width: 12rem;
+    height: 17rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 20px;
+  }
+
+  .userMovieCard p {
+    text-align: center;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    font-size: 20px;
+    width: fit-content;
+    margin: auto;
+  }
+
+  .userMovieCard a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .moviesBlank p {
+    border: 4px solid #ffb20c;
+    text-align: center;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+    font-size: 20px;
+    width: fit-content;
+    height: auto;
+    margin: auto;
+  }
+}
+
+/* VERSION TABLET */
+@media (min-width: 601px) and (max-width: 1023px) {
+  .favoritesMoviesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    gap: 20px;
+    overflow: auto;
+  }
+
+  .backBtn {
+    width: fit-content;
+  }
+
+  .userMovies {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .userMoviesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .userMovieCard {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .userMovieCard a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffb20c;
+  }
+
+  .userMovieCard img {
+    width: 11rem;
+    height: 17rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 30px;
+  }
+
+  .userMovieCard:active img {
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .userMovieCard p {
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    background-color: black;
+    font-size: 20px;
+    padding: 5px;
+    width: auto;
+  }
+
+  .userMovieCard:active p {
+    color: black;
+    background-color: #ffb20c;
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .moviesBlank {
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    background-color: black;
+    padding: 5px;
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .moviesBlank p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* VERSION MOBILE */
+@media (max-width: 600px) {
+  .favoritesMoviesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+    overflow: auto;
+  }
+
+  .backBtn {
+    width: fit-content;
+  }
+
+  .userMovies {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .userMoviesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .userMovieCard {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .userMovieCard a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffb20c;
+  }
+
+
+  .userMovieCard img {
+    width: 9rem;
+    height: 14rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 30px;
+  }
+
+  .userMovieCard:active img {
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .userMovieCard p {
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    background-color: black;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .userMovieCard:active p {
+    color: black;
+    background-color: #ffb20c;
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .moviesBlank {
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    background-color: black;
+    padding: 5px;
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .moviesBlank p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}

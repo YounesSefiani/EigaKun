@@ -1,0 +1,385 @@
+/* VERSION PC */
+@media (min-width: 1441px) {
+  .favoritesSeriesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px;
+    overflow: auto;
+    color: #ffb20c;
+  }
+
+  .backBtn {
+    width: fit-content;
+  }
+
+  .favoritesSeriesContainer h3 {
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+  }
+
+  .userSeries {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 20px;
+  }
+
+  .userSeriesList {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+  }
+
+  .userSerieCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .userSerieCard img {
+    width: 12rem;
+    height: 17rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 20px;
+  }
+
+  .userSerieCard:hover img {
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .userSerieCard p {
+    text-align: center;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    font-size: 20px;
+    width: fit-content;
+    margin: auto;
+  }
+
+  .userSerieCard:hover p {
+    color: black;
+    background-color: #ffb20c;
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .userSerieCard a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .seriesBlank p {
+    border: 4px solid #ffb20c;
+    text-align: center;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+    font-size: 20px;
+    width: fit-content;
+    height: auto;
+    margin: auto;
+  }
+}
+
+/* VERSION DESKTOP */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .favoritesSeriesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    gap: 20px;
+    overflow: auto;
+  }
+
+  .backBtn {
+    width: fit-content;
+  }
+
+  .favoritesSeriesContainer h3 {
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+  }
+
+  .userSeries {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 20px;
+  }
+
+  .userSeriesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .userSerieCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .userSerieCard:hover p {
+    color: black;
+    background-color: #ffb20c;
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .userSerieCard img {
+    width: 12rem;
+    height: 17rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 20px;
+  }
+
+  .userSerieCard p {
+    text-align: center;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    font-size: 20px;
+    width: fit-content;
+    margin: auto;
+  }
+
+  .userSerieCard a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .seriesBlank p {
+    border: 4px solid #ffb20c;
+    text-align: center;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+    font-size: 20px;
+    width: fit-content;
+    height: auto;
+    margin: auto;
+  }
+}
+
+/* VERSION TABLET */
+@media (min-width: 601px) and (max-width: 1023px) {
+  .favoritesSeriesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    gap: 20px;
+    overflow: auto;
+  }
+
+  .backBtn {
+    width: fit-content;
+  }
+
+  .userSeries {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .userSeriesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .userSerieCard {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+
+  .userSerieCard a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffb20c;
+  }
+
+
+  .userSerieCard img {
+    width: 11rem;
+    height: 17rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 30px;
+  }
+
+  .userSerieCard:active img {
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .userSerieCard p {
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    background-color: black;
+    font-size: 20px;
+    padding: 5px;
+    width: auto;
+  }
+
+  .userSerieCard:active p {
+    color: black;
+    background-color: #ffb20c;
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .seriesBlank {
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    background-color: black;
+    padding: 5px;
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .seriesBlank p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* VERSION MOBILE */
+@media (max-width: 600px) {
+  .favoritesSeriesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+    overflow: auto;
+  }
+
+  .backBtn {
+    width: fit-content;
+  }
+
+  .userSeries {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .userSeriesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .userSerieCard a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffb20c;
+  }
+
+  .userSerieCard img {
+    width: 9rem;
+    height: 14rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 30px;
+  }
+
+  .userSerieCard:active img {
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .userSerieCard p {
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    background-color: black;
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  .userSerieCard:active p {
+    color: black;
+    background-color: #ffb20c;
+    border: 4px solid black;
+    transition: 0.5s ease;
+  }
+
+  .seriesBlank {
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    background-color: black;
+    padding: 5px;
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .seriesBlank p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}

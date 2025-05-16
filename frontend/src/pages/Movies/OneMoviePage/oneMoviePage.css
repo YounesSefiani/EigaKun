@@ -14,7 +14,8 @@
     justify-content: flex-start;
     align-items: center;
     width: auto;
-    height: 80%;
+    height: 100%;
+    padding: 15px;
     position: relative;
     border-bottom: 4px solid #ffb20c;
     background: linear-gradient(to right, black 40%, transparent 90%);
@@ -30,6 +31,14 @@
     z-index: -1;
   }
 
+  .oneMovieBackgroundFolder {
+    width: auto;
+    height: auto;
+    object-fit: fill;
+    position: absolute;
+    z-index: -1;
+  }
+
   .oneMovieHeaderContent {
     display: flex;
     flex-direction: row;
@@ -37,7 +46,14 @@
     width: 100%;
     height: auto;
     gap: 20px;
-    padding: 15px;
+  }
+
+  .oneMoviePoster {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
   }
 
   .oneMoviePoster img {
@@ -45,6 +61,28 @@
     height: 30rem;
     border: 4px solid #ffb20c;
     object-fit: fill;
+  }
+
+  .oneMoviePosterFolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 30rem;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+    color: #ffb20c;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .oneMoviePosterFolder img {
+    width: 100%;
+    height: 8rem;
+    object-fit: fill;
+    border: none;
   }
 
   .oneMovieHeaderInfos {
@@ -55,6 +93,7 @@
     height: auto;
     color: #ffb20c;
     text-align: center;
+    position: relative;
   }
 
   .oneMovieHeaderInfos img {
@@ -64,6 +103,8 @@
     border: 4px solid #ffb20c;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 4.5rem;
   }
 
   .oneMovieHeaderInfos h3 {
@@ -72,6 +113,8 @@
     background-color: rgba(0, 0, 0, 0.6);
     font-size: 40px;
     width: fit-content;
+    position: absolute;
+    top: 4.5rem;
   }
 
   .oneMovieHeaderInfosContainer {
@@ -81,6 +124,8 @@
     width: 100%;
     height: auto;
     gap: 30px;
+    position: absolute;
+    bottom: 0;
   }
 
   .oneMovieDetails {
@@ -161,7 +206,8 @@
     justify-content: flex-start;
     align-items: center;
     width: auto;
-    height: 80%;
+    height: 100%;
+    padding: 15px;
     position: relative;
     border-bottom: 4px solid #ffb20c;
     background: linear-gradient(to right, black 40%, transparent 90%);
@@ -177,6 +223,14 @@
     z-index: -1;
   }
 
+  .oneMovieBackgroundFolder {
+    width: auto;
+    height: auto;
+    object-fit: fill;
+    position: absolute;
+    z-index: -1;
+  }
+
   .oneMovieHeaderContent {
     display: flex;
     flex-direction: row;
@@ -184,7 +238,15 @@
     width: 100%;
     height: auto;
     gap: 20px;
-    padding: 15px;
+  }
+
+  .oneMoviePoster {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
   }
 
   .oneMoviePoster img {
@@ -192,6 +254,32 @@
     height: 30rem;
     border: 4px solid #ffb20c;
     object-fit: fill;
+  }
+
+  .oneMoviePosterFolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 30rem;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+    color: #ffb20c;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .oneMoviePosterFolder img {
+    width: 100%;
+    height: 8rem;
+    object-fit: fill;
+    border: none;
+  }
+
+  .oneMoviePosterFolder p {
+    margin: 0;
   }
 
   .oneMovieHeaderInfos {
@@ -202,6 +290,7 @@
     height: auto;
     color: #ffb20c;
     text-align: center;
+    position: relative;
   }
 
   .oneMovieHeaderInfos img {
@@ -211,6 +300,8 @@
     border: 4px solid #ffb20c;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 4.5rem;
   }
 
   .oneMovieHeaderInfos h3 {
@@ -219,6 +310,8 @@
     background-color: rgba(0, 0, 0, 0.6);
     font-size: 40px;
     width: fit-content;
+    position: absolute;
+    top: 4.5rem;
   }
 
   .oneMovieHeaderInfosContainer {
@@ -228,6 +321,8 @@
     width: 100%;
     height: auto;
     gap: 30px;
+    position: absolute;
+    bottom: 0;
   }
 
   .oneMovieDetails {
@@ -308,6 +403,7 @@
     flex-direction: column;
     width: auto;
     height: auto;
+    gap: 15px;
   }
 
   .oneMovieBackground {
@@ -316,10 +412,9 @@
     border-bottom: 4px solid #ffb20c;
   }
 
-
   .oneMovieHeader img {
     width: auto;
-    height: 25rem;
+    height: 20rem;
     object-fit: cover;
   }
 
@@ -328,8 +423,26 @@
     flex-direction: column;
     align-items: center;
     width: auto;
+    height: 100%;
+    padding: 15px 0;
+    gap: 10px;
+  }
+
+  .oneMovieBackgroundFolder {
+    width: auto;
     height: auto;
-    gap: 20px;
+    object-fit: fill;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .oneMoviePoster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
   }
 
   .oneMoviePoster img {
@@ -341,10 +454,43 @@
     margin-top: 20px;
   }
 
+  .oneMoviePosterFolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    height: 25rem;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+    color: #ffb20c;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: black;
+  }
+
+  .notPoster {
+    font-size: 15px;
+  }
+
+  .oneMoviePosterFolder img {
+    width: 13rem;
+    height: 7rem;
+    object-fit: fill;
+    border: none;
+  }
+
+  .oneMoviePosterFolder a {
+    margin: 0;
+  }
+
   .oneMovieHeaderInfos {
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 100%;
     height: auto;
     justify-content: center;
     align-items: center;
@@ -358,7 +504,7 @@
 
   .oneMovieHeaderInfos img {
     width: 20rem;
-    height: 10rem;
+    height: auto;
     object-fit: contain;
   }
 
@@ -382,6 +528,7 @@
     height: auto;
     gap: 10px;
     font-size: 1.3rem;
+    white-space: no-wrap;
     align-items: center;
   }
 
@@ -430,7 +577,6 @@
     border-bottom: 4px solid #ffb20c;
   }
 
-
   .oneMovieHeader img {
     width: auto;
     height: 15rem;
@@ -443,7 +589,25 @@
     align-items: center;
     width: auto;
     height: auto;
-    gap: 20px;
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .oneMovieBackgroundFolder {
+    width: auto;
+    height: auto;
+    object-fit: fill;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .oneMoviePoster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 15px;
   }
 
   .oneMoviePoster img {
@@ -452,13 +616,43 @@
     object-fit: fill;
     border: 4px solid #ffb20c;
     border-radius: 10px;
-    margin-top: 20px;
   }
 
+  .oneMoviePosterFolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    height: 18rem;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+    color: #ffb20c;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: black;
+  }
+
+  .notPoster {
+    font-size: 11px;
+  }
+  .oneMoviePosterFolder img {
+    width: 10rem;
+    height: 5rem;
+    object-fit: fill;
+    border: none;
+  }
+
+  .oneMoviePosterFolder a {
+    margin: 0;
+  }
   .oneMovieHeaderInfos {
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 100%;
     height: auto;
     justify-content: center;
     align-items: center;
@@ -470,10 +664,23 @@
     border: 4px solid #ffb20c;
   }
 
+  .oneMovieBackgroundFolder {
+    width: auto;
+    height: auto;
+    object-fit: fill;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+  .oneMovieBackgroundFolder img {
+    width: 30rem;
+    height: 15rem;
+    object-fit: fill;
+  }
+
   .oneMovieHeaderInfos img {
     width: 15rem;
-    height: 5rem;
-    object-fit: fill;
+    height: auto;
+    object-fit: contain;
   }
 
   .oneMovieHeaderInfos h3 {

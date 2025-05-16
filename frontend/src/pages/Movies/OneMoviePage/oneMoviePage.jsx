@@ -1,29 +1,31 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import "./oneMoviePage.css";
 import Header from "../../../components/Header/Header";
 import HeaderPhone from "../../../components/Header/HeaderPhone/HeaderPhone";
 import FooterPhone from "../../../components/Header/FooterPhone/FooterPhone";
+import UserInteractionsButtons from "../../../components/UserInteractionsButtons/UserInteractionsButtons";
+import EigaKunLogo from "../../../assets/EigaKunLogo.png";
 import MovieCasting from "../../../components/MovieCasting/MovieCasting";
+import "./oneMoviePage.css";
 
-function oneMoviePage() {
+function OneMoviePage() {
   const movie = useLoaderData();
 
-  const zero = (number) => (number < 10 ? `0${number}` : number);
+  // Fonction pour formater la date
+  const formatDate = (date) => {
+    const zeroPad = (number) => (number < 10 ? `0${number}` : number);
+    const movieDate = new Date(date);
+    const day = zeroPad(movieDate.getDate());
+    const month = zeroPad(movieDate.getMonth() + 1);
+    const year = movieDate.getFullYear();
+    return `${day}-${month}-${year}`;
+  };
 
-  const date = new Date(movie.release_date);
-  const day = zero(date.getDate());
-  const month = zero(date.getMonth() + 1);
-  const year = date.getFullYear();
-
-  const formattedDate = `${day}-${month}-${year}`;
-
+  // Fonction pour formater la durée
   const formatDuration = (duration) => {
-    if (!duration) return ""; // Sécurité si la durée est vide
-
-    const [hh, mm] = duration.split(":"); // Sépare heures et minutes
-    const hours = parseInt(hh, 10); // Convertit en nombre pour supprimer le 0 devant
-    return `${hours}:${mm}`;
+    if (!duration) return "";
+    const [hh, mm] = duration.split(":");
+    return `${parseInt(hh, 10)}:${mm}`;
   };
 
   return (
@@ -32,14 +34,29 @@ function oneMoviePage() {
       <HeaderPhone />
       <div className="oneMoviePage">
         <div className="oneMovieHeader">
-          <img
-            className="oneMovieBackground"
-            src={movie.background}
-            alt={movie.title}
-          />
+          {movie.background ? (
+            <img
+              className="oneMovieBackground"
+              src={movie.background}
+              alt={movie.title}
+            />
+          ) : (
+            <div className="oneMovieBackgroundFolder" />
+          )}
           <div className="oneMovieHeaderContent">
             <div className="oneMoviePoster">
-              <img src={movie.poster} alt={movie.title} />
+              <UserInteractionsButtons movie={movie} movieId={movie.id} />
+              {movie.poster ? (
+                <img src={movie.poster} alt={movie.title} />
+              ) : (
+                <div className="oneMoviePosterFolder">
+                  <img src={EigaKunLogo} alt="EigaKunLogo" />
+                  <p>{movie.title}</p>
+                  <p className="notPoster">
+                    Pas d'affiche disponible pour le moment.
+                  </p>
+                </div>
+              )}
             </div>
             <div className="oneMovieHeaderInfos">
               {movie.logo ? (
@@ -50,7 +67,8 @@ function oneMoviePage() {
               <div className="oneMovieHeaderInfosContainer">
                 <div className="oneMovieDetails">
                   <p>
-                    <strong>Date de sortie :</strong> {formattedDate}
+                    <strong>Date de sortie :</strong>{" "}
+                    {formatDate(movie.release_date)}
                   </p>
                   <p>
                     <strong>Durée :</strong> {formatDuration(movie.duration)}
@@ -67,30 +85,36 @@ function oneMoviePage() {
                   <p>
                     <strong>Origine :</strong> {movie.country}
                   </p>
-                  {movie.universe ? (
+                  {movie.universe && (
                     <p>
                       <strong>Univers :</strong> {movie.universe}
                     </p>
-                  ) : null}
-                  {movie.subUniverse ? (
+                  )}
+                  {movie.subUniverse && (
                     <p>
                       <strong>Sous-Univers :</strong> {movie.subUniverse}
                     </p>
-                  ) : null}
-                  {movie.streaming ? (
+                  )}
+                  {movie.streaming && (
                     <p>
                       <strong>Disponible sur :</strong> {movie.streaming}
                     </p>
-                  ) : null}
-                  {movie.original ? (
+                  )}
+                  {movie.original && (
                     <p>
                       <strong>Une production exclusive de :</strong>{" "}
                       {movie.original}
                     </p>
-                  ) : null}
+                  )}
                 </div>
                 <div className="oneMovieSynopsis">
-                  <p>{movie.synopsis}</p>
+                  {movie.synopsis ? (
+                    <p>{movie.synopsis}</p>
+                  ) : (
+                    <p style={{ fontSize: "15px" }}>
+                      Pas de synopsis pour le moment.
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
@@ -105,4 +129,4 @@ function oneMoviePage() {
   );
 }
 
-export default oneMoviePage;
+export default OneMoviePage;

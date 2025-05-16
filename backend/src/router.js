@@ -249,6 +249,195 @@ router.put(
 // Route to delete a movie
 router.delete('/users/:id', usersControllers.destroy);
 
+/* *********************************USERS*LIKED*MOVIES*************************************** */
+
+const userHasLiked = require('./controllers/usersInteractionsControllers/usersLikedControllers');
+
+router.get(
+  '/userLiked/:id/likedMovies',
+  verifyToken,
+  userHasLiked.readUserLikedMovies
+);
+router.get(
+  '/userLiked/:id/likedSeries',
+  verifyToken,
+  userHasLiked.readUserLikedSeries
+);
+router.get(
+  '/userLiked/:id/likedPersonalities',
+  verifyToken,
+  userHasLiked.readUserLikedPersonalities
+);
+router.post(
+  '/userLikedMovies/:userId/:movieId',
+  verifyToken,
+  userHasLiked.addLikedMovie
+);
+router.post(
+  '/userLikedSeries/:userId/:serieId',
+  verifyToken,
+  userHasLiked.addLikedSerie
+);
+router.post(
+  '/userLikedPersonalities/:userId/:personalityId',
+  verifyToken,
+  userHasLiked.addLikedPersonality
+);
+router.delete(
+  '/userLikedMovies/:userId/:movieId',
+  verifyToken,
+  userHasLiked.destroyLikeMovie
+);
+router.delete(
+  '/userLikedSeries/:userId/:serieId',
+  verifyToken,
+  userHasLiked.destroyLikeSerie
+);
+router.delete(
+  '/userLikedPersonalities/:userId/:personalityId',
+  verifyToken,
+  userHasLiked.destroyLikePersonality
+);
+/* *********************************USERS*FAVORITES*MOVIES*************************************** */
+
+const userFavorites = require('./controllers/usersInteractionsControllers/usersFavoritesControllers');
+
+router.get(
+  '/userFavorites/:id/favoritesMovies',
+  verifyToken,
+  userFavorites.readUserFavoritesMovies
+);
+router.get(
+  '/userFavorites/:id/favoritesSeries',
+  verifyToken,
+  userFavorites.readUserFavoritesSeries
+);
+router.get(
+  '/userFavorites/:id/favoritesPersonalities',
+  verifyToken,
+  userFavorites.readUserFavoritesPersonalities
+);
+router.post(
+  '/userFavoritesMovies/:userId/:movieId',
+  verifyToken,
+  userFavorites.addFavoriteMovie
+);
+router.post(
+  '/userFavoritesSeries/:userId/:serieId',
+  verifyToken,
+  userFavorites.addFavoriteSerie
+);
+router.post(
+  '/userFavoritesPersonalities/:userId/:personalityId',
+  verifyToken,
+  userFavorites.addFavoritePersonality
+);
+router.delete(
+  '/userFavoritesMovies/:userId/:movieId',
+  verifyToken,
+  userFavorites.destroyFavoriteMovie
+);
+router.delete(
+  '/userFavoritesSeries/:userId/:serieId',
+  verifyToken,
+  userFavorites.destroyFavoriteSerie
+);
+router.delete(
+  '/userFavoritesPersonalities/:userId/:personalityId',
+  verifyToken,
+  userFavorites.destroyFavoritePersonality
+);
+
+/* *********************************USERS*SEEN*MOVIES*************************************** */
+
+const userHasSeen = require('./controllers/usersInteractionsControllers/usersSeenControllers');
+
+router.get(
+  '/userSeen/:id/seenMovies',
+  verifyToken,
+  userHasSeen.readUserSeenMovies
+);
+router.get(
+  '/userSeen/:id/seenSeries',
+  verifyToken,
+  userHasSeen.readUserSeenSeries
+);
+router.post(
+  '/userSeenMovies/:userId/:movieId',
+  verifyToken,
+  userHasSeen.addSeenMovie
+);
+router.post(
+  '/userSeenSeries/:userId/:serieId',
+  verifyToken,
+  userHasSeen.addSeenSerie
+);
+router.delete(
+  '/userSeenMovies/:userId/:movieId',
+  verifyToken,
+  userHasSeen.destroySeenMovie
+);
+router.delete(
+  '/userSeenSeries/:userId/:serieId',
+  verifyToken,
+  userHasSeen.destroySeenSerie
+);
+
+/* *********************************USERS*HAS*TO*WATCH************************************* */
+
+const userHasToWatch = require('./controllers/usersInteractionsControllers/usersToWatchControllers');
+
+router.get(
+  '/userToWatch/:id/toWatchMovies',
+  verifyToken,
+  userHasToWatch.readUserToWatchMovies
+);
+router.get(
+  '/userToWatch/:id/toWatchSeries',
+  verifyToken,
+  userHasToWatch.readUserToWatchSeries
+);
+router.post(
+  '/userToWatchMovies/:userId/:movieId',
+  verifyToken,
+  userHasToWatch.addToWatchMovie
+);
+router.post(
+  '/userToWatchSeries/:userId/:serieId',
+  verifyToken,
+  userHasToWatch.addToWatchSerie
+);
+router.delete(
+  '/userToWatchMovies/:userId/:movieId',
+  verifyToken,
+  userHasToWatch.destroyToWatchMovie
+);
+router.delete(
+  '/userToWatchSeries/:userId/:serieId',
+  verifyToken,
+  userHasToWatch.destroyToWatchSerie
+);
+
+/* *********************************USERS*IS*WATCHING*SERIES************************************** */
+
+const userIsWatchingSeries = require('./controllers/usersInteractionsControllers/usersIsWatchingSeriesControllers');
+
+router.get(
+  '/userIsWatchingSeries/:id/isWatchingSeries',
+  verifyToken,
+  userIsWatchingSeries.readUserIsWatchingSeries
+);
+router.post(
+  '/userIsWatchingSeries/:userId/:serieId',
+  verifyToken,
+  userIsWatchingSeries.addIsWatchingSerie
+);
+router.delete(
+  '/userIsWatchingSeries/:userId/:serieId',
+  verifyToken,
+  userIsWatchingSeries.destroyIsWatchingSerie
+);
+
 router.post('/login', usersControllers.login);
 router.get('/verify/:token', usersControllers.verifyEmail);
 router.get('/user/validate/:token', usersControllers.validateUser);
