@@ -44,6 +44,8 @@ INSERT INTO movies (title, poster, background, logo, trailer, synopsis, genre, t
 VALUES ("Venom : The Last Dance", "https://image.tmdb.org/t/p/original/8mRrl8lc7TrbdA1PFzUhQ0nFZ7R.jpg", "https://image.tmdb.org/t/p/original/fUiKX7u3XZSxGn4sNszq1UQyxEb.jpg", "https://image.tmdb.org/t/p/original/3zyq38OmyZtEBeqhtUhGCBbj2R3.png", "https://www.youtube.com/embed/TEg5kTBN22I?si=e0nTNeIsxbiFAwkL", "Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddie's last dance.", "Action, Science-Fiction", "Super-Héros", "2024-10-30", "Cinéma", null, null, "01:49:00", "USA", "Marvel", "Venom / Spider-Man");
 INSERT INTO movies (title, poster, background, logo, trailer, synopsis, genre, theme, release_date, screen, streaming, original, duration, country, universe, subUniverse)
 VALUES ("Kraven The Hunter", "https://image.tmdb.org/t/p/original/1GvBhRxY6MELDfxFrete6BNhBB5.jpg", "https://image.tmdb.org/t/p/original/unNWOdnrdVraksBgMobtfvZpWpb.jpg", "https://image.tmdb.org/t/p/original/wEuiG5gakvzTthDVz0X5gfEz7T1.png", "https://www.youtube.com/embed/7T2vVYC6fb4?si=Xuur8RpRsnh-7OMg", "Sergei Kravinoff est un chasseur de gros gibier, qui prend un sérum magique lui donnant des capacités surhumaines et une vie plus longue...", "Action, Science-Fiction", "Super-Héros", "2024-12-11", "Cinéma", null, null, "02:07:00", "USA", "Marvel", "Spider-Man");
+INSERT INTO movies (title, poster, background, logo, trailer, synopsis, genre, theme, release_date, screen, streaming, original, duration, country, universe, subUniverse)
+VALUES ("Spider-Man: Brand New Day", null, null, null, null, null, "Action, Science-Fiction", "Super-Héros", "2026-07-29", "Cinéma", null, null, null, "USA", "Marvel", "Spider-Man");
 
 CREATE TABLE series (
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -96,6 +98,7 @@ CREATE TABLE episodes (
   CONSTRAINT unique_episode_per_season_and_series UNIQUE(serie_id, season_id, episode_number)
 );
 
+/* --- MARVEL'S DAREDEVIL --- */
 INSERT INTO series (title, poster, background, logo, trailer, synopsis, genre, theme, universe, subUniverse, release_date, ending_date, statut, seasons, episodes, country, screen, streaming, original)
 VALUES ("Marvel's Daredevil", "https://image.tmdb.org/t/p/original/doJ6axLfzLCDaPqFSSHjaSTYKb2.jpg", "https://image.tmdb.org/t/p/original/rZ1ynks9dDkIR87KGNfhZFHfEgj.jpg", "https://image.tmdb.org/t/p/original/jbYIbMDDMP6gTA4VjBfoMDJ3L85.png", "https://www.youtube.com/embed/-g8fSUNeYIE?si=oy9p_w--BZUydVx0", "Victime d'un accident sur la route pendant son enfance, Matt Murdock perd la vue mais ses sens se sont décuplés d'une grande ampleur. Aujourd'hui, Matt Murdock partage une double vie et combat pour la justice de deux manières. Avocat de jour, et justicier masqué de nuit sous le nom de Daredevil.", "Action / Thriller", "Super-Héros / Enquêtes", "Marvel", "Daredevil", "2015-04-10", "2018-10-19", "Terminée", "3", "39", "USA", "TV", "Disney +", "Netflix");
 
@@ -147,6 +150,28 @@ VALUES ("1", "1", "12", "Ceux qui restent", "https://image.tmdb.org/t/p/original
 INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
 VALUES ("1", "1", "13", "Daredevil", "https://image.tmdb.org/t/p/original/wJRC62B12NMrHcsXWwPvI0OW8lB.jpg", "2015-04-10", "Karen, Foggy et Matt décident de frapper un grand coup pour arrêter Fisk. Fisk et Daredevil, sous un nouveau costume, s'affrontent enfin.", "00:56:00");
 
+/* --- ASH VS EVIL DEAD --- */
+INSERT INTO series (title, poster, background, logo, trailer, synopsis, genre, theme, universe, subUniverse, release_date, ending_date, statut, seasons, episodes, country, screen, streaming, original)
+VALUES ("Ash vs Evil Dead", "https://image.tmdb.org/t/p/original/ghAP6Od4f8bNjocQIr121gPj1MJ.jpg", "https://image.tmdb.org/t/p/original/tVjJ7tVe0P5FPRSJb66iz495biL.jpg", "https://image.tmdb.org/t/p/original/quGCYh8cpJzr67klnvfU42zjUjf.png", "https://www.youtube.com/embed/-Yq3jeOmxSk?si=WVD5LW972TZBeSsX", "30 ans après la bataille déchaînée avec les forces du mal, Ash Williams vit reclus dans sa caravane et travaille dans une boutique de bricolage. Un soir, dans un état d'ébriété, il relit une des pages du Necronomicon, le livre démoniaque. Par conséquent, les forces du mal sont de retour et Ash va devoir reprendre du service.", "Comédie / Horreur", "Démons / Surnaturel", "Evil Dead", null, "2015-10-31", "2018-04-29", "Annulée", "3", "30", "USA", "TV", null, null);
+
+INSERT INTO seasons (serie_id, season_number, poster, first_episode_date, last_episode_date, synopsis, episodes)
+VALUES (2, 1, "https://image.tmdb.org/t/p/original/ApSCYgOsISv0l6SBRNPFVXAiXVu.jpg", "2015-10-31", "2016-01-02", "30 ans après avoir combattu les démons, Ash Williams va devoir reprendre le service en les affrontant une fois de plus. Mais il ne sera pas le seul, il sera accompagné de ses collègues du travail.", "10");
+
+INSERT INTO seasons (serie_id, season_number, poster, first_episode_date, last_episode_date, synopsis, episodes)
+VALUES (2, 2, "https://image.tmdb.org/t/p/original/rL9movJWGBjuwJvbbGBGqW85zYA.jpg", "2016-10-02", "2016-12-11", "Quelques mois après avoir passé un marché, Ruby ne contrôle plus ses démons. Elle demande de l'aide à Ash, Pablo et Kelly, qui vont devoir mettre un terme à leur pause bien méritée à Jacksonville. Ash va devoir faire l'impensable : Retourner dans sa ville natale : Elk Grove.", "10");
+
+INSERT INTO seasons (serie_id, season_number, poster, first_episode_date, last_episode_date, synopsis, episodes)
+VALUES (2, 3, "https://image.tmdb.org/t/p/original/mZ39CL65VtTD01JDFYuJvAjR3KM.jpg", "2018-02-25", "2018-04-29", "Ash Williams devient le héros d'Elk Grove et il a ouvert sa propre quincaillerie. Mais les forces du mal ressurgissent de nouveau avec Ruby. Et comme si ce n'était pas assez, Ash découvre qu'il est père d'une jeune fille de 17 ans.", "10");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("2", "4", "1", "El Jefe", "https://image.tmdb.org/t/p/original/qQsnITK8ltH7FFckLg68ai8tcw7.jpg", "2015-10-31", "Un soir, dans un état second, Ash Williams lit un verset du Necronomicon. Par conséquent, les forces du mal se réveillent pour la première fois depuis trente ans. Ash va devoir reprendre du service, et sa tronconneuse.", "00:41:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("2", "4", "2", "L'Appât", "https://image.tmdb.org/t/p/original/oHtGZvJvnMKEncTFesvkUpn5dFO.jpg", "2015-11-07", "Kelly part à la rescousse de son père et elle retrouve sa mère, supposée morte. Alors que Ash et Pablo la rejoigne chez eux, Ash doute de la nature de la mère de Kelly.", "00:28:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("2", "4", "3", "Les livres de l'au-delà", "https://image.tmdb.org/t/p/original/kbR1K3A3nl6Km0bb9bSP46cZh4h.jpg", "2015-11-14", "Ash, Pablo et Kelly invoquent un démon pour lui soutirer des informations pour empêcher l'invasion des Cadavéreux. L'inspectrice Amanda Fisher retrouve Ash, qui est, selon elle, le responsble du meurtre de son coéquipier.", "00:28:00");
+
 
 CREATE TABLE personalities (
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -159,6 +184,19 @@ CREATE TABLE personalities (
   profession VARCHAR(255) NOT NULL
 );
 
+INSERT INTO personalities (fullname, image_src, birthdate, deathdate, origin, bio, profession)
+VALUES ("Jodelle Ferland", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Jodelle_Ferland_%28medium_crop%29.jpg/600px-Jodelle%20Ferland%20%28medium%20crop%29.jpg", "1994-10-09", null, "Canada", "Jodelle Micah Ferland a débuté sa carrière très jeune, elle est notamment connue pour son double rôle de Alessa et Sharon dans le film Silent Hill (2006), dans le film Tideland (2006). Elle a fait une apparition dans de nombreuses séries comme Smallville, Supernatural, elle a eu un rôle majeur dans la série Dark Matters.", "Actrice");
+INSERT INTO personalities (fullname, image_src, birthdate, deathdate, origin, bio, profession)
+VALUES ("Christophe Gans", "https://upload.wikimedia.org/wikipedia/commons/5/52/Christophe_Gans_2010.JPG", "1960-03-11", null, "France", "Réalisateur français", "Réalisateur");
+INSERT INTO personalities (fullname, image_src, birthdate, deathdate, origin, bio, profession)
+VALUES ("Sean Bean", "https://fr.web.img2.acsta.net/pictures/15/07/20/17/45/031961.jpg", "1959-04-17", null, "Angleterre", "Sean Bean, de son vrai nom Shaun Mark Bean, est un acteur britannique né le 17 avril 1959 à Sheffield, en Angleterre. Il est connu pour ses rôles marquants, souvent tragiques, dans des films et séries à succès. Avec sa voix distinctive et sa présence charismatique, il s'est imposé dans les genres de la fantasy, du drame historique et du thriller. Sean Bean est réputé pour jouer des personnages qui meurent souvent à l’écran, une particularité qui est devenue un mème sur Internet. Pourtant, il a aussi interprété des rôles où il survit, comme dans The Martian (2015) ou la série Legends (2014-2015). Il est également acteur de doublage, prêtant sa voix à des jeux vidéo comme The Elder Scrolls IV: Oblivion (2006) et Hitman 2 (2018).", "Acteur");
+INSERT INTO personalities (fullname, image_src, birthdate, deathdate, origin, bio, profession)
+VALUES ("Radha Mitchell", "https://image.tmdb.org/t/p/original/ctC7epg65XgUol62d1UAoyGvNKm.jpg", "1973-11-12", null, "Australie", "Actrice australienne", "Actrice");
+INSERT INTO personalities (fullname, image_src, birthdate, deathdate, origin, bio, profession)
+VALUES ("Bruce Campbell", "https://image.tmdb.org/t/p/original/vR46yp0Bx9Y198DtiDHnamyr610.jpg", "1958-06-22", null, "USA", "Bruce Campbell est un acteur, réalisateur, producteur et écrivain américain, né le 22 juin 1958 à Royal Oak, dans le Michigan. Il est principalement connu pour son rôle culte d’Ash Williams dans la saga Evil Dead, réalisée par Sam Raimi. En plus de son travail d’acteur, Bruce Campbell est aussi réalisateur et producteur. Il a dirigé des épisodes de séries télé et a réalisé le film My Name is Bruce (2007), où il joue une version parodique de lui-même. Côté écriture, il a publié deux autobiographies humoristiques : If Chins Could Kill: Confessions of a B Movie Actor (2001) et Hail to the Chin: Further Confessions of a B Movie Actor (2017), racontant sa carrière dans le cinéma de série B. Avec son charisme et son humour, il est devenu une icône du cinéma de genre, notamment dans l’horreur et la pop culture geek.", "Acteur, Réalisateur, Scénariste, Producteur");
+
+
+
 CREATE TABLE movieCasting (
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   movie_id INT NOT NULL,
@@ -170,6 +208,13 @@ CREATE TABLE movieCasting (
   CONSTRAINT unique_personality_movie UNIQUE(movie_id, personality_id)
 );
 
+INSERT INTO movieCasting (movie_id, personality_id, side, role)
+VALUES (1, 2, "Realisation", "Réalisateur"),
+(1, 3, "Acting", "Christopher Da Silva"),
+(1, 4, "Acting", "Rose Da Silva"),
+(1, 1, "Acting", "Sharon / Alessa");
+
+
 CREATE TABLE serieCasting (
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   serie_id INT,
@@ -180,6 +225,10 @@ CREATE TABLE serieCasting (
   FOREIGN KEY (serie_id) REFERENCES series(id) ON DELETE CASCADE,
   FOREIGN KEY (personality_id) REFERENCES personalities(id) ON DELETE CASCADE
 );
+
+INSERT INTO serieCasting (serie_id, personality_id, side, role, presence)
+VALUES (2, 5, "Acting", "Ash Williams", "Saisons 1 à 3");
+
 
 
 CREATE TABLE users (
@@ -195,3 +244,65 @@ CREATE TABLE users (
 
 INSERT INTO users (pseudo, password, mail, birthdate, avatar)
 VALUES ('admin', 'admin', 'H4QvM@example.com', '2000-01-01', 'avatar.jpg');
+
+CREATE TABLE usersFavorites (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  user_id INT NOT NULL,
+  movie_id INT NULL,
+  serie_id INT NULL,
+  personality_id INT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE,
+  FOREIGN KEY (serie_id) REFERENCES series(id) ON DELETE CASCADE,
+  FOREIGN KEY (personality_id) REFERENCES personalities(id) ON DELETE CASCADE,
+  CONSTRAINT unique_favorites UNIQUE(user_id, movie_id, serie_id, personality_id)
+);
+
+CREATE TABLE usersHasSeen (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  user_id INT NOT NULL,
+  movie_id INT NULL,
+  serie_id INT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE,
+  FOREIGN KEY (serie_id) REFERENCES series(id) ON DELETE CASCADE,
+  CONSTRAINT unique_seen UNIQUE(user_id, movie_id, serie_id)
+  );
+
+CREATE TABLE usersHasToWatch (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  user_id INT NOT NULL,
+  movie_id INT NULL,
+  serie_id INT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE,
+  FOREIGN KEY (serie_id) REFERENCES series(id) ON DELETE CASCADE,
+  CONSTRAINT unique_toWatch UNIQUE(user_id, movie_id, serie_id)
+);
+
+CREATE TABLE usersHasLiked (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  user_id INT NOT NULL,
+  movie_id INT NULL,
+  serie_id INT NULL,
+  personality_id INT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE,
+  FOREIGN KEY (serie_id) REFERENCES series(id) ON DELETE CASCADE,
+  FOREIGN KEY (personality_id) REFERENCES personalities(id) ON DELETE CASCADE,
+  CONSTRAINT unique_liked UNIQUE(user_id, movie_id, serie_id, personality_id)
+);
+
+CREATE TABLE usersIsWatchingSeries (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  user_id INT NOT NULL,
+  serie_id INT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (serie_id) REFERENCES series(id) ON DELETE CASCADE,
+  CONSTRAINT unique_watching UNIQUE(user_id, serie_id)
+);
