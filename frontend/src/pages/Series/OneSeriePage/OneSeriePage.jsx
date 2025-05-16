@@ -4,6 +4,7 @@ import Header from "../../../components/Header/Header";
 import HeaderPhone from "../../../components/Header/HeaderPhone/HeaderPhone";
 import FooterPhone from "../../../components/Header/FooterPhone/FooterPhone";
 import Seasons from "../../../components/SeasonsContainer/SeasonsContainer";
+import UserInteractionsButtons from "../../../components/UserInteractionsButtons/UserInteractionsButtons";
 import SerieCasting from "../../../components/SerieCasting/SerieCasting";
 import "./OneSeriePage.css";
 
@@ -35,6 +36,7 @@ function OneSerie() {
           />
           <div className="oneSerieHeaderContent">
             <div className="oneSeriePoster">
+              <UserInteractionsButtons serie={serie} serieId={serie.id} />
               <img src={serie.poster} alt={serie.title} />
             </div>
             <div className="oneSerieHeaderInfos">

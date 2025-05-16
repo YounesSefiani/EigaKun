@@ -2,17 +2,31 @@ import React, { useContext, useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import connexion from "./connexion";
 import { AuthContext } from "../context/AuthContext";
+import "./UserLayout.css";
 
 function UserLayout() {
-  const { user, token, validateToken } = useContext(AuthContext);
+  const { user, token, validateToken, logout } = useContext(AuthContext);
   const navigate = useNavigate();
   const [validationInProgress, setValidationInProgress] = useState(false);
+  const [showPopUp, setShowPopUp] = useState(false);
 
   useEffect(() => {
     if (token && !user) {
       validateToken();
     }
   }, [token, user, validateToken]);
+
+  useEffect(() => {
+    const handleTokenExpired = () => {
+      setShowPopUp(true); // Affiche la popup
+    };
+
+    window.addEventListener("tokenExpired", handleTokenExpired);
+
+    return () => {
+      window.removeEventListener("tokenExpired", handleTokenExpired);
+    };
+  }, []);
 
   const handleValidation = async () => {
     setValidationInProgress(true);
@@ -50,6 +64,26 @@ function UserLayout() {
   // if (user && user.role === "Admin") {
   //   navigate("/user/admin");
   // }
+
+  if (showPopUp) {
+    return (
+      <div className="popup-overlay">
+        <div className="popup-content">
+          <p>Votre session a expiré. Vous avez été déconnecté.</p>
+          <button
+            type="button"
+            onClick={() => {
+              logout();
+              setShowPopUp(false);
+              navigate("/"); // Redirection vers la page d'accueil
+            }}
+          >
+            Ok
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="user-layout">

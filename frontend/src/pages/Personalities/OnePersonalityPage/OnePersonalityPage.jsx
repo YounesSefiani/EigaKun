@@ -4,6 +4,7 @@ import Header from "../../../components/Header/Header";
 import HeaderPhone from "../../../components/Header/HeaderPhone/HeaderPhone";
 import FooterPhone from "../../../components/Header/FooterPhone/FooterPhone";
 import HorizontalScroll from "../../../components/HorizontalScroll/HorizontalScroll";
+import UserInteractionsButtons from "../../../components/UserInteractionsButtons/UserInteractionsButtons";
 import "./OnePersonalityPage.css";
 
 function OnePersonalityPage() {
@@ -34,6 +35,10 @@ function OnePersonalityPage() {
       <div className="onePersonalityPage">
         <div className="onePersonalityHeader">
           <div className="onePersonalityPicture">
+            <UserInteractionsButtons
+              personality={personality}
+              personalityId={personality.id}
+            />
             <img src={personality.image_src} alt={personality.fullName} />
           </div>
           <div className="onePersonalityContent">

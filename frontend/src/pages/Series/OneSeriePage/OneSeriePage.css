@@ -1,497 +1,686 @@
 /* VERSION PC */
 @media screen and (min-width: 1441px) {
-    .oneSeriePage {
-      display: flex;
-      flex-direction: column;
-      width: auto;
-      height: 100%;
-      overflow: auto;
-      gap: 10px;
-    }
-  
-    .oneSerieHeader {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-      width: auto;
-      height: 100%;
-      padding: 20px;
-      position: relative;
-      border-bottom: 4px solid #ffb20c;
-      background: linear-gradient(to right, black 40%, transparent 90%);
-    }
-  
-    .oneSerieBackground {
-      width: 60%;
-      height: 100%;
-      object-fit: fill;
-      object-position: right;
-      position: absolute;
-      right: 0;
-      z-index: -1;
-    }
-  
-    .oneSerieHeaderContent {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      width: auto;
-      height: 100%;
-      gap: 15px;
-    }
-  
-    .oneSeriePoster img {
-      width: 20rem;
-      height: 30rem;
-      border: 4px solid #ffb20c;
-      object-fit: fill;
-    }
-  
-    .oneSerieHeaderInfos {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      color: #ffb20c;
-      text-align: center;
-      gap: 20px;
-    }
-  
-    .oneSerieHeaderInfos img {
-      width: 25rem;
-      height: 16rem;
-      object-fit: contain;
-      border: 4px solid #ffb20c;
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-  
-    .oneSerieHeaderInfosContainer {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-      height: 50%;
-      gap: 30px;
-    }
-  
-    .oneSerieDetails {
-      border: 4px solid #ffb20c;
-      display: flex;
-      flex-direction: column;
-      width: 70%;
-      height: 200px;
-      overflow: auto;
-      gap: 5px;
-      padding: 5px;
-      background-color: rgba(0, 0, 0, 0.6);
-      font-size: 20px;
-      text-align: center;
-    }
-
-    .oneSerieDetails p {
-      padding: 0;
-      margin: 0;
-    }
-  
-    .oneSerieDetails::-webkit-scrollbar {
-      background-color: black;
-      height: 100%;
-    }
-  
-    .oneSerieDetails::-webkit-scrollbar-thumb {
-      background-color: #ffb20c;
-    }
-  
-    .oneSerieSynopsis {
-      border: 4px solid #ffb20c;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 200px;
-      overflow: auto;
-      gap: 5px;
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.6);
-      font-size: 20px;
-      text-align: center;
-    }
-  
-    .oneSerieSynopsis::-webkit-scrollbar {
-      background-color: black;
-      height: 100%;
-    }
-  
-    .oneSerieSynopsis::-webkit-scrollbar-thumb {
-      background-color: #ffb20c;
-    }
-
-    .seasons {
-      display: flex;
-      width: auto;
-      height: auto;
-    }
+  .oneSeriePage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    overflow: auto;
   }
-  
-  /* VERSION DESKTOP */
-  @media screen and (min-width: 1024px) and (max-width: 1440px) {
-    .oneSeriePage {
-      display: flex;
-      flex-direction: column;
-      width: auto;
-      height: 100%;
-      overflow: auto;
-      gap: 20px;
-    }
-  
-    .oneSerieHeader {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-      width: auto;
-      height: 100%;
-      padding: 20px;
-      position: relative;
-      border-bottom: 4px solid #ffb20c;
-      background: linear-gradient(to right, black 50%, transparent 90%);
-    }
-  
-    .oneSerieBackground {
-      width: 50%;
-      height: 100%;
-      object-fit: fill;
-      object-position: right;
-      position: absolute;
-      right: 0;
-      z-index: -1;
-    }
-  
-    .oneSerieHeaderContent {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: auto;
-      gap: 20px;
-    }
-  
-    .oneSeriePoster img {
-      width: 18rem;
-      height: 25rem;
-      border: 4px solid #ffb20c;
-      object-fit: fill;
-    }
-  
-    .oneSerieHeaderInfos {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: auto;
-      color: #ffb20c;
-      text-align: center;
-      gap: 20px;
-    }
-  
-    .oneSerieHeaderInfos img {
-      width: 30rem;
-      height: 11rem;
-      object-fit: contain;
-      border: 4px solid #ffb20c;
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-  
-    .oneSerieHeaderInfosContainer {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-      height: 50%;
-      gap: 30px;
-    }
-  
-    .oneSerieDetails {
-      border: 4px solid #ffb20c;
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      height: 200px;
-      overflow: auto;
-      gap: 5px;
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.6);
-      font-size: 20px;
-      text-align: center;
-    }
 
-    .oneSerieDetails p {
-      padding: 0;
-      margin: 0;
-    }
-  
-    .oneSerieDetails::-webkit-scrollbar {
-      background-color: black;
-      height: 100%;
-    }
-  
-    .oneSerieDetails::-webkit-scrollbar-thumb {
-      background-color: #ffb20c;
-    }
-  
-    .oneSerieSynopsis {
-      border: 4px solid #ffb20c;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 200px;
-      overflow: auto;
-      gap: 5px;
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.6);
-      font-size: 20px;
-      text-align: center;
-    }
-  
-    .oneSerieSynopsis::-webkit-scrollbar {
-      background-color: black;
-      height: 100%;
-    }
-  
-    .oneSerieSynopsis::-webkit-scrollbar-thumb {
-      background-color: #ffb20c;
-    }
+  .oneSerieHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    padding: 15px;
+    position: relative;
+    border-bottom: 4px solid #ffb20c;
+    background: linear-gradient(to right, black 40%, transparent 90%);
   }
-  
-  /* VERSION TABLET */
-  @media screen and (min-width: 601px) and (max-width: 1023px) {
-    .oneSeriePage {
-      display: flex;
-      flex-direction: column;
-      width: auto;
-      height: 100%;
-      gap: 15px;
-      overflow-y: auto;
-    }
-  
-    .oneSerieHeader {
-      display: flex;
-      flex-direction: column;
-      width: auto;
-      height: auto;
-      gap: 20px;
-    }
-  
-    .oneSerieBackground {
-      width: auto;
-      height: 25rem !important;
-      object-fit: fill;
-      border-bottom: 4px solid #ffb20c;
-    }
-  
-    .oneSerieHeaderContent {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: auto;
-      height: auto;
-      gap: 10px;
-    }
-  
-    .oneSeriePoster img {
-      width: 20rem;
-      height: 30rem;
-      object-fit: fill;
-      border: 4px solid #ffb20c;
-      border-radius: 10px;
-    }
-  
-    .oneSerieHeaderInfos {
-      display: flex;
-      flex-direction: column;
-      width: auto;
-      height: auto;
-      justify-content: center;
-      align-items: center;
-      color: #ffb20c;
-      background-color: rgba(0, 0, 0, 0.8);
-      text-align: center;
-      gap: 10px;
-      padding: 10px;
-      border: 4px solid #ffb20c;
-    }
-  
-    .oneSerieHeaderInfos img {
-      width: 20rem;
-      height: auto;
-      object-fit: fill;
-    }
-  
-    .oneSerieHeaderInfos h3 {
-      font-size: 1.3rem;
-    }
-  
-    .oneSerieHeaderInfosContainer {
-      display: flex;
-      flex-direction: column;
-      width: auto;
-      height: 100%;
-      gap: 20px;
-      align-items: center;
-    }
-  
-    .oneSerieDetails {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      font-size: 1.3rem;
-      white-space: no-wrap;
-      align-items: center;
-    }
-  
-    .oneSerieSynopsis {
-      width: auto;
-      height: 15rem;
-      font-size: 1.3rem;
-      overflow: auto;
-      padding: 5px;
-      border: 4px solid #ffb20c;
-    }
-  
-    .oneSerieSynopsis::-webkit-scrollbar {
-      background-color: black;
-      height: 100%;
-    }
-  
-    .oneSerieSynopsis::-webkit-scrollbar-thumb {
-      background-color: #ffb20c;
-    }
 
-    .seasons {
-      display: flex;
-      width: 100%;
-      height: auto;
-    }
-
+  .oneSerieBackground {
+    width: 60%;
+    height: 100%;
+    object-fit: fill;
+    object-position: right;
+    position: absolute;
+    right: 0;
+    z-index: -1;
   }
-  
-  /* VERSION MOBILE */
-  @media screen and (max-width: 600px) {
-    .oneSeriePage {
-      display: flex;
-      flex-direction: column;
-      width: auto;
-      height: 100%;
-      overflow-y: auto;
-      gap: 20px;
-    }
-  
-    .oneSerieHeader {
-      display: flex;
-      flex-direction: column;
-      width: auto;
-      height: 100%;
-      gap: 15px;
-    }
-  
-    .oneSerieBackground {
-      width: auto;
-      height: auto;
-      object-fit: fill;
-      border-bottom: 4px solid #ffb20c;
-    }
-  
-  
-    .oneSerieHeader img {
-      width: auto;
-      height: 15rem;
-      object-fit: fill;
-    }
-  
-    .oneSerieHeaderContent {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: auto;
-      height: 100%;
-      padding: 15px auto;
-      gap: 10px;
-    }
-  
-    .oneSeriePoster img {
-      width: 12rem;
-      height: 18rem;
-      object-fit: fill;
-      border: 4px solid #ffb20c;
-      border-radius: 10px;
-    }
-  
-    .oneSerieHeaderInfos {
-      display: flex;
-      flex-direction: column;
-      width: auto;
-      height: auto;
-      justify-content: center;
-      align-items: center;
-      color: #ffb20c;
-      background-color: rgba(0, 0, 0, 0.8);
-      text-align: center;
-      gap: 15px;
-      padding: 10px;
-      border: 4px solid #ffb20c;
-    }
-  
-    .oneSerieHeaderInfos img {
-      width: 15rem;
-      height: auto;
-      object-fit: fill;
-    }
-  
-    .oneSerieHeaderInfos h3 {
-      font-size: 1.3rem;
-    }
-  
-    .oneSerieHeaderInfosContainer {
-      display: flex;
-      flex-direction: column;
-      width: auto;
-      height: 100%;
-      gap: 10px;
-      align-items: center;
-    }
-  
-    .oneSerieDetails {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      font-size: 1rem;
-      white-space: no-wrap;
-      align-items: center;
-    }
 
-    .oneSerieDetails p {
-      padding: 0;
-      margin: 0;
-    }
-  
-    .oneSerieSynopsis {
-      width: auto;
-      height: 10rem;
-      font-size: 1rem;
-      overflow: auto;
-      padding: 10px;
-      border: 4px solid #ffb20c;
-    }
-
-    .oneSerieSynopsis::-webkit-scrollbar {
-      background-color: black;
-      height: 100%;
-    }
-  
-    .oneSerieSynopsis::-webkit-scrollbar-thumb {
-      background-color: #ffb20c;
-    }
+  .oneSerieHeaderContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 20px;
   }
-  
+  .oneSeriePoster {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .oneSeriePoster img {
+    width: 20rem;
+    height: 30rem;
+    border: 4px solid #ffb20c;
+    object-fit: fill;
+  }
+
+  .oneSerieHeaderInfos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    color: #ffb20c;
+    text-align: center;
+    position: relative;
+  }
+
+  .oneSerieHeaderInfos img {
+    width: 30rem;
+    height: 10rem;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 4.5rem;
+  }
+
+  .oneSerieHeaderInfos h3 {
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 40px;
+    width: fit-content;
+    position: absolute;
+    top: 4.5rem;
+  }
+
+  .oneSerieHeaderInfosContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 30px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .oneSerieDetails {
+    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 18rem;
+    overflow: auto;
+    padding: 5px;
+    gap: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .oneSerieDetails p {
+    margin: 0;
+  }
+
+  .oneSerieDetails::-webkit-scrollbar {
+    background-color: black;
+    height: 100%;
+  }
+
+  .oneSerieDetails::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+  }
+
+  .oneSerieSynopsis {
+    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 18rem;
+    overflow: auto;
+    gap: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  .oneSerieSynopsis::-webkit-scrollbar {
+    background-color: black;
+    height: 100%;
+  }
+
+  .oneSerieSynopsis::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+  }
+
+  .seasons {
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+}
+
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .oneSeriePage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .oneSerieHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    padding: 15px;
+    position: relative;
+    border-bottom: 4px solid #ffb20c;
+    background: linear-gradient(to right, black 50%, transparent 90%);
+  }
+
+  .oneSerieBackground {
+    width: 60%;
+    height: 100%;
+    object-fit: fill;
+    object-position: right;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+
+  .oneSerieHeaderContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .oneSeriePoster {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .oneSeriePoster img {
+    width: 20rem;
+    height: 30rem;
+    border: 4px solid #ffb20c;
+    object-fit: fill;
+  }
+
+  .oneSerieHeaderInfos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    color: #ffb20c;
+    text-align: center;
+    position: relative;
+  }
+
+  .oneSerieHeaderInfos img {
+    width: 30rem;
+    height: 10rem;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 4.5rem;
+  }
+
+  .oneSerieHeaderInfos h3 {
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 40px;
+    width: fit-content;
+    position: absolute;
+    top: 4.5rem;
+  }
+
+  .oneSerieHeaderInfosContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 30px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .oneSerieDetails {
+    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 18rem;
+    overflow: auto;
+    padding: 5px;
+    gap: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .oneSerieDetails p {
+    margin: 0;
+  }
+
+  .oneSerieDetails::-webkit-scrollbar {
+    background-color: black;
+    height: 100%;
+  }
+
+  .oneSerieDetails::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+  }
+
+  .oneSerieSynopsis {
+    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 18rem;
+    overflow: auto;
+    gap: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  .oneSerieSynopsis::-webkit-scrollbar {
+    background-color: black;
+    height: 100%;
+  }
+
+  .oneSerieSynopsis::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+  }
+
+  .seasons {
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+  .oneSeriePage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .oneSerieHeader {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 15px;
+  }
+
+  .oneSerieBackground {
+    width: auto;
+    height: auto;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+  .oneSerieHeader img {
+    width: auto;
+    height: 20rem;
+    object-fit: cover;
+  }
+
+  .oneSerieHeaderContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    padding: 15px 0;
+    gap: 10px;
+  }
+
+  .oneSerieBackgroundFolder {
+    width: auto;
+    height: auto;
+    object-fit: fill;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .oneSeriePoster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .oneSeriePoster img {
+    width: 18rem;
+    height: 25rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+  }
+
+  .oneSeriePosterFolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    height: 25rem;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+    color: #ffb20c;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: black;
+  }
+
+  .notPoster {
+    font-size: 15px;
+  }
+
+  .oneSeriePosterFolder img {
+    width: 13rem;
+    height: 7rem;
+    object-fit: fill;
+    border: none;
+  }
+
+  .oneSeriePosterFolder a {
+    margin: 0;
+  }
+
+
+  .oneSerieHeaderInfos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    color: #ffb20c;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .oneSerieHeaderInfos img {
+    width: 20rem;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .oneSerieHeaderInfos h3 {
+    font-size: 1.3rem;
+  }
+
+  .oneSerieHeaderInfosContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .oneSerieDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: auto;
+    height: auto;
+    gap: 10px;
+    font-size: 1.3rem;
+    white-space: no-wrap;
+    align-items: center;
+  }
+
+  .oneSerieSynopsis {
+    width: auto;
+    height: 10rem;
+    font-size: 1.2rem;
+    overflow: auto;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .castingContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding: 5px;
+    color: #ffb20c;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+
+  .oneSerieSynopsis::-webkit-scrollbar {
+    background-color: black;
+    height: 100%;
+  }
+
+  .oneSerieSynopsis::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+  }
+
+  .seasons {
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 600px) {
+  .oneSeriePage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .oneSerieHeader {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+
+  .oneSerieBackground {
+    width: auto;
+    height: auto;
+    object-fit: fill;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+  .oneSerieHeader img {
+    width: auto;
+    height: 15rem;
+    object-fit: fill;
+  }
+
+  .oneSerieHeaderContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .oneSerieBackgroundFolder {
+    width: auto;
+    height: auto;
+    object-fit: fill;
+    position: absolute;
+    z-index: -1;
+  }
+
+
+  .oneSeriePoster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 15px;
+  }
+
+  .oneSeriePoster img {
+    width: 12rem;
+    height: 18rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+  }
+
+  .oneSeriePosterFolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    height: 18rem;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+    color: #ffb20c;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: black;
+  }
+
+  .notPoster {
+    font-size: 11px;
+  }
+  .oneSeriePosterFolder img {
+    width: 10rem;
+    height: 5rem;
+    object-fit: fill;
+    border: none;
+  }
+
+  .oneSeriePosterFolder a {
+    margin: 0;
+  }
+
+
+  .oneSerieHeaderInfos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    color: #ffb20c;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .oneSerieBackgroundFolder {
+    width: auto;
+    height: auto;
+    object-fit: fill;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+  .oneSerieBackgroundFolder img {
+    width: 30rem;
+    height: 15rem;
+    object-fit: fill;
+  }
+
+
+  .oneSerieHeaderInfos img {
+    width: 15rem;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .oneSerieHeaderInfos h3 {
+    font-size: 1.3rem;
+  }
+
+  .oneSerieHeaderInfosContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .oneSerieDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    font-size: 1rem;
+    white-space: no-wrap;
+    align-items: center;
+  }
+
+  .oneSerieDetails p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .oneSerieSynopsis {
+    width: auto;
+    height: 10rem;
+    font-size: 1.1rem;
+    overflow: auto;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .castingContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding: 5px;
+    color: #ffb20c;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+
+  .oneSerieSynopsis::-webkit-scrollbar {
+    background-color: black;
+    height: 100%;
+  }
+
+  .oneSerieSynopsis::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+  }
+}

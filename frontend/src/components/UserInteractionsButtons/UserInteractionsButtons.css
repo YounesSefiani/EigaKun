@@ -1,0 +1,131 @@
+/* VERSION PC */
+@media (min-width: 1441px) {
+
+  .userInteractionsButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .Toastify {
+    position: absolute;
+  }
+  .userInteractionsButtons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.5s ease;
+  }
+
+  .userInteractionsButtons button.active {
+    color: red; /* Couleur rouge lorsque l'icône est active */
+  }
+
+  .userInteractionsButtons button:hover {
+    color: black; /* Couleur au survol */
+  }
+
+  .userInteractionsButtons svg:hover {
+    color: black;
+  }
+
+}
+
+/* VERSION DESKTOP */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .userInteractionsButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .Toastify {
+    position: absolute;
+  }
+  .userInteractionsButtons button {
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    transition: color 0.5s ease;
+  }
+
+  .userInteractionsButtons button.active {
+    color: red; /* Couleur rouge lorsque l'icône est active */
+  }
+
+  .userInteractionsButtons button:hover {
+    color: black; /* Couleur au survol */
+  }
+
+  .userInteractionsButtons svg:hover {
+    color: black;
+  }
+}
+
+/* VERSION TABLET */
+@media (min-width: 601px) and (max-width: 1023px) {
+  .userInteractionsButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .Toastify {
+    position: absolute;
+  }
+  .userInteractionsButtons button {
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    transition: color 0.5s ease;
+  }
+
+  .userInteractionsButtons svg {
+    font-size: 35px;
+  }
+
+  .userInteractionsButtons button.active {
+    color: red; /* Couleur rouge lorsque l'icône est active */
+  }
+
+  .userInteractionsButtons svg:hover {
+    color: black;
+  }
+}
+
+/* VERSION MOBILE */
+@media (max-width: 600px) {
+  .userInteractionsButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .Toastify {
+    position: absolute;
+  }
+  .userInteractionsButtons button {
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    transition: color 0.5s ease;
+  }
+
+  .userInteractionsButtons svg {
+    font-size: 25px;
+  }
+
+  .userInteractionsButtons button.active {
+    color: red; /* Couleur rouge lorsque l'icône est active */
+  }
+
+  .userInteractionsButtons button:hover {
+    color: black; /* Couleur au survol */
+  }
+
+  .userInteractionsButtons svg:hover {
+    color: black;
+  }
+}
