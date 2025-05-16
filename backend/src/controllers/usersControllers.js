@@ -97,7 +97,8 @@ const add = async (req, res, next) => {
     const verificationLink = `http://localhost:5173/user/validation/${verificationToken}`;
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: process.env.EMAIL_HOST,
+      port: process.env.EMAIL_PORT,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -111,13 +112,13 @@ const add = async (req, res, next) => {
       text: `Merci de confirmer votre compte en cliquant sur le lien suivant : ${verificationLink}`,
     };
 
-    await transporter.sendMail(mailOptions);
-    res.status(201).json({
-      message: 'Un e-mail de confirmation vient de vous être envoyé',
-      insertId,
-      user,
-      token: verificationToken,
-    });
+    try {
+      await transporter.sendMail(mailOptions);
+    } catch (error) {
+      console.error("Erreur lors de l'envoi du mail de confirmation :", error);
+    }
+
+    res.status(201).json({ id: insertId });
   } catch (err) {
     next(err);
   }

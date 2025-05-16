@@ -91,27 +91,37 @@ const generateToken = (user) => {
 
 const verifyToken = (req, res, next) => {
   try {
-    const authorizationHeader = req.get('Authorization');
+    // Vérifier d'abord dans l'en-tête Authorization
+    let token = null;
+    const authHeader = req.get('Authorization');
 
-    if (!authorizationHeader) {
-      return res
-        .status(401)
-        .json({ message: 'Authorization header is missing' });
+    if (authHeader && authHeader.startsWith('Bearer ')) {
+      [, token] = authHeader.split(' ');
     }
 
-    const [type, token] = authorizationHeader.split(' ');
-    if (type !== 'Bearer' || !token) {
-      return res.status(401).json({ message: 'Invalid authorization format' });
+    // Si pas de token dans Authorization, vérifier dans les cookies
+    if (!token && req.cookies && req.cookies.authToken) {
+      token = req.cookies.authToken;
+    }
+
+    // Si toujours pas de token, vérifier dans le corps de la requête
+    if (!token && req.body && req.body.token) {
+      token = req.body.token;
+    }
+
+    if (!token) {
+      return res.status(401).json({ message: 'No authentication token found' });
     }
 
     const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
-
     req.user = decodedToken;
 
     next();
   } catch (err) {
     console.error('Token verification error:', err.message);
-    res.status(401).json({ message: 'Invalid or expired token' });
+    res
+      .status(401)
+      .json({ message: `Invalid or expired token: ${err.message}` });
   }
 };
 
