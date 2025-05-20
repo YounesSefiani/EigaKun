@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "open-cli": "^8.0.0",
+    "wait-on": "^8.0.3"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run start:open --prefix frontend\"",
+    "start:wait": "wait-on http://localhost:3000 && open http://localhost:3000 && npm start --prefix frontend",
+    "start:open": "react-scripts start & npx wait-on http://localhost:3000 && npx open-cli http://localhost:3000",
+    "db:migrate": "cd ./backend && node migrate.js"
+  }
+}
