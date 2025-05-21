@@ -1,3 +1,10 @@
+const MovieManager = require('./models/MovieManager');
+
+const managers = [
+    MovieManager,
+    // Add other managers here
+];
+
 const tables = {};
 
 managers.forEach((ManagerClass) => {
