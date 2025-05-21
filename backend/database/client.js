@@ -1,5 +1,5 @@
+require('dotenv').config();
 const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME } = process.env;
-
 const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
@@ -11,7 +11,7 @@ const pool = mysql.createPool({
     dateStrings: true,
 });
 
-client.getConnection()
+pool.getConnection()
     .then(connection => {
         console.log('Connected to the database');
         connection.release();
@@ -20,6 +20,4 @@ client.getConnection()
         console.error('Error connecting to the database:', error);
     });
 
-    client.databaseName = DB_NAME;
-
-    module.exports = client;
+module.exports = pool;
