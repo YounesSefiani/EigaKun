@@ -1,7 +1,9 @@
 const MovieManager = require('./models/MovieManager');
+const SerieManager = require('./models/SerieManager');
 
 const managers = [
     MovieManager,
+    SerieManager,
     // Add other managers here
 ];
 
