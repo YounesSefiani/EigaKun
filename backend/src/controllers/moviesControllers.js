@@ -25,29 +25,31 @@ const edit = async (req, res, next) => {
     const { id } = req.params;
     const updateMovie = req.body;
     const { files } = req;
+    
+    const movie = await tables.movies.read(id);
 
     const updatedMovieDatas = {
         id,
-      title: updateMovie.title || null,
-      release_date: updateMovie.release_date || null,
-      genre: updateMovie.genre || null,
-      theme: updateMovie.theme || null,
-      universe: updateMovie.universe || null,
-      subUniverse: updateMovie.subUniverse || null,
-      synopsis: updateMovie.synopsis || null,
+      title: updateMovie.title || movie.title,
+      release_date: updateMovie.release_date || movie.release_date || null,
+      genre: updateMovie.genre || movie.genre || null,
+      theme: updateMovie.theme || movie.theme || null,
+      universe: updateMovie.universe || movie.universe || null,
+      subUniverse: updateMovie.subUniverse || movie.subUniverse || null,
+      synopsis: updateMovie.synopsis || movie.synopsis || null,
       poster: files?.poster
         ? files.poster[0].filename
-        : updateMovie.poster || null,
-      logo: files?.logo ? files.logo[0].filename : updateMovie.logo || null,
+        : updateMovie.poster || movie.poster || null,
+      logo: files?.logo ? files.logo[0].filename : updateMovie.logo || movie.logo || null,
       background: files?.background
         ? files.background[0].filename
-        : updateMovie.background || null,
-      trailer: updateMovie.trailer || null,
-      country: updateMovie.country || null,
-      duration: updateMovie.duration || null,
-      screen: updateMovie.screen || null,
-      streaming: updateMovie.streaming || null,
-      original: updateMovie.original || null
+        : updateMovie.background || movie.background || null,
+      trailer: updateMovie.trailer || movie.trailer || null,
+      country: updateMovie.country || movie.country || null,
+      duration: updateMovie.duration || movie.duration || null,
+      screen: updateMovie.screen || movie.screen || null,
+      streaming: updateMovie.streaming || movie.streaming || null,
+      original: updateMovie.original || movie.original || null
     };
 
     await tables.movies.update(updatedMovieDatas);
