@@ -1,9 +1,13 @@
 const MovieManager = require('./models/MovieManager');
 const SerieManager = require('./models/SerieManager');
+const SeasonManager = require('./models/SeasonManager');
+const EpisodeManager = require('./models/EpisodeManager');
 
 const managers = [
     MovieManager,
     SerieManager,
+    SeasonManager,
+    EpisodeManager,
     // Add other managers here
 ];
 

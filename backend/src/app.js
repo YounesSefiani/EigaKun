@@ -28,5 +28,10 @@ app.use('/src/assets/Series/Posters', express.static('../src/assets/Series/Poste
 app.use('/src/assets/Series/Logos', express.static('../src/assets/Series/Logos'));
 app.use('/src/assets/Series/Backgrounds', express.static('../src/assets/Series/Backgrounds'));
 
+// Seasons //
+app.use('/src/assets/Series/Seasons/Posters', express.static('../src/assets/Series/Seasons/Posters'));
+
+// Episodes //
+app.use('/src/assets/Series/Episodes/Images', express.static('../src/assets/Series/Episodes/Images'));
 // Ajoute cette ligne pour que l'app soit exportée correctement
 module.exports = app;

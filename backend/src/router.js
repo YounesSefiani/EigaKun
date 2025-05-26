@@ -32,7 +32,7 @@ router.delete("/movies/:id", moviesControllers.destroy);
 const seriesControllers = require("./controllers/seriesControllers");
 const uploadSeries = require("./Middlewares/Multer/MulterSeries");
 router.get("/series", seriesControllers.browse);
-router.get("/series/:id", seriesControllers.read);
+router.get("/series/:id", seriesControllers.getFullSerie);
 router.post(
   "/series",
   uploadSeries.fields([
@@ -52,5 +52,42 @@ router.put(
   seriesControllers.edit
 );
 router.delete("/series/:id", seriesControllers.destroy);
+
+// SEASONS //
+const seasonsControllers = require("./controllers/seasonsControllers");
+const uploadSeasons = require("./Middlewares/Multer/MulterSeasons");
+router.get("/seasons", seasonsControllers.browse);
+router.get("/seasons/:id", seasonsControllers.read);
+router.get("/seasons/series/:id", seasonsControllers.getSeasonsBySerie);
+router.post(
+  "/seasons",
+  uploadSeasons.single('poster'),
+  seasonsControllers.add
+);
+router.put(
+  "/seasons/:id",
+  uploadSeasons.single('poster'),
+  seasonsControllers.edit
+);
+router.delete("/seasons/:id", seasonsControllers.destroy);
+
+// EPISODES //
+const episodesControllers = require("./controllers/episodesControllers");
+const uploadEpisodes = require("./Middlewares/Multer/MulterEpisodes");
+
+router.get("/episodes", episodesControllers.browse);
+router.get("/episodes/:id", episodesControllers.read);
+router.get("/episodes/seasons/:id", episodesControllers.getEpisodesBySeason);
+router.post(
+  "/episodes",
+  uploadEpisodes.single('image'),
+  episodesControllers.add
+);
+router.put(
+  "/episodes/:id",
+  uploadEpisodes.single('image'),
+  episodesControllers.edit
+);
+router.delete("/episodes/:id", episodesControllers.destroy);
 
 module.exports = router;
