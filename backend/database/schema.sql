@@ -46,3 +46,103 @@ INSERT INTO movies (title, poster, background, logo, trailer, synopsis, genre, t
 VALUES ("Kraven The Hunter", "https://image.tmdb.org/t/p/original/1GvBhRxY6MELDfxFrete6BNhBB5.jpg", "https://image.tmdb.org/t/p/original/unNWOdnrdVraksBgMobtfvZpWpb.jpg", "https://image.tmdb.org/t/p/original/wEuiG5gakvzTthDVz0X5gfEz7T1.png", "https://www.youtube.com/embed/7T2vVYC6fb4?si=Xuur8RpRsnh-7OMg", "Sergei Kravinoff est un chasseur de gros gibier, qui prend un sérum magique lui donnant des capacités surhumaines et une vie plus longue...", "Action, Science-Fiction", "Super-Héros", "2024-12-11", "Cinéma", null, null, "02:07:00", "USA", "Marvel", "Spider-Man");
 INSERT INTO movies (title, poster, background, logo, trailer, synopsis, genre, theme, release_date, screen, streaming, original, duration, country, universe, subUniverse)
 VALUES ("Spider-Man: Brand New Day", null, null, null, null, null, "Action, Science-Fiction", "Super-Héros", "2026-07-29", "Cinéma", null, null, null, "USA", "Marvel", "Spider-Man");
+
+
+CREATE TABLE series (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  poster VARCHAR(255),
+  background VARCHAR(255),
+  logo VARCHAR(255),
+  trailer VARCHAR(255),
+  synopsis TEXT,
+  genre VARCHAR(255),
+  theme VARCHAR(255),
+  universe VARCHAR(255),
+  subUniverse VARCHAR(255),
+  release_date DATE,
+  ending_date DATE,
+  statut ENUM('En cours', 'Terminée', 'Fin de saison', 'Annulée') NULL,
+  seasons INT,
+  episodes INT,
+  duration VARCHAR(255),
+  country VARCHAR(255),
+  screen ENUM('TV', 'Streaming'),
+  streaming VARCHAR(255),
+  original VARCHAR(255)
+  );
+
+ CREATE TABLE seasons (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  serie_id INT NOT NULL,
+  season_number INT NOT NULL,
+  poster VARCHAR(255),
+  first_episode_date DATE,
+  last_episode_date DATE,
+  synopsis TEXT,
+  episodes INT,
+  FOREIGN KEY (serie_id) REFERENCES series(id) ON DELETE CASCADE,
+  CONSTRAINT unique_season_per_series UNIQUE(serie_id, season_number)
+);
+
+CREATE TABLE episodes (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  serie_id INT NOT NULL,
+  season_id INT NOT NULL,
+  episode_number INT NOT NULL,
+  title VARCHAR(255),
+  image VARCHAR(255),
+  release_date DATE,
+  synopsis TEXT,
+  duration TIME,
+  FOREIGN KEY (serie_id) REFERENCES series(id) ON DELETE CASCADE,
+  FOREIGN KEY (season_id) REFERENCES seasons(id) ON DELETE CASCADE,
+  CONSTRAINT unique_episode_per_season_and_series UNIQUE(serie_id, season_id, episode_number)
+);
+
+
+/* Marvel's DAREDEVIL */
+INSERT INTO series (title, poster, background, logo, trailer, synopsis, genre, theme, universe, subUniverse, release_date, ending_date, statut, seasons, episodes, country, screen, streaming, original)
+VALUES ("Marvel's Daredevil", "https://image.tmdb.org/t/p/original/doJ6axLfzLCDaPqFSSHjaSTYKb2.jpg", "https://image.tmdb.org/t/p/original/rZ1ynks9dDkIR87KGNfhZFHfEgj.jpg", "https://image.tmdb.org/t/p/original/jbYIbMDDMP6gTA4VjBfoMDJ3L85.png", "https://www.youtube.com/embed/-g8fSUNeYIE?si=oy9p_w--BZUydVx0", "Victime d'un accident sur la route pendant son enfance, Matt Murdock perd la vue mais ses sens se sont décuplés d'une grande ampleur. Aujourd'hui, Matt Murdock partage une double vie et combat pour la justice de deux manières. Avocat de jour, et justicier masqué de nuit sous le nom de Daredevil.", "Action / Thriller", "Super-Héros / Enquêtes", "Marvel", "Daredevil", "2015-04-10", "2018-10-19", "Terminée", "3", "39", "USA", "TV", "Disney +", "Netflix");
+
+INSERT INTO seasons (serie_id, season_number, poster, first_episode_date, last_episode_date, synopsis, episodes)
+VALUES ("1", "1", "https://image.tmdb.org/t/p/original/kdLJYXXHF0JJO3gy7lUNSk3LPgK.jpg", "2015-04-10", "2015-04-10", "Matt Murdock et Foogy Nelson enquêtent sur l'affaire du meurtre dont la coupable se dit innocente. Murdock découvre que cette affaire en tant qu'avocat et son combat contre une organisation criminelle en tant que Daredevil ne font qu'un.", "13");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("1", "1", "1", "Sur le ring", "https://image.tmdb.org/t/p/original/3qqMt1XCVFZNqWtMLMp2oGUH6AJ.jpg", "2015-04-10", "Matt Murdock & Foggy Nelson prennent la défense d'une femme accusée de meurtre.", "00:53:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("1", "1", "2", "L'Homme blessé", "https://image.tmdb.org/t/p/original/ujNuAv6IkFAkl1JJ1c9VF1VtqUZ.jpg", "2015-04-10", "Matt Murdock est gravement blessé suite à la confrontation avec les Russes. Une infirmière le retrouve inconscient dans une benne et l'emmène pour le soigner.", "00:53:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("1", "1", "3", "Un lapin dans une tempête de neige", "https://image.tmdb.org/t/p/original/J4CRudWRH10yG9fCcanDuvt1v7.jpg", "2015-04-10", "Matt Murdock & Foggy Nelson sont engagés pour défendre un homme qui a tué un mafieux. Karen Page demande des réponses à un reporter concernant son article sur Union Allied.", "00:53:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("1", "1", "4", "Liens de sang", "https://image.tmdb.org/t/p/original/bD8xT2dViVjt4pKctc1f6Hj32sl.jpg", "2015-04-10", "Vladimir et Anatoly kidnappent Claire sur ordre de Fisk, pour attirer Daredevil. Ben Ulrich et Karen Page enquêtent sur Union Allied", "00:53:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("1", "1", "5", "Un monde en feu", "https://image.tmdb.org/t/p/original/vif8R3u4lakvK5GAtXNzpZij9Jo.jpg", "2015-04-10", "Fisk met en oeuvre son plan pour détruire Hell's Kitchen, Matt et Foggy veulent défendre ses habitants d'un marchand de sommeil.", "00:56:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("1", "1", "6", "Condamné", "https://image.tmdb.org/t/p/original/5mbtaKTQp3K5bI8iCJUoIm1RqI0.jpg", "2015-04-10", "Daredevil et Vladimir sont coincés dans un immeuble en ruine suite à une explosion dans Hell's Kitchen. Karen et Foggy sont à l'hôpital auprès des victimes, dont Elena.", "00:49:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("1", "1", "7", "Stick", "https://image.tmdb.org/t/p/original/ov9Xq6OiMO9boaYwuC3PvmOEuXo.jpg", "2015-04-10", "Matt retrouve Stick, une ancienne connaissance, lui aussi aveugle, qui l'a entrainé aux arts martiaux et à contrôler ses autres sens. Stick demande à Matt de l'aider à trouver et détruire une arme secrète qui menace Hell's Kitchen.", "00:51:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("1", "1", "8", "Jeu d'ombre", "https://image.tmdb.org/t/p/original/6gUMciNHfEvTj8CNqz5ZCVI3gej.jpg", "2015-04-10", "Matt découvre que Foggy & Karen travaillent avec Ben Urich pour faire tomber Fisk", "00:54:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("1", "1", "9", "L'habit du diable", "https://image.tmdb.org/t/p/original/3qqMt1XCVFZNqWtMLMp2oGUH6AJ.jpg", "2015-04-10", "Fisk s'est présenté au monde comme le bienfaiteur de Hell's Kitchen, mais reste cependant très mystérieux. Matt va donc chercher à connaitre son ennemi par Vanessa, alors que Ben, Foggy et Karen vont fouiller son passé.", "00:58:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("1", "1", "10", "Nelson contre Murdock", "https://image.tmdb.org/t/p/original/9iHXMhqpGrvHB5O6ngEolyeDojL.jpg", "2015-04-10", "Foggy apprend que Matt & Daredevil ne font qu'un, ce qui met en péril leur amitié. Pendant ce temps-là, Karen & Ben ont une discussion avec une personne proche de Fisk.", "00:57:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("1", "1", "11", "La marche des vertueux", "https://image.tmdb.org/t/p/original/qe61mt255BsP8pmsCx51URUoers.jpg", "2015-04-10", "Matt Murdock se remet de ses blessures suite au combat contre Fisk et Nobu. Il rencontre l'homme qui a conçu les costumes de Fisk pour lui demander de créer un nouveau costume. Fisk est au chevet de Vanessa à l'hôpital, Wesley veut se charger seul de Karen.", "00:59:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("1", "1", "12", "Ceux qui restent", "https://image.tmdb.org/t/p/original/910qlBTtpkUtwC5OSM50Noo9qEM.jpg", "2015-04-10", "Karen ne se remet pas de sa dernière rencontre avec Wesley. Fisk a tout découvert concernant Karen et Ben et décide de mettre un terme.", "01:00:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("1", "1", "13", "Daredevil", "https://image.tmdb.org/t/p/original/wJRC62B12NMrHcsXWwPvI0OW8lB.jpg", "2015-04-10", "Karen, Foggy et Matt décident de frapper un grand coup pour arrêter Fisk. Fisk et Daredevil, sous un nouveau costume, s'affrontent enfin.", "00:56:00");
