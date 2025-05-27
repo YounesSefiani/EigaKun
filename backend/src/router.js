@@ -7,7 +7,7 @@ const moviesControllers = require("./controllers/moviesControllers");
 const uploadMovies = require("./Middlewares/Multer/MulterMovies");
 
 router.get("/movies", moviesControllers.browse);
-router.get("/movies/:id", moviesControllers.read);
+router.get("/movies/:id", moviesControllers.readMovie);
 router.post(
   "/movies",
   uploadMovies.fields([
@@ -102,9 +102,24 @@ router.put(
   uploadPersonalities.single("image_src"),
   personalitiesControllers.edit
 );
-router.delete(
-  "/personalities/:id",
-  personalitiesControllers.destroy
-);
+router.delete("/personalities/:id", personalitiesControllers.destroy);
+
+// MOVIES CASTINGS //
+const movieCastingControllers = require("./controllers/movieCastingControllers");
+
+router.get("/movieCasting", movieCastingControllers.browse);
+router.get("/movieCasting/:id", movieCastingControllers.read);
+router.post("/movieCasting", movieCastingControllers.add);
+router.put("/movieCasting/:id", movieCastingControllers.edit);
+router.delete("/movieCasting/:id", movieCastingControllers.destroy);
+
+// SERIES CASTINGS //
+const serieCastingControllers = require("./controllers/serieCastingControllers");
+
+router.get("/serieCasting", serieCastingControllers.browse);
+router.get("/serieCasting/:id", serieCastingControllers.read);
+router.post("/serieCasting", serieCastingControllers.add);
+router.put("/serieCasting/:id", serieCastingControllers.edit);
+router.delete("/serieCasting/:id", serieCastingControllers.destroy);
 
 module.exports = router;

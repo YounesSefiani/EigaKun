@@ -28,12 +28,15 @@ const getFullSerie = async (req, res, next) => {
       return res.status(404).json({ error: "Cette série n'existe pas." });
     }
 
+    const casting = await tables.serieCasting.readBySerie(serie.id);
+    serie.casting = casting || [];
+
     const seasons = await tables.seasons.readBySerie(serie.id);
 
     const seasonsWithEpisodes = await Promise.all(
       seasons.map(async (season) => {
-        const episodes = await tables.episodes.readBySeason(season.id)
-        return { ...season, episodes: episodes || season.episodes }; 
+        const episodes = await tables.episodes.readBySeason(season.id);
+        return { ...season, episodes: episodes || season.episodes };
       })
     );
 
