@@ -19,6 +19,23 @@ const read = async (req, res, next) => {
     res.json(movie);
 }
 
+const readMovie = async (req, res, next) => {
+  try {
+    const movieId = req.params.id;
+    const movie = await tables.movies.read(movieId);
+
+    if (!movie) {
+      return res.status(404).json({error: 'Film Introuvable !'});
+    }
+
+    const casting = await tables.movieCasting.readByMovie(movieId);
+    movie.casting = casting || [];
+    return res.json(movie);
+  } catch (err) {
+    next(err);
+  }
+}
+
 // E - BREAD - EDIT
 const edit = async (req, res, next) => {
   try {
@@ -109,4 +126,4 @@ const destroy = async (req, res, next) => {
 
 
 
-module.exports = { browse, add, read, edit, destroy };
+module.exports = { browse, add, read, readMovie, edit, destroy };
