@@ -59,14 +59,10 @@ const uploadSeasons = require("./Middlewares/Multer/MulterSeasons");
 router.get("/seasons", seasonsControllers.browse);
 router.get("/seasons/:id", seasonsControllers.read);
 router.get("/seasons/series/:id", seasonsControllers.getSeasonsBySerie);
-router.post(
-  "/seasons",
-  uploadSeasons.single('poster'),
-  seasonsControllers.add
-);
+router.post("/seasons", uploadSeasons.single("poster"), seasonsControllers.add);
 router.put(
   "/seasons/:id",
-  uploadSeasons.single('poster'),
+  uploadSeasons.single("poster"),
   seasonsControllers.edit
 );
 router.delete("/seasons/:id", seasonsControllers.destroy);
@@ -80,14 +76,35 @@ router.get("/episodes/:id", episodesControllers.read);
 router.get("/episodes/seasons/:id", episodesControllers.getEpisodesBySeason);
 router.post(
   "/episodes",
-  uploadEpisodes.single('image'),
+  uploadEpisodes.single("image"),
   episodesControllers.add
 );
 router.put(
   "/episodes/:id",
-  uploadEpisodes.single('image'),
+  uploadEpisodes.single("image"),
   episodesControllers.edit
 );
 router.delete("/episodes/:id", episodesControllers.destroy);
+
+// PERSONALITIES
+const personalitiesControllers = require("./controllers/personalitiesControllers");
+const uploadPersonalities = require("./Middlewares/Multer/MulterPersonalities");
+
+router.get("/personalities", personalitiesControllers.browse);
+router.get("/personalities/:id", personalitiesControllers.read);
+router.post(
+  "/personalities",
+  uploadPersonalities.single("image_src"),
+  personalitiesControllers.add
+);
+router.put(
+  "/personalities/:id",
+  uploadPersonalities.single("image_src"),
+  personalitiesControllers.edit
+);
+router.delete(
+  "/personalities/:id",
+  personalitiesControllers.destroy
+);
 
 module.exports = router;
