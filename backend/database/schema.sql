@@ -147,6 +147,28 @@ VALUES ("1", "1", "12", "Ceux qui restent", "https://image.tmdb.org/t/p/original
 INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
 VALUES ("1", "1", "13", "Daredevil", "https://image.tmdb.org/t/p/original/wJRC62B12NMrHcsXWwPvI0OW8lB.jpg", "2015-04-10", "Karen, Foggy et Matt décident de frapper un grand coup pour arrêter Fisk. Fisk et Daredevil, sous un nouveau costume, s'affrontent enfin.", "00:56:00");
 
+/* --- ASH VS EVIL DEAD --- */
+INSERT INTO series (title, poster, background, logo, trailer, synopsis, genre, theme, universe, subUniverse, release_date, ending_date, statut, seasons, episodes, country, screen, streaming, original)
+VALUES ("Ash vs Evil Dead", "https://image.tmdb.org/t/p/original/ghAP6Od4f8bNjocQIr121gPj1MJ.jpg", "https://image.tmdb.org/t/p/original/tVjJ7tVe0P5FPRSJb66iz495biL.jpg", "https://image.tmdb.org/t/p/original/quGCYh8cpJzr67klnvfU42zjUjf.png", "https://www.youtube.com/embed/-Yq3jeOmxSk?si=WVD5LW972TZBeSsX", "30 ans après la bataille déchaînée avec les forces du mal, Ash Williams vit reclus dans sa caravane et travaille dans une boutique de bricolage. Un soir, dans un état d'ébriété, il relit une des pages du Necronomicon, le livre démoniaque. Par conséquent, les forces du mal sont de retour et Ash va devoir reprendre du service.", "Comédie / Horreur", "Démons / Surnaturel", "Evil Dead", null, "2015-10-31", "2018-04-29", "Annulée", "3", "30", "USA", "TV", null, null);
+
+INSERT INTO seasons (serie_id, season_number, poster, first_episode_date, last_episode_date, synopsis, episodes)
+VALUES (2, 1, "https://image.tmdb.org/t/p/original/ApSCYgOsISv0l6SBRNPFVXAiXVu.jpg", "2015-10-31", "2016-01-02", "30 ans après avoir combattu les démons, Ash Williams va devoir reprendre le service en les affrontant une fois de plus. Mais il ne sera pas le seul, il sera accompagné de ses collègues du travail.", "10");
+
+INSERT INTO seasons (serie_id, season_number, poster, first_episode_date, last_episode_date, synopsis, episodes)
+VALUES (2, 2, "https://image.tmdb.org/t/p/original/rL9movJWGBjuwJvbbGBGqW85zYA.jpg", "2016-10-02", "2016-12-11", "Quelques mois après avoir passé un marché, Ruby ne contrôle plus ses démons. Elle demande de l'aide à Ash, Pablo et Kelly, qui vont devoir mettre un terme à leur pause bien méritée à Jacksonville. Ash va devoir faire l'impensable : Retourner dans sa ville natale : Elk Grove.", "10");
+
+INSERT INTO seasons (serie_id, season_number, poster, first_episode_date, last_episode_date, synopsis, episodes)
+VALUES (2, 3, "https://image.tmdb.org/t/p/original/mZ39CL65VtTD01JDFYuJvAjR3KM.jpg", "2018-02-25", "2018-04-29", "Ash Williams devient le héros d'Elk Grove et il a ouvert sa propre quincaillerie. Mais les forces du mal ressurgissent de nouveau avec Ruby. Et comme si ce n'était pas assez, Ash découvre qu'il est père d'une jeune fille de 17 ans.", "10");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("2", "4", "1", "El Jefe", "https://image.tmdb.org/t/p/original/qQsnITK8ltH7FFckLg68ai8tcw7.jpg", "2015-10-31", "Un soir, dans un état second, Ash Williams lit un verset du Necronomicon. Par conséquent, les forces du mal se réveillent pour la première fois depuis trente ans. Ash va devoir reprendre du service, et sa tronconneuse.", "00:41:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("2", "4", "2", "L'Appât", "https://image.tmdb.org/t/p/original/oHtGZvJvnMKEncTFesvkUpn5dFO.jpg", "2015-11-07", "Kelly part à la rescousse de son père et elle retrouve sa mère, supposée morte. Alors que Ash et Pablo la rejoigne chez eux, Ash doute de la nature de la mère de Kelly.", "00:28:00");
+
+INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
+VALUES ("2", "4", "3", "Les livres de l'au-delà", "https://image.tmdb.org/t/p/original/kbR1K3A3nl6Km0bb9bSP46cZh4h.jpg", "2015-11-14", "Ash, Pablo et Kelly invoquent un démon pour lui soutirer des informations pour empêcher l'invasion des Cadavéreux. L'inspectrice Amanda Fisher retrouve Ash, qui est, selon elle, le responsble du meurtre de son coéquipier.", "00:28:00");
+
 
 CREATE TABLE personalities (
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -169,3 +191,42 @@ INSERT INTO personalities (fullname, image_src, birthdate, deathdate, origin, bi
 VALUES ("Radha Mitchell", "https://image.tmdb.org/t/p/original/ctC7epg65XgUol62d1UAoyGvNKm.jpg", "1973-11-12", null, "Australie", "Radha Rani Amber Indigo Ananda Mitchell commence sa carrière dans la série australienne Neighbours. Elle se fait remarquer en 1998 dans le film indépendant High Art. Elle alterne ensuite entre films indépendants (Pitch Black, Everything Put Together) et blockbusters (Phone Game, Man on Fire). En 2006, elle tient le rôle principal de Rose Da Silva dans Silent Hill de Christophe Gans. Elle poursuit sa carrière avec des films comme The Crazies (2010), Olympus Has Fallen (2013) et The Shack (2017).", "Actrice");
 INSERT INTO personalities (fullname, image_src, birthdate, deathdate, origin, bio, profession)
 VALUES ("Bruce Campbell", "https://image.tmdb.org/t/p/original/vR46yp0Bx9Y198DtiDHnamyr610.jpg", "1958-06-22", null, "USA", "Bruce Campbell est principalement connu pour son rôle culte d’Ash Williams dans la saga Evil Dead, réalisée par Sam Raimi. En plus de son travail d’acteur, Bruce Campbell est aussi réalisateur et producteur. Il a dirigé des épisodes de séries télé et a réalisé le film My Name is Bruce (2007), où il joue une version parodique de lui-même. Côté écriture, il a publié deux autobiographies humoristiques : If Chins Could Kill: Confessions of a B Movie Actor (2001) et Hail to the Chin: Further Confessions of a B Movie Actor (2017), racontant sa carrière dans le cinéma de série B. Avec son charisme et son humour, il est devenu une icône du cinéma de genre, notamment dans l’horreur et la pop culture geek.", "Acteur, Réalisateur, Scénariste, Producteur");
+
+
+CREATE TABLE movieCasting (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  movie_id INT NOT NULL,
+  personality_id INT NOT NULL,
+  role VARCHAR(255) NOT NULL,
+  side ENUM("Acting", "Directing", "Both") NOT NULL,
+  FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE,
+  FOREIGN KEY (personality_id) REFERENCES personalities(id) ON DELETE CASCADE,
+  UNIQUE(movie_id, personality_id)
+);
+
+INSERT INTO movieCasting (movie_id, personality_id, role, side)
+VALUES ("1", "1", "Sharon / Alessa", "Acting");
+
+INSERT INTO movieCasting (movie_id, personality_id, role, side)
+VALUES ("1", "2", "Réalisateur", "Directing");
+
+INSERT INTO movieCasting (movie_id, personality_id, role, side)
+VALUES ("1", "4", "Rose Da Silva", "Acting");
+
+INSERT INTO movieCasting (movie_id, personality_id, role, side)
+VALUES ("1", "3", "Harry Da Silva", "Acting");
+
+CREATE TABLE serieCasting (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  serie_id INT NOT NULL,
+  personality_id INT NOT NULL,
+  role VARCHAR(255) NOT NULL,
+  presence VARCHAR(255) NOT NULL,
+  side ENUM("Acting", "Directing", "Both") NOT NULL,
+  FOREIGN KEY (serie_id) REFERENCES series(id) ON DELETE CASCADE,
+  FOREIGN KEY (personality_id) REFERENCES personalities(id) ON DELETE CASCADE,
+  UNIQUE(serie_id, personality_id)
+);
+
+INSERT INTO serieCasting (serie_id, personality_id, role, presence, side)
+VALUES ("2", "5", "Ash Williams", "Saisons 1 à 3", "Acting");
