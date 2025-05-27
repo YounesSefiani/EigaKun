@@ -146,3 +146,26 @@ VALUES ("1", "1", "12", "Ceux qui restent", "https://image.tmdb.org/t/p/original
 
 INSERT INTO episodes (serie_id, season_id, episode_number, title, image, release_date, synopsis, duration)
 VALUES ("1", "1", "13", "Daredevil", "https://image.tmdb.org/t/p/original/wJRC62B12NMrHcsXWwPvI0OW8lB.jpg", "2015-04-10", "Karen, Foggy et Matt décident de frapper un grand coup pour arrêter Fisk. Fisk et Daredevil, sous un nouveau costume, s'affrontent enfin.", "00:56:00");
+
+
+CREATE TABLE personalities (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  fullname VARCHAR(255) NOT NULL,
+  image_src VARCHAR(255) NOT NULL,
+  birthdate DATE NOT NULL,
+  deathdate DATE,
+  origin VARCHAR(255) NOT NULL,
+  bio TEXT,
+  profession VARCHAR(255) NOT NULL
+);
+
+INSERT INTO personalities (fullname, image_src, birthdate, deathdate, origin, bio, profession)
+VALUES ("Jodelle Ferland", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Jodelle_Ferland_%28medium_crop%29.jpg/600px-Jodelle%20Ferland%20%28medium%20crop%29.jpg", "1994-10-09", null, "Canada", "Jodelle Micah Ferland a débuté sa carrière très jeune, elle est notamment connue pour son double rôle de Alessa et Sharon dans le film Silent Hill (2006), dans le film Tideland (2006). Elle a fait une apparition dans de nombreuses séries comme Smallville, Supernatural, elle a eu un rôle majeur dans la série Dark Matters.", "Actrice");
+INSERT INTO personalities (fullname, image_src, birthdate, deathdate, origin, bio, profession)
+VALUES ("Christophe Gans", "https://upload.wikimedia.org/wikipedia/commons/5/52/Christophe_Gans_2010.JPG", "1960-03-11", null, "France", "Christophe Gans est un cinéaste français reconnu pour son travail dans le cinéma fantastique. Diplômé de l'IDHEC, il réalise en 1981 le court métrage Silver Slime, hommage aux maîtres italiens de l'horreur. Il cofonde ensuite le magazine Starfix, dédié au cinéma de genre. Sa carrière décolle avec Crying Freeman (1995), adaptation d'un manga culte. En 2001, il connaît un grand succès avec Le Pacte des loups, mêlant action, horreur et aventure, attirant près de 5 millions de spectateurs en France. Il réalise ensuite Silent Hill (2006), adaptation du jeu vidéo éponyme, et La Belle et la Bête (2014), avec Vincent Cassel et Léa Seydoux. Il travaille actuellement sur Return to Silent Hill, prévu pour 2025.", "Réalisateur");
+INSERT INTO personalities (fullname, image_src, birthdate, deathdate, origin, bio, profession)
+VALUES ("Sean Bean", "https://fr.web.img2.acsta.net/pictures/15/07/20/17/45/031961.jpg", "1959-04-17", null, "Angleterre", "Sean Bean, de son vrai nom Shaun Mark Bean, est un acteur britannique né le 17 avril 1959 à Sheffield, en Angleterre. Il est connu pour ses rôles marquants, souvent tragiques, dans des films et séries à succès. Avec sa voix distinctive et sa présence charismatique, il s'est imposé dans les genres de la fantasy, du drame historique et du thriller. Sean Bean est réputé pour jouer des personnages qui meurent souvent à l’écran, une particularité qui est devenue un mème sur Internet. Pourtant, il a aussi interprété des rôles où il survit, comme dans The Martian (2015) ou la série Legends (2014-2015). Il est également acteur de doublage, prêtant sa voix à des jeux vidéo comme The Elder Scrolls IV: Oblivion (2006) et Hitman 2 (2018).", "Acteur");
+INSERT INTO personalities (fullname, image_src, birthdate, deathdate, origin, bio, profession)
+VALUES ("Radha Mitchell", "https://image.tmdb.org/t/p/original/ctC7epg65XgUol62d1UAoyGvNKm.jpg", "1973-11-12", null, "Australie", "Radha Rani Amber Indigo Ananda Mitchell commence sa carrière dans la série australienne Neighbours. Elle se fait remarquer en 1998 dans le film indépendant High Art. Elle alterne ensuite entre films indépendants (Pitch Black, Everything Put Together) et blockbusters (Phone Game, Man on Fire). En 2006, elle tient le rôle principal de Rose Da Silva dans Silent Hill de Christophe Gans. Elle poursuit sa carrière avec des films comme The Crazies (2010), Olympus Has Fallen (2013) et The Shack (2017).", "Actrice");
+INSERT INTO personalities (fullname, image_src, birthdate, deathdate, origin, bio, profession)
+VALUES ("Bruce Campbell", "https://image.tmdb.org/t/p/original/vR46yp0Bx9Y198DtiDHnamyr610.jpg", "1958-06-22", null, "USA", "Bruce Campbell est principalement connu pour son rôle culte d’Ash Williams dans la saga Evil Dead, réalisée par Sam Raimi. En plus de son travail d’acteur, Bruce Campbell est aussi réalisateur et producteur. Il a dirigé des épisodes de séries télé et a réalisé le film My Name is Bruce (2007), où il joue une version parodique de lui-même. Côté écriture, il a publié deux autobiographies humoristiques : If Chins Could Kill: Confessions of a B Movie Actor (2001) et Hail to the Chin: Further Confessions of a B Movie Actor (2017), racontant sa carrière dans le cinéma de série B. Avec son charisme et son humour, il est devenu une icône du cinéma de genre, notamment dans l’horreur et la pop culture geek.", "Acteur, Réalisateur, Scénariste, Producteur");
