@@ -36,4 +36,7 @@ app.use('/src/assets/Series/Episodes/Images', express.static('../src/assets/Seri
 
 // Personalities //
 app.use('/src/assets/Personalities/Images', express.static('../src/assets/Personalities/Images'));
+
+// Users //
+app.use('/src/assets/Users/Avatars', express.static('../src/assets/Users/Avatars'));
 module.exports = app;
