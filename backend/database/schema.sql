@@ -230,3 +230,16 @@ CREATE TABLE serieCasting (
 
 INSERT INTO serieCasting (serie_id, personality_id, role, presence, side)
 VALUES ("2", "5", "Ash Williams", "Saisons 1 à 3", "Acting");
+
+CREATE TABLE users (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  username VARCHAR(255) NOT NULL UNIQUE,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  birthdate DATE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  avatar VARCHAR(255) NULL,
+  role ENUM("User", "Admin") DEFAULT "User",
+  isValidated BOOLEAN DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
