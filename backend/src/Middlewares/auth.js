@@ -1,5 +1,6 @@
 const argon2 = require("argon2");
 const jwt = require("jsonwebtoken");
+const Joi = require("joi");
 const tables = require("../tables");
 
 const hashingOptions = {
@@ -9,19 +10,26 @@ const hashingOptions = {
   parallelism: 1,
 };
 
-const hashPassword = async (req, res, next) => {
-  try {
-    if (!req.body.password) {
-      return res.status(400).json({ message: "Password is required" });
-    }
-
-    const hashedPassword = await argon2.hash(req.body.password, hashingOptions);
-    req.body.password = hashedPassword;
-
+const hashPassword = (req, res, next) => {
+  console.log("BODY RECU: ", req.body);
+  if (
+    typeof req.body.password === "string" &&
+    req.body.password.trim() !== ""
+  ) {
+    argon2
+      .hash(req.body.password, hashingOptions)
+      .then((hashedPassword) => {
+        req.body.password = hashedPassword;
+        next();
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  } else {
+    // Pas de mot de passe à hasher, on passe au suivant
+    delete req.body.password;
     next();
-  } catch (err) {
-    console.error("Hashing error:", err);
-    res.sendStatus(500);
   }
 };
 
@@ -31,7 +39,7 @@ const updateHashPassword = async (req, res, next) => {
       return next(); // Si pas de nouveau mot de passe, on passe
     }
 
-    // Vérifier que currentPassword est bien fourni
+    // // Vérifier que currentPassword est bien fourni
     if (!req.body.currentPassword) {
       return res
         .status(400)
@@ -73,6 +81,17 @@ const verifyPassword = async (password, hashed) => {
     throw new Error("Invalid credentials");
   }
 };
+
+
+const validateUserForm = (req, res, next) => {
+  const schema = Joi.object({
+    username: Joi.string().min(3).max(15).required(),
+    email: Joi.string().email().required(),
+    password: Joi.string()
+        .pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')),
+    birthdate: Joi.date().required(),
+  });
+}
 
 const generateToken = (user) => {
   const payload = {
@@ -128,6 +147,7 @@ module.exports = {
   updateHashPassword,
   hashPassword,
   generateToken,
+  validateUserForm,
   verifyPassword,
   verifyToken,
 };

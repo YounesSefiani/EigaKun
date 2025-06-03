@@ -55,8 +55,9 @@ const {
   hashPassword,
   updateHashPassword,
   verifyToken,
-  generateToken,
+  // validateUserForm,
 } = require("./Middlewares/auth");
+
 
 const usersControllers = require("./controllers/usersControllers");
 const uploadUsers = require("./Middlewares/Multer/MulterUsers");
@@ -64,9 +65,11 @@ const uploadUsers = require("./Middlewares/Multer/MulterUsers");
 router.get("/users",  verifyToken, usersControllers.browse);
 router.get("/users/:id", verifyToken, usersControllers.read);
 router.get("/users/validate/:token", usersControllers.validateUser);
-router.post("/users", hashPassword, uploadUsers.single("avatar"), usersControllers.add);
-router.post("/users/login", generateToken, usersControllers.login);
-router.put("/users/:id", hashPassword, verifyToken, uploadUsers.single("avatar"), updateHashPassword, usersControllers.edit);
+router.post("/users", uploadUsers.single("avatar"), hashPassword, usersControllers.add);
+router.post("/users/login", usersControllers.login);
+router.post("/users/forgot-password", usersControllers.forgotPassword);
+router.post("/users/reset-password-confirm/:token", usersControllers.resetPassword);
+router.put("/users/:id", verifyToken, uploadUsers.single("avatar"), updateHashPassword, usersControllers.edit);
 router.delete("/users/:id", verifyToken, usersControllers.destroy);
 
 
