@@ -1,11 +1,11 @@
 const argon2 = require("argon2");
 const jwt = require("jsonwebtoken");
-const nodemailer = require("nodemailer");
+const nodemailer = require("../Middlewares/nodemailer");
 const tables = require("../tables");
 const fs = require("fs");
 const path = require("path");
 
-// The B of BREAD - Browse (Read All) operation
+// BREAD - Browse (Read All)
 const browse = async (req, res, next) => {
   try {
     const users = await tables.users.readAll();
@@ -15,11 +15,11 @@ const browse = async (req, res, next) => {
   }
 };
 
-// The R of BREAD - Read operation
+// BREAD - Read (Read One)
 const read = async (req, res, next) => {
   try {
     const user = await tables.users.read(req.params.id);
-    if (user == null) {
+    if (!user) {
       res.sendStatus(404);
     } else {
       res.json({ user });
@@ -29,7 +29,62 @@ const read = async (req, res, next) => {
   }
 };
 
-// The E of BREAD - Edit (Update) operation
+// BREAD - Add (Create)
+const add = async (req, res, next) => {
+  try {
+    // Prépare l'objet user à valider
+    const user = {
+      username: req.body.username,
+      email: req.body.email,
+      birthdate: req.body.birthdate,
+      password: req.body.password,
+      avatar: req.file ? req.file.filename : null,
+      isValidated: false,
+    };
+
+    // Validation via le manager
+    const result = await tables.users.create(user);
+
+    if (!result.success) {
+      // Supprime l'avatar uploadé si erreur
+      if (req.file) {
+        fs.unlink(
+          path.join(__dirname, "../assets/Users/Avatars", req.file.filename),
+          () => {}
+        );
+      }
+      return res.status(400).json({ errors: result.errors });
+    }
+
+    // Hash du mot de passe (après validation)
+    const hashedPassword = await argon2.hash(user.password);
+    user.password = hashedPassword;
+
+    // Mise à jour du mot de passe hashé en base
+    await tables.users.update(result.insertId, { password: user.password });
+
+    // Génération du token de validation
+    const verificationToken = jwt.sign(
+      { email: user.email, isValidated: user.isValidated },
+      process.env.JWT_SECRET,
+      { expiresIn: "2h" }
+    );
+    const verificationLink = `http://localhost:3994/api/users/validate/${verificationToken}`;
+
+    // Envoi de l'email de validation
+    await nodemailer.sendMail({
+      from: process.env.EMAIL_USER,
+      to: user.email,
+      subject: "Veuillez confirmer votre compte",
+      text: `Merci de confirmer votre compte en cliquant sur le lien suivant : ${verificationLink}`,
+    });
+
+    res.status(201).json({ id: result.insertId });
+  } catch (err) {
+    next(err);
+  }
+};
+// BREAD - Edit (Update)
 const edit = async (req, res, next) => {
   try {
     const { id } = req.params;
@@ -39,8 +94,11 @@ const edit = async (req, res, next) => {
       updatedData.avatar = req.file.filename;
     }
 
-    // Hash le mot de passe si fourni
-    if (updatedData.password && updatedData.password.trim() !== "") {
+    // Hash le mot de passe si fourni et valide
+    if (
+      typeof updatedData.password === "string" &&
+      updatedData.password.trim() !== ""
+    ) {
       updatedData.password = await argon2.hash(updatedData.password);
     } else {
       delete updatedData.password;
@@ -57,6 +115,7 @@ const edit = async (req, res, next) => {
         role: updatedUser.role,
         avatar: updatedUser.avatar,
         birthdate: updatedUser.birthdate,
+        isValidated: updatedUser.isValidated,
       },
       process.env.JWT_SECRET,
       { expiresIn: "1h" }
@@ -67,106 +126,22 @@ const edit = async (req, res, next) => {
   }
 };
 
-// The A of BREAD - Add (Create) operation
-const add = async (req, res, next) => {
+// BREAD - Destroy (Delete)
+const destroy = async (req, res, next) => {
   try {
-    // Vérification des champs obligatoires
-    if (
-      !req.body.username ||
-      !req.body.email ||
-      !req.body.birthdate ||
-      !req.body.password
-    ) {
-      if (req.file) {
-        // Supprime l'avatar uploadé si erreur de validation
-        fs.unlink(
-          path.join(__dirname, "../assets/Users/Avatars", req.file.filename),
-          () => {}
-        );
-      }
-      return res
-        .status(400)
-        .json({ message: "Champs obligatoires manquants." });
-    }
-
-    const hashedPassword = await argon2.hash(req.body.password);
-
-    const user = {
-      username: req.body.username,
-      email: req.body.email,
-      birthdate: req.body.birthdate,
-      password: hashedPassword,
-      avatar: req.file ? req.file.filename : null,
-      isValidated: false,
-    };
-
-    const insertId = await tables.users.create(user);
-
-    const verificationToken = jwt.sign(
-      { email: user.email, isValidated: user.isValidated },
-      process.env.JWT_SECRET,
-      { expiresIn: "2h" }
-    );
-
-    const verificationLink = `http://localhost:3994/api/users/validate/${verificationToken}`;
-
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: user.email,
-      subject: "Veuillez confirmer votre compte",
-      text: `Merci de confirmer votre compte en cliquant sur le lien suivant : ${verificationLink}`,
-    };
-
-    try {
-      await transporter.sendMail(mailOptions);
-    } catch (error) {
-      console.error("Erreur lors de l'envoi du email de confirmation :", error);
-    }
-
-    res.status(201).json({ id: insertId });
+    await tables.users.delete(req.params.id);
+    res.sendStatus(204);
   } catch (err) {
     next(err);
   }
 };
 
-const verifyEmail = async (req, res) => {
-  try {
-    const { token } = req.params;
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-
-    const user = await tables.users.findByEmail(decoded.email);
-    if (!user) {
-      return res.status(404).json({ message: "Utilisateur introuvable." });
-    }
-
-    if (user.isVerified) {
-      return res.status(400).json({ message: "Compte déjà vérifié." });
-    }
-
-    await tables.users.update(user.id, { isValidated: true });
-
-    return res.json({ message: "Compte vérifié avec succès !" });
-  } catch (err) {
-    console.error("Erreur de vérification :", err);
-    return res
-      .status(400)
-      .json({ message: "Lien de validation invalide ou expiré." });
-  }
-};
-
+// Validation du compte par email
 const validateUser = async (req, res) => {
   const { token } = req.params;
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const user = await tables.users.authByMail(decoded.email);
+    const user = await tables.users.findByEmail(decoded.email);
 
     if (!user) {
       return res.status(404).json({ message: "Utilisateur non trouvé." });
@@ -192,48 +167,38 @@ const validateUser = async (req, res) => {
   }
 };
 
+// Mot de passe oublié
 const forgotPassword = async (req, res, next) => {
   const { email } = req.body;
 
   try {
-    const user = await tables.users.authByMail(email);
+    const user = await tables.users.findByEmail(email);
     if (!user) {
       return res
         .status(404)
-        .json({ message: "Aucun utilisateur trouvé avec cet e-email." });
+        .json({ message: "Aucun utilisateur trouvé avec cet e-mail." });
     }
 
     const resetToken = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
-    const resetLink = `http://localhost:5173/reset-password-confirm/${resetToken}`;
+    const resetLink = `http://localhost:3994/reset-password-confirm/${resetToken}`;
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
-    const mailOptions = {
+    await nodemailer.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
-      subject: "Réinitialisation de votre mot de passe",
-      text: `Pour réinitialiser votre mot de passe, veuillez cliquer sur ce lien : ${resetLink}`,
-    };
-
-    await transporter.sendMail(mailOptions);
-
+      subject: "Reinitialisation de votre mot de passe",
+      text: `Merci de confirmer votre compte en cliquant sur le lien suivant : ${resetLink}`,
+    });
     return res.json({
-      message:
-        "Un lien de réinitialisation du mot de passe a été envoyé à votre adresse e-email.",
+      message: "Un lien de réinitialisation a été envoyé à votre boite mail.",
     });
   } catch (err) {
     return next(err);
   }
 };
 
+// Réinitialisation du mot de passe
 const resetPassword = async (req, res, next) => {
   const { token, newPassword } = req.body;
   try {
@@ -247,19 +212,10 @@ const resetPassword = async (req, res, next) => {
   }
 };
 
-// The D of BREAD - Destroy (Delete) operation
-const destroy = async (req, res, next) => {
-  try {
-    await tables.users.delete(req.params.id);
-    res.sendStatus(204);
-  } catch (err) {
-    next(err);
-  }
-};
-
+// Connexion utilisateur
 const login = async (req, res, next) => {
   try {
-    const user = await tables.users.authByMail(req.body.email);
+    const user = await tables.users.findByEmail(req.body.email);
 
     if (!user || user.isValidated === 0) {
       return res
@@ -272,7 +228,7 @@ const login = async (req, res, next) => {
       req.body.password
     );
     if (!isValidPassword) {
-      return res.sendStatus(422);
+      return res.status(401).json({ message: "Mot de passe incorrect." });
     }
 
     const token = jwt.sign(
@@ -283,13 +239,20 @@ const login = async (req, res, next) => {
         avatar: user.avatar,
         role: user.role,
         birthdate: user.birthdate,
-        isVerified: user.isVerified,
+        isValidated: user.isValidated,
       },
       process.env.JWT_SECRET,
       { expiresIn: "1h" }
     );
 
-    return res.status(200).json({ token, user });
+    return res.status(200).json({ token, user:{
+      username: user.username,
+      birthdate: user.birthdate,
+      email: user.email,
+      role: user.role,
+      isValidated: user.isValidated,
+      avatar: user.avatar,
+    } });
   } catch (err) {
     next(err);
     return res.sendStatus(500);
@@ -301,7 +264,6 @@ module.exports = {
   read,
   edit,
   add,
-  verifyEmail,
   validateUser,
   resetPassword,
   forgotPassword,
