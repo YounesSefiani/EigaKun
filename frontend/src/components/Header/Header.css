@@ -1,0 +1,150 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .header {
+    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px 20px;
+    gap: 20px;
+  }
+
+  .header img {
+    width: 300px;
+  }
+
+  .header ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 25px;
+  }
+
+  .header a {
+    text-decoration: none;
+    color: #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .header a:hover {
+    color: purple;
+  }
+
+  .header input {
+    width: 50rem;
+    height: auto;
+    padding: 10px;
+  }
+
+  .header button {
+    background-color: black;
+    color: #ffb20c;
+    font-size: 25px;
+    border: 4px solid #ffb20c;
+    width: 20rem;
+    height: 5rem;
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+  .header button:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+}
+
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .header {
+    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px 20px;
+    gap: 20px;
+  }
+
+    .header img {
+    width: 300px;
+  }
+
+  .header ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 25px;
+  }
+
+  .header a {
+    text-decoration: none;
+    color: #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .header a:hover {
+    color: purple;
+  }
+
+  .header input {
+    width: 50rem;
+    height: auto;
+    padding: 10px;
+  }
+
+  .header button {
+    background-color: black;
+    color: #ffb20c;
+    font-size: 25px;
+    border: 4px solid #ffb20c;
+    width: 20rem;
+    height: 5rem;
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+  .header button:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .header {
+        display: none;
+    }
+}
+
+/* VERSION PHONE */
+@media screen and (max-width: 767px) {
+    .header {
+        display: none;
+    }
+}
