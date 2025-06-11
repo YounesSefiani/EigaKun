@@ -1,23 +1,23 @@
 /* VERSION PC */
 @media screen and (min-width: 1441px) {
   .headerPhone,
-  .footerPhone {
+  footer {
     display: none;
   }
 }
 /* VERSION DESKTOP */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   .headerPhone,
-  .footerPhone {
+  footer {
     display: none;
   }
 }
 /* VERSION TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .headerPhone {
+  .headerPhone {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: sticky;
     left: 0;
     right: 0;
     top: 0;
@@ -68,8 +68,7 @@
     font-size: 20px;
   }
 
-
-  .footerPhone {
+  footer {
     display: flex;
     position: fixed;
     left: 0;
@@ -86,7 +85,7 @@
     z-index: 1000;
   }
 
-  .footerPhone ul {
+  footer ul {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -98,7 +97,7 @@
     font-size: 20px;
   }
 
-  .footerPhone a {
+  footer a {
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -106,10 +105,9 @@
     transition: 0.5s ease;
   }
 
-  .footerPhone a:active {
+  footer a:active {
     color: purple;
   }
-
 }
 
 /* VERSION MOBILE */
@@ -117,7 +115,7 @@
   .headerPhone {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: sticky;
     left: 0;
     right: 0;
     top: 0;
@@ -168,45 +166,4 @@
     font-size: 20px;
   }
 
-
-  .footerPhone {
-    display: flex;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: auto;
-    border: 4px solid #ffb20c;
-    background-color: black;
-    color: #ffb20c;
-    padding: 20px 0;
-    z-index: 1000;
-  }
-
-  .footerPhone ul {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
-    list-style-type: none;
-    justify-content: space-around;
-    margin: 0px;
-    padding: 0px;
-    font-size: 20px;
-  }
-
-  .footerPhone a {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: #ffb20c;
-    transition: 0.5s ease;
-  }
-
-  .footerPhone a:active {
-    color: purple;
-  }
 }
