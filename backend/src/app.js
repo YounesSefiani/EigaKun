@@ -4,8 +4,12 @@ const cors = require('cors');
 const router = require('./router');
 
 // Autorise toutes les origines (pour Postman et le frontend)
-app.use(cors());
-
+app.use(
+  cors({
+    origin: "http://localhost:3000", // l'URL de ton frontend
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
