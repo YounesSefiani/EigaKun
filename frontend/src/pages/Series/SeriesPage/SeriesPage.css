@@ -1,0 +1,504 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .seriesPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    padding: 10px 10px;
+  }
+
+  .seriesPage h2 {
+    width: fit-content;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 10px 15px;
+  }
+
+  .seriesContainer {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .seriesList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+    flex: 1;
+    padding: 0 10px;
+  }
+
+  .seriesList::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-btn {
+    background-color: black;
+    border: none;
+    color: #ffb20c;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease, opacity 0.2s;
+    opacity: 1;
+  }
+
+  .scroll-btn:hover {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+  .left-btn {
+    left: 0;
+  }
+
+  .right-btn {
+    right: 0;
+  }
+
+  .scroll-btn:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    opacity: 0.7;
+    border: 1px solid black;
+    color: black;
+  }
+
+  .serieCard a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    gap: 20px;
+  }
+
+  .serieCard img {
+    width: 12rem;
+    height: 18rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .serieCard h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffb20c;
+    background-color: black;
+    width: 100%;
+    height: 3rem;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease;
+    font-size: 20px;
+    margin: 0;
+    padding: 15px 10px;
+  }
+
+  .serieCard:hover h3 {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .serieCard a {
+    text-decoration: none;
+  }
+  .posterPlaceholder img {
+    width: 12rem;
+    height: 18rem;
+    object-fit: contain;
+    background-color: black;
+  }
+}
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .seriesPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    padding: 10px 10px;
+  }
+
+  .seriesPage h2 {
+    width: fit-content;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 10px 15px;
+  }
+
+  .seriesContainer {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .seriesList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+    flex: 1;
+    padding: 15px 10px;
+  }
+
+  .seriesList::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-btn {
+    background-color: black;
+    border: none;
+    color: #ffb20c;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease, opacity 0.2s;
+    opacity: 1;
+  }
+
+  .scroll-btn:hover {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+  .left-btn {
+    left: 0;
+  }
+
+  .right-btn {
+    right: 0;
+  }
+
+  .scroll-btn:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    opacity: 0.7;
+    border: 1px solid black;
+    color: black;
+  }
+
+  .serieCard a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    gap: 20px;
+  }
+
+  .serieCard img {
+    width: 12rem;
+    height: 18rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .serieCard h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffb20c;
+    background-color: black;
+    width: 100%;
+    height: 3rem;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease;
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 15px;
+  }
+
+  .serieCard:hover h3 {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .serieCard a {
+    text-decoration: none;
+  }
+  .posterPlaceholder img {
+    width: 12rem;
+    height: 18rem;
+    object-fit: contain;
+    background-color: black;
+  }
+}
+/* VERSION TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .seriesPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+    padding: 10px 10px;
+  }
+
+  .seriesPage h2 {
+    width: fit-content;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 5px;
+  }
+
+  .seriesContainer {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 20px;
+  }
+
+  .seriesList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+    overflow-x: auto;
+    gap: 40px;
+    scroll-behavior: smooth;
+    flex: 1;
+    padding: 0 10px;
+  }
+
+  .seriesList::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-btn {
+    background-color: black;
+    border: none;
+    color: #ffb20c;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease, opacity 0.2s;
+    opacity: 1;
+  }
+
+  .scroll-btn:active {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+  .left-btn {
+    left: 0;
+  }
+
+  .right-btn {
+    right: 0;
+  }
+
+  .scroll-btn:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    opacity: 0.7;
+    color: black;
+    border: 1px solid black;
+  }
+
+  .serieCard a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    text-decoration: none;
+    gap: 15px;
+  }
+
+  .serieCard img {
+    width: 9rem;
+    height: 13rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .serieCard h3,
+  .posterPlaceholder h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffb20c;
+    background-color: black;
+    width: 100%;
+    height: 4rem;
+    border: 4px solid #ffb20c;
+    font-size: 15px;
+    padding: 10px 15px;
+    margin: 0;
+    transition: 0.5s ease;
+  }
+
+  .serieCard:active h3 {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .posterPlaceholder img {
+    width: 9rem;
+    height: 13rem;
+    object-fit: contain;
+    background-color: black;
+  }
+}
+/* VERSION MOBILE */
+@media screen and (max-width: 767px) {
+  .seriesPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+    padding: 10px 10px;
+  }
+
+  .seriesPage h2 {
+    width: fit-content;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 5px;
+  }
+
+  .seriesContainer {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 20px;
+  }
+
+  .seriesList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+    overflow-x: auto;
+    gap: 40px;
+    scroll-behavior: smooth;
+    flex: 1;
+    padding: 0 10px;
+  }
+
+  .seriesList::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-btn {
+    background-color: black;
+    border: none;
+    color: #ffb20c;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease, opacity 0.2s;
+    opacity: 1;
+  }
+
+  .scroll-btn:active {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+  .left-btn {
+    left: 0;
+  }
+
+  .right-btn {
+    right: 0;
+  }
+
+  .scroll-btn:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    opacity: 0.7;
+    color: black;
+    border: 1px solid black;
+  }
+
+  .serieCard a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    text-decoration: none;
+    gap: 15px;
+  }
+
+  .serieCard img {
+    width: 9rem;
+    height: 13rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .serieCard h3,
+  .posterPlaceholder h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffb20c;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    border: 4px solid #ffb20c;
+    font-size: 15px;
+    padding: 10px 15px;
+    transition: 0.5s ease;
+    margin: 0;
+  }
+
+  .serieCard:active h3 {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .posterPlaceholder img {
+    width: 9rem;
+    height: 13rem;
+    object-fit: contain;
+    background-color: black;
+  }
+}
