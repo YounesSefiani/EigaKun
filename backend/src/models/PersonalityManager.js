@@ -2,7 +2,7 @@ const AbstractManager = require("./AbstractManager");
 
 class PersonalityManager extends AbstractManager {
     constructor() {
-        super({table: 'personalities'});
+        super({table: "personalities"});
     }
 
     // C - CRUD - Create

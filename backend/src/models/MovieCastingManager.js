@@ -80,6 +80,17 @@ class MovieCastingManager extends AbstractManager {
     return movieCasting;
   }
 
+  async moviesByPersonalityId(personalityId) {
+    const [casting] = await this.database.query(
+      `SELECT movies.id AS movie_id, movies.title AS movie_title, movies.release_date AS movie_release_date, movies.poster AS movie_poster, movieCasting.role, movieCasting.side
+      FROM ${this.table}
+      JOIN movies ON ${this.table}.movie_id = movies.id
+      WHERE ${this.table}.personality_id = ?`,
+      [personalityId]
+    );
+    return casting;
+  }
+
   // U - CRUD - Update
   async update(movieCasting) {
     const [updateMovieCasting] = await this.database.query(

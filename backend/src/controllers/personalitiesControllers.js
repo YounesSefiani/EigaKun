@@ -40,16 +40,16 @@ const read = async (req, res, next) => {
 const getFilmography = async (req, res) => {
   try {
     const personalityId = req.params.id;
-    const personality = await personalityManager.read(personalityId);
+    const personality = await tables.personalities.read(personalityId);
     if (!personality) {
       return res.status(404).send('Personnalité non trouvée');
     }
 
     const movies =
-      await movieCastingManager.moviesByPersonalityId(personalityId);
+      await tables.movieCasting.moviesByPersonalityId(personalityId);
 
     const series =
-      await serieCastingManager.seriesByPersonalityId(personalityId);
+      await tables.serieCasting.seriesByPersonalityId(personalityId);
 
     const fullFilmography = { personality, movies, series };
 

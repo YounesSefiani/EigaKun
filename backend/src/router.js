@@ -35,7 +35,7 @@ const personalitiesControllers = require("./controllers/personalitiesControllers
 const uploadPersonalities = require("./Middlewares/Multer/MulterPersonalities");
 
 router.get("/personalities", personalitiesControllers.browse);
-router.get("/personalities/:id", personalitiesControllers.read);
+router.get("/personalities/:id", personalitiesControllers.getFilmography);
 
 // MOVIES CASTINGS //
 const movieCastingControllers = require("./controllers/movieCastingControllers");
