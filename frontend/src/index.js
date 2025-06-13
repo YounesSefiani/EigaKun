@@ -4,8 +4,12 @@ import "./index.css";
 import connexion from "./services/connexion";
 import MoviesPage from "./pages/Movies/MoviesPage/MoviesPage";
 import OneMoviePage from "./pages/Movies/OneMoviePage/OneMoviePage";
+import SeriesPage from "./pages/Series/SeriesPage/SeriesPage";
+import OneSeriePage from "./pages/Series/OneSeriePage/OneSeriePage";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "bootstrap/dist/css/bootstrap.min.css"
+
 import {
   // BrowserRouter,
   createBrowserRouter,
@@ -35,6 +39,30 @@ const router = createBrowserRouter([
     loader: async ({ params }) => {
       try {
         const res = await connexion.get(`/movies/${params.id}`);
+        return res.data;
+      } catch (err) {
+        return console.error(err);
+      }
+    },
+  },
+  {
+    path: "/series",
+    element: <SeriesPage />,
+    loader: async () => {
+      try {
+        const res = await connexion.get("/series");
+        return res.data;
+      } catch (err) {
+        return console.error(err);
+      }
+    },
+  },
+  {
+    path: "/series/:id",
+    element: <OneSeriePage />,
+    loader: async ({ params }) => {
+      try {
+        const res = await connexion.get(`/series/${params.id}`);
         return res.data;
       } catch (err) {
         return console.error(err);
