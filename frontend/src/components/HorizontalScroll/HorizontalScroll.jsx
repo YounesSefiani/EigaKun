@@ -36,13 +36,13 @@ function HorizontalScroll({ children }) {
     setDisableRight(scrollLeft + clientWidth >= scrollWidth);
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = React.useCallback((e) => {
     if (e.key === "ArrowLeft") {
       scroll("left");
     } else if (e.key === "ArrowRight") {
       scroll("right");
     }
-  };
+  }, []);
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
