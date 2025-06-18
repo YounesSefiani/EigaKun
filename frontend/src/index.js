@@ -6,9 +6,11 @@ import MoviesPage from "./pages/Movies/MoviesPage/MoviesPage";
 import OneMoviePage from "./pages/Movies/OneMoviePage/OneMoviePage";
 import SeriesPage from "./pages/Series/SeriesPage/SeriesPage";
 import OneSeriePage from "./pages/Series/OneSeriePage/OneSeriePage";
+import PersonalitiesPage from "./pages/Personalities/PersonalitiesPage/PersonalitiesPage";
+import OnePersonalityPage from "./pages/Personalities/OnePersonalityPage/OnePersonalityPage";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import {
   // BrowserRouter,
@@ -63,6 +65,30 @@ const router = createBrowserRouter([
     loader: async ({ params }) => {
       try {
         const res = await connexion.get(`/series/${params.id}`);
+        return res.data;
+      } catch (err) {
+        return console.error(err);
+      }
+    },
+  },
+  {
+    path: "/personnalités",
+    element: <PersonalitiesPage />,
+    loader: async () => {
+      try {
+        const res = await connexion.get("/personalities");
+        return res.data;
+      } catch (err) {
+        return console.error(err);
+      }
+    },
+  },
+  {
+    path: "/personnalites/:id",
+    element: <OnePersonalityPage />,
+    loader: async ({ params }) => {
+      try {
+        const res = await connexion.get(`/personalities/${params.id}`);
         return res.data;
       } catch (err) {
         return console.error(err);
