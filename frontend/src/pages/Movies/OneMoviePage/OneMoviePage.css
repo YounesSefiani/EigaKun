@@ -147,6 +147,16 @@
     border: 3px solid black;
   }
 
+  .castingSection h3 {
+    text-align: center;
+    margin: 20px 0;
+    border: 4px solid #ffb20c;
+    color: #ffb20c;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 40px;
+  }
+
   .reviewsAndTrailer {
     display: flex;
     flex-direction: row;
@@ -372,7 +382,6 @@
     height: auto;
     gap: 20px;
     overflow-x: hidden;
-    padding-bottom: 10px;
   }
 
   .oneMovieHeader {
@@ -439,6 +448,19 @@
     background-color: rgba(0, 0, 0, 0.8);
   }
 
+    .oneMovieHeaderLeftSide h4 {
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    width: 90%;
+    height: auto;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+  }
+
+
   .oneMovieDetails {
     display: flex;
     flex-direction: column;
@@ -456,7 +478,7 @@
     height: 20rem;
     overflow-y: auto;
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 15px 10px;
@@ -494,6 +516,16 @@
     background-color: #ffb20c;
     border-radius: 6px;
     border: 3px solid black;
+  }
+
+    .castingSection h3 {
+    text-align: center;
+    margin: 20px 0;
+    border: 4px solid #ffb20c;
+    color: #ffb20c;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
   }
 
   .reviewsAndTrailer {
@@ -523,7 +555,9 @@
 
   .trailer iframe {
     border: 4px solid #ffb20c;
+    width: 30rem;
     height: 15rem;
+    margin: auto;
   }
 }
 /* VERSION MOBILE */
@@ -535,7 +569,6 @@
     height: auto;
     gap: 20px;
     overflow-x: hidden;
-    padding-bottom: 10px;
   }
 
   .oneMovieHeader {
@@ -602,6 +635,18 @@
     background-color: rgba(0, 0, 0, 0.8);
   }
 
+  .oneMovieHeaderLeftSide h4 {
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    width: 90%;
+    height: auto;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+  }
+
   .oneMovieDetails {
     display: flex;
     flex-direction: column;
@@ -657,6 +702,16 @@
     background-color: #ffb20c;
     border-radius: 6px;
     border: 3px solid black;
+  }
+
+  .castingSection h3 {
+    text-align: center;
+    margin: 20px 0;
+    border: 4px solid #ffb20c;
+    color: #ffb20c;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
   }
 
   .reviewsAndTrailer {
