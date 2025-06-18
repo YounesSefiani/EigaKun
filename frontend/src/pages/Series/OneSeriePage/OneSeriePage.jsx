@@ -5,6 +5,7 @@ import HeaderPhone from "../../../components/HeaderPhone/HeaderPhone";
 import FooterPhone from "../../../components/FooterPhone/FooterPhone";
 import SeasonsContainer from "../../../components/SeasonsContainer/SeasonsContainer";
 import EigaKunLogo from "../../../assets/EigaKunLogo.png";
+import CastingContainer from "../../../components/CastingContainer/CastingContainer";
 import "./OneSeriePage.css";
 
 function OneSeriePage() {
@@ -107,6 +108,10 @@ function OneSeriePage() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="castingSection">
+          <h4>Casting de la série "{serie.title}"</h4>
+        <CastingContainer casting={serie.casting} />
         </div>
         <div className="reviewsAndTrailer">
           <div className="reviews">
