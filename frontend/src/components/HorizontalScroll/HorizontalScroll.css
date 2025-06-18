@@ -1,0 +1,273 @@
+/* VERSION PC */
+@media (min-width: 1441px) {
+  .horizontal-scroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    position: relative;
+  }
+
+  .scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    position: relative;
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    gap: 20px;
+    transition: transform 0.3 ease;
+  }
+
+  .scroll-btn {
+    display: flex;
+    position: absolute;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: #ffb20c;
+    background-color: black;
+    font-size: 40px;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .scroll-btn:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .scroll-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: grey;
+  }
+
+  .left-btn {
+    left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .right-btn {
+    right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 4px solid #ffb20c;
+  }
+}
+
+/* VERSION DESKTOP */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .horizontal-scroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    position: relative;
+  }
+
+  .scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    position: relative;
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 20px;
+    transition: transform 0.3 ease;
+  }
+
+  .scroll-btn {
+    display: flex;
+    position: absolute;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: #ffb20c;
+    background-color: black;
+    font-size: 30px;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .scroll-btn:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .scroll-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: grey;
+  }
+
+  .left-btn {
+    left: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .right-btn {
+    right: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+/* VERSION TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .horizontal-scroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    position: relative;
+  }
+
+  .scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    position: relative;
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+  }
+
+  .scroll-btn {
+    display: flex;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    color: #ffb20c;
+    background-color: black;
+    font-size: 35px;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .scroll-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: grey;
+  }
+
+  .scroll-btn:active {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .left-btn {
+    left: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .right-btn {
+    right: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+/* VERSION PHONE */
+@media (max-width: 600px) {
+  .horizontal-scroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    position: relative;
+  }
+
+  .scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    position: relative;
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+  }
+
+  .scroll-btn {
+    display: flex;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    color: #ffb20c;
+    background-color: black;
+    font-size: 35px;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .scroll-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: grey;
+  }
+
+  .scroll-btn:active {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .left-btn {
+    left: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .right-btn {
+    right: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}

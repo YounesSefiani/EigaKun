@@ -1,0 +1,694 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .onePersonalityPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    gap: 20px;
+  }
+
+  .onePersonalityHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+    height: 35rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    border-top: none;
+    margin: 0;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .onePersonalityHeader p {
+    margin: 0;
+  }
+
+  .onePersonalityPicture {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+
+  .onePersonalityPicture img {
+    width: 20rem;
+    height: 100%;
+    border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityLeftSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+  }
+
+  .onePersonalityInfos {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    font-size: 20px;
+    border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityBio {
+    width: auto;
+    height: 10rem;
+    overflow-y: auto;
+    padding: 10px;
+    text-align: justify;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .filmography {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .filmography h3 {
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 15px;
+  }
+
+  .movieGraphy,
+  .serieGraphy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .movieGraphy h4,
+  .serieGraphy h4 {
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 15px;
+  }
+
+  .movieGraphyList,
+  .serieGraphyList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 4px solid #ffb20c;
+    padding: 10px;
+  }
+
+  .movieGraphyList p,
+  .serieGraphyList p {
+    font-size: 20px;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    font-size: 25px;
+    transition: 0.5s ease;
+  }
+
+  .movieGraphyCard a,
+  .serieGraphyCard a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    color: #ffb20c;
+    text-decoration: none;
+  }
+
+  .movieGraphyCard img,
+  .serieGraphyCard img {
+    width: 18rem;
+    height: 25rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .movieGraphyCard p,
+  .serieGraphyCard p {
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+    transition: 0.5s ease;
+  }
+
+  .movieGraphyCard:hover p,
+  .serieGraphyCard:hover p {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+}
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .onePersonalityPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    gap: 20px;
+  }
+
+  .onePersonalityHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+    height: 35rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    border-top: none;
+    margin: 0;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .onePersonalityHeader p {
+    margin: 0;
+  }
+
+  .onePersonalityPicture {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+
+  .onePersonalityPicture img {
+    width: 20rem;
+    height: 100%;
+    border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityLeftSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+  }
+
+  .onePersonalityInfos {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    font-size: 20px;
+    border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityBio {
+    width: auto;
+    height: 10rem;
+    overflow-y: auto;
+    padding: 10px;
+    text-align: justify;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .filmography {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .filmography h3 {
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 15px;
+  }
+
+  .movieGraphy,
+  .serieGraphy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .movieGraphy h4,
+  .serieGraphy h4 {
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 15px;
+  }
+
+  .movieGraphyList,
+  .serieGraphyList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 4px solid #ffb20c;
+    padding: 10px;
+  }
+
+  .movieGraphyList p,
+  .serieGraphyList p {
+    font-size: 20px;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    font-size: 25px;
+    transition: 0.5s ease;
+  }
+
+  .movieGraphyCard a,
+  .serieGraphyCard a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    color: #ffb20c;
+    text-decoration: none;
+  }
+
+  .movieGraphyCard img,
+  .serieGraphyCard img {
+    width: 18rem;
+    height: 25rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .movieGraphyCard p,
+  .serieGraphyCard p {
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+  }
+
+    .movieGraphyCard:hover p,
+  .serieGraphyCard:hover p {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+}
+/* VERSION TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .onePersonalityPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  .onePersonalityPage p {
+    margin: 0;
+  }
+
+  .onePersonalityHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    border-top: none;
+    margin: 0;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .onePersonalityPicture {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+
+  .onePersonalityPicture img {
+    width: 13rem;
+    height: 20rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityLeftSide {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityInfos {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    gap: 15px;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityBio {
+    width: auto;
+    height: 10rem;
+    overflow-y: auto;
+    text-align: justify;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .filmography {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .filmography h3 {
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    padding: 15px;
+  }
+
+  .movieGraphy,
+  .serieGraphy {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    text-align: center;
+  }
+
+  .movieGraphy h4,
+  .serieGraphy h4 {
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 15px;
+    font-size: 25px;
+  }
+
+  .movieGraphyList p,
+  .serieGraphyList p {
+    font-size: 20px;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .movieGraphyList,
+  .serieGraphyList {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 4px solid #ffb20c;
+  }
+
+  .movieGraphyCard a,
+  .serieGraphyCard a {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+  }
+
+  .movieGraphyCard img,
+  .serieGraphyCard img {
+    width: 13rem;
+    height: 20rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 20px;
+  }
+
+  .movieGraphyCard p,
+  .serieGraphyCard p {
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    transition: 0.5s ease;
+  }
+}
+/* VERSION MOBILE */
+@media screen and (max-width: 767px) {
+  .onePersonalityPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  .onePersonalityPage p {
+    margin: 0;
+  }
+
+  .onePersonalityHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    border-top: none;
+    margin: 0;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .onePersonalityPicture {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+
+  .onePersonalityPicture img {
+    width: 12rem;
+    height: 18rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityLeftSide {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityInfos {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    gap: 15px;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityBio {
+    width: auto;
+    height: 10rem;
+    overflow-y: auto;
+    text-align: justify;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .filmography {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .filmography h3 {
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    padding: 15px;
+  }
+
+  .movieGraphy,
+  .serieGraphy {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    text-align: center;
+  }
+
+  .movieGraphy h4,
+  .serieGraphy h4 {
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 15px;
+    font-size: 25px;
+  }
+
+  .movieGraphyList p,
+  .serieGraphyList p {
+    font-size: 20px;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .movieGraphyList,
+  .serieGraphyList {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 4px solid #ffb20c;
+  }
+
+  .movieGraphyCard a,
+  .serieGraphyCard a {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+  }
+
+  .movieGraphyCard img,
+  .serieGraphyCard img {
+    width: 10rem;
+    height: 15rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 20px;
+  }
+
+  .movieGraphyCard p,
+  .serieGraphyCard p {
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    transition: 0.5s ease;
+  }
+
+      .movieGraphyCard:active p,
+  .serieGraphyCard:active p {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+}

@@ -68,6 +68,20 @@ class SerieCastingManager extends AbstractManager {
     }
   }
 
+    async readBySerie(serieId) {
+    const [serieCasting] = await this.database.query(
+      `SELECT series.id AS serie_id, series.title AS serie_title, personalities.id AS personality_id, personalities.fullname AS personality_fullname, personalities.image_src AS personality_image, ${this.table}.* 
+       FROM ${this.table} 
+       JOIN series ON ${this.table}.serie_id = series.id 
+         JOIN personalities ON ${this.table}.personality_id = personalities.id
+       WHERE ${this.table}.serie_id = ?`,
+      [serieId]
+    );
+
+    return serieCasting;
+  }
+
+
     async seriesByPersonalityId(personalityId) {
     const [casting] = await this.database.query(
       `SELECT series.id AS serie_id, series.title AS serie_title, series.poster AS serie_poster, series.release_date AS serie_release_date, series.ending_date AS serie_ending_date, serieCasting.role, serieCasting.side, serieCasting.presence
