@@ -4,6 +4,7 @@ import Header from "../../../components/Header/Header";
 import HeaderPhone from "../../../components/HeaderPhone/HeaderPhone";
 import FooterPhone from "../../../components/FooterPhone/FooterPhone";
 import EigaKunLogo from "../../../assets/EigaKunLogo.png";
+import CastingContainer from "../../../components/CastingContainer/CastingContainer";
 import "./OneMoviePage.css";
 
 function OneMoviePage() {
@@ -16,13 +17,13 @@ function OneMoviePage() {
     const month = zeroPad(movieDate.getMonth() + 1);
     const year = movieDate.getFullYear();
     return `${day}/${month}/${year}`;
-  }
+  };
 
   const formatDuration = (duration) => {
     if (!duration) return "";
     const [hh, mm] = duration.split(":");
     return `${parseInt(hh, 10)}:${mm}`;
-  }
+  };
   return (
     <>
       <Header />
@@ -109,6 +110,10 @@ function OneMoviePage() {
             </div>
           </div>
         </div>
+        <div className="castingSection">
+          <h3>Casting du film "{movie.title}"</h3>
+          <CastingContainer casting={movie.casting} />
+        </div>
         <div className="reviewsAndTrailer">
           <div className="reviews">
             <h4>Reviews</h4>
@@ -118,8 +123,8 @@ function OneMoviePage() {
             <iframe src={movie.trailer} title={`Trailer de ${movie.title}`} />
           </div>
         </div>
+        <FooterPhone />
       </div>
-      <FooterPhone />
     </>
   );
 }
