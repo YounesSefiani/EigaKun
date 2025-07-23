@@ -64,14 +64,19 @@ const updateHashPassword = async (req, res, next) => {
         .json({ message: "Mot de passe actuel incorrect." });
     }
 
-    // Hacher le nouveau mot de passe
-    req.body.password = await argon2.hash(req.body.password, hashingOptions);
-    next();
-  } catch (err) {
-    console.error("Hashing error:", err);
-    res.sendStatus(500);
-  }
-};
+        // Hacher le nouveau mot de passe
+        try {
+          req.body.password = await argon2.hash(req.body.password, hashingOptions);
+          next();
+        } catch (err) {
+          console.error(err);
+          res.sendStatus(500);
+        }
+      } catch (err) {
+        console.error(err);
+        res.sendStatus(500);
+      }
+    };
 
 const verifyPassword = async (password, hashed) => {
   try {
@@ -82,16 +87,14 @@ const verifyPassword = async (password, hashed) => {
   }
 };
 
-
 const validateUserForm = (req, res, next) => {
   const schema = Joi.object({
     username: Joi.string().min(3).max(15).required(),
     email: Joi.string().email().required(),
-    password: Joi.string()
-        .pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')),
+    password: Joi.string().pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")),
     birthdate: Joi.date().required(),
   });
-}
+};
 
 const generateToken = (user) => {
   const payload = {
@@ -127,12 +130,14 @@ const verifyToken = (req, res, next) => {
       token = req.body.token;
     }
 
-    if (!token) {
-      return res.status(401).json({ message: "No authentication token found" });
-    }
-
     const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decodedToken;
+    req.user = {
+      id: decodedToken.sub,
+      mail: decodedToken.mail,
+      username: decodedToken.username,
+      avatar: decodedToken.avatar,
+      role: decodedToken.role,
+    };
 
     next();
   } catch (err) {
@@ -150,4 +155,5 @@ module.exports = {
   validateUserForm,
   verifyPassword,
   verifyToken,
+  hashingOptions,
 };
