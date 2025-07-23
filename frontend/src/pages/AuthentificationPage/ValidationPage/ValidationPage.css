@@ -1,0 +1,350 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .validationPage {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+    border: 4px solid #ffb20c;
+  }
+
+  .validationPageLeft {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    border-right: 4px solid #ffb20c;
+  }
+
+  .validationPageRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    gap: 30px;
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffb20c;
+    font-size: 30px;
+  }
+
+  .validationPageRight h2 {
+    position: absolute;
+    top: 20px;
+    width: 80%;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    color: #ffb20c;
+    padding: 20px;
+  }
+
+  .validationPageRight button {
+    width: 50%;
+    height: 50px;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    color: #ffb20c;
+    font-size: 1.5rem;
+    transition: 0.5s ease;
+  }
+
+  .validationPageRight button a {
+    text-decoration: none;
+    color: #ffb20c;
+    transition: 0.5s ease;
+  }
+
+  .validationPageRight button:hover a {
+    color: black;
+  }
+
+  .validationPageRight button:hover {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .validationProcessing {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: contain;
+  }
+
+  .validationSuccess {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .validationMessage {
+    border: 4px solid blue;
+  }
+}
+/* VERSION DESKTOP */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .validationPage {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 100vh;
+    border: 4px solid #ffb20c;
+  }
+
+  .validationPageLeft {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    border-right: 4px solid #ffb20c;
+  }
+
+  .validationPageRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    gap: 30px;
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffb20c;
+    font-size: 30px;
+  }
+
+  .validationPageRight h2 {
+    position: absolute;
+    top: 20px;
+    width: 80%;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    color: #ffb20c;
+    padding: 20px;
+  }
+
+  .validationPageRight button {
+    width: 50%;
+    height: 50px;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    color: #ffb20c;
+    font-size: 1.5rem;
+    transition: 0.5s ease;
+  }
+
+  .validationPageRight button a {
+    text-decoration: none;
+    color: #ffb20c;
+    transition: 0.5s ease;
+  }
+
+  .validationPageRight button:hover a {
+    color: black;
+  }
+
+  .validationPageRight button:hover {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .validationProcessing {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: contain;
+  }
+
+  .validationSuccess {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .validationMessage {
+    border: 4px solid blue;
+  }
+}
+/* VERSION TABLET */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .validationPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    border: 4px solid #ffb20c;
+  }
+
+  .validationPageLeft {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    padding: 10px;
+    background-color: black;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+  .validationPageLeft img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .validationPageRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    gap: 30px;
+    padding: 15px;
+    width: 100%;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffb20c;
+    font-size: 20px;
+  }
+
+    .validationPageRight h2 {
+    position: absolute;
+    top: 20px;
+    width: auto;
+    text-align: center;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    color: #ffb20c;
+    padding: 20px;
+  }
+
+    .validationPageRight button {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    color: #ffb20c;
+    font-size: 1.3rem;
+    transition: 0.5s ease;
+  }
+
+  .validationPageRight button a {
+    text-decoration: none;
+    color: #ffb20c;
+    transition: 0.5s ease;
+  }
+
+  .validationPageRight button:active a {
+    color: black;
+  }
+
+    .validationProcessing {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: contain;
+  }
+
+  .validationSuccess {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+/* VERSION MOBILE */
+@media screen and (max-width: 768px) {
+  .validationPage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    border: 4px solid #ffb20c;
+  }
+
+  .validationPageLeft {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    padding: 10px;
+    background-color: black;
+    border-bottom: 4px solid #ffb20c;
+  }
+
+  .validationPageLeft img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .validationPageRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    gap: 30px;
+    padding: 15px;
+    width: 100%;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffb20c;
+    font-size: 20px;
+  }
+
+    .validationPageRight h2 {
+    position: absolute;
+    top: 20px;
+    width: auto;
+    text-align: center;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    color: #ffb20c;
+    padding: 20px;
+  }
+
+    .validationPageRight button {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    color: #ffb20c;
+    font-size: 1.3rem;
+    transition: 0.5s ease;
+  }
+
+  .validationPageRight button a {
+    text-decoration: none;
+    color: #ffb20c;
+    transition: 0.5s ease;
+  }
+
+  .validationPageRight button:active a {
+    color: black;
+  }
+
+    .validationProcessing {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: contain;
+  }
+
+  .validationSuccess {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+}
