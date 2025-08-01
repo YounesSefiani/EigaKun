@@ -1,0 +1,224 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .adminAddMovieOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+  }
+
+  .adminAddMovieModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+    gap: 10px;
+    padding: 10px;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 0);
+    z-index: 600;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieButtons {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 10px;
+    right: 10px;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+
+  .adminAddMovie {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .adminAddMovieForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: none;
+  }
+
+  .adminAddMovieTop {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminAddMovieTop p {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .adminAddMovieTop input {
+    width: 50%;
+    margin: auto;
+  }
+
+  .adminAddMovieContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .adminAddMovieLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    gap: 30px;
+    padding: 20px;
+        border: 4px solid #ffb20c;
+  }
+
+  .adminAddMovieLeft label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: auto;
+    height: 100%;
+    gap: 25px;
+  }
+
+  .adminAddMovieLeft p {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .addMoviePosterHolder, .moviePosterAdd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    height: 25rem;
+    margin: auto;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieBackgroundHolder, .movieBackgroundAdd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    height: 15rem;
+    margin: auto;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminAddMovieLeft input {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .adminAddMovieRight p {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .adminAddMovieRight {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+
+
+  .adminAddMovieRight input {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .addMovieLogoHolder, .movieLogoAdd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieLogoHolder p {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .addMovieInfos {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieInfos p {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .addMovieSynopsisTrailer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .addMovieSynopsisTrailer p {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .addMovieSynopsisTrailer label {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieSynopsisTrailer textarea {
+    width: auto;
+    height: 100%;
+  }
+}
+/* VERSION DESKTOP */
+/* VERSION TABLET */
+/* VERSION MOBILE */
