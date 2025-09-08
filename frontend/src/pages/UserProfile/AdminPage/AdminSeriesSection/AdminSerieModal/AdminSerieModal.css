@@ -1,0 +1,1434 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .adminSerieOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9;
+  }
+  .adminSerieModal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+    gap: 10px;
+    padding: 10px;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerie {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .adminSerieTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieTop h2 {
+    width: 50%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .adminSerieTop div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .adminSerieContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .adminSerieLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    padding: 15px;
+    gap: 20px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieLeft div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .adminSerieLeft p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .adminSerieModalPoster {
+    width: 18rem;
+    height: 25rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieModalPosterHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18rem !important;
+    height: 25rem !important;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+  }
+
+  .adminSerieModalPosterHolder svg {
+    font-size: 4rem;
+  }
+
+  .adminSerieBackground {
+    width: 18rem;
+    height: 16rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieModalBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18rem !important;
+    height: 16rem !important;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+  }
+
+  .adminSerieModalBackgroundHolder svg {
+    font-size: 4rem;
+  }
+
+  .adminSerieRight {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieLogo {
+    width: 100%;
+    height: 10rem;
+    object-fit: contain;
+    padding: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieLogoHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+    margin: 0;
+    font-size: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieLogoHolder svg {
+    font-size: 3rem;
+  }
+
+  .adminSerieInfos {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+    font-size: 1rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieInfos p {
+    margin: 0;
+  }
+
+  .adminSerieSynopsisTrailer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSynopsis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    text-align: justify;
+  }
+
+  .adminSerieSynopsis p {
+    width: 100%;
+    height: 20rem;
+    overflow-y: auto;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieTrailer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .adminSerieTrailer iframe {
+    width: 100%;
+    height: 20rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSeasons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSeasonsList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .adminSerieSeasonCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSeasonCard p {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .adminSerieSeasonCard img {
+    width: 18rem;
+    height: 25rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieCasting {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .adminSerieCasting h3 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .adminSerieCastingSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieCastingSection h3 {
+    margin: 0;
+  }
+
+  .adminSerieCastingList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .adminSerieCastingCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+    border-radius: 20px;
+  }
+
+  .adminSerieCastingCard img {
+    width: 15rem;
+    height: 20rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminSerieCastingCard p {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    border: 4px solid #ffb20c;
+  }
+}
+
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .adminSerieOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9;
+  }
+  .adminSerieModal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    overflow-y: auto;
+    gap: 10px;
+    padding: 10px;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerie {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .adminSerieTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieTop h2 {
+    width: 50%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .adminSerieTop div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .adminSerieContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .adminSerieLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieLeft div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .adminSerieLeft p {
+    margin: 0;
+    font-size: 25px;
+  }
+
+  .adminSerieModalPoster {
+    width: 14rem;
+    height: 20rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+    .adminSerieModalPosterHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 14rem !important;
+    height: 20rem !important;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+  }
+
+  .adminSerieModalPosterHolder p {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .adminSerieModalPosterHolder svg {
+    font-size: 3rem;
+  }
+
+
+  .adminSerieBackground {
+    width: 14rem;
+    height: 10rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieModalBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 14rem !important;
+    height: 10rem !important;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+  }
+
+  .adminSerieModalBackgroundHolder p {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .adminSerieModalBackgroundHolder svg {
+    font-size: 3rem;
+  }
+
+  .adminSerieRight {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieLogo {
+    width: 100%;
+    height: 10rem;
+    object-fit: contain;
+    padding: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieLogoHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+    margin: 0;
+    font-size: 35px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieLogoHolder p {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .adminSerieLogoHolder svg {
+    font-size: 3rem;
+  }
+
+  .adminSerieInfos {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+    font-size: 1rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieInfos p {
+    margin: 0;
+  }
+
+  .adminSerieSynopsisTrailer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSynopsis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    text-align: justify;
+  }
+
+  .adminSerieSynopsis p {
+    width: 100%;
+    height: 20rem;
+    overflow-y: auto;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieTrailer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .adminSerieTrailer iframe {
+    width: 100%;
+    height: 20rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSeasons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSeasonsList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .adminSerieSeasonCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSeasonCard p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .adminSerieSeasonCard img {
+    width: 15rem;
+    height: 22rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieCasting {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .adminSerieCasting h3 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .adminSerieCastingSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieCastingSection h3 {
+    margin: 0;
+  }
+
+  .adminSerieCastingList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .adminSerieCastingCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+    border-radius: 20px;
+  }
+
+  .adminSerieCastingCard img {
+    width: 13rem;
+    height: 18rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminSerieCastingCard p {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    border: 4px solid #ffb20c;
+  }
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .adminSerieOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9;
+  }
+
+  .adminSerieModal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow-y: auto;
+    z-index: 10;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    padding-bottom: 15%;
+  }
+
+  .adminSerie {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .adminSerieTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .adminSerieTop h2 {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .adminSerieTop div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .adminSerieTop button {
+    width: 100%;
+    color: #ffb20c;
+    background-color: black;
+    font-size: 25px;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease;
+  }
+
+  .adminSerieTop button:active {
+    color: black;
+    background-color: #ffb20c;
+    border: 4px solid black;
+  }
+
+  .adminSerieContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .adminSerieLeft {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+  }
+
+  .adminSerieLeft div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    height: auto;
+    font-size: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieModalPoster {
+    width: 15rem;
+    height: 20rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieModalPosterHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15rem !important;
+    height: 20rem !important;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieModalPosterHolder p {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .adminSerieModalPosterHolder svg {
+    font-size: 3.5rem;
+  }
+
+  .adminSerieBackground {
+    width: 22rem;
+    height: 18rem;
+    margin: auto;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieModalBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22rem !important;
+    height: 18rem !important;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieModalBackgroundHolder p {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .adminSerieModalBackgroundHolder svg {
+    font-size: 3.5rem;
+  }
+
+  .adminSerieRight {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .adminSerieLogo {
+    width: 100%;
+    height: 10rem;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieLogoHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieLogoHolder p {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .adminSerieLogoHolder svg {
+    font-size: 3.5rem;
+  }
+
+  .adminSerieInfos {
+    display: grid;
+    grid-template-columns: auto 50%;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+    padding: 10px;
+    margin: auto;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieInfos p {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #ffb20c;
+  }
+
+  .adminSerieSynopsisTrailer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .adminSerieSynopsis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .adminSerieSynopsis p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
+    overflow-y: auto;
+    margin: 0;
+    padding: 5px;
+    font-size: 20px;
+    text-align: justify;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieTrailer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .adminSerieTrailer iframe {
+    width: 100%;
+    height: 20rem;
+    border: 4px solid #ffb20c;
+  }
+
+    .adminSerieSeasons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSeasons h3 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .adminSerieSeasonsList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .adminSerieSeasonCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSeasonCard p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .adminSerieSeasonCard img {
+    width: 13rem;
+    height: 22rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+
+  .adminSerieCasting {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 5px;
+  }
+
+  .adminSerieCasting h3 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .adminSerieCastingSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieCastingSection h3 {
+    margin: 0;
+  }
+
+  .adminSerieCastingList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+  }
+
+  .adminSerieCastingCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .adminSerieCastingCard img {
+    width: 13rem;
+    height: 19rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminSerieCastingCard p {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+    border: 4px solid #ffb20c;
+  }
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 767px) {
+  .adminSerieOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9;
+  }
+
+  .adminSerieModal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow-y: auto;
+    z-index: 10;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    padding-bottom: 25%;
+  }
+
+  .adminSerie {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .adminSerieTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .adminSerieTop h2 {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .adminSerieTop div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .adminSerieTop button {
+    width: 100%;
+    color: #ffb20c;
+    background-color: black;
+    font-size: 20px;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease;
+  }
+
+  .adminSerieTop button:active {
+    color: black;
+    background-color: #ffb20c;
+    border: 4px solid black;
+  }
+
+  .adminSerieContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .adminSerieLeft {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+  }
+
+  .adminSerieLeft div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieModalPoster {
+    width: 9rem;
+    height: 14rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieModalPosterHolder {
+    display: flex;
+    flex-direction: column;
+    width: 9rem !important;
+    height: 14rem !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    padding: 5px;
+  }
+  .adminSerieModalPosterHolder p {
+    margin: 0;
+    font-size: 15px;
+  }
+  .adminSerieModalPosterHolder svg {
+    font-size: 1.5rem;
+  }
+
+  .adminSerieBackground {
+    width: 9rem;
+    height: 8rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieModalBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 9rem !important;
+    height: 8rem !important;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    padding: 5px;
+  }
+
+  .adminSerieModalBackgroundHolder p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .adminSerieModalBackgroundHolder svg {
+    font-size: 1.5rem;
+  }
+
+  .adminSerieRight {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .adminSerieLogo {
+    width: 100%;
+    height: 10rem;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieLogoHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieLogoHolder svg {
+    font-size: 1.5rem;
+  }
+
+  .adminSerieLogoHolder p {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .adminSerieInfos {
+    display: grid;
+    grid-template-columns: auto 50%;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 5px;
+    margin: auto;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieInfos p {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+    border: 2px solid #ffb20c;
+  }
+
+  .adminSerieSynopsisTrailer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .adminSerieSynopsis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
+    padding: 10px;
+    overflow-y: auto;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSynopsis p {
+    margin: 0;
+    text-align: justify;
+  }
+
+  .adminSerieTrailer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .adminSerieTrailer iframe {
+    width: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSeasons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSeasons h3 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .adminSerieSeasonsList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .adminSerieSeasonCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSeasonCard p {
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .adminSerieSeasonCard img {
+    width: 12rem;
+    height: 18rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieCasting {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .adminSerieCasting h3 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .adminSerieCastingSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieCastingSection h3 {
+    margin: 0;
+  }
+
+  .adminSerieCastingList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+  }
+
+  .adminSerieCastingCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .adminSerieCastingCard img {
+    width: 9rem;
+    height: 14rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminSerieCastingCard p {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    border: 4px solid #ffb20c;
+  }
+}
