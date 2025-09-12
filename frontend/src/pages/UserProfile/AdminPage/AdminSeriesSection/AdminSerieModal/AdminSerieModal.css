@@ -62,13 +62,13 @@
     flex-direction: row;
     width: 100%;
     height: auto;
-    gap: 20px;
+    gap: 10px;
   }
 
   .adminSerieLeft {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 30%;
     height: auto;
@@ -116,43 +116,62 @@
   }
 
   .adminSerieBackground {
-    width: 18rem;
-    height: 16rem;
-    object-fit: fill;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
     border: 4px solid #ffb20c;
   }
 
-  .adminSerieModalBackgroundHolder {
+  .adminSerieBackground p {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .adminSerieBackground img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieBackgroundHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    height: 25rem;
+    font-size: 25px;
     align-items: center;
-    width: 18rem !important;
-    height: 16rem !important;
     text-align: center;
     border: 4px solid #ffb20c;
-    padding: 10px;
   }
 
-  .adminSerieModalBackgroundHolder svg {
-    font-size: 4rem;
+  .adminSerieBackgroundHolder svg {
+    font-size: 3rem;
   }
 
   .adminSerieRight {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 70%;
     height: auto;
-    gap: 10px;
-    padding: 10px;
+    gap: 15px;
+    padding: 15px;
     border: 4px solid #ffb20c;
   }
 
-  .adminSerieLogo {
+  .adminSerieModalLogo {
     width: 100%;
-    height: 10rem;
+    height: 12rem;
     object-fit: contain;
-    padding: 15px;
+    padding: 10px;
     border: 4px solid #ffb20c;
   }
 
@@ -162,8 +181,9 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10rem;
+    height: 12rem;
     margin: 0;
+    padding: 10px;
     font-size: 25px;
     border: 4px solid #ffb20c;
   }
@@ -238,6 +258,12 @@
     border: 4px solid #ffb20c;
   }
 
+  .adminSerieSeasons p,
+  .adminSerieSeasons h3 {
+    margin: 0;
+    text-align: center;
+  }
+
   .adminSerieSeasonsList {
     display: flex;
     flex-direction: row;
@@ -253,7 +279,7 @@
     width: 100%;
     height: auto;
     gap: 10px;
-    padding: 10px;
+    padding: 10px 0;
     border: 4px solid #ffb20c;
   }
 
@@ -408,11 +434,11 @@
   .adminSerieLeft {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 30%;
+    width: 35%;
     height: auto;
-    padding: 5px;
+    padding: 10px;
     border: 4px solid #ffb20c;
   }
 
@@ -423,27 +449,27 @@
     align-items: center;
     width: 100%;
     height: auto;
-    gap: 10px;
+    gap: 15px;
   }
 
   .adminSerieLeft p {
     margin: 0;
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .adminSerieModalPoster {
-    width: 14rem;
+    width: 15rem;
     height: 20rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
   }
 
-    .adminSerieModalPosterHolder {
+  .adminSerieModalPosterHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 14rem !important;
+    width: 15rem !important;
     height: 20rem !important;
     text-align: center;
     border: 4px solid #ffb20c;
@@ -452,57 +478,75 @@
 
   .adminSerieModalPosterHolder p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 20px;
   }
 
   .adminSerieModalPosterHolder svg {
     font-size: 3rem;
   }
 
-
   .adminSerieBackground {
-    width: 14rem;
-    height: 10rem;
-    object-fit: fill;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
     border: 4px solid #ffb20c;
   }
 
-  .adminSerieModalBackgroundHolder {
+  .adminSerieBackground p {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .adminSerieBackground img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieBackgroundHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 14rem !important;
-    height: 10rem !important;
+    width: 100%;
+    height: 20rem;
+    font-size: 20px;
     text-align: center;
     border: 4px solid #ffb20c;
     padding: 10px;
   }
 
-  .adminSerieModalBackgroundHolder p {
+  .adminSerieBackgroundHolder p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 20px;
   }
 
-  .adminSerieModalBackgroundHolder svg {
+  .adminSerieBackgroundHolder svg {
     font-size: 3rem;
   }
 
   .adminSerieRight {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 65%;
     height: auto;
     gap: 10px;
     padding: 10px;
     border: 4px solid #ffb20c;
   }
 
-  .adminSerieLogo {
+  .adminSerieModalLogo {
     width: 100%;
     height: 10rem;
     object-fit: contain;
-    padding: 15px;
+    padding: 5px;
     border: 4px solid #ffb20c;
   }
 
@@ -513,14 +557,15 @@
     align-items: center;
     width: 100%;
     height: 10rem;
+    padding: 10px;
     margin: 0;
-    font-size: 35px;
     border: 4px solid #ffb20c;
   }
 
   .adminSerieLogoHolder p {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 20px;
+    text-align: center;
   }
 
   .adminSerieLogoHolder svg {
@@ -529,12 +574,12 @@
 
   .adminSerieInfos {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     width: 100%;
     height: auto;
     padding: 10px;
     gap: 10px;
-    font-size: 1rem;
+    font-size: 15px;
     border: 4px solid #ffb20c;
   }
 
@@ -547,7 +592,7 @@
     flex-direction: row;
     width: 100%;
     height: auto;
-    gap: 20px;
+    gap: 10px;
     padding: 10px;
     border: 4px solid #ffb20c;
   }
@@ -586,11 +631,18 @@
   .adminSerieSeasons {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
-    gap: 20px;
-    padding: 10px;
+    gap: 10px;
+    padding: 15px;
     border: 4px solid #ffb20c;
+  }
+
+  .adminSerieSeasons p,
+  .adminSerieSeasons h3 {
+    margin: 0;
+    text-align: center;
   }
 
   .adminSerieSeasonsList {
@@ -598,7 +650,12 @@
     flex-direction: row;
     width: 100%;
     height: auto;
-    gap: 20px;
+    gap: 10px;
+  }
+
+  .adminSerieSeasonsList p {
+    margin: 0;
+    text-align: center;
   }
 
   .adminSerieSeasonCard {
@@ -789,12 +846,19 @@
   .adminSerieLeft div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 5px;
     padding: 15px;
     width: 100%;
     height: auto;
     font-size: 25px;
     border: 4px solid #ffb20c;
+  }
+
+  .adminSerieLeft p {
+    margin: 0;
+    font-size: 20px;
   }
 
   .adminSerieModalPoster {
@@ -817,7 +881,7 @@
 
   .adminSerieModalPosterHolder p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 20px;
     text-align: center;
   }
 
@@ -826,31 +890,46 @@
   }
 
   .adminSerieBackground {
-    width: 22rem;
-    height: 18rem;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieBackground p {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .adminSerieBackground img {
+    width: 100%;
+    height: 20rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
   }
 
-  .adminSerieModalBackgroundHolder {
+  .adminSerieBackgroundHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 22rem !important;
+    width: 100%;
     height: 18rem !important;
     object-fit: fill;
     border: 4px solid #ffb20c;
   }
 
-  .adminSerieModalBackgroundHolder p {
+  .adminSerieBackgroundHolder p {
     margin: 0;
     font-size: 1.2rem;
     text-align: center;
   }
 
-  .adminSerieModalBackgroundHolder svg {
+  .adminSerieBackgroundHolder svg {
     font-size: 3.5rem;
   }
 
@@ -860,7 +939,7 @@
     gap: 10px;
   }
 
-  .adminSerieLogo {
+  .adminSerieModalLogo {
     width: 100%;
     height: 10rem;
     object-fit: contain;
@@ -958,7 +1037,7 @@
     border: 4px solid #ffb20c;
   }
 
-    .adminSerieSeasons {
+  .adminSerieSeasons {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -999,12 +1078,11 @@
   }
 
   .adminSerieSeasonCard img {
-    width: 13rem;
+    width: 15rem;
     height: 22rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
   }
-
 
   .adminSerieCasting {
     display: flex;
@@ -1165,16 +1243,23 @@
   .adminSerieLeft div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 5px;
     padding: 5px;
     width: 100%;
     height: auto;
     border: 4px solid #ffb20c;
   }
 
+  .adminSerieLeft p {
+    margin: 0;
+    font-size: 20px;
+  }
+
   .adminSerieModalPoster {
-    width: 9rem;
-    height: 14rem;
+    width: 10rem;
+    height: 15rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
   }
@@ -1199,31 +1284,47 @@
   }
 
   .adminSerieBackground {
-    width: 9rem;
-    height: 8rem;
-    object-fit: fill;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
     border: 4px solid #ffb20c;
   }
 
-  .adminSerieModalBackgroundHolder {
+  .adminSerieBackground p {
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .adminSerieBackground img {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminSerieBackgroundHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 9rem !important;
-    height: 8rem !important;
+    width: auto;
+    height: 13rem;
     text-align: center;
     border: 4px solid #ffb20c;
     padding: 5px;
   }
 
-  .adminSerieModalBackgroundHolder p {
+  .adminSerieBackgroundHolder p {
     margin: 0;
     font-size: 15px;
   }
 
-  .adminSerieModalBackgroundHolder svg {
-    font-size: 1.5rem;
+  .adminSerieBackgroundHolder svg {
+    font-size: 2rem;
   }
 
   .adminSerieRight {
@@ -1232,7 +1333,7 @@
     gap: 10px;
   }
 
-  .adminSerieLogo {
+  .adminSerieModalLogo {
     width: 100%;
     height: 10rem;
     object-fit: contain;
@@ -1245,17 +1346,18 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 5rem;
+    height: 10rem;
     border: 4px solid #ffb20c;
   }
 
   .adminSerieLogoHolder svg {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .adminSerieLogoHolder p {
     margin: 0;
-    font-size: 18px;
+    font-size: 15px;
+    text-align: center;
   }
 
   .adminSerieInfos {
@@ -1265,7 +1367,7 @@
     width: 100%;
     height: auto;
     gap: 5px;
-    padding: 5px;
+    padding: 10px;
     margin: auto;
     border: 4px solid #ffb20c;
   }
@@ -1297,12 +1399,13 @@
     align-items: center;
     width: 100%;
     height: 15rem;
-    padding: 10px;
+    padding: 5px;
     overflow-y: auto;
     border: 4px solid #ffb20c;
   }
 
   .adminSerieSynopsis p {
+    font-size: 15px;
     margin: 0;
     text-align: justify;
   }
@@ -1331,6 +1434,7 @@
     border: 4px solid #ffb20c;
   }
 
+  .adminSerieSeasons p,
   .adminSerieSeasons h3 {
     margin: 0;
     text-align: center;
@@ -1342,6 +1446,11 @@
     width: 100%;
     height: auto;
     gap: 15px;
+  }
+
+  .adminSerieSeasonsList p {
+    margin: auto;
+    font-size: 15px;
   }
 
   .adminSerieSeasonCard {
@@ -1423,10 +1532,10 @@
   }
 
   .adminSerieCastingCard p {
-    margin: 0;
     width: 100%;
     height: auto;
-    padding: 10px;
+    padding: 5px;
+    margin: 0;
     text-align: center;
     font-size: 1rem;
     border: 4px solid #ffb20c;
