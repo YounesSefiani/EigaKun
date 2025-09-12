@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faImage, faPanorama, faCopyright } from "@fortawesome/free-solid-svg-icons";
+import {
+  faImage,
+  faPanorama,
+  faCopyright,
+} from "@fortawesome/free-solid-svg-icons";
 import AdminSerieEditForm from "./AdminSerieEditForm/AdminSerieEditForm";
 import HorizontallScroll from "../../../../../components/HorizontalScroll/HorizontalScroll";
 import "./AdminSerieModal.css";
@@ -52,63 +56,66 @@ function AdminSerieModal({ serie, show, onClose, onUpdate, onDelete }) {
                 <div>
                   <p>Affiche :</p>
                   {serie.poster ? (
-                  <img
-                    src={
-                      serie.poster && serie.poster.startsWith("http")
-                        ? serie.poster
-                        : serie.poster
-                        ? `http://localhost:3994/src/assets/Series/Posters/${serie.poster}`
-                        : ""
-                    }
-                    className="adminSerieModalPoster"
-                    alt={serie.title}
-                  />
-                ) : (
-                  <div className="adminSerieModalPosterHolder">
-                    <FontAwesomeIcon icon={faImage} />
-                    <p>Aucune affiche pour le moment.</p>
-                  </div>
-                )}
+                    <img
+                      src={
+                        serie.poster && serie.poster.startsWith("http")
+                          ? serie.poster
+                          : serie.poster
+                          ? `http://localhost:3994/src/assets/Series/Posters/${serie.poster}`
+                          : ""
+                      }
+                      className="adminSerieModalPoster"
+                      alt={serie.title}
+                    />
+                  ) : (
+                    <div className="adminSerieModalPosterHolder">
+                      <FontAwesomeIcon icon={faImage} />
+                      <p>Aucune affiche pour le moment.</p>
+                    </div>
+                  )}
                 </div>
                 <div>
-                  <p>Arrière-plan :</p>
-                  {serie.background ? (
-                  <img
-                    src={
-                      serie.background && serie.background.startsWith("http")
-                        ? serie.background
-                        : serie.background
-                        ? `http://localhost:3994/src/assets/Series/Backgrounds/${serie.background}`
-                        : ""
-                    }
-                    className="adminSerieBackground"
-                    alt={serie.title}
-                  />
+                  <p>Logo de la série :</p>
+                  {serie.logo ? (
+                    <img
+                      src={
+                        serie.logo && serie.logo.startsWith("http")
+                          ? serie.logo
+                          : serie.logo
+                          ? `http://localhost:3994/src/assets/Series/Logos/${serie.logo}`
+                          : ""
+                      }
+                      className="adminSerieModalLogo"
+                      alt={serie.title}
+                    />
                   ) : (
-                  <div className="adminSerieModalBackgroundHolder">
-                    <FontAwesomeIcon icon={faPanorama} />
-                    <p>Aucun arriere-plan pour le moment.</p>
-                  </div>
+                    <div className="adminSerieLogoHolder">
+                      <FontAwesomeIcon icon={faCopyright} />
+                      <p>Aucun logo pour le moment.</p>
+                    </div>
                   )}
                 </div>
               </div>
               <div className="adminSerieRight">
-                {serie.logo ? (
-                  <img
-                    src={
-                      serie.logo && serie.logo.startsWith("http")
-                        ? serie.logo
-                        : serie.logo
-                        ? `http://localhost:3994/src/assets/Series/Logos/${serie.logo}`
-                        : ""
-                    }
-                    className="adminSerieLogo"
-                    alt={serie.title}
-                  />
+                {serie.background ? (
+                  <div className="adminSerieBackground">
+                    <p>Affiche de fond :</p>
+
+                    <img
+                      src={
+                        serie.background && serie.background.startsWith("http")
+                          ? serie.background
+                          : serie.background
+                          ? `http://localhost:3994/src/assets/Series/Backgrounds/${serie.background}`
+                          : ""
+                      }
+                      alt={serie.title}
+                    />
+                  </div>
                 ) : (
-                  <div className="adminSerieLogoHolder">
-                    <FontAwesomeIcon icon={faCopyright} />
-                    <p>Aucun logo pour le moment.</p>
+                  <div className="adminSerieBackgroundHolder">
+                    <FontAwesomeIcon icon={faPanorama} />
+                    <p>Aucun arrière-plan pour le moment.</p>
                   </div>
                 )}
                 <div className="adminSerieInfos">
@@ -125,10 +132,10 @@ function AdminSerieModal({ serie, show, onClose, onUpdate, onDelete }) {
                   </p>
                   <p>
                     <strong>Saisons : </strong>
-                    <br /> {serie.seasons.length}
+                    <br /> {serie.nbSeasons}
                   </p>
                   <p>
-                    <strong>Episodes :</strong> <br /> {serie.episodes}
+                    <strong>Episodes :</strong> <br /> {serie.nbEpisodesSerie}
                   </p>
                   <p>
                     <strong>Genre(s) :</strong> <br /> {serie.genre}
@@ -158,24 +165,25 @@ function AdminSerieModal({ serie, show, onClose, onUpdate, onDelete }) {
                     </p>
                   ) : null}
                 </div>
-                <div className="adminSerieSynopsisTrailer">
-                  <div className="adminSerieSynopsis">
-                    <h3>Synopsis</h3>
-                    <p>{serie.synopsis}</p>
-                  </div>
-                  <div className="adminSerieTrailer">
-                    <h3>Trailer</h3>
-                    {serie.trailer ? (
-                    <iframe
-                      src={serie.trailer}
-                      title="trailer"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
-                    ) : ( <p>Aucun trailer pour le moment.</p>
-                    )}
-                  </div>
-                </div>
+              </div>
+            </div>
+            <div className="adminSerieSynopsisTrailer">
+              <div className="adminSerieSynopsis">
+                <h3>Synopsis</h3>
+                <p>{serie.synopsis}</p>
+              </div>
+              <div className="adminSerieTrailer">
+                <h3>Trailer</h3>
+                {serie.trailer ? (
+                  <iframe
+                    src={serie.trailer}
+                    title="trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                ) : (
+                  <p>Aucun trailer pour le moment.</p>
+                )}
               </div>
             </div>
             <div className="adminSerieSeasons">
@@ -207,7 +215,11 @@ function AdminSerieModal({ serie, show, onClose, onUpdate, onDelete }) {
                           <br />
                           {season.episodes_count}
                         </p>
-                        <AdminSerieEpisodesContainer episodes={season.episodes} serieId={serie.id} seasonId={season.id} />
+                        <AdminSerieEpisodesContainer
+                          episodes={season.episodes}
+                          serieId={serie.id}
+                          seasonId={season.id}
+                        />
                       </div>
                     ))
                   ) : (
@@ -216,23 +228,6 @@ function AdminSerieModal({ serie, show, onClose, onUpdate, onDelete }) {
                 </HorizontallScroll>
               </div>
             </div>
-            {/* <div className="adminSerieEpisodes">
-              <h3>Episodes du serie "{serie.title}"</h3>
-              <div className="adminSerieEpisodesList">
-                {episodes.length > 0 ? (
-                  episodes.map((episode) => (
-                    <div
-                      className="adminSerieEpisodeCard"
-                      key={episode.id}
-                    >
-                      <p>{episode.title}</p>
-                    </div>
-                  ))
-                ) : (
-                  <p>Aucun episode pour le moment.</p>
-                )}
-              </div>   
-              </div>          */}
             <div className="adminSerieCasting">
               <h3>Casting du serie "{serie.title}"</h3>
               <div className="adminSerieCastingSection">
@@ -298,6 +293,7 @@ function AdminSerieModal({ serie, show, onClose, onUpdate, onDelete }) {
         ) : (
           <AdminSerieEditForm
             serie={serie}
+            seasons={Array.isArray(serie.seasons) ? serie.seasons : []}
             onUpdate={handleUpdate}
             onCancel={() => setIsEditing(false)}
             onDelete={() => {
