@@ -258,7 +258,6 @@
     border: 4px solid #ffb20c;
   }
 
-  .adminSerieSeasons p,
   .adminSerieSeasons h3 {
     margin: 0;
     text-align: center;
@@ -270,6 +269,12 @@
     width: 100%;
     height: auto;
     gap: 20px;
+  }
+
+    .adminSerieSeasonsList p {
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
   }
 
   .adminSerieSeasonCard {
@@ -285,7 +290,7 @@
 
   .adminSerieSeasonCard p {
     margin: 0;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
   }
 
@@ -331,6 +336,12 @@
     width: 100%;
     height: auto;
     padding: 10px;
+  }
+
+    .adminSerieCastingList p {
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
   }
 
   .adminSerieCastingCard {
@@ -654,8 +665,9 @@
   }
 
   .adminSerieSeasonsList p {
-    margin: 0;
+    margin: auto;
     text-align: center;
+    font-size: 18px;
   }
 
   .adminSerieSeasonCard {
@@ -670,9 +682,8 @@
   }
 
   .adminSerieSeasonCard p {
-    margin: 0;
+    margin: auto;
     font-size: 18px;
-    text-align: center;
   }
 
   .adminSerieSeasonCard img {
@@ -717,6 +728,12 @@
     width: 100%;
     height: auto;
     padding: 10px;
+  }
+
+  .adminSerieCastingList p {
+    margin: auto;
+    font-size: 18px;
+    text-align: center;
   }
 
   .adminSerieCastingCard {
@@ -858,7 +875,7 @@
 
   .adminSerieLeft p {
     margin: 0;
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .adminSerieModalPoster {
@@ -900,7 +917,7 @@
   }
 
   .adminSerieBackground p {
-    font-size: 20px;
+    font-size: 22px;
     margin: 0;
     text-align: center;
   }
@@ -941,8 +958,9 @@
 
   .adminSerieModalLogo {
     width: 100%;
-    height: 10rem;
+    height: 20rem;
     object-fit: contain;
+    padding: 5px;
     border: 4px solid #ffb20c;
   }
 
@@ -1060,6 +1078,12 @@
     gap: 15px;
   }
 
+    .adminSerieSeasonsList p {
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+  }
+
   .adminSerieSeasonCard {
     display: flex;
     flex-direction: column;
@@ -1127,6 +1151,12 @@
     height: auto;
     gap: 10px;
     padding: 10px;
+  }
+
+    .adminSerieCastingList p {
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
   }
 
   .adminSerieCastingCard img {
@@ -1254,7 +1284,7 @@
 
   .adminSerieLeft p {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .adminSerieModalPoster {
@@ -1294,7 +1324,7 @@
   }
 
   .adminSerieBackground p {
-    font-size: 15px;
+    font-size: 18px;
     margin: 0;
     text-align: center;
   }
@@ -1335,8 +1365,9 @@
 
   .adminSerieModalLogo {
     width: 100%;
-    height: 10rem;
+    height: 15rem;
     object-fit: contain;
+    padding: 5px;
     border: 4px solid #ffb20c;
   }
 
@@ -1451,6 +1482,7 @@
   .adminSerieSeasonsList p {
     margin: auto;
     font-size: 15px;
+    text-align: center;
   }
 
   .adminSerieSeasonCard {
@@ -1511,6 +1543,12 @@
     width: 100%;
     height: auto;
     padding: 5px;
+  }
+
+  .adminSerieCastingList p {
+    margin: auto;
+    font-size: 15px;
+    text-align: center;
   }
 
   .adminSerieCastingCard {
