@@ -250,6 +250,11 @@ function AdminSerieModal({ serie, show, onClose, onUpdate, onDelete }) {
                             <br />
                             {direction.role}
                           </p>
+                          <p>
+                            <strong>Présence :</strong>
+                            <br />
+                            {direction.presence}
+                          </p>
                         </div>
                       ))
                     ) : (
