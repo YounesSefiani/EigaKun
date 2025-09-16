@@ -501,6 +501,18 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
                 />
                 <p>{direction.personality_fullname}</p>
                 <label>
+                  <p>Rôle :</p>
+                  <input
+                    type="text"
+                    value={direction.role}
+                    onChange={(e) =>
+                      handleCastingChange(direction.id, {
+                        role: e.target.value,
+                      })
+                    }
+                  />
+                </label>
+                <label>
                   <p>Side :</p>
                   <select
                     value={direction.side}
@@ -513,18 +525,6 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
                     <option value="Acting">Acting</option>
                     <option value="Directing">Directing</option>
                   </select>
-                </label>
-                <label>
-                  <p>Rôle :</p>
-                  <input
-                    type="text"
-                    value={direction.role}
-                    onChange={(e) =>
-                      handleCastingChange(direction.id, {
-                        role: e.target.value,
-                      })
-                    }
-                  />
                 </label>
                 <label>
                   <p>Présence :</p>
