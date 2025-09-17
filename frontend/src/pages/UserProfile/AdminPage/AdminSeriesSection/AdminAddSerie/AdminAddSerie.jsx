@@ -1,6 +1,11 @@
 import React, { useState, useContext, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileImage, faPanorama } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFileImage,
+  faPanorama,
+  faCopyright,
+  faFilm,
+} from "@fortawesome/free-solid-svg-icons";
 import connexion from "../../../../../services/connexion";
 import { AuthContext } from "../../../../../services/Context/AuthContext";
 import { ToastContainer, toast } from "react-toastify";
@@ -130,7 +135,7 @@ function AdminAddSerie({ onClose, onSerieAdded }) {
   };
 
   // Modification du rôle d'un membre (local)
-   const handleRoleChange = (castingId, newRole) => {
+  const handleRoleChange = (castingId, newRole) => {
     setCasting((prev) =>
       prev.map((cast) =>
         cast.id === castingId ? { ...cast, role: newRole } : cast
@@ -318,7 +323,7 @@ function AdminAddSerie({ onClose, onSerieAdded }) {
                   />
                 ) : (
                   <div className="addSerieLogoHolder">
-                    <FontAwesomeIcon icon={faFileImage} />
+                    <FontAwesomeIcon icon={faCopyright} />
                     <p>Ajoutez un logo</p>
                   </div>
                 )}
@@ -469,16 +474,16 @@ function AdminAddSerie({ onClose, onSerieAdded }) {
                   />
                 </label>
                 <label>
-                  <p>
-                    <strong>Sortie</strong>
-                  </p>
-                  <input
-                    type="text"
+                  <p>Sortie :</p>
+                  <select
                     name="screen"
                     value={serie.screen}
                     onChange={handleSerieChange}
-                    placeholder="Sortie de la série"
-                  />
+                  >
+                    <option value="">Sortie sur :</option>
+                    <option value="TV">TV</option>
+                    <option value="Streaming">Streaming</option>
+                  </select>
                 </label>
                 <label>
                   <p>
@@ -548,8 +553,21 @@ function AdminAddSerie({ onClose, onSerieAdded }) {
               <p>
                 <strong>Trailer</strong>
               </p>
+              {serie.trailer ? (
+                <iframe
+                  src={serie.trailer}
+                  title="trailer"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              ) : (
+                <div className="addSerieTrailerHolder">
+                  <FontAwesomeIcon icon={faFilm} />
+                  <p>Aucune bande-annonce pour le moment.</p>
+                </div>
+              )}
               <input
-                type="text"
+                type="url"
                 name="trailer"
                 value={serie.trailer}
                 onChange={handleSerieChange}

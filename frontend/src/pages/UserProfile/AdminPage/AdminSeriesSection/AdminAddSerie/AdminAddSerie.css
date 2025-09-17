@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    width: 90%;
+    width: 95%;
     height: 90%;
     overflow-y: auto;
     gap: 10px;
@@ -30,25 +30,6 @@
     border: 4px solid #ffb20c;
   }
 
-  .addSerieButtons {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    width: 100%;
-    height: auto;
-    top: 10px;
-    right: 10px;
-    gap: 20px;
-    justify-content: flex-end;
-  }
-
-  .adminAddSerie {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-  }
-
   .adminAddSerieForm {
     display: flex;
     flex-direction: column;
@@ -59,136 +40,156 @@
     border: none;
   }
 
+  .adminAddSerieForm p {
+    margin: 0;
+  }
+
+  .adminAddSerieForm label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .adminAddSerieForm input,
+  .adminAddSerieForm select {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminAddSerieForm svg {
+    font-size: 50px;
+    color: #ffb20c;
+  }
+
+  .adminAddSerieTopInterface {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminAddSerieTopInterface h2 {
+    margin: 0;
+  }
+
+  .addSerieButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
   .adminAddSerieTop {
     display: flex;
     flex-direction: column;
-    text-align: center;
     width: 100%;
     height: auto;
     padding: 10px;
     border: 4px solid #ffb20c;
-  }
-
-  .adminAddSerieTop p {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-
-  .adminAddSerieTop input {
-    width: 50%;
-    margin: auto;
   }
 
   .adminAddSerieContent {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: auto;
     height: auto;
-    gap: 15px;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
   }
 
   .adminAddSerieLeft {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 30%;
+    justify-content: space-between;
+    width: 35%;
     height: auto;
-    gap: 30px;
-    padding: 20px;
+    gap: 15px;
+    padding: 10px;
     border: 4px solid #ffb20c;
   }
 
-  .adminAddSerieLeft label {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: auto;
-    height: 100%;
-    gap: 25px;
-  }
-
-  .adminAddSerieLeft p {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-
-  .addSeriePosterHolder,
   .seriePosterAdd {
+    width: 15rem;
+    height: 20rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSeriePosterHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 18rem;
-    height: 25rem;
-    margin: auto;
+    text-align: center;
+    width: 15rem;
+    height: 20rem;
+    gap: 10px;
+    padding: 5px;
     border: 4px solid #ffb20c;
   }
 
-  .addSerieBackgroundHolder,
-  .serieBackgroundAdd {
+  .serieLogoAdd {
+    width: 15rem;
+    height: 10rem;
+    object-fit: contain;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieLogoHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 18rem;
-    object-fit: cover;
-    margin: auto;
+    text-align: center;
+    width: 15rem;
+    height: 10rem;
+    gap: 10px;
+    padding: 5px;
     border: 4px solid #ffb20c;
-  }
-
-  .adminAddSerieLeft input {
-    width: 100%;
-    font-size: 1.2rem;
-  }
-
-  .adminAddSerieRight p {
-    margin: 0;
-    font-size: 1.5rem;
   }
 
   .adminAddSerieRight {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 65%;
     height: 100%;
-    gap: 20px;
+    gap: 15px;
     padding: 10px;
     border: 4px solid #ffb20c;
   }
 
-  .adminAddSerieRight label {
-    display: flex;
-    flex-direction: column;
+  .serieBackgroundAdd {
     width: 100%;
-    height: auto;
-    text-align: center;
+    height: 17rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
   }
 
-  .adminAddSerieRight input {
-    width: 100%;
-    font-size: 1.2rem;
-  }
-
-  .addSerieLogoHolder,
-  .serieLogoAdd {
+  .addSerieBackgroundHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10rem;
+    height: 17rem;
+    margin: auto;
     border: 4px solid #ffb20c;
-  }
-
-  .addSerieLogoHolder p {
-    margin: 0;
-    font-size: 1.5rem;
   }
 
   .addSerieInfos {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     width: 100%;
     height: auto;
     gap: 10px;
@@ -196,23 +197,17 @@
     border: 4px solid #ffb20c;
   }
 
-  .addSerieInfos p {
-    margin: 0;
-    font-size: 1.2rem;
+  .addSerieInfos label {
+    font-size: 18px;
   }
 
   .addSerieSynopsisTrailer {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100%;
-    gap: 20px;
-    padding: 0;
-  }
-
-  .addSerieSynopsisTrailer p {
-    margin: 0;
-    font-size: 1.2rem;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
   }
 
   .addSerieSynopsisTrailer label {
@@ -225,8 +220,103 @@
   }
 
   .addSerieSynopsisTrailer textarea {
-    width: auto;
+    width: 100%;
     height: 100%;
+    font-size: 15px;
+    text-align: justify;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer iframe {
+    width: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+    background-color: #222;
+    color: #ffb20c;
+    font-size: 20px;
+  }
+
+  .addSerieTrailerHolder svg {
+    font-size: 50px;
+  }
+
+  .addSerieCasting {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieCastingSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieCastingList {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .addSerieCastingCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    font-size: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieCastingCard img {
+    width: 13rem;
+    height: 18rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMemberCasting {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+  .addMemberCasting label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    text-align: center;
   }
 }
 /* VERSION DESKTOP */
@@ -451,11 +541,34 @@
 
   .addSerieSynopsisTrailer textarea {
     width: 100%;
-    height: 8rem;
+    height: 100%;
     font-size: 15px;
     text-align: justify;
     resize: none;
     border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer iframe {
+    width: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+    background-color: #222;
+    color: #ffb20c;
+    font-size: 18px;
+  }
+
+  .addSerieTrailerHolder svg {
+    font-size: 50px;
   }
 
   .addSerieCasting {
@@ -777,6 +890,30 @@
     border: 4px solid #ffb20c;
   }
 
+  .addSerieSynopsisTrailer iframe {
+    width: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+    background-color: #222;
+    color: #ffb20c;
+    font-size: 20px;
+  }
+
+  .addSerieTrailerHolder svg {
+    font-size: 50px;
+  }
+
   .addSerieCasting {
     display: flex;
     flex-direction: column;
@@ -1093,6 +1230,30 @@
     resize: none;
     padding: 5px;
     border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer iframe {
+    width: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+    background-color: #222;
+    color: #ffb20c;
+    font-size: 18px;
+  }
+
+  .addSerieTrailerHolder svg {
+    font-size: 50px;
   }
 
   .addSerieCasting {

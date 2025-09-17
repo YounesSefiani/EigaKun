@@ -8,6 +8,7 @@ import {
   faImage,
   faPanorama,
   faCopyright,
+  faFilm,
 } from "@fortawesome/free-solid-svg-icons";
 import "./AdminSerieEditForm.css";
 import { AuthContext } from "../../../../../../services/Context/AuthContext";
@@ -87,6 +88,18 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
     if (logoInput.file) data.append("logo", logoInput.file);
     else if (logoInput.url) data.append("logo", logoInput.url);
     onUpdate(data);
+    try {
+      const response = await connexion.put(`/series/${serie.id}`, data, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      if (typeof onUpdate === "function") onUpdate(response.data.updateSerie);
+    } catch (err) {
+      console.error(err);
+      toast.error("Une erreur s'est produite lors de la mise à jour.");
+    }
   };
 
   const previewImage = (input, localPath) => {
@@ -469,15 +482,22 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
         </label>
         <label>
           <p>Bande-annonce :</p>
-          <iframe
-            title="Trailer de la série"
-            src={serie.trailer}
-            allowFullScreen
-          ></iframe>
+          {serieForm.trailer ? (
+            <iframe
+              title="Trailer de la série"
+              src={serieForm.trailer}
+              allowFullScreen
+            ></iframe>
+          ) : (
+            <div className="editSerieTrailerHolder">
+              <FontAwesomeIcon icon={faFilm} />
+              <p>Aucune bande-annonce pour le moment.</p>
+            </div>
+          )}
           <input
-            type="text"
+            type="url"
             name="trailer"
-            value={serie.trailer}
+            value={serieForm.trailer}
             onChange={handleSerieChange}
           />
         </label>
