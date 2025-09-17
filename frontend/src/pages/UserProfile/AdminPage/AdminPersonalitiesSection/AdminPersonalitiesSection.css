@@ -1,0 +1,447 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .adminPersonalitiesSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .adminPersonalitiesSection h2 {
+    width: fit-content;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 10px 15px;
+  }
+
+  .adminBtnSection {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .adminPersonalitiesSection button {
+    border: 4px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+    font-size: 25px;
+    transition: 0.5s ease;
+  }
+
+  .adminPersonalitiesSection button:hover {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .adminPersonalitiesList {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    gap: 20px;
+    padding: 15px;
+    margin: auto;
+    overflow-y: auto;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+  }
+
+  .adminPersonalityCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    color: #ffb20c;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminPersonalityCard a:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .adminPersonalityCard img {
+    width: 15rem;
+    height: 20rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminPersonalityAvatarHolder img {
+    width: 15rem;
+    height: 20rem;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    padding: 10px;
+  }
+
+  .adminPersonalityCard p {
+    width: 100%;
+    font-size: 100%;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminPersonalityCard a:hover p {
+    background-color: #ffb20c;
+    color: black;
+  }
+}
+
+/* VERSION DESKTOP */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .adminPersonalitiesSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .adminPersonalitiesSection h2 {
+    width: fit-content;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 10px 15px;
+  }
+
+  .adminBtnSection {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .adminPersonalitiesSection button {
+    border: 4px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+    font-size: 25px;
+    transition: 0.5s ease;
+  }
+
+  .adminPersonalitiesSection button:hover {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .adminPersonalitiesList {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    gap: 20px;
+    padding: 15px;
+    margin: auto;
+    overflow-y: auto;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+  }
+
+  .adminPersonalityCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    color: #ffb20c;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminPersonalityCard a:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .adminPersonalityCard img {
+    width: 13rem;
+    height: 19rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminPersonalityAvatarHolder img {
+    width: 13rem;
+    height: 19rem;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    padding: 10px;
+  }
+
+  .adminPersonalityCard p {
+    width: 100%;
+    font-size: 100%;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminPersonalityCard a:hover p {
+    background-color: #ffb20c;
+    color: black;
+  }
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .adminPersonalitiesSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: auto;
+    height: 100%;
+    padding: 5px;
+    padding-bottom: 15%;
+  }
+
+  .adminPersonalitiesSection h2 {
+    width: fit-content;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 5px;
+  }
+
+  .adminBtnSection {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    gap: 10px;
+  }
+
+  .adminPersonalitiesSection button {
+    border: 4px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    padding: 5px;
+    font-size: 22px;
+    transition: 0.5s ease;
+  }
+
+  .adminPersonalitiesSection button:active {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .adminPersonalitiesList {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+    margin: auto;
+    overflow-y: auto;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+  }
+
+  .adminPersonalityCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+    color: #ffb20c;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .adminPersonalityCard a:active {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .adminPersonalityCard img {
+    width: 10rem;
+    height: 15rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminPersonalityAvatarHolder img {
+    width: 10rem;
+    height: 15rem;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    padding: 5px;
+  }
+
+  .adminPersonalityCard p {
+    width: 100%;
+    height: auto;
+    font-size: 13px;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    border-radius: 20px;
+  }
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 767px) {
+  .adminPersonalitiesSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: auto;
+    height: 100%;
+    padding: 5px;
+    padding-bottom: 25%;
+  }
+
+  .adminPersonalitiesSection h2 {
+    width: fit-content;
+    font-size: 15px;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 5px;
+  }
+
+  .adminBtnSection {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    gap: 10px;
+  }
+
+  .adminPersonalitiesSection button {
+    border: 4px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    padding: 5px;
+    font-size: 16px;
+    transition: 0.5s ease;
+  }
+
+  .adminPersonalitiesSection button:active {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .adminPersonalitiesList {
+    display: grid;
+    grid-template-columns: auto 50%;
+    width: auto;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+    margin: auto;
+    overflow-y: auto;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+  }
+
+  .adminPersonalityCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+    color: #ffb20c;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .adminPersonalityCard a:active {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .adminPersonalityCard img {
+    width: 8rem;
+    height: 11rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminPersonalityAvatarHolder img {
+    width: 8rem;
+    height: 10rem;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    padding: 5px;
+  }
+
+  .adminPersonalityCard p {
+    width: 100%;
+    height: auto;
+    font-size: 11px;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminPersonalityCard a:hover p {
+    background-color: #ffb20c;
+    color: black;
+  }
+}
