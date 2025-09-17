@@ -245,6 +245,23 @@
     border: 4px solid #ffb20c;
   }
 
+  .editSerieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+    background-color: #222;
+    color: #ffb20c;
+    font-size: 20px;
+  }
+
+  .editSerieTrailerHolder svg {
+    font-size: 50px;
+  }
+
   .noneSeasonPoster {
     display: flex;
     flex-direction: column;
@@ -586,6 +603,23 @@
     width: 100%;
     height: 15rem;
     border: 4px solid #ffb20c;
+  }
+
+  .editSerieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+    background-color: #222;
+    color: #ffb20c;
+    font-size: 20px;
+  }
+
+  .editSerieTrailerHolder svg {
+    font-size: 50px;
   }
 
   .noneSeasonPoster {
@@ -940,6 +974,24 @@
     width: 100%;
     height: 15rem;
     border: 4px solid #ffb20c;
+  }
+
+  .editSerieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+    background-color: #222;
+    color: #ffb20c;
+    font-size: 20px;
+  }
+
+  .editSerieTrailerHolder svg {
+    font-size: 50px;
   }
 
   .noneSeasonPoster {
@@ -1317,6 +1369,24 @@
     width: 100%;
     height: 15rem;
     border: 4px solid #ffb20c;
+  }
+
+  .editSerieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+    background-color: #222;
+    color: #ffb20c;
+    font-size: 20px;
+  }
+
+  .editSerieTrailerHolder svg {
+    font-size: 50px;
   }
 
   .noneSeasonPoster {
