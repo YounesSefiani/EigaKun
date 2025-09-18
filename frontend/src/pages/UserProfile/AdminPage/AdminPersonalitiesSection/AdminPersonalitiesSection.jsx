@@ -5,12 +5,15 @@ import connexion from "../../../../services/connexion";
 import EigaKunLogo from "../../../../assets/EigaKunLogo.png";
 import { useNavigate } from "react-router-dom";
 import "./AdminPersonalitiesSection.css";
+import AdminPersonalityModal from "./AdminPersonalityModal/AdminPersonalityModal";
 
 function AdminPersonalitiesSection({ setView }) {
   const { user, token, handleAuthError, sessionExpired } =
     useContext(AuthContext);
   const navigate = useNavigate();
   const [personalities, setPersonalities] = useState([]);
+  const [selectedPersonality, setSelectedPersonality] = useState(null);
+  const [showPersonalityModal, setShowPersonalityModal] = useState(false);
 
   useEffect(() => {
     if ((!user || !token) && !sessionExpired) {
@@ -31,6 +34,36 @@ function AdminPersonalitiesSection({ setView }) {
     }
   }, [user, token, handleAuthError, sessionExpired, navigate]);
 
+  const handleOpenPersonalityModal = async (personality) => {
+    // Récupère la personnalité complète avec filmographie
+    const response = await connexion.get(`/personalities/${personality.id}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    console.log("2. Réponse API reçue:", response.data);
+    setSelectedPersonality(response.data);
+    
+    console.log("3. selectedPersonality mis à jour");
+    setShowPersonalityModal(true);
+    
+    console.log("4. showPersonalityModal = true");
+  };
+
+  const handleClosePersonalityModal = () => {
+    setSelectedPersonality(null);
+    setShowPersonalityModal(false);
+  };
+
+  const handleUpdatePersonality = async (formData) => {
+    // Logique de mise à jour
+    console.log("Mise à jour personnalité:", formData);
+  };
+
+  const handleDeletePersonality = async (personalityId) => {
+    // Logique de suppression
+    console.log("Suppression personnalité:", personalityId);
+  };
+
   return (
     <div className="adminPersonalitiesSection">
       <h2>Les personnalités</h2>
@@ -42,7 +75,11 @@ function AdminPersonalitiesSection({ setView }) {
       </div>
       <div className="adminPersonalitiesList">
         {personalities.map((personality) => (
-          <div key={personality.id} className="adminPersonalityCard">
+          <div
+            key={personality.id}
+            className="adminPersonalityCard"
+            onClick={() => handleOpenPersonalityModal(personality)}
+          >
             {personality.image_src ? (
               <img
                 src={
@@ -64,8 +101,19 @@ function AdminPersonalitiesSection({ setView }) {
           </div>
         ))}
       </div>
+      <AdminPersonalityModal
+        personality={selectedPersonality}
+        show={showPersonalityModal}
+        onClose={handleClosePersonalityModal}
+        onUpdate={handleUpdatePersonality}
+        onDelete={handleDeletePersonality}
+      />
     </div>
   );
 }
+
+AdminPersonalitiesSection.propTypes = {
+  setView: PropTypes.func.isRequired,
+};
 
 export default AdminPersonalitiesSection;
