@@ -54,10 +54,13 @@ function AdminPersonalitiesSection({ setView }) {
     setShowPersonalityModal(false);
   };
 
-  const handleUpdatePersonality = async (formData) => {
-    // Logique de mise à jour
-    console.log("Mise à jour personnalité:", formData);
-  };
+  const handleUpdatePersonality = (updatedPersonality) => {
+  setPersonalities(prev =>
+    prev.map(p => p.id === updatedPersonality.id ? { ...p, ...updatedPersonality } : p)
+  );
+  setSelectedPersonality(updatedPersonality);
+  setShowPersonalityModal(false);
+};
 
   const handleDeletePersonality = async (personalityId) => {
     // Logique de suppression

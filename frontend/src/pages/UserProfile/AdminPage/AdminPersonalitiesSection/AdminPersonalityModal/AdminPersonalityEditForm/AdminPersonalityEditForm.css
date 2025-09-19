@@ -1,0 +1,818 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .adminPersonalityEditForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .adminPersonalityEditForm label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .adminPersonalityEditForm label p {
+    font-size: 20px;
+  }
+
+  .adminPersonalityEditForm input, .adminPersonalityEditForm select {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminPersonalityEditForm p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .editPersonalityFormTop {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+  }
+
+  .editPersonalityFormTop div button {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .editPersonalityFormTop div button:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .editPersonalityFormContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .editPersonalityFormLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityImage {
+    width: 18rem;
+    height: 28rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFormRight {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .editPersonalityInfos {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio textarea {
+    width: 100%;
+    height: 10rem;
+    font-size: 18px;
+    padding: 5px;
+    text-align: justify;
+    overflow-y: auto;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFilmography {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesSection,
+  .editPersonalitySeriesSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesList,
+  .editPersonalitySeriesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityMoviesList p,
+  .editPersonalitySeriesList p {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .editPersonalityMovieCard,
+  .editPersonalitySerieCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard img,
+  .editPersonalitySerieCard img {
+    width: 18rem;
+    height: 25rem;
+    object-fit: fill;
+    border-radius: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard p,
+  .editPersonalitySerieCard p {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+  }
+}
+
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .adminPersonalityEditForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .adminPersonalityEditForm label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .adminPersonalityEditForm label p {
+    font-size: 18px;
+  }
+
+  .adminPersonalityEditForm input, .adminPersonalityEditForm select {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminPersonalityEditForm p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .editPersonalityFormTop {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+  }
+
+  .editPersonalityFormTop div button {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    padding: 5px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .editPersonalityFormTop div button:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .editPersonalityFormContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .editPersonalityFormLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityImage {
+    width: 14rem;
+    height: 21rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFormRight {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .editPersonalityInfos {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: auto;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio textarea {
+    width: 100%;
+    height: 10rem;
+    font-size: 15px;
+    padding: 5px;
+    text-align: justify;
+    overflow-y: auto;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFilmography {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesSection,
+  .editPersonalitySeriesSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesList,
+  .editPersonalitySeriesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+  }
+
+  .editPersonalityMoviesList p,
+  .editPersonalitySeriesList p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .editPersonalityMovieCard,
+  .editPersonalitySerieCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    border-radius: 25px;
+  }
+
+  .editPersonalityMovieCard img,
+  .editPersonalitySerieCard img {
+    width: 13rem;
+    height: 18rem;
+    object-fit: fill;
+    border-radius: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard p,
+  .editPersonalitySerieCard p {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+  }
+
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+        .adminPersonalityEditForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .adminPersonalityEditForm label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .adminPersonalityEditForm label p {
+    font-size: 18px;
+  }
+
+  .adminPersonalityEditForm input, .adminPersonalityEditForm select {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminPersonalityEditForm p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .editPersonalityFormTop {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+  }
+
+  .editPersonalityFormTop div button {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .editPersonalityFormTop div button:active {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .editPersonalityFormContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .editPersonalityFormLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityImage {
+    width: 15rem;
+    height: 20rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFormRight {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .editPersonalityInfos {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: auto;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio textarea {
+    width: 100%;
+    height: 10rem;
+    font-size: 15px;
+    padding: 5px;
+    text-align: justify;
+    overflow-y: auto;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFilmography {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesSection,
+  .editPersonalitySeriesSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesList,
+  .editPersonalitySeriesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityMoviesList p,
+  .editPersonalitySeriesList p {
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .editPersonalityMovieCard,
+  .editPersonalitySerieCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityMovieCard img,
+  .editPersonalitySerieCard img {
+    width: 13rem;
+    height: 19rem;
+    object-fit: fill;
+    border-radius: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard p,
+  .editPersonalitySerieCard p {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+  }
+
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 767px) {
+      .adminPersonalityEditForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .adminPersonalityEditForm label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .adminPersonalityEditForm label p {
+    font-size: 18px;
+  }
+
+  .adminPersonalityEditForm input, .adminPersonalityEditForm select {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminPersonalityEditForm p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .editPersonalityFormTop {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+  }
+
+  .editPersonalityFormTop div button {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .editPersonalityFormTop div button:active {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .editPersonalityFormContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .editPersonalityFormLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityImage {
+    width: 14rem;
+    height: 21rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFormRight {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+  .editPersonalityInfos {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: auto;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio textarea {
+    width: 100%;
+    height: 10rem;
+    font-size: 15px;
+    padding: 5px;
+    text-align: justify;
+    overflow-y: auto;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFilmography {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesSection,
+  .editPersonalitySeriesSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesList,
+  .editPersonalitySeriesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+  }
+
+  .editPersonalityMoviesList p,
+  .editPersonalitySeriesList p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .editPersonalityMovieCard,
+  .editPersonalitySerieCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityMovieCard img,
+  .editPersonalitySerieCard img {
+    width: 9rem;
+    height: 14rem;
+    object-fit: fill;
+    border-radius: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard p,
+  .editPersonalitySerieCard p {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+  }
+
+}
