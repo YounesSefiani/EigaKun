@@ -20,7 +20,8 @@
     font-size: 20px;
   }
 
-  .adminPersonalityEditForm input, .adminPersonalityEditForm select {
+  .adminPersonalityEditForm input,
+  .adminPersonalityEditForm select {
     width: 100%;
     height: auto;
     font-size: 18px;
@@ -206,7 +207,7 @@
 
 /* VERSION DESKTOP */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
-    .adminPersonalityEditForm {
+  .adminPersonalityEditForm {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -226,7 +227,8 @@
     font-size: 18px;
   }
 
-  .adminPersonalityEditForm input, .adminPersonalityEditForm select {
+  .adminPersonalityEditForm input,
+  .adminPersonalityEditForm select {
     width: 100%;
     height: auto;
     font-size: 15px;
@@ -406,12 +408,11 @@
     text-align: center;
     border: 4px solid #ffb20c;
   }
-
 }
 
 /* VERSION TABLET */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-        .adminPersonalityEditForm {
+  .adminPersonalityEditForm {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -431,7 +432,8 @@
     font-size: 18px;
   }
 
-  .adminPersonalityEditForm input, .adminPersonalityEditForm select {
+  .adminPersonalityEditForm input,
+  .adminPersonalityEditForm select {
     width: 100%;
     height: auto;
     font-size: 15px;
@@ -610,12 +612,11 @@
     text-align: center;
     border: 4px solid #ffb20c;
   }
-
 }
 
 /* VERSION MOBILE */
 @media screen and (max-width: 767px) {
-      .adminPersonalityEditForm {
+  .adminPersonalityEditForm {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -635,7 +636,8 @@
     font-size: 18px;
   }
 
-  .adminPersonalityEditForm input, .adminPersonalityEditForm select {
+  .adminPersonalityEditForm input,
+  .adminPersonalityEditForm select {
     width: 100%;
     height: auto;
     font-size: 15px;
@@ -814,5 +816,4 @@
     text-align: center;
     border: 4px solid #ffb20c;
   }
-
 }
