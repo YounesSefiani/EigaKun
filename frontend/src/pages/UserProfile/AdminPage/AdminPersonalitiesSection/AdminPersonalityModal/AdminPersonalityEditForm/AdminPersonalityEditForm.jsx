@@ -84,7 +84,11 @@ function AdminPersonalityEditForm({
     formData.append("fullname", personalityForm.fullname);
     formData.append("birthdate", personalityForm.birthdate);
     formData.append("deathdate", personalityForm.deathdate);
-    formData.append("image_src", image.file || image.url);
+    if (image.file) {
+      formData.append("image_src", image.file);
+    } else if (image.url) {
+      formData.append("image_src", image.url);
+    }
     formData.append("origin", personalityForm.origin);
     formData.append("profession", personalityForm.profession);
     formData.append("bio", personalityForm.bio);
@@ -151,7 +155,7 @@ function AdminPersonalityEditForm({
           />
           <label>
             <input
-              type="url"
+              type="text"
               name="image_src"
               value={image.url}
               onChange={(e) => setImage({ url: e.target.value, file: null })}

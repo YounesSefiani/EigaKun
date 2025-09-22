@@ -4,8 +4,9 @@ import { AuthContext } from "../../../../services/Context/AuthContext";
 import connexion from "../../../../services/connexion";
 import EigaKunLogo from "../../../../assets/EigaKunLogo.png";
 import { useNavigate } from "react-router-dom";
-import "./AdminPersonalitiesSection.css";
 import AdminPersonalityModal from "./AdminPersonalityModal/AdminPersonalityModal";
+import AdminAddPersonality from "./AdminAddPersonality/AdminAddPersonality";
+import "./AdminPersonalitiesSection.css";
 
 function AdminPersonalitiesSection({ setView }) {
   const { user, token, handleAuthError, sessionExpired } =
@@ -14,6 +15,7 @@ function AdminPersonalitiesSection({ setView }) {
   const [personalities, setPersonalities] = useState([]);
   const [selectedPersonality, setSelectedPersonality] = useState(null);
   const [showPersonalityModal, setShowPersonalityModal] = useState(false);
+  const [showAddPersonality, setShowAddPersonality] = useState(false);
 
   useEffect(() => {
     if ((!user || !token) && !sessionExpired) {
@@ -42,10 +44,10 @@ function AdminPersonalitiesSection({ setView }) {
 
     console.log("2. Réponse API reçue:", response.data);
     setSelectedPersonality(response.data);
-    
+
     console.log("3. selectedPersonality mis à jour");
     setShowPersonalityModal(true);
-    
+
     console.log("4. showPersonalityModal = true");
   };
 
@@ -55,12 +57,14 @@ function AdminPersonalitiesSection({ setView }) {
   };
 
   const handleUpdatePersonality = (updatedPersonality) => {
-  setPersonalities(prev =>
-    prev.map(p => p.id === updatedPersonality.id ? { ...p, ...updatedPersonality } : p)
-  );
-  setSelectedPersonality(updatedPersonality);
-  setShowPersonalityModal(false);
-};
+    setPersonalities((prev) =>
+      prev.map((p) =>
+        p.id === updatedPersonality.id ? { ...p, ...updatedPersonality } : p
+      )
+    );
+    setSelectedPersonality(updatedPersonality);
+    setShowPersonalityModal(false);
+  };
 
   const handleDeletePersonality = async (personalityId) => {
     // Logique de suppression
@@ -71,11 +75,31 @@ function AdminPersonalitiesSection({ setView }) {
     <div className="adminPersonalitiesSection">
       <h2>Les personnalités</h2>
       <div className="adminBtnSection">
-        <button type="button">Ajouter une personnalité</button>
+        <button type="button" onClick={() => setShowAddPersonality(true)}>
+          Ajouter une personnalité
+        </button>
         <button type="button" onClick={() => setView("initial")}>
           Retour
         </button>
       </div>
+      {showAddPersonality && (
+        <AdminAddPersonality
+          onClose={() => setShowAddPersonality(false)}
+          onPersonalityAdded={() => {
+            connexion
+              .get(`/personalities`, {
+                headers: { Authorization: `Bearer ${token}` },
+              })
+              .then((response) => {
+                setPersonalities(response.data);
+                setShowAddPersonality(false);
+              })
+              .catch((error) => {
+                handleAuthError(error);
+              });
+          }}
+        />
+        )}
       <div className="adminPersonalitiesList">
         {personalities.map((personality) => (
           <div
