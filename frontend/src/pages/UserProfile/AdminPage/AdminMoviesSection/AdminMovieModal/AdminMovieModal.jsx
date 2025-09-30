@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faImage,
+  faPanorama,
+  faCopyright,
+  faFilm,
+} from "@fortawesome/free-solid-svg-icons";
 import AdminMovieEditForm from "./AdminMovieEditForm/AdminMovieEditForm";
 import HorizontallScroll from "../../../../../components/HorizontalScroll/HorizontalScroll";
 import "./AdminMovieModal.css";
@@ -13,6 +20,14 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
   const directing = casting.filter((cast) => cast.side === "Directing");
   const acting = casting.filter((cast) => cast.side === "Acting");
 
+  const formatDate = (date) => {
+    const zeroPad = (number) => (number < 10 ? "0" : "") + number;
+    const serieDate = new Date(date);
+    const day = zeroPad(serieDate.getDate());
+    const month = zeroPad(serieDate.getMonth() + 1);
+    const year = serieDate.getFullYear();
+    return `${day}/${month}/${year}`;
+  };
   // Handler pour la mise à jour du film (appelé à la soumission du formulaire d'édition)
   const handleUpdate = async (formData) => {
     // Appel du parent pour mettre à jour le film (incluant le casting)
@@ -37,6 +52,7 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
               <div className="adminMovieLeft">
                 <div>
                   <p>Affiche :</p>
+                  {movie.poster ? (
                   <img
                     src={
                       movie.poster && movie.poster.startsWith("http")
@@ -48,9 +64,39 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
                     className="adminMoviePoster"
                     alt={movie.title}
                   />
+                  ) : (
+                    <div className="adminMovieModalPosterHolder">
+                      <FontAwesomeIcon icon={faImage} />
+                      <p>Aucune affiche pour le moment.</p>
+                    </div>
+                  )}
                 </div>
                 <div>
+                  <p>Logo :</p>
+                  {movie.logo ? (
+                    <img
+                      src={
+                        movie.logo && movie.logo.startsWith("http")
+                          ? movie.logo
+                          : movie.logo
+                          ? `http://localhost:3994/src/assets/Movies/Logos/${movie.logo}`
+                          : ""
+                      }
+                      className="adminMovieLogo"
+                      alt={movie.title}
+                    />
+                  ) : (
+                    <div className="adminMovieLogoHolder">
+                      <FontAwesomeIcon icon={faCopyright} />
+                      <p>Aucun logo pour le moment.</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div className="adminMovieRight">
+                <div className="adminMovieBackground">
                   <p>Arrière-plan :</p>
+                  {movie.background ? (
                   <img
                     src={
                       movie.background && movie.background.startsWith("http")
@@ -59,32 +105,19 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
                         ? `http://localhost:3994/src/assets/Movies/Backgrounds/${movie.background}`
                         : ""
                     }
-                    className="adminMovieBackground"
                     alt={movie.title}
                   />
+                  ) : (
+                    <div className="adminMovieBackgroundHolder">
+                      <FontAwesomeIcon icon={faPanorama}/>
+                      <p>Aucun arrière-plan pour le moment.</p>
+                    </div>
+                  )}
                 </div>
-              </div>
-              <div className="adminMovieRight">
-                {movie.logo ? (
-                  <img
-                    src={
-                      movie.logo && movie.logo.startsWith("http")
-                        ? movie.logo
-                        : movie.logo
-                        ? `http://localhost:3994/src/assets/Movies/Logos/${movie.logo}`
-                        : ""
-                    }
-                    className="adminMovieLogo"
-                    alt={movie.title}
-                  />
-                ) : (
-                  <div className="adminMovieLogoHolder">
-                    <p>Aucun logo pour le moment.</p>
-                  </div>
-                )}
                 <div className="adminMovieInfos">
                   <p>
-                    <strong>Date de sortie :</strong> <br /> {movie.release_date}
+                    <strong>Date de sortie :</strong> <br />{" "}
+                    {formatDate(movie.release_date)}
                   </p>
                   <p>
                     <strong>Durée :</strong> <br /> {movie.duration}
@@ -117,21 +150,28 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
                     </p>
                   ) : null}
                 </div>
-                <div className="adminMovieSynopsisTrailer">
-                  <div className="adminMovieSynopsis">
-                    <h3>Synopsis</h3>
-                    <p>{movie.synopsis}</p>
+              </div>
+            </div>
+            <div className="adminMovieSynopsisTrailer">
+              <div className="adminMovieSynopsis">
+                <h3>Synopsis</h3>
+                <p>{movie.synopsis}</p>
+              </div>
+              <div className="adminMovieTrailer">
+                <h3>Trailer</h3>
+                {movie.trailer ? (
+                <iframe
+                  src={movie.trailer}
+                  title="trailer"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+                ) : (
+                  <div className="adminMovieModalTrailerHolder">
+                    <FontAwesomeIcon icon={faFilm} />
+                    <p>Aucun trailer pour le moment.</p>
                   </div>
-                  <div className="adminMovieTrailer">
-                    <h3>Trailer</h3>
-                    <iframe
-                      src={movie.trailer}
-                      title="trailer"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                </div>
+                )}
               </div>
             </div>
             <div className="adminMovieCasting">
@@ -147,7 +187,14 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
                           key={direction.id}
                         >
                           <img
-                            src={direction.personality_image}
+                            src={
+                              direction.personality_image &&
+                              direction.personality_image.startsWith("http")
+                                ? direction.personality_image
+                                : direction.personality_image
+                                ? `http://localhost:3994/src/assets/Personnages/${direction.personality_image}`
+                                : ""
+                            }
                             alt={direction.personality_fullname}
                           />
                           <p>{direction.personality_fullname}</p>
@@ -159,7 +206,7 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
                         </div>
                       ))
                     ) : (
-                      <p>Aucun réalisateur pour le moment.</p>
+                      <p>Aucun membre de la réalisation pour le moment.</p>
                     )}
                   </HorizontallScroll>
                 </div>
@@ -172,7 +219,14 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
                       acting.map((actor) => (
                         <div className="adminMovieCastingCard" key={actor.id}>
                           <img
-                            src={actor.personality_image}
+                            src={
+                              actor.personality_image &&
+                              actor.personality_image.startsWith("http")
+                                ? actor.personality_image
+                                : actor.personality_image
+                                ? `http://localhost:3994/src/assets/Personalities/Images/${actor.personality_image}`
+                                : ""
+                            }
                             alt={actor.personality_fullname}
                           />
                           <p>{actor.personality_fullname}</p>
@@ -184,7 +238,7 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
                         </div>
                       ))
                     ) : (
-                      <p>Aucun acteur pour le moment.</p>
+                      <p>Aucun acteur ni actrice pour le moment.</p>
                     )}
                   </HorizontallScroll>
                 </div>
@@ -193,17 +247,17 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
           </div>
         ) : (
           <AdminMovieEditForm
-  movie={movie}
-  onUpdate={handleUpdate}
-  onCancel={() => setIsEditing(false)}
-  onDelete={() => {
-    if (typeof onDelete === "function") {
-      onDelete(movie.id);
-    }
-    setIsEditing(false);
-    onClose();
-  }}
-/>
+            movie={movie}
+            onUpdate={handleUpdate}
+            onCancel={() => setIsEditing(false)}
+            onDelete={() => {
+              if (typeof onDelete === "function") {
+                onDelete(movie.id);
+              }
+              setIsEditing(false);
+              onClose();
+            }}
+          />
         )}
       </div>
     </>

@@ -1,6 +1,11 @@
 import React, { useState, useContext, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileImage, faPanorama } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFileImage,
+  faPanorama,
+  faCopyright,
+  faFilm,
+} from "@fortawesome/free-solid-svg-icons";
 import connexion from "../../../../../services/connexion";
 import { AuthContext } from "../../../../../services/Context/AuthContext";
 import { ToastContainer, toast } from "react-toastify";
@@ -34,7 +39,10 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
 
   // Images
   const [posterInput, setPosterInput] = useState({ url: "", file: null });
-  const [backgroundInput, setBackgroundInput] = useState({ url: "", file: null });
+  const [backgroundInput, setBackgroundInput] = useState({
+    url: "",
+    file: null,
+  });
   const [logoInput, setLogoInput] = useState({ url: "", file: null });
 
   // Casting local (avant POST)
@@ -153,8 +161,10 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
     movieFormData.append("title", movie.title);
     if (posterInput.file) movieFormData.append("poster", posterInput.file);
     else if (posterInput.url) movieFormData.append("poster", posterInput.url);
-    if (backgroundInput.file) movieFormData.append("background", backgroundInput.file);
-    else if (backgroundInput.url) movieFormData.append("background", backgroundInput.url);
+    if (backgroundInput.file)
+      movieFormData.append("background", backgroundInput.file);
+    else if (backgroundInput.url)
+      movieFormData.append("background", backgroundInput.url);
     if (logoInput.file) movieFormData.append("logo", logoInput.file);
     else if (logoInput.url) movieFormData.append("logo", logoInput.url);
     movieFormData.append("trailer", movie.trailer);
@@ -201,8 +211,8 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
     } catch (error) {
       toast.error(
         error.response?.data?.message ||
-        error.response?.data?.error ||
-        "Erreur lors de l'ajout du film"
+          error.response?.data?.error ||
+          "Erreur lors de l'ajout du film"
       );
     } finally {
       setLoading(false);
@@ -214,11 +224,15 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
       <ToastContainer />
       <div className="adminAddMovieOverlay"></div>
       <div className="adminAddMovieModal">
-        <h2>Ajouter un film</h2>
-        <form className="adminAddMovieForm" onSubmit={handleMovieAdd}>
-          <div className="adminAddMovieTop">
-            <label htmlFor="title">
-              <p><strong>Titre</strong></p>
+        <div className="adminAddMovieTopInterface">
+          <h2>Ajouter un film</h2>
+        </div>
+        <form className="addMovieForm" onSubmit={handleMovieAdd}>
+          <div className="addMovieFormTop">
+            <label>
+              <p>
+                <strong>Titre</strong>
+              </p>
               <input
                 type="text"
                 name="title"
@@ -228,104 +242,120 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                 required
               />
             </label>
+            <div>
+              <button type="submit" disabled={loading}>
+                {loading ? "Ajout en cours..." : "Ajouter le film"}
+              </button>
+              <button type="button" onClick={onClose}>
+                Retour
+              </button>
+            </div>
           </div>
-          <div className="adminAddMovieContent">
-            <div className="adminAddMovieLeft">
-              <label>
-                <p><strong>Affiche :</strong></p>
+          <div className="addMovieFormContent">
+            <div className="addMovieFormLeft">
+              <div>
+                <p>
+                  <strong>Affiche</strong>
+                </p>
                 {posterInput.file || posterInput.url ? (
                   <img
                     src={previewImage(posterInput, "Posters")}
                     alt="Affiche du film"
-                    className="moviePosterAdd"
+                    className="addMoviePoster"
                   />
                 ) : (
-                  <div className="addMoviePoster">
-                    <div className="addMoviePosterHolder">
-                      <FontAwesomeIcon icon={faFileImage} />
-                      <p>Ajoutez une affiche</p>
-                    </div>
+                  <div className="addMoviePosterHolder">
+                    <FontAwesomeIcon icon={faFileImage} />
+                    <p>Ajoutez une affiche</p>
                   </div>
                 )}
-                <input
-                  type="text"
-                  name="posterUrl"
-                  placeholder="URL de l'affiche"
-                  value={posterInput.url}
-                  onChange={(e) => handleImageChange("poster", e)}
-                />
-                <input
-                  type="file"
-                  name="posterFile"
-                  accept="image/*"
-                  onChange={(e) => handleImageChange("poster", e)}
-                />
-              </label>
-              <label>
-                <p><strong>Arrière-plan :</strong></p>
+                <label>
+                  <input
+                    type="text"
+                    name="posterUrl"
+                    placeholder="URL de l'affiche"
+                    value={posterInput.url}
+                    onChange={(e) => handleImageChange("poster", e)}
+                  />
+                  <input
+                    type="file"
+                    name="posterFile"
+                    accept="image/*"
+                    onChange={(e) => handleImageChange("poster", e)}
+                  />
+                </label>
+              </div>
+              <div>
+                <label>
+                  <p>
+                    <strong>Logo</strong>
+                  </p>
+                  {logoInput.file || logoInput.url ? (
+                    <img
+                      src={previewImage(logoInput, "Logos")}
+                      alt="Logo du film"
+                      className="addMovieLogo"
+                    />
+                  ) : (
+                    <div className="addMovieLogoHolder">
+                      <FontAwesomeIcon icon={faCopyright} />
+                      <p>Ajoutez un logo</p>
+                    </div>
+                  )}
+                  <input
+                    type="text"
+                    name="logoUrl"
+                    placeholder="URL du logo"
+                    value={logoInput.url}
+                    onChange={(e) => handleImageChange("logo", e)}
+                  />
+                  <input
+                    type="file"
+                    name="logoFile"
+                    accept="image/*"
+                    onChange={(e) => handleImageChange("logo", e)}
+                  />
+                </label>
+              </div>
+            </div>
+            <div className="addMovieFormRight">
+              <div>
+                <p>
+                  <strong>Arrière-plan</strong>
+                </p>
                 {backgroundInput.file || backgroundInput.url ? (
                   <img
                     src={previewImage(backgroundInput, "Backgrounds")}
                     alt="Arrière-plan du film"
-                    className="movieBackgroundAdd"
+                    className="addMovieBackground"
                   />
                 ) : (
-                  <div className="addMovieBackground">
-                    <div className="addMovieBackgroundHolder">
-                      <FontAwesomeIcon icon={faPanorama} />
-                      <p>Ajoutez un arrière-plan</p>
-                    </div>
+                  <div className="addMovieBackgroundHolder">
+                    <FontAwesomeIcon icon={faPanorama} />
+                    <p>Ajoutez un arrière-plan</p>
                   </div>
                 )}
-                <input
-                  type="text"
-                  name="backgroundUrl"
-                  placeholder="URL de l'arrière-plan"
-                  value={backgroundInput.url}
-                  onChange={(e) => handleImageChange("background", e)}
-                />
-                <input
-                  type="file"
-                  name="backgroundFile"
-                  accept="image/*"
-                  onChange={(e) => handleImageChange("background", e)}
-                />
-              </label>
-            </div>
-            <div className="adminAddMovieRight">
-              <label>
-                <p><strong>Logo :</strong></p>
-                {logoInput.file || logoInput.url ? (
-                  <img
-                    src={previewImage(logoInput, "Logos")}
-                    alt="Logo du film"
-                    className="movieLogoAdd"
+                <label>
+                  <input
+                    type="text"
+                    name="backgroundUrl"
+                    placeholder="URL de l'arrière-plan"
+                    value={backgroundInput.url}
+                    onChange={(e) => handleImageChange("background", e)}
                   />
-                ) : (
-                  <div className="addMovieLogo">
-                    <div className="addMovieLogoHolder">
-                      <FontAwesomeIcon icon={faFileImage} />
-                      <p>Ajoutez un logo</p>
-                    </div>
-                  </div>
-                )}
-                <input
-                  type="text"
-                  name="logoUrl"
-                  placeholder="URL du logo"
-                  value={logoInput.url}
-                  onChange={(e) => handleImageChange("logo", e)}
-                />
-                <input
-                  type="file"
-                  name="logoFile"
-                  accept="image/*"
-                  onChange={(e) => handleImageChange("logo", e)}
-                />
-              </label>
+                  <input
+                    type="file"
+                    name="backgroundFile"
+                    accept="image/*"
+                    onChange={(e) => handleImageChange("background", e)}
+                  />
+                </label>
+              </div>
               <div className="addMovieInfos">
                 <label>
-                  <p><strong>Date de sortie</strong></p>
+                  <p>
+                    <strong>Date de sortie</strong>
+                  </p>
                   <input
                     type="date"
                     name="release_date"
@@ -334,7 +364,9 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                   />
                 </label>
                 <label>
-                  <p><strong>Durée</strong></p>
+                  <p>
+                    <strong>Durée</strong>
+                  </p>
                   <input
                     type="text"
                     name="duration"
@@ -344,7 +376,9 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                   />
                 </label>
                 <label>
-                  <p><strong>Genre</strong></p>
+                  <p>
+                    <strong>Genre</strong>
+                  </p>
                   <input
                     type="text"
                     name="genre"
@@ -354,7 +388,9 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                   />
                 </label>
                 <label>
-                  <p><strong>Thème</strong></p>
+                  <p>
+                    <strong>Thème</strong>
+                  </p>
                   <input
                     type="text"
                     name="theme"
@@ -364,7 +400,9 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                   />
                 </label>
                 <label>
-                  <p><strong>Origine</strong></p>
+                  <p>
+                    <strong>Origine</strong>
+                  </p>
                   <input
                     type="text"
                     name="country"
@@ -374,7 +412,9 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                   />
                 </label>
                 <label>
-                  <p><strong>Sortie</strong></p>
+                  <p>
+                    <strong>Sortie</strong>
+                  </p>
                   <input
                     type="text"
                     name="screen"
@@ -384,7 +424,9 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                   />
                 </label>
                 <label>
-                  <p><strong>Streaming</strong></p>
+                  <p>
+                    <strong>Streaming</strong>
+                  </p>
                   <input
                     type="text"
                     name="streaming"
@@ -394,7 +436,9 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                   />
                 </label>
                 <label>
-                  <p><strong>Original</strong></p>
+                  <p>
+                    <strong>Original</strong>
+                  </p>
                   <input
                     type="text"
                     name="original"
@@ -404,7 +448,9 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                   />
                 </label>
                 <label>
-                  <p><strong>Univers</strong></p>
+                  <p>
+                    <strong>Univers</strong>
+                  </p>
                   <input
                     type="text"
                     name="universe"
@@ -414,7 +460,9 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                   />
                 </label>
                 <label>
-                  <p><strong>Sous-univers</strong></p>
+                  <p>
+                    <strong>Sous-univers</strong>
+                  </p>
                   <input
                     type="text"
                     name="subUniverse"
@@ -424,79 +472,95 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                   />
                 </label>
               </div>
-              <div className="addMovieSynopsisTrailer">
-                <label>
-                  <p><strong>Synopsis</strong></p>
-                  <textarea
-                    name="synopsis"
-                    value={movie.synopsis}
-                    onChange={handleMovieChange}
-                    placeholder="Synopsis du film"
-                    required
-                  ></textarea>
-                </label>
-                <label>
-                  <p><strong>Trailer</strong></p>
-                  <input
-                    type="text"
-                    name="trailer"
-                    value={movie.trailer}
-                    onChange={handleMovieChange}
-                    placeholder="URL du trailer"
-                  />
-                </label>
-              </div>
             </div>
           </div>
+          <div className="addMovieSynopsisTrailer">
+            <label>
+              <p>
+                <strong>Synopsis</strong>
+              </p>
+              <textarea
+                name="synopsis"
+                value={movie.synopsis}
+                onChange={handleMovieChange}
+                placeholder="Synopsis du film"
+                required
+              ></textarea>
+            </label>
+            <label>
+              <p>
+                <strong>Trailer</strong>
+              </p>
+              {movie.trailer ? (
+                <iframe
+                  src={movie.trailer}
+                  title="trailer"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              ) : (
+                <div className="addMovieTrailerHolder">
+                  <FontAwesomeIcon icon={faFilm} />
+                  <p>Ajouter une bande-annonce</p>
+                </div>
+              )}
+              <input
+                type="text"
+                name="trailer"
+                value={movie.trailer}
+                onChange={handleMovieChange}
+                placeholder="URL du trailer"
+              />
+            </label>
+          </div>
+
           {/* --- CASTING --- */}
           <div className="editMovieCasting">
-            <h3>Casting du film "{movie.title}"</h3>
+            <h3>Casting du film</h3>
             <div className="addMemberCasting">
-              <div>
-                <label>
-                  <p>
-                    <strong>Personnalité :</strong>
-                  </p>
-                  <select
-                    value={selectedPersonality}
-                    onChange={(e) => setSelectedPersonality(e.target.value)}
-                  >
-                    <option value="">Choisir une personnalité</option>
-                    {personalities.map((personality) => (
-                      <option key={personality.id} value={personality.id}>
-                        {personality.fullname}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-                <label>
-                  <p>
-                    <strong>Rôle :</strong>
-                  </p>
-                  <input
-                    type="text"
-                    value={role}
-                    onChange={(e) => setRole(e.target.value)}
-                  />
-                </label>
-                <label>
-                  <p>
-                    <strong>Side :</strong>
-                  </p>
-                  <select value={side} onChange={(e) => setSide(e.target.value)}>
-                    <option value="Directing">Directing</option>
-                    <option value="Acting">Acting</option>
-                  </select>
-                </label>
-                <button
-                  type="button"
-                  onClick={handleAddMember}
-                  disabled={loading}
+              <label>
+                <p>
+                  <strong>Personnalité :</strong>
+                </p>
+                <select
+                  value={selectedPersonality}
+                  onChange={(e) => setSelectedPersonality(e.target.value)}
                 >
-                  Ajouter
-                </button>
-                {error && <div className="error">{error}</div>}
-              </div>
+                  <option value="">Choisir une personnalité</option>
+                  {personalities.map((personality) => (
+                    <option key={personality.id} value={personality.id}>
+                      {personality.fullname}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                <p>
+                  <strong>Rôle :</strong>
+                </p>
+                <input
+                  type="text"
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
+                />
+              </label>
+              <label>
+                <p>
+                  <strong>Side :</strong>
+                </p>
+                <select value={side} onChange={(e) => setSide(e.target.value)}>
+                  <option value="Directing">Directing</option>
+                  <option value="Acting">Acting</option>
+                </select>
+              </label>
+              <button
+                type="button"
+                onClick={handleAddMember}
+                disabled={loading}
+              >
+                Ajouter
+              </button>
+              {error && <div className="error">{error}</div>}
             </div>
             {/* Réalisation */}
             <div className="editMovieCastingSection">
@@ -531,7 +595,6 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                           >
                             <option value="Directing">Directing</option>
                             <option value="Acting">Acting</option>
-                            <option value="Writing">Writing</option>
                           </select>
                         </label>
                         <button
@@ -581,7 +644,6 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                           >
                             <option value="Directing">Directing</option>
                             <option value="Acting">Acting</option>
-                            <option value="Writing">Writing</option>
                           </select>
                         </label>
                         <button
@@ -600,14 +662,6 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
             </div>
           </div>
           {/* --- FIN CASTING --- */}
-          <div className="addMovieButtons">
-            <button type="submit" disabled={loading}>
-              {loading ? "Ajout en cours..." : "Ajouter le film"}
-            </button>
-            <button type="button" onClick={onClose}>
-              Retour
-            </button>
-          </div>
         </form>
       </div>
     </>

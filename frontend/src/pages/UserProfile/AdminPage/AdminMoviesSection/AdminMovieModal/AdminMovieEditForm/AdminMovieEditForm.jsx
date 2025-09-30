@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faImage,
+  faPanorama,
+  faCopyright,
+  faFilm,
+} from "@fortawesome/free-solid-svg-icons";
 import connexion from "../../../../../../services/connexion";
 import HorizontalScroll from "../../../../../../components/HorizontalScroll/HorizontalScroll";
 import { AuthContext } from "../../../../../../services/Context/AuthContext";
@@ -237,7 +244,11 @@ function AdminMovieEditForm({ movie, onUpdate, onCancel, onDelete }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} encType="multipart/form-data">
+    <form
+      className="editMovieForm"
+      onSubmit={handleSubmit}
+      encType="multipart/form-data"
+    >
       <div className="editMovieFormTop">
         <label>
           <p>
@@ -267,11 +278,18 @@ function AdminMovieEditForm({ movie, onUpdate, onCancel, onDelete }) {
             <p>
               <strong>Affiche :</strong>
             </p>
-            <img
-              src={previewImage(posterInput, "Posters")}
-              className="editMoviePoster"
-              alt="Affiche du film"
-            />
+            {posterInput.url || posterInput.file ? (
+              <img
+                src={previewImage(posterInput, "Posters")}
+                className="editMoviePoster"
+                alt="Affiche du film"
+              />
+            ) : (
+              <div className="editMoviePosterHolder">
+                <FontAwesomeIcon icon={faImage} />
+                <p>Aucune affiche pour le moment.</p>
+              </div>
+            )}
             <label>
               <input
                 type="text"
@@ -290,32 +308,8 @@ function AdminMovieEditForm({ movie, onUpdate, onCancel, onDelete }) {
           </div>
           <div>
             <p>
-              <strong>Background :</strong>
+              <strong>Logo :</strong>
             </p>
-            <img
-              src={previewImage(backgroundInput, "Backgrounds")}
-              className="editMovieBackground"
-              alt="Background du film"
-            />
-            <label>
-              <input
-                type="text"
-                name="background"
-                placeholder="URL du background"
-                value={backgroundInput.url}
-                onChange={(e) => handleImageChange("background", e)}
-              />
-              <input
-                type="file"
-                name="background"
-                accept="image/*"
-                onChange={(e) => handleImageChange("background", e)}
-              />
-            </label>
-          </div>
-        </div>
-        <div className="editMovieFormRight">
-          <div>
             {logoInput.url || logoInput.file ? (
               <img
                 src={previewImage(logoInput, "Logos")}
@@ -324,6 +318,7 @@ function AdminMovieEditForm({ movie, onUpdate, onCancel, onDelete }) {
               />
             ) : (
               <div className="editMovieLogoHolder">
+                <FontAwesomeIcon icon={faCopyright} />
                 <p>Aucun logo pour le moment.</p>
               </div>
             )}
@@ -340,6 +335,40 @@ function AdminMovieEditForm({ movie, onUpdate, onCancel, onDelete }) {
                 name="logo"
                 accept="image/*"
                 onChange={(e) => handleImageChange("logo", e)}
+              />
+            </label>
+          </div>
+        </div>
+        <div className="editMovieFormRight">
+          <div>
+            <p>
+              <strong>Background :</strong>
+            </p>
+            {backgroundInput.url || backgroundInput.file ? (
+              <img
+                src={previewImage(backgroundInput, "Backgrounds")}
+                className="editMovieBackground"
+                alt="Background du film"
+              />
+            ) : (
+              <div className="editMovieBackgroundHolder">
+                <FontAwesomeIcon icon={faPanorama} />
+                <p>Aucun background pour le moment.</p>
+              </div>
+            )}
+            <label>
+              <input
+                type="text"
+                name="background"
+                placeholder="URL du background"
+                value={backgroundInput.url}
+                onChange={(e) => handleImageChange("background", e)}
+              />
+              <input
+                type="file"
+                name="background"
+                accept="image/*"
+                onChange={(e) => handleImageChange("background", e)}
               />
             </label>
           </div>
@@ -362,6 +391,7 @@ function AdminMovieEditForm({ movie, onUpdate, onCancel, onDelete }) {
               <input
                 type="text"
                 name="duration"
+                placeholder="hh:mm:ss"
                 value={formatDuration(form.duration)}
                 onChange={handleChange}
               />
@@ -373,6 +403,7 @@ function AdminMovieEditForm({ movie, onUpdate, onCancel, onDelete }) {
               <input
                 type="text"
                 name="genre"
+                placeholder="Genre(s) (séparés par des virgules)"
                 value={form.genre}
                 onChange={handleChange}
               />
@@ -384,6 +415,7 @@ function AdminMovieEditForm({ movie, onUpdate, onCancel, onDelete }) {
               <input
                 type="text"
                 name="theme"
+                placeholder="Thème(s) (séparés par des virgules)"
                 value={form.theme}
                 onChange={handleChange}
               />
@@ -395,6 +427,7 @@ function AdminMovieEditForm({ movie, onUpdate, onCancel, onDelete }) {
               <input
                 type="text"
                 name="country"
+                placeholder="Origine(s) (séparées par des virgules)"
                 value={form.country}
                 onChange={handleChange}
               />
@@ -403,85 +436,90 @@ function AdminMovieEditForm({ movie, onUpdate, onCancel, onDelete }) {
               <p>
                 <strong>Sortie :</strong>
               </p>
-              <input
-                type="text"
-                name="screen"
-                value={form.screen}
-                onChange={handleChange}
-              />
+              <select name="screen" value={form.screen} onChange={handleChange}>
+                <option value="Cinema">Cinéma</option>
+                <option value="Streaming">Streaming</option>
+              </select>
             </label>
-            {movie.streaming ? (
-              <label>
-                <p>
-                  <strong>Streaming :</strong>
-                  <input
-                    type="text"
-                    name="streaming"
-                    value={form.streaming}
-                    onChange={handleChange}
-                  />
-                </p>
-              </label>
-            ) : null}
-            {movie.universe ? (
-              <label>
-                <p>
-                  <strong>Univers :</strong>
-                  <input
-                    type="text"
-                    name="universe"
-                    value={form.universe}
-                    onChange={handleChange}
-                  />
-                </p>
-              </label>
-            ) : null}
-            {movie.subUniverse ? (
-              <label>
-                <p>
-                  <strong>Sous-univers :</strong>
-                  <input
-                    type="text"
-                    name="subUniverse"
-                    value={form.subUniverse}
-                    onChange={handleChange}
-                  />
-                </p>
-              </label>
-            ) : null}
-          </div>
-          <div className="editMovieSynopsisTrailer">
             <label>
               <p>
-                <strong>Synopsis :</strong>
+                <strong>Streaming :</strong>
               </p>
-              <textarea
+              <input
                 type="text"
-                name="synopsis"
-                value={form.synopsis}
+                name="streaming"
+                placeholder="Plateforme de streaming"
+                value={form.streaming}
                 onChange={handleChange}
               />
             </label>
             <label>
               <p>
-                <strong>Trailer :</strong>
+                <strong>Univers :</strong>
               </p>
-              <iframe
-                src={form.trailer}
-                title="trailer"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
               <input
                 type="text"
-                name="trailer"
-                value={form.trailer}
+                name="universe"
+                placeholder="Univers"
+                value={form.universe}
+                onChange={handleChange}
+              />
+            </label>
+            <label>
+              <p>
+                <strong>Sous-univers :</strong>
+              </p>
+              <input
+                type="text"
+                name="subUniverse"
+                placeholder="Sous-univers"
+                value={form.subUniverse}
                 onChange={handleChange}
               />
             </label>
           </div>
         </div>
       </div>
+      <div className="editMovieSynopsisTrailer">
+        <label>
+          <p>
+            <strong>Synopsis</strong>
+          </p>
+          <textarea
+            type="text"
+            name="synopsis"
+            placeholder="Synopsis"
+            value={form.synopsis}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          <p>
+            <strong>Trailer</strong>
+          </p>
+          {form.trailer ? (
+            <iframe
+              src={form.trailer}
+              title="trailer"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          ) : (
+            <div className="editMovieTrailerHolder">
+              <FontAwesomeIcon icon={faFilm} />
+              <p>Aucun trailer pour le moment.</p>
+            </div>
+          )}
+          <input
+            type="text"
+            name="trailer"
+            placeholder="URL du trailer"
+            value={form.trailer}
+            onChange={handleChange}
+          />
+        </label>
+      </div>
+
       <div className="editMovieCasting">
         <h3>Casting du film "{form.title}"</h3>
         <div className="addMemberCasting">
@@ -533,7 +571,14 @@ function AdminMovieEditForm({ movie, onUpdate, onCancel, onDelete }) {
                 directing.map((direction) => (
                   <div className="editMovieCastingCard" key={direction.id}>
                     <img
-                      src={direction.personality_image}
+                      src={
+                        direction.personality_image &&
+                        direction.personality_image.startsWith("http")
+                          ? direction.personality_image
+                          : direction.personality_image
+                          ? `http://localhost:3994/src/assets/Personalities/Images/${direction.personality_image}`
+                          : ""
+                      }
                       alt={direction.personality_fullname}
                     />
                     <p>{direction.personality_fullname}</p>
@@ -582,7 +627,14 @@ function AdminMovieEditForm({ movie, onUpdate, onCancel, onDelete }) {
                 acting.map((actor) => (
                   <div className="editMovieCastingCard" key={actor.id}>
                     <img
-                      src={actor.personality_image}
+                      src={
+                        actor.personality_image &&
+                        actor.personality_image.startsWith("http")
+                          ? actor.personality_image
+                          : actor.personality_image
+                          ? `http://localhost:3994/src/assets/Personalities/Images/${actor.personality_image}`
+                          : ""
+                      }
                       alt={actor.personality_fullname}
                     />
                     <p>{actor.personality_fullname}</p>
