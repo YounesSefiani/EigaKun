@@ -415,13 +415,17 @@ function AdminAddMovie({ onClose, onMovieAdded }) {
                   <p>
                     <strong>Sortie</strong>
                   </p>
-                  <input
+                  <select
                     type="text"
                     name="screen"
                     value={movie.screen}
                     onChange={handleMovieChange}
-                    placeholder="Sortie du film"
                   />
+                  <option value="">Sortie sur :</option>
+                  <option value="Cinema">Cinéma</option>
+                  <option value="Streaming">Streaming</option>
+                  <option value="DVD">DVD</option>
+                  <option value="TV">TV</option>
                 </label>
                 <label>
                   <p>

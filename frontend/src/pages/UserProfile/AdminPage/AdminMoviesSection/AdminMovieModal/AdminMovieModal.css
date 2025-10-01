@@ -97,7 +97,7 @@
     font-size: 20px;
   }
 
-  .adminMoviePoster {
+  .adminMovieModalPoster {
     width: 18rem;
     height: 25rem;
     object-fit: fill;
@@ -115,7 +115,7 @@
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieLogo {
+  .adminMovieModalLogo {
     width: 100%;
     height: 12rem;
     object-fit: contain;
@@ -123,12 +123,12 @@
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieLogoHolder {
+  .adminMovieModalLogoHolder {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 12rem;
+    height: 12rem !important;
     margin: 0;
     padding: 10px;
     font-size: 25px;
@@ -146,7 +146,7 @@
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieBackground {
+  .adminMovieModalBackground {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,25 +156,25 @@
     gap: 10px;
   }
 
-  .adminMovieBackground p {
+  .adminMovieModalBackground p {
     margin: 0;
     font-size: 20px;
   }
 
-  .adminMovieBackground img {
+  .adminMovieModalBackground img {
     width: 100%;
     height: 25rem;
     object-fit: cover;
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieBackgroundHolder {
+  .adminMovieModalBackgroundHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 25rem;
+    height: 25rem !important;
     padding: 5px;
     gap: 10px;
     text-align: center;
@@ -299,8 +299,9 @@
   }
 
   .adminMovieCastingList p {
-    margin: 0;
+    margin: auto;
     font-size: 20px;
+    text-align: center;
   }
 
   .adminMovieCastingCard {
@@ -325,10 +326,11 @@
 
   .adminMovieCastingCard p {
     margin: 0;
-    width: 100%;
+    width: 15rem;
     height: auto;
     padding: 10px;
     text-align: center;
+    white-space: wrap;
     font-size: 20px;
     border: 4px solid #ffb20c;
   }
@@ -433,7 +435,7 @@
     font-size: 20px;
   }
 
-  .adminMoviePoster {
+  .adminMovieModalPoster {
     width: 14rem;
     height: 20rem;
     object-fit: fill;
@@ -452,7 +454,7 @@
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieLogo {
+  .adminMovieModalLogo {
     width: 100%;
     height: 10rem;
     object-fit: contain;
@@ -460,12 +462,12 @@
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieLogoHolder {
+  .adminMovieModalLogoHolder {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10rem;
+    height: 10rem !important;
     margin: 0;
     padding: 10px;
     font-size: 18px;
@@ -484,7 +486,7 @@
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieBackground {
+  .adminMovieModalBackground {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -494,25 +496,25 @@
     gap: 10px;
   }
 
-  .adminMovieBackground p {
+  .adminMovieModalBackground p {
     margin: 0;
     font-size: 20px;
   }
 
-  .adminMovieBackground img {
+  .adminMovieModalBackground img {
     width: 100%;
     height: 20rem;
     object-fit: cover;
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieBackgroundHolder {
+  .adminMovieModalBackgroundHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 20rem;
+    height: 20rem !important;
     padding: 5px;
     gap: 10px;
     font-size: 18px;
@@ -667,10 +669,11 @@
 
   .adminMovieCastingCard p {
     margin: 0;
-    width: 100%;
+    width: 12rem;
     height: auto;
     padding: 5px;
     text-align: center;
+    white-space: wrap;
     font-size: 18px;
     border: 4px solid #ffb20c;
   }
@@ -790,7 +793,7 @@
     font-size: 25px;
   }
 
-  .adminMoviePoster {
+  .adminMovieModalPoster {
     width: 15rem;
     height: 22rem;
     object-fit: fill;
@@ -808,7 +811,7 @@
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieLogo {
+  .adminMovieModalLogo {
     width: 100%;
     height: 10rem;
     object-fit: contain;
@@ -816,7 +819,7 @@
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieLogoHolder {
+  .adminMovieModalLogoHolder {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -825,7 +828,7 @@
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieLogoHolder p {
+  .adminMovieModalLogoHolder p {
     margin: 0;
     font-size: 25px;
     text-align: center;
@@ -837,7 +840,7 @@
     gap: 10px;
   }
 
-  .adminMovieBackground {
+  .adminMovieModalBackground {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -847,19 +850,19 @@
     gap: 10px;
   }
 
-  .adminMovieBackground p {
+  .adminMovieModalBackground p {
     margin: 0;
     font-size: 25px;
   }
 
-  .adminMovieBackground img {
+  .adminMovieModalBackground img {
     width: 100%;
     height: 25rem;
     object-fit: cover;
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieBackgroundHolder {
+  .adminMovieModalBackgroundHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1019,10 +1022,11 @@
 
   .adminMovieCastingCard p {
     margin: 0;
-    width: 100%;
+    width: 13rem;
     height: auto;
     padding: 10px;
     text-align: center;
+    white-space: wrap;
     font-size: 20px;
     border: 4px solid #ffb20c;
   }
@@ -1130,14 +1134,16 @@
   .adminMovieLeft div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 5px;
     padding: 5px;
     width: 100%;
     height: auto;
     border: 4px solid #ffb20c;
   }
 
-  .adminMoviePoster {
+  .adminMovieModalPoster {
     width: 9rem;
     height: 14rem;
     object-fit: fill;
@@ -1155,14 +1161,14 @@
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieLogo {
+  .adminMovieModalLogo {
     width: 100%;
     height: 10rem;
     object-fit: contain;
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieLogoHolder {
+  .adminMovieModalLogoHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1172,7 +1178,7 @@
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieLogoHolder p {
+  .adminMovieModalLogoHolder p {
     margin: 0;
     font-size: 15px;
   }
@@ -1185,7 +1191,7 @@
     gap: 10px;
   }
 
-  .adminMovieBackground {
+  .adminMovieModalBackground {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1195,25 +1201,25 @@
     gap: 10px;
   }
 
-  .adminMovieBackground p {
+  .adminMovieModalBackground p {
     margin: 0;
     font-size: 18px;
   }
 
-  .adminMovieBackground img {
+  .adminMovieModalBackground img {
     width: 100%;
     height: 12rem;
     object-fit: cover;
     border: 4px solid #ffb20c;
   }
 
-  .adminMovieBackgroundHolder {
+  .adminMovieModalBackgroundHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 25rem;
+    height: 12rem;
     padding: 5px;
     gap: 10px;
     text-align: center;
@@ -1259,6 +1265,7 @@
     width: 100%;
     height: auto;
     padding: 5px;
+    overflow-y: auto;
   }
 
   .adminMovieSynopsis p {
@@ -1354,10 +1361,11 @@
 
   .adminMovieCastingCard p {
     margin: 0;
-    width: 100%;
+    width: 9rem;
     height: auto;
     padding: 5px;
     text-align: center;
+    white-space: wrap;
     font-size: 15px;
     border: 4px solid #ffb20c;
   }

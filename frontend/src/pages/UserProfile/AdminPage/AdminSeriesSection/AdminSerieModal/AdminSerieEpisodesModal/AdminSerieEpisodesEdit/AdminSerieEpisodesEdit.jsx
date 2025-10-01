@@ -30,23 +30,20 @@ function AdminSerieEpisodesEdit({ episode, onUpdate, onCancel, onDelete }) {
   const handleImageChange = (type, e) => {
     if (e.target.type === "file" && e.target.files.length > 0) {
       const file = e.target.files[0];
-      if (type === "image")
-      setImage({ url: "", file });
+      if (type === "image") setImage({ url: "", file });
     } else {
       const url = e.target.value;
-      if (type === "image")
-      setImage({ url, file: null });
+      if (type === "image") setImage({ url, file: null });
     }
   };
 
-    const previewImage = (input, localPath) => {
+  const previewImage = (input, localPath) => {
     if (input.file) return URL.createObjectURL(input.file);
     if (input.url && input.url.startsWith("http")) return input.url;
     if (input.url)
       return `http://localhost:3994/src/assets/Series/Episodes/${localPath}/${input.url}`;
     return "";
   };
-
 
   // Gestion de l'enregistrement
   const handleSubmit = async (e) => {
@@ -66,16 +63,26 @@ function AdminSerieEpisodesEdit({ episode, onUpdate, onCancel, onDelete }) {
         formData.append("image", image.url);
       }
 
-      const response = await connexion.put(`/episodes/${episode.id}`, formData, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const response = await connexion.put(
+        `/episodes/${episode.id}`,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
 
       setLoading(false);
       if (typeof onUpdate === "function") {
-        onUpdate(response.data.updateEpisode || { ...episode, ...episodeForm, image: image.file ? image.file.name : image.url });
+        onUpdate(
+          response.data.updateEpisode || {
+            ...episode,
+            ...episodeForm,
+            image: image.file ? image.file.name : image.url,
+          }
+        );
       }
     } catch (err) {
       setLoading(false);
@@ -115,74 +122,76 @@ function AdminSerieEpisodesEdit({ episode, onUpdate, onCancel, onDelete }) {
       <h2>Modifier l'épisode</h2>
       {error && <p className="error">{error}</p>}
       <div className="episodeEdit">
-      <div className="episodeEditLeft">
-        <div className="episodeImagePreview">
-          <p>L'image de l'épisode</p>
-          <img
-            src={previewImage(image, "Images")}
-            alt="Aperçu de l'épisode"
-          />
+        <div className="episodeEditLeft">
+          <div className="episodeImagePreview">
+            <p>L'image de l'épisode</p>
+            <img
+              src={previewImage(image, "Images")}
+              alt="Aperçu de l'épisode"
+            />
           </div>
-        <label>
-          Image (URL)
-          <input
-            type="text"
-            name="image"
-            value={image.url}
-            onChange={(e) => handleImageChange("image", e)}
-          />
-        </label>
-        <label>
-          Image (Fichier)
-          <input
-            type="file"
-            name="image"
-            accept="image/*"
-            onChange={(e) => handleImageChange("image", e)}
-          />
-        </label>
+          <label>
+            Image (URL)
+            <input
+              type="text"
+              name="image"
+              value={image.url}
+              onChange={(e) => handleImageChange("image", e)}
+            />
+          </label>
+          <label>
+            Image (Fichier)
+            <input
+              type="file"
+              name="image"
+              accept="image/*"
+              onChange={(e) => handleImageChange("image", e)}
+            />
+          </label>
+        </div>
+        <div className="episodeEditRight">
+          <label>
+            Numéro d'épisode
+            <input
+              type="number"
+              name="episode_number"
+              value={episodeForm.episode_number}
+              onChange={handleChange}
+              min={1}
+            />
+          </label>
+          <label>
+            Titre
+            <input
+              type="text"
+              name="title"
+              value={episodeForm.title}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Date de diffusion
+            <input
+              type="date"
+              name="release_date"
+              value={
+                episodeForm.release_date
+                  ? episodeForm.release_date.slice(0, 10)
+                  : ""
+              }
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Synopsis
+            <textarea
+              name="synopsis"
+              value={episodeForm.synopsis}
+              onChange={handleChange}
+            />
+          </label>
+        </div>
       </div>
-      <div className="episodeEditRight">
-        <label>
-          Numéro d'épisode
-          <input
-            type="number"
-            name="episode_number"
-            value={episodeForm.episode_number}
-            onChange={handleChange}
-            min={1}
-          />
-        </label>
-        <label>
-          Titre
-          <input
-            type="text"
-            name="title"
-            value={episodeForm.title}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Date de diffusion
-          <input
-            type="date"
-            name="release_date"
-            value={
-              episodeForm.release_date
-                ? episodeForm.release_date.slice(0, 10)
-                : ""
-            }
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Synopsis
-          <textarea
-            name="synopsis"
-            value={episodeForm.synopsis}
-            onChange={handleChange}
-          />
-        </label>
       <div className="editButtons">
         <button type="submit" disabled={loading}>
           Enregistrer
@@ -198,8 +207,6 @@ function AdminSerieEpisodesEdit({ episode, onUpdate, onCancel, onDelete }) {
         >
           Supprimer
         </button>
-      </div>
-      </div>
       </div>
     </form>
   );

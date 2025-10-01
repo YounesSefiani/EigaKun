@@ -61,7 +61,7 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
                         ? `http://localhost:3994/src/assets/Movies/Posters/${movie.poster}`
                         : ""
                     }
-                    className="adminMoviePoster"
+                    className="adminMovieModalPoster"
                     alt={movie.title}
                   />
                   ) : (
@@ -82,11 +82,11 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
                           ? `http://localhost:3994/src/assets/Movies/Logos/${movie.logo}`
                           : ""
                       }
-                      className="adminMovieLogo"
+                      className="adminMovieModalLogo"
                       alt={movie.title}
                     />
                   ) : (
-                    <div className="adminMovieLogoHolder">
+                    <div className="adminMovieModalLogoHolder">
                       <FontAwesomeIcon icon={faCopyright} />
                       <p>Aucun logo pour le moment.</p>
                     </div>
@@ -94,7 +94,7 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
                 </div>
               </div>
               <div className="adminMovieRight">
-                <div className="adminMovieBackground">
+                <div className="adminMovieModalBackground">
                   <p>Arrière-plan :</p>
                   {movie.background ? (
                   <img
@@ -108,7 +108,7 @@ function AdminMovieModal({ movie, show, onClose, onUpdate, onDelete }) {
                     alt={movie.title}
                   />
                   ) : (
-                    <div className="adminMovieBackgroundHolder">
+                    <div className="adminMovieModalBackgroundHolder">
                       <FontAwesomeIcon icon={faPanorama}/>
                       <p>Aucun arrière-plan pour le moment.</p>
                     </div>
