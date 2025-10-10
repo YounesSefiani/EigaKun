@@ -41,14 +41,8 @@ function AdminPersonalitiesSection({ setView }) {
     const response = await connexion.get(`/personalities/${personality.id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
-
-    console.log("2. Réponse API reçue:", response.data);
     setSelectedPersonality(response.data);
-
-    console.log("3. selectedPersonality mis à jour");
     setShowPersonalityModal(true);
-
-    console.log("4. showPersonalityModal = true");
   };
 
   const handleClosePersonalityModal = () => {
@@ -67,20 +61,34 @@ function AdminPersonalitiesSection({ setView }) {
   };
 
   const handleDeletePersonality = async (personalityId) => {
-    // Logique de suppression
-    console.log("Suppression personnalité:", personalityId);
+    try {
+      await connexion.delete(`/personalities/${personalityId}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      // Rafraîchir la liste après suppression
+      const response = await connexion.get(`/personalities`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setPersonalities(response.data);
+      setShowPersonalityModal(false);
+      setSelectedPersonality(null);
+    } catch (error) {
+      alert("Erreur lors de la suppression de la personnalité");
+    }
   };
 
   return (
     <div className="adminPersonalitiesSection">
-      <h2>Les personnalités</h2>
-      <div className="adminBtnSection">
-        <button type="button" onClick={() => setShowAddPersonality(true)}>
-          Ajouter une personnalité
-        </button>
-        <button type="button" onClick={() => setView("initial")}>
-          Retour
-        </button>
+      <div className="adminPersonalitiesSectionTop">
+        <h2>Les personnalités</h2>
+        <div>
+          <button type="button" onClick={() => setShowAddPersonality(true)}>
+            Ajouter une personnalité
+          </button>
+          <button type="button" onClick={() => setView("initial")}>
+            Retour
+          </button>
+        </div>
       </div>
       {showAddPersonality && (
         <AdminAddPersonality
@@ -99,7 +107,7 @@ function AdminPersonalitiesSection({ setView }) {
               });
           }}
         />
-        )}
+      )}
       <div className="adminPersonalitiesList">
         {personalities.map((personality) => (
           <div

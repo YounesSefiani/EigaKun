@@ -114,7 +114,7 @@ function AdminPersonalityModal({
             <div className="adminPersonalityFilmography">
               <h3>Filmographie de {personalityData.fullname}</h3>
               <div className="adminPersonalityMoviesSection">
-                <h4>Films</h4>
+                <h3>Films</h3>
                 <div className="adminPersonalityMoviesList">
                   <HorizontallScroll>
                     {movies.length > 0 ? (
@@ -124,7 +124,11 @@ function AdminPersonalityModal({
                           key={movie.movie_id}
                         >
                           <img
-                            src={movie.movie_poster}
+                            src={movie.movie_poster && movie.movie_poster.startsWith("http")
+                              ? movie.movie_poster
+                              : movie.movie_poster
+                              ? `http://localhost:3994/src/assets/Movies/Posters/${movie.movie_poster}`
+                              : ""}
                             alt={movie.movie_title}
                           />
                           <p>
@@ -145,7 +149,7 @@ function AdminPersonalityModal({
                 </div>
               </div>
               <div className="adminPersonalitySeriesSection">
-                <h4>Séries</h4>
+                <h3>Séries</h3>
                 <div className="adminPersonalitySeriesList">
                   <HorizontallScroll>
                     {series.length > 0 ? (
@@ -155,7 +159,11 @@ function AdminPersonalityModal({
                           key={serie.serie_id}
                         >
                           <img
-                            src={serie.serie_poster}
+                            src={serie.serie_poster && serie.serie_poster.startsWith("http")
+                              ? serie.serie_poster
+                              : serie.serie_poster
+                              ? `http://localhost:3994/src/assets/Series/Posters/${serie.serie_poster}`
+                              : ""}
                             alt={serie.serie_title}
                           />
                           <p>
@@ -185,6 +193,7 @@ function AdminPersonalityModal({
           </div>
         ) : (
           <AdminPersonalityEditForm
+          key={personalityData.id}
             personality={personalityData}
             movies={movies}
             series={series}
