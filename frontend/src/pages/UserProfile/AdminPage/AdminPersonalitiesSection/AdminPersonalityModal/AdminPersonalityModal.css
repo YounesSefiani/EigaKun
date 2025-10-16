@@ -798,8 +798,8 @@
   }
 
   .adminPersonalityPoster {
-    width: 9rem;
-    height: 14rem;
+    width: 12rem;
+    height: 18rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
   }
