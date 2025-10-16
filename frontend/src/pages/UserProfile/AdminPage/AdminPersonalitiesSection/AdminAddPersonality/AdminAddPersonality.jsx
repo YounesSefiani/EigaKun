@@ -24,8 +24,8 @@ function AdminAddPersonality({ onClose, onPersonalityAdded }) {
   };
   const [moviesList, setMoviesList] = useState([]);
   const [seriesList, setSeriesList] = useState([]);
-  const [movie, setMovie] = useState([]);
-  const [serie, setSerie] = useState([]);
+  const [setMovie] = useState([]);
+  const [setSerie] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState("");
   const [selectedSerie, setSelectedSerie] = useState("");
   // Etats distincts pour éviter le couplage Films/Séries
