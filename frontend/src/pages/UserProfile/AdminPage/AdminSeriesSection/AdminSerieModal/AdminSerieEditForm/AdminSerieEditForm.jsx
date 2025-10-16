@@ -221,30 +221,18 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
     fetchPersonalities();
   }, []);
 
+  const handleDeleteSerie = () => {
+    if (window.confirm("Supprimer cette série ?")) {
+      if (onDelete) onDelete();
+    }
+  };
+
   return (
     <form
-      className="adminSerieEditForm"
+      className="editSerieForm"
       onSubmit={handleSerieSubmit}
       encType="multipart/form-data"
     >
-      <div className="editSerieFormTopInterface">
-        <h2>Modification de la série "{serie.title}"</h2>
-        <div className="editSerieFormTopButtons">
-          <button type="submit" className="btn-submit">
-            Enregistrer
-          </button>
-          <button
-            type="button"
-            className="btn-delete"
-            onClick={() => onDelete(serie.id)}
-          >
-            Supprimer la série
-          </button>
-          <button type="button" className="btn-cancel" onClick={onCancel}>
-            Annuler
-          </button>
-        </div>
-      </div>
       <div className="editSerieFormTop">
         <label>
           <h3>Titre de la série</h3>
@@ -255,6 +243,15 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
             onChange={handleSerieChange}
           />
         </label>
+        <div>
+          <button type="submit">Enregistrer</button>
+          <button type="button" onClick={handleDeleteSerie}>
+            Supprimer le film
+          </button>
+          <button type="button" onClick={onCancel}>
+            Annuler
+          </button>
+        </div>
       </div>
       <div className="editSerieFormContent">
         <div className="editSerieFormLeft">
@@ -267,7 +264,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
                 className="editSeriePoster"
               />
             ) : (
-              <div className="noneSeriePoster">
+              <div className="editSeriePosterHolder">
                 <FontAwesomeIcon icon={faImage} />
                 <p>Aucune affiche de la série pour le moment.</p>
               </div>
@@ -297,7 +294,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
                 className="editSerieLogo"
               />
             ) : (
-              <div className="noneSerieLogo">
+              <div className="editSerieLogoHolder">
                 <FontAwesomeIcon icon={faCopyright} />
                 <p>Aucun logo de la série pour le moment.</p>
               </div>
@@ -329,7 +326,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
                 className="editSerieBackground"
               />
             ) : (
-              <div className="noneSerieBackground">
+              <div className="editSerieBackgroundHolder">
                 <FontAwesomeIcon icon={faPanorama} />
                 <p>Aucun arrière-plan de la série pour le moment.</p>
               </div>
@@ -352,7 +349,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
           </div>
           <div className="editSerieInfos">
             <label>
-              <p>Date de début de diffusion :</p>
+              <p>Date de début de diffusion</p>
               <input
                 type="date"
                 name="release_date"
@@ -361,7 +358,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
               />
             </label>
             <label>
-              <p>Date de fin de diffusion :</p>
+              <p>Date de fin de diffusion</p>
               <input
                 type="date"
                 name="ending_date"
@@ -370,7 +367,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
               />
             </label>
             <label>
-              <p>Nombre de saison(s) :</p>
+              <p>Nombre de saison(s)</p>
               <input
                 type="number"
                 name="nbSeasons"
@@ -379,7 +376,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
               />
             </label>
             <label>
-              <p>Nombre d'épisode(s) :</p>
+              <p>Nombre d'épisode(s)</p>
               <input
                 type="number"
                 name="nbEpisodesSerie"
@@ -388,7 +385,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
               />
             </label>
             <label>
-              <p>Sortie :</p>
+              <p>Sortie</p>
               <select
                 name="screen"
                 value={serieForm.screen}
@@ -418,7 +415,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
               />
             </label>
             <label>
-              <p>Statut :</p>
+              <p>Statut</p>
               <select
                 name="statut"
                 value={serieForm.statut}
@@ -432,7 +429,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
               </select>
             </label>
             <label>
-              <p>Genre(s) :</p>
+              <p>Genre(s)</p>
               <input
                 type="text"
                 name="genre"
@@ -441,7 +438,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
               />
             </label>
             <label>
-              <p>Thème(s) :</p>
+              <p>Thème(s)</p>
               <input
                 type="text"
                 name="theme"
@@ -450,7 +447,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
               />
             </label>
             <label>
-              <p>Univers :</p>
+              <p>Univers</p>
               <input
                 type="text"
                 name="universe"
@@ -459,7 +456,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
               />
             </label>
             <label>
-              <p>Sous-univers :</p>
+              <p>Sous-univers</p>
               <input
                 type="text"
                 name="subUniverse"
@@ -472,7 +469,7 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
       </div>
       <div className="editSerieSynopsisTrailer">
         <label>
-          <p>Synopsis :</p>
+          <p>Synopsis</p>
           <textarea
             name="synopsis"
             value={serieForm.synopsis}
@@ -516,7 +513,12 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
             {directing.map((direction) => (
               <div key={direction.id} className="editSerieCastingCard">
                 <img
-                  src={direction.personality_image}
+                  src={direction.personality_image && direction.personality_image.startsWith("http")
+                    ? direction.personality_image
+                    : direction.personality_image
+                    ? `http://localhost:3994/src/assets/Personalities/Images/${direction.personality_image}`
+                    : ""
+                  }
                   alt={direction.personality_fullname}
                 />
                 <p>{direction.personality_fullname}</p>
@@ -574,7 +576,12 @@ function AdminSerieEditForm({ serie, seasons, onUpdate, onCancel, onDelete }) {
             {acting.map((acting) => (
               <div key={acting.id} className="editSerieCastingCard">
                 <img
-                  src={acting.personality_image}
+                  src={acting.personality_image && acting.personality_image.startsWith("http")
+                    ? acting.personality_image
+                    : acting.personality_image
+                    ? `http://localhost:3994/src/assets/Personalities/Images/${acting.personality_image}`
+                    : ""
+                  }
                   alt={acting.personality_fullname}
                 />
                 <p>{acting.personality_fullname}</p>

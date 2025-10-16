@@ -8,7 +8,7 @@
     height: 100%;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 500;
+    z-index: 9;
   }
 
   .adminAddMovieModal {
@@ -24,161 +24,645 @@
     left: 50%;
     top: 5%;
     transform: translate(-50%, 0);
-    z-index: 600;
+    z-index: 10;
     color: #ffb20c;
     background-color: black;
     border: 4px solid #ffb20c;
   }
 
-  .addMovieButtons {
+  .addMovieForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    gap: 20px;
+  }
+
+  .addMovieForm svg {
+    font-size: 50px;
+  }
+
+  .addMovieForm label {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    gap: 10px;
+  }
+
+  .addMovieForm p {
+    margin: 0;
+  }
+
+  .addMovieFormTop {
     display: flex;
     flex-direction: row;
-    position: absolute;
-    width: 100%;
-    height: auto;
-    top: 10px;
-    right: 10px;
-    gap: 20px;
-    justify-content: flex-end;
-  }
-
-  .adminAddMovie {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-  }
-
-  .adminAddMovieForm {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    gap: 20px;
-    padding: 10px;
-    border: none;
-  }
-
-  .adminAddMovieTop {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
+    justify-content: space-between;
+    width: auto;
     height: auto;
     padding: 10px;
     border: 4px solid #ffb20c;
   }
 
-  .adminAddMovieTop p {
-    margin: 0;
-    font-size: 1.5rem;
+  .addMovieFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 20px;
   }
 
-  .adminAddMovieTop input {
-    width: 50%;
-    margin: auto;
+  .addMovieFormTop button {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    font-size: 20px;
   }
 
-  .adminAddMovieContent {
+  .addMovieFormTop input {
+    width: 25rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormContent {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: auto;
-    gap: 15px;
+    gap: 20px;
   }
 
-  .adminAddMovieLeft {
+  .addMovieFormLeft {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     width: 30%;
     height: auto;
-    gap: 30px;
-    padding: 20px;
-        border: 4px solid #ffb20c;
+    gap: 20px;
+    padding: 15px;
+    border: 4px solid #ffb20c;
   }
 
-  .adminAddMovieLeft label {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: auto;
-    height: 100%;
-    gap: 25px;
-  }
-
-  .adminAddMovieLeft p {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-
-  .addMoviePosterHolder, .moviePosterAdd {
+  .addMovieFormLeft div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addMovieFormLeft p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .addMovieFormLeft label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .addMovieFormLeft input {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMoviePoster {
     width: 18rem;
     height: 25rem;
-    margin: auto;
+    object-fit: fill;
     border: 4px solid #ffb20c;
   }
 
-  .addMovieBackgroundHolder, .movieBackgroundAdd {
+  .addMoviePosterHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 18rem;
-    height: 15rem;
-    margin: auto;
+    width: 18rem !important;
+    height: 25rem !important;
+    text-align: center;
+    font-size: 18px;
     border: 4px solid #ffb20c;
   }
 
-  .adminAddMovieLeft input {
+  .addMovieLogo {
     width: 100%;
-    font-size: 1.2rem;
+    height: 12rem;
+    object-fit: contain;
+    padding: 10px;
+    border: 4px solid #ffb20c;
   }
 
-  .adminAddMovieRight p {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-
-  .adminAddMovieRight {
+  .addMovieLogoHolder {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 12rem !important;
+    margin: 0;
+    font-size: 35px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 70%;
-    height: 100%;
+    height: auto;
+    gap: 15px;
+    padding: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormRight div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addMovieFormRight p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .addMovieFormRight label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .addMovieFormRight input,
+  .addMovieFormRight select {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieBackground {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieInfos {
+    display: grid !important;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    gap: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieInfos p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .addMovieSynopsisTrailer {
+    display: flex;
+    flex-direction: row !important;
+    width: 100%;
+    height: auto;
     gap: 20px;
     padding: 10px;
     border: 4px solid #ffb20c;
   }
 
-
-
-  .adminAddMovieRight input {
+  .addMovieSynopsisTrailer label {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    font-size: 1.2rem;
+    height: 100%;
   }
 
-  .addMovieLogoHolder, .movieLogoAdd {
+  .addMovieSynopsisTrailer textarea {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 18px;
+    text-align: justify;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieSynopsisTrailer iframe {
+    width: 100%;
+    height: 20rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieSynopsisTrailer input {
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieTrailerHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10rem;
+    height: 20rem;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+}
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .adminAddMovieOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }
+
+  .adminAddMovieModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+    gap: 10px;
+    padding: 10px;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    color: #ffb20c;
+    background-color: black;
     border: 4px solid #ffb20c;
   }
 
-  .addMovieLogoHolder p {
+  .addMovieForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    gap: 20px;
+  }
+
+  .addMovieForm svg {
+    font-size: 40px;
+  }
+
+  .addMovieForm label {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .addMovieForm p {
     margin: 0;
-    font-size: 1.5rem;
+  }
+
+  .addMovieFormTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 20px;
+  }
+
+  .addMovieFormTop button {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .addMovieFormTop input {
+    width: 25rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .addMovieFormLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormLeft div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addMovieFormLeft p,
+  .addMovieFormRight p {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .addMovieFormLeft label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .addMovieFormLeft input {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMoviePoster {
+    width: 14rem;
+    height: 20rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMoviePosterHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 14rem !important;
+    height: 20rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieLogo {
+    width: 100%;
+    height: 10rem;
+    object-fit: contain;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieLogoHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem !important;
+    margin: 0;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormRight div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addMovieFormRight label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .addMovieFormRight input,
+  .addMovieFormRight select {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieBackground {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
   }
 
   .addMovieInfos {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: grid !important;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieInfos p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .addMovieSynopsisTrailer {
+    display: flex;
+    flex-direction: row !important;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieSynopsisTrailer label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .addMovieSynopsisTrailer textarea {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 15px;
+    text-align: justify;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieSynopsisTrailer iframe {
+    width: 100%;
+    height: 20rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieSynopsisTrailer input {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 18rem;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+}
+/* VERSION TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .adminAddMovieOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }
+
+  .adminAddMovieModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+    gap: 10px;
+    left: 50%;
+    top: 1%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .addMovieForm svg {
+    font-size: 35px;
+  }
+
+  .addMovieForm label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    gap: 10px;
+  }
+
+  .addMovieFormTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     height: auto;
     gap: 10px;
@@ -186,39 +670,641 @@
     border: 4px solid #ffb20c;
   }
 
-  .addMovieInfos p {
-    margin: 0;
-    font-size: 1.2rem;
+  .addMovieFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 10px;
   }
 
-  .addMovieSynopsisTrailer {
+  .addMovieForm p {
+    margin: 0;
+    font-size: 25px;
+  }
+
+  .addMovieFormTop input {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormTop button {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    color: #ffb20c;
+    padding: 5px;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormContent {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addMovieFormLeft {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100%;
-    gap: 20px;
-    padding: 0;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
   }
 
-  .addMovieSynopsisTrailer p {
+  .addMovieFormLeft div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormLeft label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addMovieFormLeft input {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMoviePoster {
+    width: 13rem;
+    height: 19rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMoviePosterHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 13rem !important;
+    height: 19rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieLogo {
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+    padding: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieLogoHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    height: 12rem !important;
+    text-align: center;
+    font-size: 18px;
     margin: 0;
-    font-size: 1.2rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormRight {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .addMovieFormRight div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormRight label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addMovieFormRight input {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieBackground {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieInfos {
+    display: grid !important;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieInfos label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .addMovieInfos p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .addMovieInfos input, .addMovieInfos select {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieSynopsisTrailer {
+    display: flex;
+    flex-direction: column !important;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
   }
 
   .addMovieSynopsisTrailer label {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .addMovieSynopsisTrailer p {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .addMovieSynopsisTrailer textarea {
+    width: 100%;
+    height: 12rem;
+    padding: 5px;
+    font-size: 15px;
+    text-align: justify;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieSynopsisTrailer iframe {
+    width: 100%;
+    height: 20rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20rem;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieSynopsisTrailer input {
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieCasting {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     height: auto;
+    gap: 10px;
     padding: 10px;
     border: 4px solid #ffb20c;
   }
 
-  .addMovieSynopsisTrailer textarea {
+  .addMovieCasting p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .addMovieCasting input {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieCastingCard {
+    display: flex;
+    flex-direction: column;
     width: auto;
-    height: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieCastingCard p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .editMovieCastingCard label {
+    width: 100%;
+  }
+
+  .editMovieCastingCard select {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieCastingCard button {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMemberCasting {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMemberCasting p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .addMemberCasting input,
+  .addMemberCasting select {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMemberCasting button {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
   }
 }
-/* VERSION DESKTOP */
-/* VERSION TABLET */
 /* VERSION MOBILE */
+@media screen and (max-width: 767px) {
+  .adminAddMovieOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }
+
+  .adminAddMovieModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+    gap: 10px;
+    padding: 10px;
+    left: 50%;
+    top: 1%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    gap: 10px;
+  }
+
+  .addMovieForm svg {
+    font-size: 40px;
+  }
+
+  .addMovieForm label {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .addMovieForm p {
+    margin: 0;
+  }
+
+  .addMovieFormTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 20px;
+  }
+
+  .addMovieFormTop button {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .addMovieFormTop input {
+    width: auto;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormContent {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addMovieFormLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormLeft div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addMovieFormLeft p,
+  .addMovieFormRight p {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .addMovieFormLeft label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addMovieFormLeft input {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMoviePoster {
+    width: 12rem;
+    height: 17rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMoviePosterHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12rem !important;
+    height: 17rem !important;
+    text-align: center;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieLogo {
+    width: 100%;
+    height: 10rem;
+    object-fit: contain;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieLogoHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem !important;
+    margin: 0;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieFormRight div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addMovieFormRight label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addMovieFormRight input,
+  .addMovieFormRight select {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieBackground {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem !important;
+    text-align: center;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieInfos {
+    display: grid !important;
+    grid-template-columns: 50% auto;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieInfos p {
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .addMovieSynopsisTrailer {
+    display: flex;
+    flex-direction: column !important;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieSynopsisTrailer label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .addMovieSynopsisTrailer textarea {
+    width: 100%;
+    height: 10rem;
+    padding: 5px;
+    font-size: 15px;
+    text-align: justify;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieSynopsisTrailer iframe {
+    width: 100%;
+    height: 10rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieSynopsisTrailer input {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMovieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+    gap: 5px;
+    border: 4px solid #ffb20c;
+  }
+}

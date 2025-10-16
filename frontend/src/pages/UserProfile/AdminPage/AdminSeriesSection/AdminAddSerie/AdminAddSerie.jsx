@@ -252,19 +252,11 @@ function AdminAddSerie({ onClose, onSerieAdded }) {
       <ToastContainer />
       <div className="adminAddSerieOverlay"></div>
       <div className="adminAddSerieModal">
-        <form className="adminAddSerieForm" onSubmit={handleSerieAdd}>
-          <div className="adminAddSerieTopInterface">
-            <h2>Ajouter une nouvelle série</h2>
-            <div className="addSerieButtons">
-              <button type="submit" disabled={loading}>
-                {loading ? "Ajout en cours..." : "Ajouter la série"}
-              </button>
-              <button type="button" onClick={onClose}>
-                Retour
-              </button>
-            </div>
-          </div>
-          <div className="adminAddSerieTop">
+        <div className="adminAddSerieTopInterface">
+          <h2>Ajouter une nouvelle série</h2>
+        </div>
+        <form className="addSerieForm" onSubmit={handleSerieAdd}>
+          <div className="addSerieFormTop">
             <label htmlFor="title">
               <p>
                 <strong>Titre</strong>
@@ -278,9 +270,17 @@ function AdminAddSerie({ onClose, onSerieAdded }) {
                 required
               />
             </label>
+            <div>
+              <button type="submit" disabled={loading}>
+                {loading ? "Ajout en cours..." : "Ajouter la série"}
+              </button>
+              <button type="button" onClick={onClose}>
+                Retour
+              </button>
+            </div>
           </div>
-          <div className="adminAddSerieContent">
-            <div className="adminAddSerieLeft">
+          <div className="addSerieFormContent">
+            <div className="addSerieFormLeft">
               <label>
                 <p>
                   <strong>Affiche :</strong>
@@ -289,7 +289,7 @@ function AdminAddSerie({ onClose, onSerieAdded }) {
                   <img
                     src={previewImage(posterInput, "Posters")}
                     alt="Affiche de la série"
-                    className="seriePosterAdd"
+                    className="addSeriePoster"
                   />
                 ) : (
                   <div className="addSeriePosterHolder">
@@ -319,7 +319,7 @@ function AdminAddSerie({ onClose, onSerieAdded }) {
                   <img
                     src={previewImage(logoInput, "Logos")}
                     alt="Logo de la série"
-                    className="serieLogoAdd"
+                    className="addSerieLogo"
                   />
                 ) : (
                   <div className="addSerieLogoHolder">
@@ -342,7 +342,7 @@ function AdminAddSerie({ onClose, onSerieAdded }) {
                 />
               </label>
             </div>
-            <div className="adminAddSerieRight">
+            <div className="addSerieFormRight">
               <label>
                 <p>
                   <strong>Arrière-plan :</strong>
@@ -351,7 +351,7 @@ function AdminAddSerie({ onClose, onSerieAdded }) {
                   <img
                     src={previewImage(backgroundInput, "Backgrounds")}
                     alt="Arrière-plan de la série"
-                    className="serieBackgroundAdd"
+                    className="addSerieBackground"
                   />
                 ) : (
                   <div className="addSerieBackgroundHolder">
@@ -577,16 +577,16 @@ function AdminAddSerie({ onClose, onSerieAdded }) {
           </div>
 
           {/* --- CASTING --- */}
-          <div className="addSerieCasting">
+          <div className="editSerieCasting">
             <h3>Casting de la série</h3>
             {/* Réalisation */}
-            <div className="addSerieCastingSection">
+            <div className="editSerieCastingSection">
               <h4>Réalisation</h4>
-              <div className="addSerieCastingList">
+              <div className="editSerieCastingList">
                 <HorizontalScroll>
                   {directing.length > 0 ? (
                     directing.map((direction) => (
-                      <div className="addSerieCastingCard" key={direction.id}>
+                      <div className="editSerieCastingCard" key={direction.id}>
                         <img
                           src={direction.personality_image}
                           alt={direction.personality_fullname}
@@ -639,13 +639,13 @@ function AdminAddSerie({ onClose, onSerieAdded }) {
               </div>
             </div>
             {/* Acting */}
-            <div className="addSerieCastingSection">
+            <div className="editSerieCastingSection">
               <h4>Acteurs et actrices</h4>
-              <div className="addSerieCastingList">
+              <div className="editSerieCastingList">
                 <HorizontalScroll>
                   {acting.length > 0 ? (
                     acting.map((actor) => (
-                      <div className="addSerieCastingCard" key={actor.id}>
+                      <div className="editSerieCastingCard" key={actor.id}>
                         <img
                           src={actor.personality_image}
                           alt={actor.personality_fullname}
