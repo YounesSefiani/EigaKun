@@ -61,9 +61,18 @@ function UserFavoritesSeriesSection({ setView }) {
         <h3>Les series que j'ai aimés</h3>
         <HorizontalScroll>
           {likedSeries.map((serie) => (
-            <div className="userMovieCard" key={serie.serie_id}>
+            <div className="userSerieCard" key={serie.serie_id}>
               <Link to={`/series/${serie.serie_id}`}>
-                <img src={serie.serie_poster} alt={serie.serie_title} />
+                            <img
+              src={
+                serie.serie_poster && serie.serie_poster.startsWith("http")
+                  ? serie.serie_poster
+                  : serie.serie_poster
+                  ? `http://localhost:3994/src/assets/Series/Posters/${serie.serie_poster}`
+                  : ""
+              }
+              alt={serie.title}
+            />
                 <h3>{serie.serie_title}</h3>
               </Link>
             </div>
@@ -74,9 +83,18 @@ function UserFavoritesSeriesSection({ setView }) {
         <h3>Mes series favoris</h3>
         <HorizontalScroll>
           {favoritesSeries.map((serie) => (
-            <div className="userMovieCard" key={serie.serie_id}>
+            <div className="userSerieCard" key={serie.serie_id}>
               <Link to={`/series/${serie.serie_id}`}>
-                <img src={serie.serie_poster} alt={serie.serie_title} />
+                            <img
+              src={
+                serie.serie_poster && serie.serie_poster.startsWith("http")
+                  ? serie.serie_poster
+                  : serie.serie_poster
+                  ? `http://localhost:3994/src/assets/Series/Posters/${serie.serie_poster}`
+                  : ""
+              }
+              alt={serie.title}
+            />
                 <h3>{serie.serie_title}</h3>
               </Link>
             </div>
@@ -87,9 +105,18 @@ function UserFavoritesSeriesSection({ setView }) {
         <h3>Les series que j'ai vus</h3>
         <HorizontalScroll>
           {seenSeries.map((serie) => (
-            <div className="userMovieCard" key={serie.serie_id}>
+            <div className="userSerieCard" key={serie.serie_id}>
               <Link to={`/series/${serie.serie_id}`}>
-                <img src={serie.serie_poster} alt={serie.serie_title} />
+                            <img
+              src={
+                serie.serie_poster && serie.serie_poster.startsWith("http")
+                  ? serie.serie_poster
+                  : serie.serie_poster
+                  ? `http://localhost:3994/src/assets/Series/Posters/${serie.serie_poster}`
+                  : ""
+              }
+              alt={serie.title}
+            />
                 <h3>{serie.serie_title}</h3>
               </Link>
             </div>
@@ -100,9 +127,18 @@ function UserFavoritesSeriesSection({ setView }) {
         <h3>Les series à voir</h3>
         <HorizontalScroll>
           {toWatchSeries.map((serie) => (
-            <div className="userMovieCard" key={serie.serie_id}>
+            <div className="userSerieCard" key={serie.serie_id}>
               <Link to={`/series/${serie.serie_id}`}>
-                <img src={serie.serie_poster} alt={serie.serie_title} />
+                            <img
+              src={
+                serie.serie_poster && serie.serie_poster.startsWith("http")
+                  ? serie.serie_poster
+                  : serie.serie_poster
+                  ? `http://localhost:3994/src/assets/Series/Posters/${serie.serie_poster}`
+                  : ""
+              }
+              alt={serie.title}
+            />
                 <h3>{serie.serie_title}</h3>
               </Link>
             </div>
@@ -113,9 +149,18 @@ function UserFavoritesSeriesSection({ setView }) {
         <h3>Les series que je regarde</h3>
         <HorizontalScroll>
           {isWatchingSeries.map((serie) => (
-            <div className="userMovieCard" key={serie.serie_id}>
+            <div className="userSerieCard" key={serie.serie_id}>
               <Link to={`/series/${serie.serie_id}`}>
-                <img src={serie.serie_poster} alt={serie.serie_title} />
+                            <img
+              src={
+                serie.serie_poster && serie.serie_poster.startsWith("http")
+                  ? serie.serie_poster
+                  : serie.serie_poster
+                  ? `http://localhost:3994/src/assets/Series/Posters/${serie.serie_poster}`
+                  : ""
+              }
+              alt={serie.title}
+            />
                 <h3>{serie.serie_title}</h3>
               </Link>
             </div>
