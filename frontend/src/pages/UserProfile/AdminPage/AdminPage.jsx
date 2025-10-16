@@ -6,6 +6,7 @@ import "./AdminPage.css";
 import { AuthContext } from "../../../services/Context/AuthContext";
 import AdminMoviesSection from "./AdminMoviesSection/AdminMoviesSection";
 import AdminSeriesSection from "./AdminSeriesSection/AdminSeriesSection";
+import AdminPersonalitiesSection from "./AdminPersonalitiesSection/AdminPersonalitiesSection";
 import { useNavigate } from "react-router-dom";
 
 function AdminPage() {
@@ -44,7 +45,7 @@ useEffect(() => {
             Les films
           </button>
           <button type="button" onClick={() => setView("admin-series-section")}>Les séries</button>
-          <button type="button">Les personnalités</button>
+          <button type="button" onClick={() => setView("admin-personalities-section")}>Les personnalités</button>
           <button type="button">Les Users</button>
           <button type="button" onClick={() => navigate("/user")}>
             Mon Profil
@@ -60,6 +61,9 @@ useEffect(() => {
       )}
       {view === "admin-series-section" && (
         <AdminSeriesSection setView={setView} />
+      )}
+      {view === "admin-personalities-section" && (
+        <AdminPersonalitiesSection setView={setView} />
       )}
     </div>
   );
