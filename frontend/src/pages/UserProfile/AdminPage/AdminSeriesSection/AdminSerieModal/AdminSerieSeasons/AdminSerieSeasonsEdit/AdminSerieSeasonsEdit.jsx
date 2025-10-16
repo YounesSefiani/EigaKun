@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
+import HorizontalScroll from "../../../../../../../components/HorizontalScroll/HorizontalScroll";
 import connexion from "../../../../../../../services/connexion";
 import { AuthContext } from "../../../../../../../services/Context/AuthContext";
 import { ToastContainer, toast } from "react-toastify";
@@ -158,6 +159,7 @@ function AdminSerieSeasonsEdit({ serie, seasons = [], onSeasonsUpdate }) {
       {loading && <p>Chargement...</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
       <div className="adminSeasonsEditList">
+        <HorizontalScroll>
         {localSeasons.length > 0 ? (
           localSeasons.map((season, idx) => (
             <div key={season.id || idx} className="seasonEditCard">
@@ -292,6 +294,7 @@ function AdminSerieSeasonsEdit({ serie, seasons = [], onSeasonsUpdate }) {
         ) : (
           <p>Aucune saison trouvée.</p>
         )}
+        </HorizontalScroll>
       </div>
       <div className="addSeasonForm">
         <h3>Ajouter une saison</h3>

@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import connexion from "../../../services/connexion";
 import { AuthContext } from "../../../services/Context/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -8,8 +7,7 @@ import UserFavoritesMoviesSection from "../UserFavoritesMoviesSection/UserFavori
 import UserFavoritesSeriesSection from "../UserFavoritesSeriesSection/UserFavoritesSeriesSection";
 import UserFavoritesPersonalitiesSection from "../UserFavoritesPersonalitiesSection/UserFavoritesPersonalitiesSection";
 import UserSettings from "../UserSettings/UserSettings";
-import sessionExpiredImage from "../../../assets/userExpiredSession.png";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function UserPage() {
   const { user, token, handleAuthError, sessionExpired, isLoading } =
@@ -26,19 +24,6 @@ useEffect(() => {
   // ...
 }, [user, token, isLoading, handleAuthError, sessionExpired, navigate]);
   // Si la session est expirée, on affiche uniquement le message
-  if (sessionExpired) {
-    return (
-      <div className="sessionExpired">
-        <img src={sessionExpiredImage} alt="sessionExpiredImage" />
-        <h2>Oh oh ! La session a expiré !</h2>
-        <p>
-          Mais n'aie crainte, tu peux te reconnecter.
-          <br />
-          Juste <a href="/authentification">ici !</a>
-        </p>
-      </div>
-    );
-  }
 
   return (
     <div className="userPage">

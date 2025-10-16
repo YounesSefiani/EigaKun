@@ -5,6 +5,7 @@ import {
   faImage,
   faPanorama,
   faCopyright,
+  faFilm,
 } from "@fortawesome/free-solid-svg-icons";
 import AdminSerieEditForm from "./AdminSerieEditForm/AdminSerieEditForm";
 import HorizontallScroll from "../../../../../components/HorizontalScroll/HorizontalScroll";
@@ -89,7 +90,7 @@ function AdminSerieModal({ serie, show, onClose, onUpdate, onDelete }) {
                       alt={serie.title}
                     />
                   ) : (
-                    <div className="adminSerieLogoHolder">
+                    <div className="adminSerieModalLogoHolder">
                       <FontAwesomeIcon icon={faCopyright} />
                       <p>Aucun logo pour le moment.</p>
                     </div>
@@ -98,7 +99,7 @@ function AdminSerieModal({ serie, show, onClose, onUpdate, onDelete }) {
               </div>
               <div className="adminSerieRight">
                 {serie.background ? (
-                  <div className="adminSerieBackground">
+                  <div className="adminSerieModalBackground">
                     <p>Affiche de fond :</p>
 
                     <img
@@ -113,7 +114,7 @@ function AdminSerieModal({ serie, show, onClose, onUpdate, onDelete }) {
                     />
                   </div>
                 ) : (
-                  <div className="adminSerieBackgroundHolder">
+                  <div className="adminSerieModalBackgroundHolder">
                     <FontAwesomeIcon icon={faPanorama} />
                     <p>Aucun arrière-plan pour le moment.</p>
                   </div>
@@ -182,7 +183,10 @@ function AdminSerieModal({ serie, show, onClose, onUpdate, onDelete }) {
                     allowFullScreen
                   ></iframe>
                 ) : (
-                  <p>Aucun trailer pour le moment.</p>
+                  <div className="adminSerieTrailerHolder">
+                    <FontAwesomeIcon icon={faFilm} />
+                    <p>Aucun trailer pour le moment.</p>
+                  </div>
                 )}
               </div>
             </div>
@@ -241,7 +245,11 @@ function AdminSerieModal({ serie, show, onClose, onUpdate, onDelete }) {
                           key={direction.id}
                         >
                           <img
-                            src={direction.personality_image}
+                            src={direction.personality_image && direction.personality_image.startsWith("http")
+                              ? direction.personality_image
+                              : direction.personality_image
+                              ? `http://localhost:3994/src/assets/Personnages/${direction.personality_image}`
+                              : ""}
                             alt={direction.personality_fullname}
                           />
                           <p>{direction.personality_fullname}</p>
@@ -271,7 +279,11 @@ function AdminSerieModal({ serie, show, onClose, onUpdate, onDelete }) {
                       acting.map((actor) => (
                         <div className="adminSerieCastingCard" key={actor.id}>
                           <img
-                            src={actor.personality_image}
+                            src={actor.personality_image && actor.personality_image.startsWith("http")
+                              ? actor.personality_image
+                              : actor.personality_image
+                              ? `http://localhost:3994/src/assets/Personalities/Images/${actor.personality_image}`
+                              : ""}
                             alt={actor.personality_fullname}
                           />
                           <p>{actor.personality_fullname}</p>

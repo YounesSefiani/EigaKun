@@ -1,6 +1,6 @@
 /* VERSION PC */
 @media screen and (min-width: 1441px) {
-  form {
+  .editMovieForm {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -9,12 +9,24 @@
     gap: 20px;
   }
 
-  form label {
+  .editMovieForm label {
     display: flex;
     flex-direction: column;
     width: auto;
     font-size: 25px;
     gap: 10px;
+  }
+
+  .editMovieForm input,
+  .editMovieForm select {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieForm p {
+    margin: 0;
   }
 
   .editMovieFormTop {
@@ -27,53 +39,47 @@
     border: 4px solid #ffb20c;
   }
 
+  .editMovieFormTop input {
+    width: 30rem;
+  }
+
   .editMovieFormTop div {
     display: flex;
     flex-direction: row;
-    align-items: end;
     width: auto;
     height: auto;
-    gap: 20px;
+    gap: 10px;
   }
 
   .editMovieFormTop button {
     width: auto;
     height: auto;
-    padding: 5px;
-    font-size: 25px;
+    padding: 10px;
+    font-size: 20px;
   }
 
   .editMovieFormTop p {
     margin: 0;
-    font-size: 1.2rem;
-  }
-
-  .editMovieFormTop input {
-    width: 25rem;
-    border: 4px solid #ffb20c;
+    font-size: 20px;
   }
 
   .editMovieFormContent {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    width: auto;
+    height: auto;
+    gap: 15px;
   }
 
   .editMovieFormLeft {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
     width: 30%;
     height: auto;
-    gap: 30px;
+    gap: 20px;
     padding: 10px;
     border: 4px solid #ffb20c;
-  }
-
-  .editMovieFormLeft p {
-    margin: 0;
-    font-size: 1.2rem;
   }
 
   .editMovieFormLeft div {
@@ -86,20 +92,9 @@
     gap: 10px;
   }
 
-  .editMovieFormLeft label {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-  }
-
-  .editMovieFormLeft input {
-    width: 100%;
-    height: auto;
-    font-size: 1rem;
-    border: 4px solid #ffb20c;
+  .editMovieFormLeft p {
+    margin: 0;
+    font-size: 20px;
   }
 
   .editMoviePoster {
@@ -109,43 +104,23 @@
     border: 4px solid #ffb20c;
   }
 
-  .editMovieBackground {
-    width: 18rem;
-    height: 15rem;
-    object-fit: fill;
-    border: 4px solid #ffb20c;
-  }
-
-  .editMovieFormRight {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    height: auto;
-    overflow-y: auto;
-    gap: 10px;
-    padding: 10px;
-    border: 4px solid #ffb20c;
-  }
-
-  .editMovieFormRight div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .editMovieFormRight label {
+  .editMovieModalPosterHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    height: auto;
+    align-items: center;
+    width: 18rem;
+    height: 25rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
   }
 
   .editMovieLogo {
     width: 100%;
-    height: 10rem;
+    height: 12rem;
     object-fit: contain;
-    padding: 15px;
+    padding: 10px;
     border: 4px solid #ffb20c;
   }
 
@@ -155,67 +130,104 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 12rem;
     margin: 0;
-    font-size: 35px;
+    font-size: 18px;
     border: 4px solid #ffb20c;
   }
 
-  .editMovieFormRight input {
+  .editMovieFormRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieFormRight div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     width: 100%;
     height: auto;
-    font-size: 1rem;
+    gap: 10px;
+  }
+
+  .editMovieFormRight p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .editMovieBackground {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
     border: 4px solid #ffb20c;
   }
 
   .editMovieInfos {
     display: grid !important;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     width: 100%;
     height: auto;
-    padding: 10px;
-    gap: 10px;
+    padding: 5px;
+    gap: 5px;
     border: 4px solid #ffb20c;
   }
 
   .editMovieInfos p {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 18px;
+    text-align: center;
   }
 
   .editMovieSynopsisTrailer {
     display: flex;
     flex-direction: row !important;
     width: 100%;
-    height: 100%;
+    height: auto;
+    gap: 20px;
     padding: 10px;
-    gap: 10px;
     border: 4px solid #ffb20c;
   }
 
   .editMovieSynopsisTrailer label {
     display: flex;
     flex-direction: column;
+    text-align: center;
     width: 100%;
     height: 100%;
-  }
-
-  .editMovieSynopsisTrailer p {
-    margin: 0;
-    font-size: 1.1rem;
   }
 
   .editMovieSynopsisTrailer textarea {
     width: 100%;
     height: 100%;
-    font-size: 1rem;
+    padding: 5px;
+    font-size: 16px;
     text-align: justify;
+    resize: none;
     border: 4px solid #ffb20c;
   }
 
   .editMovieSynopsisTrailer iframe {
     width: 100%;
-    height: 100%;
+    height: 20rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20rem;
+    gap: 10px;
     border: 4px solid #ffb20c;
   }
 
@@ -230,6 +242,8 @@
   .editMovieCasting h3 {
     margin: 0;
     text-align: center;
+    padding: 10px;
+    border: 4px solid #ffb20c;
   }
 
   .editMovieCastingSection {
@@ -243,8 +257,11 @@
     border: 4px solid #ffb20c;
   }
 
-  .editMovieCastingSection h3 {
+  .editMovieCastingSection h4 {
     margin: 0;
+    text-align: center;
+    padding: 10px;
+    border: 4px solid #ffb20c;
   }
 
   .addMemberCasting {
@@ -259,6 +276,7 @@
 
   .addMemberCasting p {
     margin: 0;
+    font-size: 20px;
   }
 
   .editMovieCastingList {
@@ -275,7 +293,7 @@
     align-items: center;
     width: auto;
     height: auto;
-    gap: 20px;
+    gap: 15px;
     padding: 10px;
     border: 4px solid #ffb20c;
     border-radius: 20px;
@@ -295,7 +313,7 @@
     height: auto;
     padding: 10px;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 20px;
     border: 4px solid #ffb20c;
   }
 
@@ -313,7 +331,7 @@
 }
 /* VERSION DESKTOP */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
-  form {
+  .editMovieForm {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -322,12 +340,24 @@
     gap: 20px;
   }
 
-  form label {
+  .editMovieForm label {
     display: flex;
     flex-direction: column;
     width: auto;
     font-size: 25px;
     gap: 10px;
+  }
+
+  .editMovieForm input,
+  .editMovieForm select {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieForm p {
+    margin: 0;
   }
 
   .editMovieFormTop {
@@ -340,10 +370,14 @@
     border: 4px solid #ffb20c;
   }
 
+  .editMovieFormTop input {
+    width: 20rem;
+    border: 4px solid #ffb20c;
+  }
+
   .editMovieFormTop div {
     display: flex;
     flex-direction: row;
-    align-items: end;
     width: auto;
     height: auto;
     gap: 20px;
@@ -351,42 +385,34 @@
 
   .editMovieFormTop button {
     width: auto;
-    height: 50%;
+    height: auto;
     padding: 5px;
     font-size: 18px;
   }
 
   .editMovieFormTop p {
     margin: 0;
-    font-size: 1.2rem;
-  }
-
-  .editMovieFormTop input {
-    width: 20rem;
-    border: 4px solid #ffb20c;
+    font-size: 20px;
   }
 
   .editMovieFormContent {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    width: auto;
+    height: auto;
+    gap: 10px;
   }
 
   .editMovieFormLeft {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 30%;
+    width: 35%;
     height: auto;
-    gap: 30px;
+    gap: 10px;
     padding: 10px;
     border: 4px solid #ffb20c;
-  }
-
-  .editMovieFormLeft p {
-    margin: 0;
-    font-size: 1.2rem;
   }
 
   .editMovieFormLeft div {
@@ -399,66 +425,35 @@
     gap: 10px;
   }
 
-  .editMovieFormLeft label {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-  }
-
-  .editMovieFormLeft input {
-    width: 100%;
-    height: auto;
-    font-size: 1rem;
-    border: 4px solid #ffb20c;
+  .editMovieFormLeft p {
+    margin: 0;
+    font-size: 18px;
   }
 
   .editMoviePoster {
-    width: 13rem;
+    width: 14rem;
     height: 20rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
   }
 
-  .editMovieBackground {
-    width: 13rem;
-    height: 12rem;
-    object-fit: fill;
-    border: 4px solid #ffb20c;
-  }
-
-  .editMovieFormRight {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    height: auto;
-    overflow-y: auto;
-    gap: 10px;
-    padding: 10px;
-    border: 4px solid #ffb20c;
-  }
-
-  .editMovieFormRight div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .editMovieFormRight label {
+  .editMoviePosterHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    height: auto;
+    align-items: center;
+    width: 14rem;
+    height: 20rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
   }
 
   .editMovieLogo {
     width: 100%;
     height: 10rem;
     object-fit: contain;
-    padding: 15px;
+    padding: 10px;
     border: 4px solid #ffb20c;
   }
 
@@ -468,16 +463,56 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 10rem !important;
     margin: 0;
-    font-size: 35px;
+    font-size: 18px;
+    text-align: center;
     border: 4px solid #ffb20c;
   }
 
-  .editMovieFormRight input {
+  .editMovieFormRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieFormRight div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     width: 100%;
     height: auto;
-    font-size: 1rem;
+    gap: 10px;
+  }
+
+  .editMovieFormRight p {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .editMovieBackground {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20rem !important;
+    text-align: center;
+    font-size: 18px;
     border: 4px solid #ffb20c;
   }
 
@@ -486,49 +521,60 @@
     grid-template-columns: auto auto auto;
     width: 100%;
     height: auto;
-    padding: 10px;
+    padding: 5px;
     gap: 10px;
     border: 4px solid #ffb20c;
   }
 
   .editMovieInfos p {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 16px;
+    text-align: center;
   }
 
   .editMovieSynopsisTrailer {
     display: flex;
     flex-direction: row !important;
     width: 100%;
-    height: 100%;
+    height: auto;
+    gap: 15px;
     padding: 10px;
-    gap: 10px;
     border: 4px solid #ffb20c;
   }
 
   .editMovieSynopsisTrailer label {
     display: flex;
     flex-direction: column;
+    text-align: center;
     width: 100%;
     height: 100%;
-  }
-
-  .editMovieSynopsisTrailer p {
-    margin: 0;
-    font-size: 1.1rem;
   }
 
   .editMovieSynopsisTrailer textarea {
     width: 100%;
     height: 100%;
-    font-size: 1rem;
+    padding: 5px;
+    font-size: 14px;
     text-align: justify;
+    resize: none;
     border: 4px solid #ffb20c;
   }
 
   .editMovieSynopsisTrailer iframe {
     width: 100%;
-    height: 100%;
+    height: 20rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 18rem;
+    font-size: 20px;
+    gap: 10px;
     border: 4px solid #ffb20c;
   }
 
@@ -537,12 +583,15 @@
     flex-direction: column;
     width: 100%;
     height: auto;
-    gap: 20px;
+    gap: 15px;
   }
 
   .editMovieCasting h3 {
     margin: 0;
     text-align: center;
+    font-size: 25px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
   }
 
   .editMovieCastingSection {
@@ -551,13 +600,16 @@
     width: 100%;
     height: auto;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     padding: 10px;
     border: 4px solid #ffb20c;
   }
 
-  .editMovieCastingSection h3 {
+  .editMovieCastingSection h4 {
     margin: 0;
+    text-align: center;
+    padding: 5px;
+    border: 4px solid #ffb20c;
   }
 
   .addMemberCasting {
@@ -575,19 +627,6 @@
     font-size: 20px;
   }
 
-  .addMemberCasting select {
-    font-size: 18px;
-  }
-
-  .addMemberCasting input {
-    font-size: 18px;
-  }
-
-  .addMemberCasting button {
-    font-size: 22px;
-    padding: 5px;
-  }
-
   .editMovieCastingList {
     display: flex;
     flex-direction: row;
@@ -602,15 +641,15 @@
     align-items: center;
     width: auto;
     height: auto;
-    gap: 20px;
+    gap: 10px;
     padding: 10px;
     border: 4px solid #ffb20c;
     border-radius: 20px;
   }
 
   .editMovieCastingCard img {
-    width: 14rem;
-    height: 21rem;
+    width: 12rem;
+    height: 17rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
     border-radius: 25px;
@@ -620,77 +659,88 @@
     margin: 0;
     width: 100%;
     height: auto;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 18px;
     border: 4px solid #ffb20c;
   }
 
   .editMovieCastingCard label {
     width: 100%;
     height: auto;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .editMovieCastingCard button {
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
     padding: 5px;
   }
 }
 /* VERSION TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    padding: 10px;
-    gap: 10px;
-  }
-
-  form label {
+  .editMovieForm {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
+    overflow-y: auto;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .editMovieForm label {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
     font-size: 20px;
+    gap: 10px;
+  }
+
+  .editMovieForm input,
+  .editMovieForm select {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieForm p {
+    margin: 0;
   }
 
   .editMovieFormTop {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
     width: auto;
     height: auto;
     gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
   }
 
   .editMovieFormTop div {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: auto;
     height: auto;
     gap: 10px;
-  }
-
-  .editMovieFormTop p {
-    margin: 0;
-    font-size: 1.5rem;
   }
 
   .editMovieFormTop input {
     width: 100%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 25px;
     border: 4px solid #ffb20c;
   }
 
-  .editMovieFormTop div button {
+  .editMovieFormTop button {
     width: 100%;
     height: auto;
-    font-size: 18px;
+    font-size: 20px;
     color: #ffb20c;
     padding: 5px;
     background-color: black;
@@ -702,34 +752,37 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
+    gap: 10px;
   }
 
   .editMovieFormLeft {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 100%;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 15px;
     padding: 10px;
     border: 4px solid #ffb20c;
-  }
-
-  .editMovieFormLeft p {
-    margin: 0;
-    font-size: 1.5rem;
   }
 
   .editMovieFormLeft div {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
     padding: 10px;
     gap: 10px;
     border: 4px solid #ffb20c;
+  }
+
+  .editMovieFormLeft p,
+  .editMovieRightLeft p {
+    margin: 0;
+    font-size: 20px;
   }
 
   .editMovieFormLeft label {
@@ -742,24 +795,43 @@
     gap: 10px;
   }
 
-  .editMovieFormLeft input {
-    width: 100%;
-    height: auto;
-    font-size: 15px;
-    border: 4px solid #ffb20c;
-  }
-
   .editMoviePoster {
-    width: 13rem;
-    height: 19rem;
+    width: 15rem;
+    height: 22rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
   }
 
-  .editMovieBackground {
-    width: 22rem;
-    height: 15rem;
-    object-fit: fill;
+  .editMoviePosterHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15rem !important;
+    height: 22rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieLogo {
+    width: 100%;
+    height: 10rem;
+    object-fit: contain;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieLogoHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    height: 10rem !important;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
     border: 4px solid #ffb20c;
   }
 
@@ -774,56 +846,53 @@
   .editMovieFormRight div {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-  }
-
-  .editMovieFormRight label {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
+    text-align: center;
     width: 100%;
     height: auto;
     gap: 10px;
-  }
-
-  .editMovieFormRight input {
-    width: 100%;
-    height: auto;
-    font-size: 15px;
+    padding: 10px;
     border: 4px solid #ffb20c;
   }
 
-  .editMovieLogo {
+  .editMovieBackground {
     width: 100%;
-    height: 12rem;
-    object-fit: contain;
-    padding: 15px;
+    height: 25rem;
+    object-fit: cover;
     border: 4px solid #ffb20c;
   }
 
-  .editMovieLogoHolder {
+  .editMovieBackgroundHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 5rem;
-    margin: 0;
+    height: 25rem !important;
+    text-align: center;
+    font-size: 18px;
     border: 4px solid #ffb20c;
-  }
-
-  .editMovieLogoHolder p {
-    margin: 0;
-    font-size: 25px;
   }
 
   .editMovieInfos {
     display: grid !important;
-    grid-template-columns: 50% auto;
+    grid-template-columns: auto auto auto;
+    align-items: center;
     width: 100%;
     height: auto;
+    gap: 15px;
+    padding: 10px;
+    margin: auto;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieInfos p {
+    width: 100%;
+    height: 100%;
+    margin: 0;
     padding: 5px;
-    gap: 10px;
+    font-size: 18px;
+    text-align: center;
     border: 4px solid #ffb20c;
   }
 
@@ -833,19 +902,6 @@
     justify-content: center;
     width: 100%;
     height: auto;
-  }
-
-  .editMovieInfos p {
-    margin: 0;
-    font-size: 21px;
-    text-align: center;
-  }
-
-  .editMovieInfos input {
-    width: 100%;
-    height: auto;
-    font-size: 18px;
-    border: 4px solid #ffb20c;
   }
 
   .editMovieSynopsisTrailer {
@@ -866,7 +922,7 @@
 
   .editMovieSynopsisTrailer p {
     margin: 0;
-    font-size: 25px;
+    font-size: 22px;
     text-align: center;
   }
 
@@ -874,6 +930,7 @@
     width: 100%;
     height: 12rem;
     padding: 5px;
+    font-size: 18px;
     text-align: justify;
     border: 4px solid #ffb20c;
   }
@@ -884,8 +941,16 @@
     border: 4px solid #ffb20c;
   }
 
-  .editMovieSynopsisTrailer input {
+  .editMovieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20rem;
+    text-align: center;
     font-size: 18px;
+    border: 4px solid #ffb20c;
   }
 
   .editMovieCasting {
@@ -935,14 +1000,14 @@
     flex-direction: column;
     width: 100%;
     height: auto;
-    padding: 5px;
+    padding: 10px !important;
     gap: 20px;
     border: 4px solid #ffb20c;
   }
 
   .addMemberCasting p {
     margin: 0;
-    font-size: 22px;
+    font-size: 22px !important;
   }
 
   .addMemberCasting label {
@@ -952,18 +1017,18 @@
   }
 
   .addMemberCasting select {
-    font-size: 22px;
+    font-size: 22px !important;
   }
 
   .addMemberCasting input {
-    font-size: 22px;
+    font-size: 22px !important;
   }
 
   .addMemberCasting button {
     width: 100%;
     background-color: black;
     color: #ffb20c;
-    font-size: 20px;
+    font-size: 25px !important;
     padding: 5px;
     border: 4px solid #ffb20c;
     transition: 0.5s ease;
@@ -1000,7 +1065,14 @@
     height: auto;
     padding: 10px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 22px !important;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieCastingCard input,
+  .editMovieCastingCard select {
+    width: 100%;
+    font-size: 20px !important;
     border: 4px solid #ffb20c;
   }
 
@@ -1008,7 +1080,7 @@
     width: 100%;
     background-color: black;
     color: #ffb20c;
-    font-size: 1.1rem;
+    font-size: 22px !important;
     padding: 5px;
     border: 4px solid #ffb20c;
     transition: 0.5s ease;
@@ -1022,53 +1094,57 @@
 }
 /* VERSION MOBILE */
 @media screen and (max-width: 767px) {
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    padding: 10px;
-    gap: 10px;
-  }
-
-  form label {
+  .editMovieform {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
-    font-size: 20px;
+    overflow-y: auto;
+    gap: 10px;
+  }
+
+  .editMovieForm label {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .editMovieForm input,
+  .editMovieForm select {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieForm p {
+    margin: 0;
   }
 
   .editMovieFormTop {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
     width: auto;
     height: auto;
     gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
   }
 
   .editMovieFormTop div {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: auto;
     height: auto;
     gap: 10px;
   }
 
-  .editMovieFormTop p {
-    margin: 0;
-    font-size: 1.2rem;
-  }
-
-  .editMovieFormTop input {
-    width: 100%;
-    text-align: center;
-    border: 4px solid #ffb20c;
-  }
-
-  .editMovieFormTop div button {
+  .editMovieFormTop button {
     width: 100%;
     height: auto;
     font-size: 12px;
@@ -1083,34 +1159,35 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
+    gap: 10px;
   }
 
   .editMovieFormLeft {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 20px;
     padding: 10px;
     border: 4px solid #ffb20c;
-  }
-
-  .editMovieFormLeft p {
-    margin: 0;
-    font-size: 1rem;
   }
 
   .editMovieFormLeft div {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
-    padding: 10px;
     gap: 10px;
-    border: 4px solid #ffb20c;
+  }
+
+  .editMovieFormLeft p,
+  .editMovieRightLeft p {
+    margin: 0;
+    font-size: 18px;
   }
 
   .editMovieFormLeft label {
@@ -1126,59 +1203,38 @@
   .editMovieFormLeft input {
     width: 100%;
     height: auto;
-    font-size: 13px;
+    font-size: 15px;
     border: 4px solid #ffb20c;
   }
 
   .editMoviePoster {
-    width: 12rem;
-    height: 17rem;
+    width: 9rem;
+    height: 14rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
   }
 
-  .editMovieBackground {
-    width: 15rem;
-    height: 10rem;
-    object-fit: fill;
-    border: 4px solid #ffb20c;
-  }
-
-  .editMovieFormRight {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    gap: 10px;
-  }
-
-  .editMovieFormRight div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .editMovieFormRight label {
+  .editMoviePosterHolder {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    height: auto;
-    gap: 10px;
+    align-items: center;
+    width: 12rem !important;
+    height: 17rem !important;
+    text-align: center;
+    border: 4px solid #ffb20c;
   }
 
-  .editMovieFormRight input {
-    width: 100%;
-    height: auto;
-    font-size: 13px;
-    border: 4px solid #ffb20c;
+  .editMoviePosterHolder p {
+    margin: 0;
+    font-size: 15px;
   }
 
   .editMovieLogo {
     width: 100%;
     height: 10rem;
     object-fit: contain;
-    padding: 15px;
+    padding: 10px;
     border: 4px solid #ffb20c;
   }
 
@@ -1188,14 +1244,54 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 5rem;
+    height: 10rem !important;
     margin: 0;
     border: 4px solid #ffb20c;
   }
 
   .editMovieLogoHolder p {
     margin: 0;
-    font-size: 18px;
+    font-size: 15px;
+  }
+
+  .editMovieFormRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieFormRight div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editMovieBackground {
+    width: 100%;
+    height: 10rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem !important;
+    text-align: center;
+    border: 4px solid #ffb20c;
   }
 
   .editMovieInfos {
@@ -1234,7 +1330,9 @@
     flex-direction: column !important;
     width: 100%;
     height: 100%;
-    gap: 5px;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
   }
 
   .editMovieSynopsisTrailer label {
@@ -1243,12 +1341,12 @@
     width: 100%;
     height: 100%;
     gap: 10px;
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .editMovieSynopsisTrailer p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 18px;
     text-align: center;
   }
 
@@ -1263,7 +1361,18 @@
 
   .editMovieSynopsisTrailer iframe {
     width: 100%;
-    height: 100%;
+    height: 15rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .editMovieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+    gap: 5px;
     border: 4px solid #ffb20c;
   }
 
@@ -1277,6 +1386,7 @@
 
   .editMovieCasting h3 {
     margin: 0;
+    font-size: 18px;
     text-align: center;
   }
 
@@ -1285,14 +1395,15 @@
     flex-direction: column;
     width: 100%;
     height: auto;
-    align-items: center;
-    padding: 10px;
     gap: 10px;
+    padding: 5px;
     border: 4px solid #ffb20c;
   }
 
   .editMovieCastingSection h4 {
     margin: 0;
+    font-size: 20px;
+    text-align: center;
   }
 
   .editMovieCastingList {
@@ -1300,6 +1411,7 @@
     flex-direction: row;
     width: 100%;
     height: auto;
+    padding: 5px;
   }
 
   .editMovieCastingList p {
@@ -1313,13 +1425,13 @@
     width: 100%;
     height: auto;
     padding: 5px;
-    gap: 20px;
+    gap: 10px;
     border: 4px solid #ffb20c;
   }
 
   .addMemberCasting p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 18px;
   }
 
   .addMemberCasting label {
@@ -1332,7 +1444,7 @@
     width: 100%;
     background-color: black;
     color: #ffb20c;
-    font-size: 20px;
+    font-size: 18px;
     padding: 5px;
     border: 4px solid #ffb20c;
     transition: 0.5s ease;
@@ -1347,17 +1459,16 @@
   .editMovieCastingCard {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    width: auto;
     height: auto;
-    gap: 20px;
+    gap: 15px;
     padding: 10px;
     border: 4px solid #ffb20c;
   }
 
   .editMovieCastingCard img {
-    width: 12rem;
-    height: 18rem;
+    width: 9rem;
+    height: 13rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
     border-radius: 25px;
@@ -1367,9 +1478,9 @@
     margin: 0;
     width: 100%;
     height: auto;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 16px;
     border: 4px solid #ffb20c;
   }
 
@@ -1377,7 +1488,7 @@
     width: 100%;
     background-color: black;
     color: #ffb20c;
-    font-size: 1.1rem;
+    font-size: 18px;
     padding: 5px;
     border: 4px solid #ffb20c;
     transition: 0.5s ease;

@@ -165,23 +165,22 @@ function AdminSerieEpisodesAdd({ seasonId, serieId, onAdd }) {
               onChange={handleChange}
             />
           </label>
-          <div className="addEpisodeModalButtons">
-            <button type="submit" disabled={loading}>
-              Ajouter
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                setEpisode(initialEpisode);
-                setImage({ url: "", file: null });
-              }}
-            >
-              Annuler
-            </button>
-          </div>
         </div>
       </div>
-
+      <div className="addEpisodeModalButtons">
+        <button type="submit" disabled={loading}>
+          Ajouter
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            setEpisode(initialEpisode);
+            setImage({ url: "", file: null });
+          }}
+        >
+          Annuler
+        </button>
+      </div>
       <ToastContainer />
     </form>
   );

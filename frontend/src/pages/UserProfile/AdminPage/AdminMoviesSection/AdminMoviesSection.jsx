@@ -93,14 +93,16 @@ function AdminMovieSection({ setView }) {
   // ...existing code...
   return (
     <div className="adminMoviesSection">
-      <h2>Les films</h2>
-      <div className="adminBtnSection">
-        <button type="button" onClick={() => setShowAddMovie(true)}>
-          Ajouter un film
-        </button>
-        <button type="button" onClick={() => setView("initial")}>
-          Retour
-        </button>
+      <div className="adminMoviesSectionTop">
+        <h2>Les films</h2>
+        <div>
+          <button type="button" onClick={() => setShowAddMovie(true)}>
+            Ajouter un film
+          </button>
+          <button type="button" onClick={() => setView("initial")}>
+            Retour
+          </button>
+        </div>
       </div>
       {showAddMovie && (
         <AdminAddMovie
