@@ -59,13 +59,13 @@ function OneMoviePage() {
                 className="oneMoviePoster"
               />
             ) : (
-              <div className="posterPlaceholder">
+              <div className="oneMoviePosterPlaceholder">
                 <img src={EigaKunLogo} alt={movie.title} />
+                <p>Aucune affiche pour le moment.</p>
               </div>
             )}
           </div>
           <div className="oneMovieHeaderContentRight">
-            <div className="oneMovieLogo">
               {movie.logo ? (
                 <img
                   src={
@@ -75,14 +75,14 @@ function OneMoviePage() {
                       ? `http://localhost:3994/src/assets/Movies/Logos/${movie.logo}`
                       : ""
                   }
+                  className="oneMovieLogo"
                   alt={movie.title}
                 />
               ) : (
-                <h2>{movie.title}</h2>
+                <h4>{movie.title}</h4>
               )}
-            </div>
-            <div className="oneMovieInfos">
-              <div className="oneMovieDetails">
+            <div className="oneMovieDetails">
+              <div className="oneMovieInfos">
                 <p>
                   <strong>
                     Date de sortie :<br />
@@ -164,11 +164,11 @@ function OneMoviePage() {
         <CastingContainer casting={movie.casting} />
       </div>
       {/* Reviews & Trailer */}
-      <div className="reviewsAndTrailer">
-        <div className="reviews">
+      <div className="movieReviewsAndTrailer">
+        <div className="movieReviews">
           <h4>Reviews</h4>
         </div>
-        <div className="trailer">
+        <div className="movieTrailer">
           <h4>Trailer du film "{movie.title}"</h4>
           <iframe src={movie.trailer} title={`Trailer de ${movie.title}`} />
         </div>

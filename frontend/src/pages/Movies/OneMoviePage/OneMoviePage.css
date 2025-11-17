@@ -4,16 +4,18 @@
     display: flex;
     flex-direction: column;
     width: auto;
-    height: 100%;
-    gap: 30px;
+    height: auto;
+    gap: 20px;
   }
 
   .oneMovieHeader {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     width: auto;
-    height: 40rem;
+    height: auto;
     position: relative;
+    color: #ffb20c;
     border-bottom: 4px solid #ffb20c;
   }
 
@@ -30,94 +32,153 @@
     display: flex;
     flex-direction: row;
     width: auto;
-    height: 100%;
+    height: auto;
     gap: 10px;
-    padding: 15px;
+    padding: 10px;
     z-index: 2;
     background: linear-gradient(to right, black 50%, transparent 80%);
-    border: 4px solid #ffb20c;
-    border-top: none;
-    border-bottom: none;
   }
 
   .oneMovieHeaderContentLeft {
     display: flex;
     flex-direction: column;
-    width: 25%;
-    height: 100%;
-    padding: 15px;
+    width: 20%;
+    height: auto;
     gap: 10px;
-    border: 4px solid #ffb20c;
   }
 
   .oneMoviePoster {
-    width: 23rem;
-    height: 32rem;
-    margin: auto;
+    width: auto;
+    height: 35rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
+  }
+
+  .oneMoviePosterPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 35rem;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .oneMoviePosterPlaceholder img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 10px;
+  }
+
+  .oneMoviePosterPlaceholder p {
+    margin: 0;
+    font-size: 20px;
   }
 
   .oneMovieHeaderContentRight {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 75%;
-    height: 100%;
+    width: 80%;
+    height: auto;
   }
 
-  .oneMovieLogo img {
-    width: 45rem;
-    height: 12rem;
+  .oneMovieLogo {
+    width: 40%;
+    height: 10rem;
     object-fit: contain;
     padding: 10px;
+    background-color: black;
     border: 4px solid #ffb20c;
   }
 
-  .oneMovieLogo h2 {
-    width: 50%;
+  .oneMovieHeaderContentRight h4 {
+    margin: 0;
+    width: 40%;
     height: auto;
     padding: 10px;
+    font-size: 30px;
     text-align: center;
-    font-size: 40px;
-    color: #ffb20c;
+    background-color: black;
     border: 4px solid #ffb20c;
-  }
-
-  .oneMovieInfos {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 40%;
-    gap: 20px;
   }
 
   .oneMovieDetails {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 10rem;
+    gap: 10px;
+  }
+
+  .oneMovieInfos {
     display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+    grid-template-columns: auto auto auto auto;
     width: 50%;
-    height: 100%;
-    padding: 10px;
-    color: #ffb20c;
+    height: auto;
+    gap: 5px;
+    padding: 5px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffb20c;
   }
 
+  .oneMovieInfos::-webkit-scrollbar {
+    border: 4px solid black;
+    background-color: #ffb20c;
+    width: auto;
+  }
+
+  .oneMovieInfos::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 6px;
+    border: 3px solid #ffb20c;
+  }
+
+  .oneMovieInfos::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+    border-radius: 6px;
+    border: 3px solid black;
+  }
+
+  .oneMovieInfos p {
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
   .oneMovieSynopsis {
+    display: flex;
     width: 50%;
     height: auto;
+    text-align: justify;
     overflow-y: auto;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffb20c;
   }
 
-  .oneMovieSynopsis p {
-    margin: 0;
-    text-align: justify;
-    color: #ffb20c;
+  .oneMovieSynopsis::-webkit-scrollbar {
+    border: 4px solid black;
+    background-color: #ffb20c;
+    width: auto;
+  }
+
+  .oneMovieSynopsis::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 6px;
+    border: 3px solid #ffb20c;
+  }
+
+  .oneMovieSynopsis::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+    border-radius: 6px;
+    border: 3px solid black;
   }
 
   .castingSection h3 {
@@ -127,7 +188,7 @@
     color: #ffb20c;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .reviewsAndTrailer {
@@ -172,17 +233,21 @@
     display: flex;
     flex-direction: column;
     width: auto;
-    height: 100%;
-    gap: 30px;
+    height: auto;
+    gap: 10px;
+    overflow-y: auto;
   }
 
   .oneMovieHeader {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     width: auto;
-    height: 40rem;
+    height: auto;
     position: relative;
-    border-bottom: 4px solid #ffb20c;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    border-top: none;
   }
 
   .oneMovieBackground {
@@ -200,30 +265,47 @@
     width: auto;
     height: 100%;
     gap: 10px;
-    padding: 15px;
+    padding: 10px;
     z-index: 2;
     background: linear-gradient(to right, black 50%, transparent 80%);
-    border: 4px solid #ffb20c;
-    border-top: none;
-    border-bottom: none;
   }
 
   .oneMovieHeaderContentLeft {
     display: flex;
     flex-direction: column;
     width: 25%;
-    height: 100%;
-    padding: 15px;
+    height: auto;
     gap: 10px;
-    border: 4px solid #ffb20c;
   }
 
   .oneMoviePoster {
-    width: 23rem;
-    height: 32rem;
-    margin: auto;
+    width: auto;
+    height: 30rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
+  }
+
+  .oneMoviePosterPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 30rem;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .oneMoviePosterPlaceholder img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 10px;
+  }
+
+  .oneMoviePosterPlaceholder p {
+    margin: 0;
+    font-size: 20px;
   }
 
   .oneMovieHeaderContentRight {
@@ -231,57 +313,109 @@
     flex-direction: column;
     justify-content: space-between;
     width: 75%;
-    height: 100%;
+    height: auto;
   }
 
-  .oneMovieLogo img {
-    width: 45rem;
-    height: 12rem;
+  .oneMovieLogo {
+    width: 50%;
+    height: 10rem;
     object-fit: contain;
     border: 4px solid #ffb20c;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
-  .oneMovieLogo h2 {
-    width: 50%;
+  .oneMovieHeaderContentRight h4 {
+    margin: 0;
+    width: 40%;
     height: auto;
     padding: 10px;
+    font-size: 30px;
     text-align: center;
-    font-size: 40px;
-    color: #ffb20c;
     border: 4px solid #ffb20c;
-  }
-
-  .oneMovieInfos {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 40%;
-    gap: 20px;
   }
 
   .oneMovieDetails {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    width: 50%;
-    height: 100%;
-    padding: 10px;
-    color: #ffb20c;
-    border: 4px solid #ffb20c;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 10rem;
+    gap: 5px;
   }
 
-  .oneMovieSynopsis {
+  .oneMovieInfos {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     width: 50%;
     height: auto;
+    gap: 5px;
+    padding: 5px;
     overflow-y: auto;
-    padding: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffb20c;
   }
 
-  .reviewsAndTrailer {
+  .oneMovieInfos::-webkit-scrollbar {
+    border: 4px solid black;
+    background-color: #ffb20c;
+    width: auto;
+  }
+
+  .oneMovieInfos::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 6px;
+    border: 3px solid #ffb20c;
+  }
+
+  .oneMovieInfos::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+    border-radius: 6px;
+    border: 3px solid black;
+  }
+
+  .oneMovieInfos p {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    border: 4px solid #ffb20c;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .oneMovieSynopsis {
+    border: 4px solid #ffb20c;
+    width: 50%;
+    height: auto;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 15px;
+    overflow-y: auto;
+  }
+
+  .oneMovieSynopsis p {
+    margin: 0;
+  }
+
+  .oneMovieSynopsis::-webkit-scrollbar {
+    border: 4px solid black;
+    background-color: #ffb20c;
+    width: auto;
+  }
+
+  .oneMovieSynopsis::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 6px;
+    border: 3px solid #ffb20c;
+  }
+
+  .oneMovieSynopsis::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+    border-radius: 6px;
+    border: 3px solid black;
+  }
+
+  .movieReviewsAndTrailer {
     display: flex;
     flex-direction: row;
     width: auto;
@@ -289,8 +423,8 @@
     gap: 20px;
   }
 
-  .reviews h4,
-  .trailer h4 {
+  .movieReviews h4,
+  .movieTrailer h4 {
     background-color: black;
     color: #ffb20c;
     text-align: center;
@@ -300,8 +434,8 @@
     margin: 0;
   }
 
-  .reviews,
-  .trailer {
+  .movieReviews,
+  .movieTrailer {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -310,7 +444,7 @@
     gap: 30px;
   }
 
-  .trailer iframe {
+  .movieTrailer iframe {
     border: 4px solid #ffb20c;
     width: 80%;
     height: 20rem;
@@ -323,8 +457,9 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
-    overflow-x: hidden;
+    gap: 10px;
+    padding-bottom: 15%;
+    border-bottom: 4px solid #ffb20c;
   }
 
   .oneMovieHeader {
@@ -332,20 +467,14 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 15px;
+    color: #ffb20c;
   }
 
   .oneMovieBackground {
     width: auto;
-    height: 15rem;
+    height: 15%;
     border: 4px solid #ffb20c;
-    border-top: none;
-  }
-
-  .oneMovieBackground img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
+    border-bottom: none;
   }
 
   .oneMovieHeaderContent {
@@ -353,54 +482,81 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 4px solid #ffb20c;
+  }
+
+  .oneMovieHeaderContentLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 15px;
   }
 
   .oneMoviePoster {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-    height: auto;
-    gap: 20px;
-  }
-
-  .oneMoviePoster img {
-    width: 13rem;
-    height: 20rem;
+    width: 19rem;
+    height: 27rem;
     object-fit: fill;
+    background-color: black;
     border: 4px solid #ffb20c;
   }
 
-  .oneMovieHeaderLeftSide {
+  .oneMoviePosterPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 19rem;
+    height: 27rem;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .oneMoviePosterPlaceholder img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 10px;
+  }
+
+  .oneMoviePosterPlaceholder p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .oneMovieHeaderContentRight {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: auto;
     height: auto;
-    gap: 20px;
+    gap: 15px;
   }
 
-  .oneMovieHeaderLeftSide img {
-    width: 90%;
-    height: 5rem;
+  .oneMovieLogo {
+    width: 100%;
+    height: 8rem;
     object-fit: contain;
-    border: 4px solid #ffb20c;
-    margin: 0;
-    padding: 10px 10px;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.8);
+    border: 4px solid #ffb20c;
   }
 
-  .oneMovieHeaderLeftSide h4 {
+  .oneMovieHeaderContentRight h4 {
     margin: 0;
-    background-color: black;
-    color: #ffb20c;
-    border: 4px solid #ffb20c;
-    width: 90%;
+    width: 100%;
     height: auto;
+    padding: 10px;
     font-size: 30px;
     text-align: center;
-    padding: 10px;
+    background-color: black;
+    border: 4px solid #ffb20c;
   }
 
   .oneMovieDetails {
@@ -408,98 +564,123 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
-    color: #ffb20c;
+    gap: 15px;
   }
 
   .oneMovieInfos {
     border: 4px solid #ffb20c;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     width: auto;
-    height: 20rem;
-    overflow-y: auto;
-    text-align: center;
-    font-size: 20px;
-    overflow-y: auto;
+    height: auto;
+    padding: 5px;
+    gap: 5px;
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 15px 10px;
-    gap: 10px;
+  }
+
+  .oneMovieInfos p {
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .oneMovieSynopsis {
-    border: 4px solid #ffb20c;
     width: auto;
     height: 10rem;
     padding: 10px;
     overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.8);
+    border: 4px solid #ffb20c;
   }
 
   .oneMovieSynopsis p {
-    padding: 0;
     margin: 0;
     text-align: justify;
+    font-size: 16px;
   }
 
-  .oneMovieSynopsis::-webkit-scrollbar {
-    border: 4px solid black;
-    background-color: #ffb20c;
-    width: auto;
-  }
-
-  .oneMovieSynopsis::-webkit-scrollbar-track {
-    background: black;
-    border-radius: 6px;
-    border: 3px solid #ffb20c;
-  }
-
-  .oneMovieSynopsis::-webkit-scrollbar-thumb {
-    background-color: #ffb20c;
-    border-radius: 6px;
-    border: 3px solid black;
-  }
-
-  .castingSection h3 {
-    text-align: center;
-    margin: 20px 0;
-    border: 4px solid #ffb20c;
-    color: #ffb20c;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    font-size: 20px;
-  }
-
-  .reviewsAndTrailer {
+  .castingSection,
+  .seasonsSection {
     display: flex;
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
+    gap: 10px;
   }
 
-  .reviewsAndTrailer h4 {
+  .castingSection h3,
+  .seasonsSection h3 {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 22px;
     background-color: black;
     color: #ffb20c;
     border: 4px solid #ffb20c;
-    padding: 10px;
-    margin: 0;
-    text-align: center;
-    font-size: 18px;
   }
 
-  .reviews,
-  .trailer {
+  .movieReviewsAndTrailer {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
   }
 
-  .trailer iframe {
+  .movieReviews h4,
+  .movieTrailer h4 {
+    background-color: black;
+    color: #ffb20c;
+    text-align: center;
     border: 4px solid #ffb20c;
-    width: 30rem;
-    height: 100%;
-    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .movieReviews,
+  .movieTrailer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .movieTrailer iframe {
+    border: 4px solid #ffb20c;
+    width: 100%;
+    height: 15rem;
+  }
+
+  .oneMovieTrailerPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10rem;
+    padding: 10px;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .oneMovieTrailerPlaceholder svg {
+    font-size: 2rem;
+    color: #ffb20c;
+  }
+
+  .oneMovieTrailerPlaceholder p {
+    margin: 0;
+    color: #ffb20c;
+    text-align: center;
+    font-size: 15px;
   }
 }
 /* VERSION MOBILE */
@@ -509,10 +690,9 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
+    gap: 10px;
     padding-bottom: 25%;
-
-    overflow-x: hidden;
+    border-bottom: 4px solid #ffb20c;
   }
 
   .oneMovieHeader {
@@ -520,20 +700,14 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 15px;
+    color: #ffb20c;
   }
 
   .oneMovieBackground {
     width: auto;
-    height: 15rem;
+    height: 15%;
     border: 4px solid #ffb20c;
-    border-top: none;
-  }
-
-  .oneMovieBackground img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
+    border-bottom: none;
   }
 
   .oneMovieHeaderContent {
@@ -541,54 +715,81 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 4px solid #ffb20c;
+  }
+
+  .oneMovieHeaderContentLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 15px;
   }
 
   .oneMoviePoster {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-    height: auto;
-    gap: 20px;
-  }
-
-  .oneMoviePoster img {
     width: 13rem;
-    height: 20rem;
+    height: 19rem;
     object-fit: fill;
+    background-color: black;
     border: 4px solid #ffb20c;
   }
 
-  .oneMovieHeaderLeftSide {
+  .oneMoviePosterPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 13rem;
+    height: 19rem;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .oneMoviePosterPlaceholder p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .oneMoviePosterPlaceholder img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 10px;
+  }
+
+  .oneMovieHeaderContentRight {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: auto;
     height: auto;
-    gap: 20px;
+    gap: 15px;
   }
 
-  .oneMovieHeaderLeftSide img {
-    width: 90%;
-    height: 5rem;
+  .oneMovieLogo {
+    width: 100%;
+    height: 7rem;
     object-fit: contain;
-    border: 4px solid #ffb20c;
-    margin: 0;
-    padding: 10px 10px;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.8);
+    border: 4px solid #ffb20c;
   }
 
-  .oneMovieHeaderLeftSide h4 {
+  .oneMovieHeaderContentRight h4 {
     margin: 0;
-    background-color: black;
-    color: #ffb20c;
-    border: 4px solid #ffb20c;
-    width: 90%;
+    width: 100%;
     height: auto;
-    font-size: 30px;
-    text-align: center;
     padding: 10px;
+    font-size: 22px;
+    text-align: center;
+    background-color: black;
+    border: 4px solid #ffb20c;
   }
 
   .oneMovieDetails {
@@ -596,95 +797,122 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
-    color: #ffb20c;
+    gap: 15px;
   }
 
   .oneMovieInfos {
     border: 4px solid #ffb20c;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     width: auto;
-    height: 20rem;
-    overflow-y: auto;
-    text-align: center;
-    font-size: 15px;
-    overflow-y: auto;
+    height: auto;
+    padding: 5px;
+    gap: 5px;
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 15px 10px;
-    gap: 10px;
+  }
+
+  .oneMovieInfos p {
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+    border: 4px solid #ffb20c;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .oneMovieSynopsis {
-    border: 4px solid #ffb20c;
     width: auto;
     height: 10rem;
     padding: 10px;
     overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.8);
+    border: 4px solid #ffb20c;
   }
 
   .oneMovieSynopsis p {
-    padding: 0;
     margin: 0;
     text-align: justify;
+    font-size: 14px;
   }
 
-  .oneMovieSynopsis::-webkit-scrollbar {
-    border: 4px solid black;
-    background-color: #ffb20c;
-    width: auto;
-  }
-
-  .oneMovieSynopsis::-webkit-scrollbar-track {
-    background: black;
-    border-radius: 6px;
-    border: 3px solid #ffb20c;
-  }
-
-  .oneMovieSynopsis::-webkit-scrollbar-thumb {
-    background-color: #ffb20c;
-    border-radius: 6px;
-    border: 3px solid black;
-  }
-
-  .castingSection h3 {
-    text-align: center;
-    margin: 20px 0;
-    border: 4px solid #ffb20c;
-    color: #ffb20c;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    font-size: 20px;
-  }
-
-  .reviewsAndTrailer {
+  .castingSection,
+  .seasonsSection {
     display: flex;
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
+    gap: 10px;
   }
 
-  .reviewsAndTrailer h4 {
+  .castingSection h3,
+  .seasonsSection h3 {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
     background-color: black;
     color: #ffb20c;
     border: 4px solid #ffb20c;
-    padding: 10px;
-    margin: 0;
-    text-align: center;
-    font-size: 18px;
   }
 
-  .reviews,
-  .trailer {
+  .movieReviewsAndTrailer {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 0 5px;
   }
 
-  .trailer iframe {
+  .movieReviews h4,
+  .movieTrailer h4 {
+    background-color: black;
+    color: #ffb20c;
+    text-align: center;
     border: 4px solid #ffb20c;
-    height: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .movieReviews,
+  .movieTrailer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .movieTrailer iframe {
+    border: 4px solid #ffb20c;
+    width: 100%;
+    height: auto;
+  }
+
+  .oneMovieTrailerPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .oneMovieTrailerPlaceholder svg {
+    font-size: 1.5rem;
+    color: #ffb20c;
+  }
+
+  .oneMovieTrailerPlaceholder p {
+    margin: 0;
+    color: #ffb20c;
+    text-align: center;
+    font-size: 13px;
   }
 }
