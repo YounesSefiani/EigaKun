@@ -1,0 +1,493 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .adminMoviesSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .adminMoviesSectionTop {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .adminMoviesSectionTop div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .adminMoviesSection h2 {
+    width: auto;
+    padding: 10px 15px;
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminMoviesSection button {
+    border: 4px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+    font-size: 25px;
+    transition: 0.5s ease;
+  }
+
+  .adminMoviesSection button:hover {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .adminMoviesList {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    padding: 15px;
+    margin: auto;
+    overflow-y: auto;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+  }
+
+  .adminMoviesList::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .adminMoviesList::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+    border-radius: 10px;
+  }
+
+  .adminMoviesList::-webkit-scrollbar-track {
+    background-color: black;
+  }
+
+  .adminMovieCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    color: #ffb20c;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminMovieCard:hover > p {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .adminMovieCard img {
+    width: 15rem;
+    height: 20rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminMoviePosterHolder img {
+    width: 15rem;
+    height: 20rem;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    padding: 10px;
+  }
+
+  .adminMovieCard p {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    transition: 0.5s ease;
+  }
+}
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .adminMoviesSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .adminMoviesSectionTop {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .adminMoviesSectionTop div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .adminMoviesSection h2 {
+    width: auto;
+    padding: 10px 15px;
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminMoviesSection button {
+    border: 4px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+    font-size: 25px;
+    transition: 0.5s ease;
+  }
+
+  .adminMoviesSection button:hover {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .adminMoviesList {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    gap: 15px;
+    padding: 10px;
+    margin: auto;
+    overflow-y: auto;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+  }
+
+  .adminMoviesList::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .adminMoviesList::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+    border-radius: 10px;
+  }
+
+  .adminMoviesList::-webkit-scrollbar-track {
+    background-color: black;
+  }
+
+  .adminMovieCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    color: #ffb20c;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminMovieCard:hover > p {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .adminMovieCard img {
+    width: 12rem;
+    height: 17rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminMoviePosterHolder img {
+    width: 12rem;
+    height: 17rem;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    padding: 10px;
+  }
+
+  .adminMovieCard p {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    transition: 0.5s ease;
+  }
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .adminMoviesSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: auto;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+    padding-bottom: 20%;
+  }
+
+  .adminMoviesSectionTop {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .adminMoviesSectionTop div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+
+  .adminMoviesSection h2 {
+    width: auto;
+    padding: 10px 15px;
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminMoviesSection button {
+    border: 4px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    padding: 5px;
+    font-size: 20px;
+    transition: 0.5s ease;
+  }
+
+  .adminMoviesSection button:active {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .adminMoviesList {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+    margin: auto;
+    overflow-y: auto;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+  }
+
+  .adminMovieCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+    color: #ffb20c;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .adminMovieCard a:active {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .adminMovieCard img {
+    width: 10rem;
+    height: 15rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminMoviePosterHolder img {
+    width: 10rem;
+    height: 15rem;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    padding: 10px;
+  }
+
+  .adminMovieCard p {
+    width: 100%;
+    height: auto;
+    font-size: 13px;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    border-radius: 20px;
+    transition: 0.5s ease;
+  }
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 767px) {
+  .adminMoviesSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+    padding-bottom: 30%;
+  }
+
+  .adminMoviesSectionTop {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .adminMoviesSectionTop div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .adminMoviesSection h2 {
+    width: auto;
+    padding: 10px 5px;
+    font-size: 15px;
+    margin: 0;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+  }
+
+  .adminMoviesSection button {
+    border: 4px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    padding: 5px;
+    font-size: 15px;
+    transition: 0.5s ease;
+  }
+
+   .adminMoviesSection button:active {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .adminMoviesList {
+    display: grid;
+    grid-template-columns: auto 50%;
+    width: auto;
+    height: 100%;
+    gap: 5px;
+    padding: 5px;
+    margin: auto;
+    overflow-y: auto;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    border-radius: 10px;
+  }
+
+  .adminMovieCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+    color: #ffb20c;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .adminMovieCard a:active {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .adminMovieCard img {
+    width: 8rem;
+    height: 11rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .adminMoviePosterHolder img {
+    width: 8rem;
+    height: 11rem;
+    object-fit: contain;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+    padding: 10px;
+  }
+
+  .adminMovieCard p {
+    width: 100%;
+    height: auto;
+    font-size: 10px;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    border-radius: 20px;
+    transition: 0.5s ease;
+  }
+
+  .adminMovieCard p:active {
+    background-color: #ffb20c;
+    color: black;
+  }
+}

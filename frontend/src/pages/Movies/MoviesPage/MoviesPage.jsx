@@ -1,8 +1,5 @@
 import React from "react";
 import { useLoaderData, Link, Outlet } from "react-router-dom";
-import Header from "../../../components/Header/Header";
-import HeaderPhone from "../../../components/HeaderPhone/HeaderPhone";
-import FooterPhone from "../../../components/FooterPhone/FooterPhone";
 import EigaKunLogo from "../../../assets/EigaKunLogo.png";
 import HorizontalScroll from "../../../components/HorizontalScroll/HorizontalScroll";
 import "./MoviesPage.css";
@@ -10,10 +7,9 @@ import "./MoviesPage.css";
 function MoviesPage() {
   const movies = useLoaderData();
 
+
   return (
     <>
-      <Header />
-      <HeaderPhone />
       <div className="moviesPage">
         <h2>Les films</h2>
         <div className="moviesContainer">
@@ -23,7 +19,16 @@ function MoviesPage() {
               <div className="movieCard" key={film.id}>
                 <Link to={`/films/${film.id}`}>
                   {film.poster ? (
-                    <img src={film.poster} alt={film.title} />
+                            <img
+              src={
+                film.poster && film.poster.startsWith("http")
+                  ? film.poster
+                  : film.poster
+                  ? `http://localhost:3994/src/assets/Movies/Posters/${film.poster}`
+                  : ""
+              }
+              alt={film.title}
+            />
                   ) : (
                     <div className="posterPlaceholder">
                       <img src={EigaKunLogo} alt={film.title} />
@@ -38,7 +43,6 @@ function MoviesPage() {
         </div>
       </div>
       <Outlet />
-      <FooterPhone />
     </>
   );
 }

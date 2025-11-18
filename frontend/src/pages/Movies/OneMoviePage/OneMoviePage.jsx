@@ -1,22 +1,17 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import Header from "../../../components/Header/Header";
-import HeaderPhone from "../../../components/HeaderPhone/HeaderPhone";
-import FooterPhone from "../../../components/FooterPhone/FooterPhone";
 import EigaKunLogo from "../../../assets/EigaKunLogo.png";
 import CastingContainer from "../../../components/CastingContainer/CastingContainer";
+import UserInteractionsButtons from "../../../components/UserInteractionsButtons/UserInteractionsButtons";
 import "./OneMoviePage.css";
 
 function OneMoviePage() {
   const movie = useLoaderData();
 
   const formatDate = (date) => {
-    const zeroPad = (number) => (number < 10 ? "0" : "") + number;
-    const movieDate = new Date(date);
-    const day = zeroPad(movieDate.getDate());
-    const month = zeroPad(movieDate.getMonth() + 1);
-    const year = movieDate.getFullYear();
-    return `${day}/${month}/${year}`;
+    if (!date) return "";
+    const d = new Date(date);
+    return d.toLocaleDateString("fr-FR");
   };
 
   const formatDuration = (duration) => {
@@ -24,108 +19,161 @@ function OneMoviePage() {
     const [hh, mm] = duration.split(":");
     return `${parseInt(hh, 10)}:${mm}`;
   };
+
   return (
-    <>
-      <Header />
-      <HeaderPhone />
-      <div className="oneMoviePage">
-        <div className="oneMovieHeader">
-          <div className="oneMovieBackground">
-            {movie.background ? (
+    <div className="oneMoviePage">
+      <div className="oneMovieHeader">
+        {movie.background ? (
+          <img
+            src={
+              movie.background && movie.background.startsWith("http")
+                ? movie.background
+                : movie.background
+                ? `http://localhost:3994/src/assets/Movies/Backgrounds/${movie.background}`
+                : ""
+            }
+            className="oneMovieBackground"
+            alt={movie.title}
+          />
+        ) : (
+          <div className="oneMovieBackgroundFolder" />
+        )}
+        <div className="oneMovieHeaderContent">
+          <div className="oneMovieHeaderContentLeft">
+            <UserInteractionsButtons
+              favoriteId={movie.id}
+              favoriteType="movie"
+              isMovie={true}
+              title={movie.title}
+            />
+            {movie.poster ? (
               <img
-                src={movie.background}
-                alt={`Background du film ${movie.title}`}
+                src={
+                  movie.poster && movie.poster.startsWith("http")
+                    ? movie.poster
+                    : movie.poster
+                    ? `http://localhost:3994/src/assets/Movies/Posters/${movie.poster}`
+                    : ""
+                }
+                alt={movie.title}
+                className="oneMoviePoster"
               />
             ) : (
-              <div className="oneMovieBackgroundFolder" />
+              <div className="oneMoviePosterPlaceholder">
+                <img src={EigaKunLogo} alt={movie.title} />
+                <p>Aucune affiche pour le moment.</p>
+              </div>
             )}
           </div>
-          <div className="oneMovieHeaderContent">
-            <div className="oneMoviePoster">
-              {movie.poster ? (
-                <img src={movie.poster} alt={movie.title} />
-              ) : (
-                <div className="oneMoviePosterFolder">
-                  <img src={EigaKunLogo} alt={movie.title} />
-                </div>
-              )}
-            </div>
-            <div className="oneMovieHeaderLeftSide">
+          <div className="oneMovieHeaderContentRight">
               {movie.logo ? (
-                <img src={movie.logo} alt={movie.title} />
+                <img
+                  src={
+                    movie.logo && movie.logo.startsWith("http")
+                      ? movie.logo
+                      : movie.logo
+                      ? `http://localhost:3994/src/assets/Movies/Logos/${movie.logo}`
+                      : ""
+                  }
+                  className="oneMovieLogo"
+                  alt={movie.title}
+                />
               ) : (
                 <h4>{movie.title}</h4>
               )}
-              <div className="oneMovieDetails">
-                <div className="oneMovieInfos">
+            <div className="oneMovieDetails">
+              <div className="oneMovieInfos">
+                <p>
+                  <strong>
+                    Date de sortie :<br />
+                    {formatDate(movie.release_date)}
+                  </strong>
+                </p>
+                <p>
+                  <strong>
+                    Durée :<br />
+                    {formatDuration(movie.duration)}
+                  </strong>
+                </p>
+                <p>
+                  <strong>
+                    Genre(s) :<br />
+                    {movie.genre}
+                  </strong>
+                </p>
+                <p>
+                  <strong>
+                    Thème(s) :<br />
+                    {movie.theme}
+                  </strong>
+                </p>
+                <p>
+                  <strong>
+                    Origine(s) :<br />
+                    {movie.country}
+                  </strong>
+                </p>
+                <p>
+                  <strong>
+                    Sortie :<br />
+                    {movie.screen}
+                  </strong>
+                </p>
+                {movie.streaming ? (
                   <p>
-                    Date de sortie : <br />
-                    <strong>{formatDate(movie.release_date)}</strong>
+                    <strong>
+                      Streaming :<br />
+                      {movie.streaming}
+                    </strong>
                   </p>
+                ) : null}{" "}
+                {movie.original ? (
                   <p>
-                    Durée : <br />
-                    <strong>{formatDuration(movie.duration)}</strong>
+                    <strong>
+                      Original :<br />
+                      {movie.original}
+                    </strong>
                   </p>
+                ) : null}
+                {movie.universe ? (
                   <p>
-                    Genre(s) : <br />
-                    <strong>{movie.genre}</strong>
+                    <strong>
+                      Univers :<br />
+                      {movie.universe}
+                    </strong>
                   </p>
+                ) : null}
+                {movie.subUniverse ? (
                   <p>
-                    Thème(s) : <br />
-                    <strong>{movie.theme}</strong>
+                    <strong>
+                      Sous-Univers :<br />
+                      {movie.subUniverse}
+                    </strong>
                   </p>
-                  <p>
-                    Sortie : <br />
-                    <strong>{movie.screen}</strong>
-                  </p>
-                  {movie.original ? (
-                    <p>
-                      Original: <br />
-                      <strong>{movie.original}</strong>
-                    </p>
-                  ) : null}
-                  {movie.streaming ? (
-                    <p>
-                      Streaming : <br />
-                      <strong>{movie.streaming}</strong>
-                    </p>
-                  ) : null}
-                  {movie.universe ? (
-                    <p>
-                      Univers : <br />
-                      <strong>{movie.universe}</strong>
-                    </p>
-                  ) : null}
-                  {movie.subUniverse ? (
-                    <p>
-                      Sous-univers : <br />
-                      <strong>{movie.subUniverse}</strong>
-                    </p>
-                  ) : null}
-                </div>
-                <div className="oneMovieSynopsis">
-                  <p>{movie.synopsis}</p>
-                </div>
+                ) : null}
+              </div>
+              <div className="oneMovieSynopsis">
+                <p>{movie.synopsis}</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="castingSection">
-          <h3>Casting du film "{movie.title}"</h3>
-          <CastingContainer casting={movie.casting} />
-        </div>
-        <div className="reviewsAndTrailer">
-          <div className="reviews">
-            <h4>Reviews</h4>
-          </div>
-          <div className="trailer">
-            <h4>Trailer du film "{movie.title}"</h4>
-            <iframe src={movie.trailer} title={`Trailer de ${movie.title}`} />
-          </div>
-        </div>
-        <FooterPhone />
       </div>
-    </>
+      <div className="castingSection">
+        <h3>Casting du film "{movie.title}"</h3>
+        <CastingContainer casting={movie.casting} />
+      </div>
+      {/* Reviews & Trailer */}
+      <div className="movieReviewsAndTrailer">
+        <div className="movieReviews">
+          <h4>Reviews</h4>
+        </div>
+        <div className="movieTrailer">
+          <h4>Trailer du film "{movie.title}"</h4>
+          <iframe src={movie.trailer} title={`Trailer de ${movie.title}`} />
+        </div>
+      </div>
+    </div>
   );
 }
 

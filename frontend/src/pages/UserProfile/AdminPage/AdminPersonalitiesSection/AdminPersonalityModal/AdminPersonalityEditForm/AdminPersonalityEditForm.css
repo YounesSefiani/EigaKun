@@ -1,0 +1,1197 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .editPersonalityForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    gap: 20px;
+  }
+
+  .editPersonalityForm label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    font-size: 25px;
+    gap: 10px;
+  }
+
+  .editPersonalityForm input,
+  .editPersonalityForm select {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityForm p {
+    margin: 0;
+  }
+
+  .editPersonalityFormTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityFormTop div button {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .editPersonalityFormTop div button:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .editPersonalityFormContent {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 15px;
+  }
+
+  .editPersonalityFormLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityImage {
+    width: 18rem;
+    height: 25rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFormRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .editPersonalityInfos {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: auto;
+    height: auto;
+    gap: 5px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityInfos p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .editPersonalityBio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    gap: 5px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio textarea {
+    width: 100%;
+    height: 10rem;
+    font-size: 16px;
+    padding: 5px;
+    text-align: justify;
+    overflow-y: auto;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFilmography {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .editPersonalityFilmography h3 {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesSection,
+  .editPersonalitySeriesSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesSection h4,
+  .editPersonalitySeriesSection h4 {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesList,
+  .editPersonalitySeriesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .editPersonalityMoviesList p,
+  .editPersonalitySeriesList p {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .editPersonalityMovieCard,
+  .editPersonalitySerieCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard img,
+  .editPersonalitySerieCard img {
+    width: 15rem;
+    height: 20rem;
+    object-fit: fill;
+    border-radius: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard p,
+  .editPersonalitySerieCard p {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard button,
+  .editPersonalitySerieCard button {
+    width: 100%;
+    height: auto;
+    font-size: 18px !important;
+    padding: 5px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .editPersonalityMovieCard button:hover,
+  .editPersonalitySerieCard button:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .addMovieFilmography,
+  .addSerieFilmography {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    background: #ffb20c;
+    color: black;
+    border-radius: 20px;
+  }
+
+  .addMovieFilmography p,
+  .addSerieFilmography p {
+    margin: 0;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .addMovieFilmography input,
+  .addMovieFilmography select,
+  .addSerieFilmography select,
+  .addSerieFilmography input {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    padding: 5px;
+    border: 4px solid black !important;
+    border-radius: 20px;
+  }
+
+  .addMovieFilmography button,
+  .addSerieFilmography button {
+    width: 100%;
+    height: auto;
+    font-size: 20px !important;
+    padding: 5px;
+    text-align: center;
+    background-color: #ffb20c !important;
+    color: black !important;
+    border: 4px solid black !important;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.5s ease;
+  }
+
+  .addMovieFilmography button:hover,
+  .addSerieFilmography button:hover {
+    background-color: black !important;
+    color: #ffb20c !important;
+    border: 4px solid #ffb20c !important;
+  }
+}
+
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .editPersonalityForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityForm label {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    font-size: 25px;
+    gap: 10px;
+  }
+
+  .editPersonalityForm input,
+  .editPersonalityForm select {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityForm p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .editPersonalityFormTop {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityFormTop button {
+    width: 100%;
+    height: auto;
+    font-size: 18px !important;
+    padding: 5px !important;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .editPersonalityFormTop button:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .editPersonalityFormContent {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityFormLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityImage {
+    width: 14rem;
+    height: 20rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFormRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityInfos {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio textarea {
+    width: 100%;
+    height: 10rem;
+    font-size: 14px;
+    padding: 5px;
+    text-align: justify;
+    overflow-y: auto;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFilmography {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFilmography h3 {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesSection,
+  .editPersonalitySeriesSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesSection h4,
+  .editPersonalitySeriesSection h4 {
+    margin: 0;
+    text-align: center;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesList,
+  .editPersonalitySeriesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .editPersonalityMoviesList p,
+  .editPersonalitySeriesList p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .editPersonalityMovieCard,
+  .editPersonalitySerieCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .editPersonalityMovieCard label,
+  .editPersonalitySerieCard label {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+  }
+
+  .editPersonalityMovieCard img,
+  .editPersonalitySerieCard img {
+    width: 12rem;
+    height: 17rem;
+    object-fit: fill;
+    border-radius: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard p,
+  .editPersonalitySerieCard p {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard button,
+  .editPersonalitySerieCard button {
+    width: 100%;
+    height: auto;
+    font-size: 16px !important;
+    padding: 5px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .addMovieFilmography,
+  .addSerieFilmography {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 5px;
+    background: #ffb20c;
+    color: black;
+    border-radius: 20px;
+  }
+
+  .addMovieFilmography p,
+  .addSerieFilmography p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .addMovieFilmography input,
+  .addMovieFilmography select,
+  .addSerieFilmography select,
+  .addSerieFilmography input {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding: 5px;
+    border: 4px solid black !important;
+    border-radius: 20px;
+  }
+
+  .addMovieFilmography button,
+  .addSerieFilmography button {
+    width: 100%;
+    height: auto;
+    font-size: 16px !important;
+    padding: 5px !important;
+    text-align: center;
+    background-color: #ffb20c !important;
+    color: black !important;
+    border: 4px solid black !important;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.5s ease;
+  }
+
+  .addMovieFilmography button:hover,
+  .addSerieFilmography button:hover {
+    background-color: black !important;
+    color: #ffb20c !important;
+    border: 4px solid #ffb20c !important;
+  }
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .editPersonalityForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .editPersonalityForm label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityForm label p {
+    font-size: 18px;
+  }
+
+  .editPersonalityForm input,
+  .editPersonalityForm select {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityForm p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .editPersonalityFormTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityFormTop button {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .editPersonalityFormTop button:active {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .editPersonalityFormContent {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityFormLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 15px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityImage {
+    width: 15rem;
+    height: 22rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFormRight {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .editPersonalityInfos {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio textarea {
+    width: 100%;
+    height: 10rem;
+    font-size: 17px;
+    padding: 5px;
+    text-align: justify;
+    overflow-y: auto;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFilmography {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFilmography h3 {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesSection,
+  .editPersonalitySeriesSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesSection h4,
+  .editPersonalitySeriesSection h4 {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesList,
+  .editPersonalitySeriesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityMoviesList p,
+  .editPersonalitySeriesList p {
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .editPersonalityMovieCard,
+  .editPersonalitySerieCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard img,
+  .editPersonalitySerieCard img {
+    width: 13rem;
+    height: 19rem;
+    object-fit: fill;
+    border-radius: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard p,
+  .editPersonalitySerieCard p {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard button,
+  .editPersonalitySerieCard button {
+    width: 100%;
+    height: auto;
+    font-size: 18px !important;
+    padding: 5px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .editPersonalityMovieCard button:active,
+  .editPersonalitySerieCard button:active {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .addMovieFilmography,
+  .addSerieFilmography {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+    background: #ffb20c;
+    color: black;
+    border-radius: 20px;
+  }
+
+  .addMovieFilmography p,
+  .addSerieFilmography p {
+    margin: 0;
+    font-size: 18px !important;
+    text-align: center;
+  }
+
+  .addMovieFilmography input,
+  .addMovieFilmography select,
+  .addSerieFilmography select,
+  .addSerieFilmography input {
+    width: 100%;
+    height: auto;
+    font-size: 16px !important;
+    padding: 5px;
+    border: 4px solid black !important;
+    border-radius: 20px;
+  }
+
+  .addMovieFilmography button,
+  .addSerieFilmography button {
+    width: 100%;
+    height: auto;
+    font-size: 16px !important;
+    padding: 5px;
+    text-align: center;
+    background-color: #ffb20c !important;
+    color: black !important;
+    border: 4px solid black !important;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.5s ease;
+  }
+
+  .addMovieFilmography button:active,
+  .addSerieFilmography button:active {
+    background-color: black !important;
+    color: #ffb20c !important;
+    border: 4px solid #ffb20c !important;
+  }
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 767px) {
+  .editPersonalityForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityForm label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .editPersonalityForm label p {
+    font-size: 18px;
+  }
+
+  .editPersonalityForm input,
+  .editPersonalityForm select {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityForm p {
+    margin: 0;
+  }
+
+  .editPersonalityFormTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityFormTop button {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease;
+  }
+
+  .editPersonalityFormTop button:active {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .editPersonalityFormContent {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .editPersonalityFormLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityImage {
+    width: 12rem;
+    height: 18rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFormRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityInfos {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityInfos label p {
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .editPersonalityBio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 5px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityBio textarea {
+    width: 100%;
+    height: 10rem;
+    font-size: 14px;
+    padding: 5px;
+    text-align: justify;
+    overflow-y: auto;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityFilmography {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .editPersonalityFilmography h3 {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesSection,
+  .editPersonalitySeriesSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesSection h4,
+  .editPersonalitySeriesSection h4 {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMoviesList,
+  .editPersonalitySeriesList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .editPersonalityMoviesList p,
+  .editPersonalitySeriesList p {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .editPersonalityMovieCard,
+  .editPersonalitySerieCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard img,
+  .editPersonalitySerieCard img {
+    width: 9rem;
+    height: 13rem;
+    object-fit: fill;
+    border-radius: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard p,
+  .editPersonalitySerieCard p {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+  }
+
+  .editPersonalityMovieCard button,
+  .editPersonalitySerieCard button {
+    width: 100%;
+    height: auto;
+    font-size: 16px !important;
+    padding: 5px;
+    text-align: center;
+    border: 4px solid #ffb20c;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+
+  .editPersonalityMovieCard button:hover,
+  .editPersonalitySerieCard button:hover {
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .addMovieFilmography,
+  .addSerieFilmography {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    padding: 5px;
+    background: #ffb20c;
+    color: black;
+    border-radius: 20px;
+  }
+
+  .addMovieFilmography p,
+  .addSerieFilmography p {
+    margin: 0;
+    font-size: 1px !important;
+    text-align: center;
+  }
+
+  .addMovieFilmography input,
+  .addMovieFilmography select,
+  .addSerieFilmography select,
+  .addSerieFilmography input {
+    width: 100%;
+    height: auto;
+    font-size: 15px !important;
+    padding: 5px;
+    border: 4px solid black !important;
+    border-radius: 20px;
+  }
+
+  .addMovieFilmography button,
+  .addSerieFilmography button {
+    width: 100%;
+    height: auto;
+    font-size: 16px !important;
+    padding: 5px;
+    text-align: center;
+    background-color: #ffb20c !important;
+    color: black !important;
+    border: 4px solid black !important;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.5s ease;
+  }
+
+  .addMovieFilmography button:active,
+  .addSerieFilmography button:active {
+    background-color: black !important;
+    color: #ffb20c !important;
+    border: 4px solid #ffb20c !important;
+  }
+}

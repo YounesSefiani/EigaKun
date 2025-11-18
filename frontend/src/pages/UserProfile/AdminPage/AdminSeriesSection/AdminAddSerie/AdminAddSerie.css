@@ -1,0 +1,1310 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .adminAddSerieOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }
+
+  .adminAddSerieModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+    gap: 10px;
+    padding: 10px;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    gap: 20px;
+  }
+
+  .addSerieForm svg {
+    font-size: 50px;
+  }
+
+  .addSerieForm label {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    gap: 10px;
+  }
+
+  .addSerieForm p {
+    margin: 0;
+  }
+
+  .addSerieFormTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 20px;
+  }
+
+  .addSerieFormTop button {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .addSerieFormTop input {
+    width: 25rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .addSerieFormLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    gap: 20px;
+    padding: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormLeft div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addSerieFormLeft p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .addSerieFormLeft label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .addSerieFormLeft input {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSeriePoster {
+    width: 18rem;
+    height: 25rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSeriePosterHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18rem !important;
+    height: 25rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieLogo {
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieLogoHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 12rem !important;
+    margin: 0;
+    font-size: 35px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    gap: 15px;
+    padding: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormRight div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addSerieFormRight p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .addSerieFormRight label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .addSerieFormRight input,
+  .addSerieFormRight select {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieBackground {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieInfos {
+    display: grid !important;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    gap: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieInfos p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .addSerieSynopsisTrailer {
+    display: flex;
+    flex-direction: row !important;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .addSerieSynopsisTrailer textarea {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 18px;
+    text-align: justify;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer iframe {
+    width: 100%;
+    height: 20rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer input {
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20rem;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+}
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .adminAddSerieOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }
+
+  .adminAddSerieModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+    gap: 10px;
+    padding: 10px;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    gap: 20px;
+  }
+
+  .addSerieForm svg {
+    font-size: 40px;
+  }
+
+  .addSerieForm label {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .addSerieForm p {
+    margin: 0;
+  }
+
+  .addSerieFormTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 20px;
+  }
+
+  .addSerieFormTop button {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .addSerieFormTop input {
+    width: 25rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .addSerieFormLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormLeft div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addSerieFormLeft p,
+  .addSerieFormRight p {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .addSerieFormLeft label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .addSerieFormLeft input {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSeriePoster {
+    width: 14rem;
+    height: 20rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSeriePosterHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 14rem !important;
+    height: 20rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieLogo {
+    width: 100%;
+    height: 10rem;
+    object-fit: contain;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieLogoHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem !important;
+    margin: 0;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormRight div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addSerieFormRight label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .addSerieFormRight input,
+  .addSerieFormRight select {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieBackground {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieInfos {
+    display: grid !important;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieInfos p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .addSerieSynopsisTrailer {
+    display: flex;
+    flex-direction: row !important;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .addSerieSynopsisTrailer textarea {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 15px;
+    text-align: justify;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer iframe {
+    width: 100%;
+    height: 20rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer input {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 18rem;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+}
+/* VERSION TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .adminAddSerieOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }
+
+  .adminAddSerieModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+    gap: 10px;
+    left: 50%;
+    top: 1%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .addSerieForm svg {
+    font-size: 35px;
+  }
+
+  .addSerieForm label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    gap: 10px;
+  }
+
+  .addSerieFormTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addSerieForm p {
+    margin: 0;
+    font-size: 25px;
+  }
+
+  .addSerieFormTop input {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormTop button {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    color: #ffb20c;
+    padding: 5px;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormContent {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addSerieFormLeft {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormLeft div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormLeft label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addSerieFormLeft input {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSeriePoster {
+    width: 13rem;
+    height: 19rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSeriePosterHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 13rem !important;
+    height: 19rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieLogo {
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+    padding: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieLogoHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    height: 12rem !important;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormRight {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .addSerieFormRight div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormRight label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addSerieFormRight input {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieBackground {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20rem !important;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieInfos {
+    display: grid !important;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieInfos label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .addSerieInfos p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .addSerieInfos input, .addSerieInfos select {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer {
+    display: flex;
+    flex-direction: column !important;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+  }
+
+  .addSerieSynopsisTrailer label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .addSerieSynopsisTrailer p {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .addSerieSynopsisTrailer textarea {
+    width: 100%;
+    height: 12rem;
+    padding: 5px;
+    font-size: 15px;
+    text-align: justify;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer iframe {
+    width: 100%;
+    height: 20rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20rem;
+    text-align: center;
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer input {
+    font-size: 18px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieCasting {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieCasting p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .addSerieCasting input {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editSerieCastingCard {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editSerieCastingCard p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .editSerieCastingCard label {
+    width: 100%;
+  }
+
+  .editSerieCastingCard select {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .editSerieCastingCard button {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMemberCasting {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMemberCasting p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .addMemberCasting input,
+  .addMemberCasting select {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addMemberCasting button {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+}
+/* VERSION MOBILE */
+@media screen and (max-width: 767px) {
+  .adminAddSerieOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }
+
+  .adminAddSerieModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+    gap: 10px;
+    padding: 10px;
+    left: 50%;
+    top: 1%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    gap: 10px;
+  }
+
+  .addSerieForm svg {
+    font-size: 40px;
+  }
+
+  .addSerieForm label {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .addSerieForm p {
+    margin: 0;
+  }
+
+  .addSerieFormTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormTop div {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 20px;
+  }
+
+  .addSerieFormTop button {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .addSerieFormTop input {
+    width: auto;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormContent {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addSerieFormLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormLeft div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addSerieFormLeft p,
+  .addSerieFormRight p {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .addSerieFormLeft label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addSerieFormLeft input {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSeriePoster {
+    width: 12rem;
+    height: 17rem;
+    object-fit: fill;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSeriePosterHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12rem !important;
+    height: 17rem !important;
+    text-align: center;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieLogo {
+    width: 100%;
+    height: 10rem;
+    object-fit: contain;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieLogoHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem !important;
+    margin: 0;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieFormRight div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addSerieFormRight label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .addSerieFormRight input,
+  .addSerieFormRight select {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieBackground {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieBackgroundHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem !important;
+    text-align: center;
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieInfos {
+    display: grid !important;
+    grid-template-columns: 50% auto;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    gap: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieInfos p {
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .addSerieSynopsisTrailer {
+    display: flex;
+    flex-direction: column !important;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .addSerieSynopsisTrailer textarea {
+    width: 100%;
+    height: 10rem;
+    padding: 5px;
+    font-size: 15px;
+    text-align: justify;
+    resize: none;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer iframe {
+    width: 100%;
+    height: 10rem;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieSynopsisTrailer input {
+    font-size: 15px;
+    border: 4px solid #ffb20c;
+  }
+
+  .addSerieTrailerHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+    gap: 5px;
+    border: 4px solid #ffb20c;
+  }
+}

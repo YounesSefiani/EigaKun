@@ -1,0 +1,328 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .connexionSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .connexionSide form {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 15px;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .connexionSide label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .connexionSide label a {
+    text-align: end;
+    text-decoration: none;
+    color: #ffb20c;
+    transition: 0.5s ease;
+  }
+
+  .connexionSide a:hover {
+    color: purple;
+  }
+
+  .connexionSide input {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffb20c;
+    color: black;
+  }
+
+  .connexionSide input:focus {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid purple;
+  }
+
+  .btnSection {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .btnSection button {
+    border: 4px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+    font-size: 20px;
+    transition: 0.5s ease;
+  }
+
+  .btnSection button:hover {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+}
+
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .connexionSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .connexionSide form {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 15px;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    border-radius: 25px;
+  }
+
+  .connexionSide label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .connexionSide label a {
+    text-align: end;
+    text-decoration: none;
+    color: #ffb20c;
+    transition: 0.5s ease;
+  }
+
+  .connexionSide a:hover {
+    color: purple;
+  }
+
+  .connexionSide input {
+    background-color: black;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .connexionSide input:focus {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid purple;
+  }
+
+  .btnSection {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .btnSection button {
+    border: 4px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    padding: 10px;
+    font-size: 20px;
+    transition: 0.5s ease;
+  }
+
+  .btnSection button:hover {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .connexionSide {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .connexionSide form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: black;
+    color: #ffb20c;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .connexionSide label {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .connexionSide label a {
+    text-decoration: none;
+    color: #ffb20c;
+    transition: 0.5s ease;
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  .connexionSide a:active {
+    color: purple;
+  }
+
+  .connexionSide input {
+    padding: 5px;
+    text-align: center;
+    height: auto;
+    background-color: #ffb20c;
+    border: 4px solid black;
+    border-radius: 20px;
+  }
+
+  .connexionSide input:focus {
+    color: black;
+    border: 4px solid purple;
+  }
+
+  .btnSection {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    background-color: black;
+  }
+
+  .btnSection button {
+    width: 100%;
+    border: 4px solid #ffb20c;
+    background-color: black;
+    color: #ffb20c;
+    padding: 5px;
+    transition: 0.5s ease;
+  }
+
+  .btnSection button:active {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 767px) {
+  .connexionSide {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .connexionSide form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding: 10px;
+    font-size: 15px;
+    background-color: black;
+    color: #ffb20c;
+    text-align: center;
+  }
+
+  .connexionSide label {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .connexionSide label a {
+    text-decoration: none;
+    color: #ffb20c;
+    transition: 0.5s ease;
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  .connexionSide a:active {
+    color: purple;
+  }
+
+  .connexionSide input {
+    padding: 5px;
+    text-align: center;
+    height: auto;
+    background-color: #ffb20c;
+    border: 4px solid black;
+    border-radius: 15px;
+  }
+
+  .connexionSide input:focus {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid purple;
+  }
+
+  .btnSection {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+    background-color: black;
+  }
+
+  .btnSection button {
+    width: 100%;
+    color: #ffb20c;
+    padding: 5px;
+    font-size: 13px;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease;
+  }
+
+  .btnSection button:active {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+}

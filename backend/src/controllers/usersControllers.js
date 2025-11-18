@@ -4,6 +4,7 @@ const nodemailer = require("../Middlewares/nodemailer");
 const tables = require("../tables");
 const fs = require("fs");
 const path = require("path");
+const { hashingOptions } = require("../Middlewares/auth");
 
 // BREAD - Browse (Read All)
 const browse = async (req, res, next) => {
@@ -31,6 +32,7 @@ const read = async (req, res, next) => {
 
 // BREAD - Add (Create)
 const add = async (req, res, next) => {
+
   try {
     // Prépare l'objet user à valider
     const user = {
@@ -56,12 +58,6 @@ const add = async (req, res, next) => {
       return res.status(400).json({ errors: result.errors });
     }
 
-    // Hash du mot de passe (après validation)
-    const hashedPassword = await argon2.hash(user.password);
-    user.password = hashedPassword;
-
-    // Mise à jour du mot de passe hashé en base
-    await tables.users.update(result.insertId, { password: user.password });
 
     // Génération du token de validation
     const verificationToken = jwt.sign(
@@ -69,7 +65,7 @@ const add = async (req, res, next) => {
       process.env.JWT_SECRET,
       { expiresIn: "2h" }
     );
-    const verificationLink = `http://localhost:3994/api/users/validate/${verificationToken}`;
+    const verificationLink = `http://localhost:3000/authentification/validation/${verificationToken}`;
 
     // Envoi de l'email de validation
     await nodemailer.sendMail({
@@ -92,16 +88,6 @@ const edit = async (req, res, next) => {
 
     if (req.file) {
       updatedData.avatar = req.file.filename;
-    }
-
-    // Hash le mot de passe si fourni et valide
-    if (
-      typeof updatedData.password === "string" &&
-      updatedData.password.trim() !== ""
-    ) {
-      updatedData.password = await argon2.hash(updatedData.password);
-    } else {
-      delete updatedData.password;
     }
 
     await tables.users.update(id, updatedData, req.file);
@@ -151,22 +137,13 @@ const validateUser = async (req, res) => {
       return res.status(400).json({ message: "Compte déjà validé." });
     }
 
-    const result = await tables.users.update(user.id, { isValidated: true });
+    await tables.users.update(user.id, { isValidated: true });
 
-    if (result.affectedRows > 0) {
-      return res
-        .status(200)
-        .json({ message: "Compte validé avec succès.", user });
-    }
-    return res
-      .status(500)
-      .json({ message: "Erreur lors de la validation du compte." });
+    return res.status(200).json({ message: "Compte validé avec succès." });
   } catch (error) {
-    console.error("Erreur de validation :", error);
     return res.status(400).json({ message: "Token invalide ou expiré." });
   }
 };
-
 // Mot de passe oublié
 const forgotPassword = async (req, res, next) => {
   const { email } = req.body;
@@ -182,7 +159,7 @@ const forgotPassword = async (req, res, next) => {
     const resetToken = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
-    const resetLink = `http://localhost:3994/reset-password-confirm/${resetToken}`;
+    const resetLink = `http://localhost:3000/reset-password/${resetToken}`;
 
     await nodemailer.sendMail({
       from: process.env.EMAIL_USER,
@@ -203,7 +180,7 @@ const resetPassword = async (req, res, next) => {
   const { token, newPassword } = req.body;
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const hashedPassword = await argon2.hash(newPassword);
+    const hashedPassword = await argon2.hash(newPassword, hashingOptions);
     await tables.users.update(decoded.id, { password: hashedPassword });
 
     res.json({ message: "Mot de passe réinitialisé avec succès." });
@@ -245,14 +222,18 @@ const login = async (req, res, next) => {
       { expiresIn: "1h" }
     );
 
-    return res.status(200).json({ token, user:{
-      username: user.username,
-      birthdate: user.birthdate,
-      email: user.email,
-      role: user.role,
-      isValidated: user.isValidated,
-      avatar: user.avatar,
-    } });
+    return res.status(200).json({
+      token,
+      user: {
+        id: user.id,
+        username: user.username,
+        birthdate: user.birthdate,
+        email: user.email,
+        role: user.role,
+        isValidated: user.isValidated,
+        avatar: user.avatar,
+      },
+    });
   } catch (err) {
     next(err);
     return res.sendStatus(500);
