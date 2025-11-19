@@ -13,14 +13,14 @@
     flex-direction: row;
     justify-content: flex-start;
     width: auto;
-    height: 35rem;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     color: #ffb20c;
     border: 4px solid #ffb20c;
     border-top: none;
     margin: 0;
-    padding: 20px;
-    gap: 20px;
+    padding: 10px;
+    gap: 10px;
   }
 
   .onePersonalityHeader p {
@@ -30,22 +30,31 @@
   .onePersonalityPicture {
     display: flex;
     flex-direction: column;
-    width: auto;
+    gap: 10px;
+    width: 18%;
     height: auto;
   }
 
   .onePersonalityPicture img {
-    width: 20rem;
-    height: 100%;
+    width: auto;
+    height: 30rem;
     border: 4px solid #ffb20c;
   }
 
-  .onePersonalityLeftSide {
+  .onePersonalityRightSide {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: auto;
+    width: 82%;
     height: auto;
+  }
+
+  .onePersonalityRightSide h2 {
+    margin: 0;
+    padding: 15px;
+    color: #ffb20c;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 4px solid #ffb20c;
   }
 
   .onePersonalityInfos {
@@ -56,6 +65,7 @@
     gap: 20px;
     padding: 10px;
     font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffb20c;
   }
 
@@ -66,6 +76,7 @@
     padding: 10px;
     text-align: justify;
     font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffb20c;
   }
 
@@ -133,12 +144,16 @@
   .serieGraphyCard a {
     display: flex;
     flex-direction: column;
+    width: 18rem;
     align-items: center;
-    width: auto;
-    height: auto;
-    gap: 20px;
-    color: #ffb20c;
+    white-space: wrap;
+    gap: 10px;
     text-decoration: none;
+    color: #ffb20c;
+    background-color: black;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    transition: 0.5s ease;
   }
 
   .movieGraphyCard img,
@@ -158,7 +173,7 @@
     border: 4px solid #ffb20c;
     padding: 10px;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     width: 100%;
     transition: 0.5s ease;
   }
@@ -185,14 +200,14 @@
     flex-direction: row;
     justify-content: flex-start;
     width: auto;
-    height: 35rem;
+    height: 30rem;
     background-color: rgba(0, 0, 0, 0.8);
     color: #ffb20c;
     border: 4px solid #ffb20c;
     border-top: none;
     margin: 0;
-    padding: 20px;
-    gap: 20px;
+    padding: 10px;
+    gap: 10px;
   }
 
   .onePersonalityHeader p {
@@ -202,22 +217,30 @@
   .onePersonalityPicture {
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 20%;
     height: auto;
   }
 
   .onePersonalityPicture img {
-    width: 20rem;
+    width: auto;
     height: 100%;
     border: 4px solid #ffb20c;
   }
 
-  .onePersonalityLeftSide {
+  .onePersonalityRightSide {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: auto;
+    width: 80%;
     height: auto;
+  }
+
+  .onePersonalityRightSide h2 {
+    margin: 0;
+    color: #ffb20c;
+    border: 4px solid #ffb20c;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .onePersonalityInfos {
@@ -225,9 +248,9 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
     padding: 10px;
-    font-size: 20px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffb20c;
   }
 
@@ -238,6 +261,7 @@
     padding: 10px;
     text-align: justify;
     font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffb20c;
   }
 
@@ -256,7 +280,7 @@
     background-color: black;
     color: #ffb20c;
     border: 4px solid #ffb20c;
-    padding: 15px;
+    padding: 10px;
   }
 
   .movieGraphy,
@@ -273,7 +297,7 @@
     background-color: black;
     color: #ffb20c;
     border: 4px solid #ffb20c;
-    padding: 15px;
+    padding: 10px;
   }
 
   .movieGraphyList,
@@ -297,7 +321,7 @@
     text-align: center;
     margin: auto;
     padding: 10px;
-    font-size: 25px;
+    font-size: 22px;
     transition: 0.5s ease;
   }
 
@@ -306,17 +330,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: auto;
+    white-space: wrap;
+    width: 18rem;
     height: auto;
-    gap: 20px;
+    gap: 10px;
+    padding: 10px;
     color: #ffb20c;
     text-decoration: none;
+    background-color: black;
+    border: 4px solid #ffb20c;
   }
 
   .movieGraphyCard img,
   .serieGraphyCard img {
-    width: 18rem;
-    height: 25rem;
+    width: 15rem;
+    height: 22rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
     border-radius: 25px;
@@ -328,19 +356,18 @@
     background-color: black;
     color: #ffb20c;
     border: 4px solid #ffb20c;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
-    font-size: 25px;
+    font-size: 18px;
     width: 100%;
   }
 
-    .movieGraphyCard:hover p,
+  .movieGraphyCard:hover p,
   .serieGraphyCard:hover p {
     background-color: #ffb20c;
     color: black;
     border: 4px solid black;
   }
-
 }
 /* VERSION TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -350,7 +377,7 @@
     width: auto;
     height: auto;
     gap: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 15%;
   }
 
   .onePersonalityPage p {
@@ -369,7 +396,7 @@
     border: 4px solid #ffb20c;
     border-top: none;
     margin: 0;
-    padding: 15px;
+    padding: 10px;
     gap: 10px;
   }
 
@@ -378,24 +405,30 @@
     flex-direction: column;
     width: auto;
     height: auto;
+    gap: 10px;
   }
 
   .onePersonalityPicture img {
-    width: 13rem;
-    height: 20rem;
+    width: 19rem;
+    height: 27rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
   }
 
-  .onePersonalityLeftSide {
+  .onePersonalityRightSide {
     display: flex;
     flex-direction: column;
     text-align: center;
     width: auto;
     height: 100%;
-    padding: 10px;
     gap: 10px;
+  }
+
+  .onePersonalityRightSide h2 {
+    margin: 0;
+    padding: 10px;
     border: 4px solid #ffb20c;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .onePersonalityInfos {
@@ -406,6 +439,7 @@
     height: auto;
     gap: 15px;
     font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffb20c;
   }
 
@@ -415,7 +449,27 @@
     overflow-y: auto;
     text-align: justify;
     padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityBio p {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .onePersonalityBio::-webkit-scrollbar {
+    width: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityBio::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+    border-radius: 5px;
+  }
+
+  .onePersonalityBio::-webkit-scrollbar-track {
+    background-color: black;
   }
 
   .filmography {
@@ -481,20 +535,22 @@
   .serieGraphyCard a {
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 17rem;
     height: 100%;
     align-items: center;
+    white-space: wrap;
     gap: 10px;
     padding: 10px;
     text-decoration: none;
     color: #ffb20c;
+    background-color: black;
     border: 4px solid #ffb20c;
   }
 
   .movieGraphyCard img,
   .serieGraphyCard img {
     width: 13rem;
-    height: 20rem;
+    height: 19rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
     border-radius: 20px;
@@ -503,13 +559,13 @@
   .movieGraphyCard p,
   .serieGraphyCard p {
     margin: 0;
+    width: 100%;
     background-color: black;
     color: #ffb20c;
     border: 4px solid #ffb20c;
     padding: 5px;
     text-align: center;
-    font-size: 18px;
-    width: 100%;
+    font-size: 20px;
     transition: 0.5s ease;
   }
 }
@@ -520,8 +576,8 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
-    padding-bottom: 10px;
+    gap: 10px;
+    padding-bottom: 25%;
   }
 
   .onePersonalityPage p {
@@ -540,7 +596,7 @@
     border: 4px solid #ffb20c;
     border-top: none;
     margin: 0;
-    padding: 15px;
+    padding: 10px;
     gap: 10px;
   }
 
@@ -549,24 +605,30 @@
     flex-direction: column;
     width: auto;
     height: auto;
+    gap: 10px;
   }
 
   .onePersonalityPicture img {
-    width: 12rem;
-    height: 18rem;
+    width: 13rem;
+    height: 19rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
   }
 
-  .onePersonalityLeftSide {
+  .onePersonalityRightSide {
     display: flex;
     flex-direction: column;
     text-align: center;
     width: auto;
     height: 100%;
-    padding: 10px;
     gap: 10px;
+  }
+
+  .onePersonalityRightSide h2 {
+    margin: 0;
+    padding: 10px;
     border: 4px solid #ffb20c;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .onePersonalityInfos {
@@ -576,7 +638,8 @@
     width: auto;
     height: auto;
     gap: 15px;
-    font-size: 18px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffb20c;
   }
 
@@ -585,8 +648,28 @@
     height: 10rem;
     overflow-y: auto;
     text-align: justify;
-    padding: 10px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityBio p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .onePersonalityBio::-webkit-scrollbar {
+    width: 5px;
+    border: 4px solid #ffb20c;
+  }
+
+  .onePersonalityBio::-webkit-scrollbar-thumb {
+    background-color: #ffb20c;
+    border-radius: 5px;
+  }
+
+  .onePersonalityBio::-webkit-scrollbar-track {
+    background-color: black;
   }
 
   .filmography {
@@ -603,7 +686,7 @@
     color: #ffb20c;
     text-align: center;
     border: 4px solid #ffb20c;
-    padding: 15px;
+    padding: 10px;
   }
 
   .movieGraphy,
@@ -620,8 +703,8 @@
     background-color: black;
     color: #ffb20c;
     border: 4px solid #ffb20c;
-    padding: 15px;
-    font-size: 25px;
+    padding: 10px;
+    font-size: 20px;
   }
 
   .movieGraphyList p,
@@ -652,23 +735,25 @@
   .serieGraphyCard a {
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 15rem;
     height: 100%;
     align-items: center;
+    white-space: wrap;
     gap: 10px;
     padding: 10px;
     text-decoration: none;
     color: #ffb20c;
+    background-color: black;
     border: 4px solid #ffb20c;
   }
 
   .movieGraphyCard img,
   .serieGraphyCard img {
-    width: 10rem;
-    height: 15rem;
+    width: 11rem;
+    height: 17rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
-    border-radius: 20px;
+    border-radius: 25px;
   }
 
   .movieGraphyCard p,
@@ -679,16 +764,15 @@
     border: 4px solid #ffb20c;
     padding: 5px;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     width: 100%;
     transition: 0.5s ease;
   }
 
-      .movieGraphyCard:active p,
+  .movieGraphyCard:active p,
   .serieGraphyCard:active p {
     background-color: #ffb20c;
     color: black;
     border: 4px solid black;
   }
-
 }
