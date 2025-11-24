@@ -1,28 +1,26 @@
-CREATE TABLE movies (
-  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  title VARCHAR(255) NOT NULL,
-  poster VARCHAR(255) NULL,
-  background VARCHAR(255) NULL,
-  logo VARCHAR(255) NULL,
-  trailer VARCHAR(255) NULL,
-  synopsis TEXT NULL,
-  genre VARCHAR(255) NULL,
-  theme VARCHAR(255) NULL,
-  release_date DATE NULL,
-  screen ENUM(
-    'Cinema',
-    'TV',
-    'DVD',
-    'Streaming'
-  ) NULL,
-  streaming VARCHAR(255) NULL,
-  original VARCHAR(255) NULL,
-  duration TIME NULL,
-  country VARCHAR(255) NULL,
-  universe VARCHAR(255) NULL,
-  subUniverse VARCHAR(255) NULL
-);
-INSERT INTO movies (
+CREATE TABLE
+  movies (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    poster VARCHAR(255) NULL,
+    background VARCHAR(255) NULL,
+    logo VARCHAR(255) NULL,
+    trailer VARCHAR(255) NULL,
+    synopsis TEXT NULL,
+    genre VARCHAR(255) NULL,
+    theme VARCHAR(255) NULL,
+    release_date DATE NULL,
+    screen ENUM ('Cinema', 'TV', 'DVD', 'Streaming') NULL,
+    streaming VARCHAR(255) NULL,
+    original VARCHAR(255) NULL,
+    duration TIME NULL,
+    country VARCHAR(255) NULL,
+    universe VARCHAR(255) NULL,
+    subUniverse VARCHAR(255) NULL
+  );
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -40,7 +38,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "Silent Hill",
     "https://image.tmdb.org/t/p/original/2I6UnjiJqmrYOzpsjIMjINcRSKF.jpg",
     "https://image.tmdb.org/t/p/original/fVxGOuEtac6By43qoVArpER2JCS.jpg",
@@ -58,7 +57,9 @@ VALUES (
     "Silent Hill",
     null
   );
-INSERT INTO movies (
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -76,7 +77,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "L'Immensita",
     "https://www.themoviedb.org/t/p/original/xpCBosabexDxAxqg8NMbWR4b313.jpg",
     "https://www.themoviedb.org/t/p/original/bCTLIwTUm75rMzXKZ1iefCNTC1r.jpg",
@@ -94,7 +96,9 @@ VALUES (
     null,
     null
   );
-INSERT INTO movies (
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -112,7 +116,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "Les Rascals",
     "https://www.themoviedb.org/t/p/original/wLRLbM2llYKCWabFqcMCF8GycTR.jpg",
     "https://www.themoviedb.org/t/p/original/j7ISL9Szxc6LDT8peWmN7BscVO7.jpg",
@@ -130,7 +135,9 @@ VALUES (
     null,
     null
   );
-INSERT INTO movies (
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -148,7 +155,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "Goodbye",
     "https://www.themoviedb.org/t/p/original/9w5mFsAX9YPI5IFOnd26q1RVStq.jpg",
     "https://www.themoviedb.org/t/p/original/5kmdAHM3gu1PLZafXCnMm0BE7n9.jpg",
@@ -166,7 +174,9 @@ VALUES (
     null,
     null
   );
-INSERT INTO movies (
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -184,7 +194,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "La Famille Asada",
     "https://www.themoviedb.org/t/p/original/eEOSiBnmm9q20W6hEkjpKGads2U.jpg",
     "https://www.themoviedb.org/t/p/original/2EGhE1LQwc1jiq9xbDYmGMs6Lns.jpg",
@@ -202,7 +213,9 @@ VALUES (
     null,
     null
   );
-INSERT INTO movies (
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -220,7 +233,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "About Kim Sohee",
     "https://www.themoviedb.org/t/p/original/xMyRhSLUonwcSXwO0Hgv1KQCa3j.jpg",
     "https://www.themoviedb.org/t/p/original/nsuL8cSkS3Zzkr09X0LWminnOlZ.jpg",
@@ -238,7 +252,9 @@ VALUES (
     null,
     null
   );
-INSERT INTO movies (
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -256,7 +272,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "Spider-Man",
     "https://image.tmdb.org/t/p/original/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg",
     "https://image.tmdb.org/t/p/original/2PDTWfuBWQKVC7aPAqJK5UCpz08.jpg",
@@ -274,7 +291,9 @@ VALUES (
     "Marvel",
     "Spider-Man"
   );
-INSERT INTO movies (
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -292,7 +311,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "Spider-Man 2",
     "https://image.tmdb.org/t/p/original/olxpyq9kJAZ2NU1siLshhhXEPR7.jpg",
     "https://image.tmdb.org/t/p/original/9OMNK3jt8uA3PP2IpIUkWCrlJ7t.jpg",
@@ -310,7 +330,9 @@ VALUES (
     "Marvel",
     "Spider-Man"
   );
-INSERT INTO movies (
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -328,7 +350,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "Spider-Man 3",
     "https://image.tmdb.org/t/p/original/qFmwhVUoUSXjkKRmca5yGDEXBIj.jpg",
     "https://image.tmdb.org/t/p/original/eSGBbCOX7KM3Rf8HHwK8tglklyS.jpg",
@@ -346,7 +369,9 @@ VALUES (
     "Marvel",
     "Spider-Man"
   );
-INSERT INTO movies (
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -364,7 +389,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "Ju-On",
     "https://image.tmdb.org/t/p/original/xuLEYvlIvEsy19SYfzmG5PfFL8Y.jpg",
     "https://image.tmdb.org/t/p/original/rIuZGmnmEaMSsEN8xZa38kcjY4C.jpg",
@@ -382,7 +408,9 @@ VALUES (
     "Ju-On / The Grudge",
     null
   );
-INSERT INTO movies (
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -400,7 +428,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "Ça",
     "https://image.tmdb.org/t/p/original/3SUz0F0I2Bodcj9Ev2pYSWnE9zp.jpg",
     "https://image.tmdb.org/t/p/original/rAQcPrEaPzDRVNX7XX5TWyxCGFN.jpg",
@@ -418,7 +447,9 @@ VALUES (
     "ça",
     null
   );
-INSERT INTO movies (
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -436,7 +467,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "Venom : The Last Dance",
     "https://image.tmdb.org/t/p/original/8mRrl8lc7TrbdA1PFzUhQ0nFZ7R.jpg",
     "https://image.tmdb.org/t/p/original/fUiKX7u3XZSxGn4sNszq1UQyxEb.jpg",
@@ -454,7 +486,9 @@ VALUES (
     "Marvel",
     "Venom / Spider-Man"
   );
-INSERT INTO movies (
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -472,7 +506,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "Kraven The Hunter",
     "https://image.tmdb.org/t/p/original/1GvBhRxY6MELDfxFrete6BNhBB5.jpg",
     "https://image.tmdb.org/t/p/original/unNWOdnrdVraksBgMobtfvZpWpb.jpg",
@@ -490,7 +525,9 @@ VALUES (
     "Marvel",
     "Spider-Man"
   );
-INSERT INTO movies (
+
+INSERT INTO
+  movies (
     title,
     poster,
     background,
@@ -508,7 +545,8 @@ INSERT INTO movies (
     universe,
     subUniverse
   )
-VALUES (
+VALUES
+  (
     "Spider-Man: Brand New Day",
     null,
     null,
@@ -526,66 +564,73 @@ VALUES (
     "Marvel",
     "Spider-Man"
   );
-CREATE TABLE series (
-  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  title VARCHAR(255) NOT NULL,
-  poster VARCHAR(255),
-  background VARCHAR(255),
-  logo VARCHAR(255),
-  trailer VARCHAR(255),
-  synopsis TEXT,
-  genre VARCHAR(255),
-  theme VARCHAR(255),
-  universe VARCHAR(255),
-  subUniverse VARCHAR(255),
-  release_date DATE,
-  ending_date DATE,
-  statut ENUM(
-    'En cours',
-    'Terminée',
-    'Fin de saison',
-    'Annulée'
-  ) NULL,
-  seasons INT,
-  episodes INT,
-  duration VARCHAR(255),
-  country VARCHAR(255),
-  screen ENUM('TV', 'Streaming'),
-  streaming VARCHAR(255),
-  original VARCHAR(255)
-);
-CREATE TABLE seasons (
-  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  serie_id INT NOT NULL,
-  season_number INT NOT NULL,
-  poster VARCHAR(255),
-  first_episode_date DATE,
-  last_episode_date DATE,
-  synopsis TEXT,
-  episodes INT,
-  FOREIGN KEY (serie_id) REFERENCES series (id) ON DELETE CASCADE,
-  CONSTRAINT unique_season_per_series UNIQUE (serie_id, season_number)
-);
-CREATE TABLE episodes (
-  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  serie_id INT NOT NULL,
-  season_id INT NOT NULL,
-  episode_number INT NOT NULL,
-  title VARCHAR(255),
-  image VARCHAR(255),
-  release_date DATE,
-  synopsis TEXT,
-  duration TIME,
-  FOREIGN KEY (serie_id) REFERENCES series (id) ON DELETE CASCADE,
-  FOREIGN KEY (season_id) REFERENCES seasons (id) ON DELETE CASCADE,
-  CONSTRAINT unique_episode_per_season_and_series UNIQUE (
-    serie_id,
-    season_id,
-    episode_number
-  )
-);
+
+CREATE TABLE
+  series (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    poster VARCHAR(255),
+    background VARCHAR(255),
+    logo VARCHAR(255),
+    trailer VARCHAR(255),
+    synopsis TEXT,
+    genre VARCHAR(255),
+    theme VARCHAR(255),
+    universe VARCHAR(255),
+    subUniverse VARCHAR(255),
+    release_date DATE,
+    ending_date DATE,
+    statut ENUM (
+      'En cours',
+      'Terminée',
+      'Fin de saison',
+      'Annulée'
+    ) NULL,
+    nbSeasons INT,
+    seasons INT,
+    nbEpisodesSerie INT,
+    episodes INT,
+    duration VARCHAR(255),
+    country VARCHAR(255),
+    screen ENUM ('TV', 'Streaming'),
+    streaming VARCHAR(255),
+    original VARCHAR(255)
+  );
+
+CREATE TABLE
+  seasons (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    serie_id INT NOT NULL,
+    season_number INT NOT NULL,
+    season_poster VARCHAR(255),
+    first_episode_date DATE,
+    last_episode_date DATE,
+    synopsis TEXT,
+    nbEpisodesSeason INT,
+    episodes INT,
+    FOREIGN KEY (serie_id) REFERENCES series (id) ON DELETE CASCADE,
+    CONSTRAINT unique_season_per_series UNIQUE (serie_id, season_number)
+  );
+
+CREATE TABLE
+  episodes (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    serie_id INT NOT NULL,
+    season_id INT NOT NULL,
+    episode_number INT NOT NULL,
+    title VARCHAR(255),
+    image VARCHAR(255),
+    release_date DATE,
+    synopsis TEXT,
+    duration TIME,
+    FOREIGN KEY (serie_id) REFERENCES series (id) ON DELETE CASCADE,
+    FOREIGN KEY (season_id) REFERENCES seasons (id) ON DELETE CASCADE,
+    CONSTRAINT unique_episode_per_season_and_series UNIQUE (serie_id, season_id, episode_number)
+  );
+
 /* Marvel's DAREDEVIL */
-INSERT INTO series (
+INSERT INTO
+  series (
     title,
     poster,
     background,
@@ -599,14 +644,17 @@ INSERT INTO series (
     release_date,
     ending_date,
     statut,
+    nbSeasons,
     seasons,
+    nbEpisodesSerie,
     episodes,
     country,
     screen,
     streaming,
     original
   )
-VALUES (
+VALUES
+  (
     "Marvel's Daredevil",
     "https://image.tmdb.org/t/p/original/doJ6axLfzLCDaPqFSSHjaSTYKb2.jpg",
     "https://image.tmdb.org/t/p/original/rZ1ynks9dDkIR87KGNfhZFHfEgj.jpg",
@@ -621,31 +669,86 @@ VALUES (
     "2018-10-19",
     "Terminée",
     "3",
+    null,
     "39",
+    null,
     "USA",
     "TV",
     "Disney +",
     "Netflix"
   );
-INSERT INTO seasons (
+
+INSERT INTO
+  seasons (
     serie_id,
     season_number,
-    poster,
+    season_poster,
     first_episode_date,
     last_episode_date,
     synopsis,
+    nbEpisodesSeason,
     episodes
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "https://image.tmdb.org/t/p/original/kdLJYXXHF0JJO3gy7lUNSk3LPgK.jpg",
     "2015-04-10",
     "2015-04-10",
     "Matt Murdock et Foogy Nelson enquêtent sur l'affaire du meurtre dont la coupable se dit innocente. Murdock découvre que cette affaire en tant qu'avocat et son combat contre une organisation criminelle en tant que Daredevil ne font qu'un.",
-    "13"
+    "13",
+    null
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  seasons (
+    serie_id,
+    season_number,
+    season_poster,
+    first_episode_date,
+    last_episode_date,
+    synopsis,
+    nbEpisodesSeason,
+    episodes
+  )
+VALUES
+  (
+    "1",
+    "2",
+    "https://image.tmdb.org/t/p/original/pw2rInLw1JH6hMxumFTCbqBbYfc.jpg",
+    "2016-03-18",
+    "2016-03-18",
+    "Alors que Fisk est derrière les barreaux, Hell's Kitchen est aux proies d'une nouvelle menace, et Matt Murdock et son alter-égo Daredevil sont confrontés à un homme au passé trouble.",
+    "13",
+    null
+  );
+
+INSERT INTO
+  seasons (
+    serie_id,
+    season_number,
+    season_poster,
+    first_episode_date,
+    last_episode_date,
+    synopsis,
+    nbEpisodesSeason,
+    episodes
+  )
+VALUES
+  (
+    "1",
+    "3",
+    "https://image.tmdb.org/t/p/original/9pY9oNwaz58Iw5NmnVnAEicV5oc.jpg",
+    "2018-10-19",
+    "2018-10-19",
+    "Matt Murdock est brisé à la fois physiquement et psychologiquement. Pendant ce temps-là, Wilson Fisk prépare un mauvais coup pour sortir de prison.",
+    "13",
+    null
+  );
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -655,7 +758,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "1",
@@ -665,7 +769,9 @@ VALUES (
     "Matt Murdock & Foggy Nelson prennent la défense d'une femme accusée de meurtre.",
     "00:53:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -675,7 +781,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "2",
@@ -685,7 +792,9 @@ VALUES (
     "Matt Murdock est gravement blessé suite à la confrontation avec les Russes. Une infirmière le retrouve inconscient dans une benne et l'emmène pour le soigner.",
     "00:53:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -695,7 +804,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "3",
@@ -705,7 +815,9 @@ VALUES (
     "Matt Murdock & Foggy Nelson sont engagés pour défendre un homme qui a tué un mafieux. Karen Page demande des réponses à un reporter concernant son article sur Union Allied.",
     "00:53:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -715,7 +827,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "4",
@@ -725,7 +838,9 @@ VALUES (
     "Vladimir et Anatoly kidnappent Claire sur ordre de Fisk, pour attirer Daredevil. Ben Ulrich et Karen Page enquêtent sur Union Allied",
     "00:53:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -735,7 +850,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "5",
@@ -745,7 +861,9 @@ VALUES (
     "Fisk met en oeuvre son plan pour détruire Hell's Kitchen, Matt et Foggy veulent défendre ses habitants d'un marchand de sommeil.",
     "00:56:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -755,7 +873,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "6",
@@ -765,7 +884,9 @@ VALUES (
     "Daredevil et Vladimir sont coincés dans un immeuble en ruine suite à une explosion dans Hell's Kitchen. Karen et Foggy sont à l'hôpital auprès des victimes, dont Elena.",
     "00:49:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -775,7 +896,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "7",
@@ -785,7 +907,9 @@ VALUES (
     "Matt retrouve Stick, une ancienne connaissance, lui aussi aveugle, qui l'a entrainé aux arts martiaux et à contrôler ses autres sens. Stick demande à Matt de l'aider à trouver et détruire une arme secrète qui menace Hell's Kitchen.",
     "00:51:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -795,7 +919,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "8",
@@ -805,7 +930,9 @@ VALUES (
     "Matt découvre que Foggy & Karen travaillent avec Ben Urich pour faire tomber Fisk",
     "00:54:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -815,7 +942,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "9",
@@ -825,7 +953,9 @@ VALUES (
     "Fisk s'est présenté au monde comme le bienfaiteur de Hell's Kitchen, mais reste cependant très mystérieux. Matt va donc chercher à connaitre son ennemi par Vanessa, alors que Ben, Foggy et Karen vont fouiller son passé.",
     "00:58:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -835,7 +965,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "10",
@@ -845,7 +976,9 @@ VALUES (
     "Foggy apprend que Matt & Daredevil ne font qu'un, ce qui met en péril leur amitié. Pendant ce temps-là, Karen & Ben ont une discussion avec une personne proche de Fisk.",
     "00:57:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -855,7 +988,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "11",
@@ -865,7 +999,9 @@ VALUES (
     "Matt Murdock se remet de ses blessures suite au combat contre Fisk et Nobu. Il rencontre l'homme qui a conçu les costumes de Fisk pour lui demander de créer un nouveau costume. Fisk est au chevet de Vanessa à l'hôpital, Wesley veut se charger seul de Karen.",
     "00:59:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -875,7 +1011,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "12",
@@ -885,7 +1022,9 @@ VALUES (
     "Karen ne se remet pas de sa dernière rencontre avec Wesley. Fisk a tout découvert concernant Karen et Ben et décide de mettre un terme.",
     "01:00:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -895,7 +1034,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "1",
     "1",
     "13",
@@ -905,8 +1045,10 @@ VALUES (
     "Karen, Foggy et Matt décident de frapper un grand coup pour arrêter Fisk. Fisk et Daredevil, sous un nouveau costume, s'affrontent enfin.",
     "00:56:00"
   );
+
 /* --- ASH VS EVIL DEAD --- */
-INSERT INTO series (
+INSERT INTO
+  series (
     title,
     poster,
     background,
@@ -920,14 +1062,17 @@ INSERT INTO series (
     release_date,
     ending_date,
     statut,
+    nbSeasons,
     seasons,
+    nbEpisodesSerie,
     episodes,
     country,
     screen,
     streaming,
     original
   )
-VALUES (
+VALUES
+  (
     "Ash vs Evil Dead",
     "https://image.tmdb.org/t/p/original/ghAP6Od4f8bNjocQIr121gPj1MJ.jpg",
     "https://image.tmdb.org/t/p/original/tVjJ7tVe0P5FPRSJb66iz495biL.jpg",
@@ -942,67 +1087,86 @@ VALUES (
     "2018-04-29",
     "Annulée",
     "3",
+    null,
     "30",
+    null,
     "USA",
     "TV",
     null,
     null
   );
-INSERT INTO seasons (
+
+INSERT INTO
+  seasons (
     serie_id,
     season_number,
-    poster,
+    season_poster,
     first_episode_date,
     last_episode_date,
     synopsis,
+    nbEpisodesSeason,
     episodes
   )
-VALUES (
+VALUES
+  (
     2,
     1,
     "https://image.tmdb.org/t/p/original/ApSCYgOsISv0l6SBRNPFVXAiXVu.jpg",
     "2015-10-31",
     "2016-01-02",
     "30 ans après avoir combattu les démons, Ash Williams va devoir reprendre le service en les affrontant une fois de plus. Mais il ne sera pas le seul, il sera accompagné de ses collègues du travail.",
-    "10"
+    "10",
+    null
   );
-INSERT INTO seasons (
+
+INSERT INTO
+  seasons (
     serie_id,
     season_number,
-    poster,
+    season_poster,
     first_episode_date,
     last_episode_date,
     synopsis,
+    nbEpisodesSeason,
     episodes
   )
-VALUES (
+VALUES
+  (
     2,
     2,
     "https://image.tmdb.org/t/p/original/rL9movJWGBjuwJvbbGBGqW85zYA.jpg",
     "2016-10-02",
     "2016-12-11",
     "Quelques mois après avoir passé un marché, Ruby ne contrôle plus ses démons. Elle demande de l'aide à Ash, Pablo et Kelly, qui vont devoir mettre un terme à leur pause bien méritée à Jacksonville. Ash va devoir faire l'impensable : Retourner dans sa ville natale : Elk Grove.",
-    "10"
+    "10",
+    null
   );
-INSERT INTO seasons (
+
+INSERT INTO
+  seasons (
     serie_id,
     season_number,
-    poster,
+    season_poster,
     first_episode_date,
     last_episode_date,
     synopsis,
+    nbEpisodesSeason,
     episodes
   )
-VALUES (
+VALUES
+  (
     2,
     3,
     "https://image.tmdb.org/t/p/original/mZ39CL65VtTD01JDFYuJvAjR3KM.jpg",
     "2018-02-25",
     "2018-04-29",
     "Ash Williams devient le héros d'Elk Grove et il a ouvert sa propre quincaillerie. Mais les forces du mal ressurgissent de nouveau avec Ruby. Et comme si ce n'était pas assez, Ash découvre qu'il est père d'une jeune fille de 17 ans.",
-    "10"
+    "10",
+    null
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -1012,7 +1176,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "2",
     "4",
     "1",
@@ -1022,7 +1187,9 @@ VALUES (
     "Un soir, dans un état second, Ash Williams lit un verset du Necronomicon. Par conséquent, les forces du mal se réveillent pour la première fois depuis trente ans. Ash va devoir reprendre du service, et sa tronconneuse.",
     "00:41:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -1032,7 +1199,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "2",
     "4",
     "2",
@@ -1042,7 +1210,9 @@ VALUES (
     "Kelly part à la rescousse de son père et elle retrouve sa mère, supposée morte. Alors que Ash et Pablo la rejoigne chez eux, Ash doute de la nature de la mère de Kelly.",
     "00:28:00"
   );
-INSERT INTO episodes (
+
+INSERT INTO
+  episodes (
     serie_id,
     season_id,
     episode_number,
@@ -1052,7 +1222,8 @@ INSERT INTO episodes (
     synopsis,
     duration
   )
-VALUES (
+VALUES
+  (
     "2",
     "4",
     "3",
@@ -1062,17 +1233,21 @@ VALUES (
     "Ash, Pablo et Kelly invoquent un démon pour lui soutirer des informations pour empêcher l'invasion des Cadavéreux. L'inspectrice Amanda Fisher retrouve Ash, qui est, selon elle, le responsble du meurtre de son coéquipier.",
     "00:28:00"
   );
-CREATE TABLE personalities (
-  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  fullname VARCHAR(255) NOT NULL,
-  image_src VARCHAR(255) NOT NULL,
-  birthdate DATE NOT NULL,
-  deathdate DATE,
-  origin VARCHAR(255) NOT NULL,
-  bio TEXT,
-  profession VARCHAR(255) NOT NULL
-);
-INSERT INTO personalities (
+
+CREATE TABLE
+  personalities (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    fullname VARCHAR(255) NOT NULL,
+    image_src VARCHAR(255) NOT NULL,
+    birthdate DATE NOT NULL,
+    deathdate DATE NULL,
+    origin VARCHAR(255) NOT NULL,
+    bio TEXT,
+    profession VARCHAR(255) NOT NULL
+  );
+
+INSERT INTO
+  personalities (
     fullname,
     image_src,
     birthdate,
@@ -1081,7 +1256,8 @@ INSERT INTO personalities (
     bio,
     profession
   )
-VALUES (
+VALUES
+  (
     "Jodelle Ferland",
     "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Jodelle_Ferland_%28medium_crop%29.jpg/600px-Jodelle%20Ferland%20%28medium%20crop%29.jpg",
     "1994-10-09",
@@ -1090,7 +1266,9 @@ VALUES (
     "Jodelle Micah Ferland a débuté sa carrière très jeune, elle est notamment connue pour son double rôle de Alessa et Sharon dans le film Silent Hill (2006), dans le film Tideland (2006). Elle a fait une apparition dans de nombreuses séries comme Smallville, Supernatural, elle a eu un rôle majeur dans la série Dark Matters.",
     "Actrice"
   );
-INSERT INTO personalities (
+
+INSERT INTO
+  personalities (
     fullname,
     image_src,
     birthdate,
@@ -1099,7 +1277,8 @@ INSERT INTO personalities (
     bio,
     profession
   )
-VALUES (
+VALUES
+  (
     "Christophe Gans",
     "https://upload.wikimedia.org/wikipedia/commons/5/52/Christophe_Gans_2010.JPG",
     "1960-03-11",
@@ -1108,7 +1287,9 @@ VALUES (
     "Christophe Gans est un cinéaste français reconnu pour son travail dans le cinéma fantastique. Diplômé de l'IDHEC, il réalise en 1981 le court métrage Silver Slime, hommage aux maîtres italiens de l'horreur. Il cofonde ensuite le magazine Starfix, dédié au cinéma de genre. Sa carrière décolle avec Crying Freeman (1995), adaptation d'un manga culte. En 2001, il connaît un grand succès avec Le Pacte des loups, mêlant action, horreur et aventure, attirant près de 5 millions de spectateurs en France. Il réalise ensuite Silent Hill (2006), adaptation du jeu vidéo éponyme, et La Belle et la Bête (2014), avec Vincent Cassel et Léa Seydoux. Il travaille actuellement sur Return to Silent Hill, prévu pour 2025.",
     "Réalisateur"
   );
-INSERT INTO personalities (
+
+INSERT INTO
+  personalities (
     fullname,
     image_src,
     birthdate,
@@ -1117,7 +1298,8 @@ INSERT INTO personalities (
     bio,
     profession
   )
-VALUES (
+VALUES
+  (
     "Sean Bean",
     "https://fr.web.img2.acsta.net/pictures/15/07/20/17/45/031961.jpg",
     "1959-04-17",
@@ -1126,7 +1308,9 @@ VALUES (
     "Sean Bean, de son vrai nom Shaun Mark Bean, est un acteur britannique né le 17 avril 1959 à Sheffield, en Angleterre. Il est connu pour ses rôles marquants, souvent tragiques, dans des films et séries à succès. Avec sa voix distinctive et sa présence charismatique, il s'est imposé dans les genres de la fantasy, du drame historique et du thriller. Sean Bean est réputé pour jouer des personnages qui meurent souvent à l’écran, une particularité qui est devenue un mème sur Internet. Pourtant, il a aussi interprété des rôles où il survit, comme dans The Martian (2015) ou la série Legends (2014-2015). Il est également acteur de doublage, prêtant sa voix à des jeux vidéo comme The Elder Scrolls IV: Oblivion (2006) et Hitman 2 (2018).",
     "Acteur"
   );
-INSERT INTO personalities (
+
+INSERT INTO
+  personalities (
     fullname,
     image_src,
     birthdate,
@@ -1135,7 +1319,8 @@ INSERT INTO personalities (
     bio,
     profession
   )
-VALUES (
+VALUES
+  (
     "Radha Mitchell",
     "https://image.tmdb.org/t/p/original/ctC7epg65XgUol62d1UAoyGvNKm.jpg",
     "1973-11-12",
@@ -1144,7 +1329,9 @@ VALUES (
     "Radha Rani Amber Indigo Ananda Mitchell commence sa carrière dans la série australienne Neighbours. Elle se fait remarquer en 1998 dans le film indépendant High Art. Elle alterne ensuite entre films indépendants (Pitch Black, Everything Put Together) et blockbusters (Phone Game, Man on Fire). En 2006, elle tient le rôle principal de Rose Da Silva dans Silent Hill de Christophe Gans. Elle poursuit sa carrière avec des films comme The Crazies (2010), Olympus Has Fallen (2013) et The Shack (2017).",
     "Actrice"
   );
-INSERT INTO personalities (
+
+INSERT INTO
+  personalities (
     fullname,
     image_src,
     birthdate,
@@ -1153,7 +1340,8 @@ INSERT INTO personalities (
     bio,
     profession
   )
-VALUES (
+VALUES
+  (
     "Bruce Campbell",
     "https://image.tmdb.org/t/p/original/vR46yp0Bx9Y198DtiDHnamyr610.jpg",
     "1958-06-22",
@@ -1162,109 +1350,81 @@ VALUES (
     "Bruce Campbell est principalement connu pour son rôle culte d’Ash Williams dans la saga Evil Dead, réalisée par Sam Raimi. En plus de son travail d’acteur, Bruce Campbell est aussi réalisateur et producteur. Il a dirigé des épisodes de séries télé et a réalisé le film My Name is Bruce (2007), où il joue une version parodique de lui-même. Côté écriture, il a publié deux autobiographies humoristiques : If Chins Could Kill: Confessions of a B Movie Actor (2001) et Hail to the Chin: Further Confessions of a B Movie Actor (2017), racontant sa carrière dans le cinéma de série B. Avec son charisme et son humour, il est devenu une icône du cinéma de genre, notamment dans l’horreur et la pop culture geek.",
     "Acteur, Réalisateur, Scénariste, Producteur"
   );
-CREATE TABLE movieCasting (
-  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  movie_id INT NOT NULL,
-  personality_id INT NOT NULL,
-  role VARCHAR(255) NOT NULL,
-  side ENUM("Acting", "Directing", "Both") NOT NULL,
-  FOREIGN KEY (movie_id) REFERENCES movies (id) ON DELETE CASCADE,
-  FOREIGN KEY (personality_id) REFERENCES personalities (id) ON DELETE CASCADE,
-  UNIQUE (movie_id, personality_id)
-);
-INSERT INTO movieCasting (
-    movie_id,
-    personality_id,
-    role,
-    side
-  )
-VALUES (
-    "1",
-    "1",
-    "Sharon / Alessa",
-    "Acting"
+
+CREATE TABLE
+  movieCasting (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    movie_id INT NOT NULL,
+    personality_id INT NOT NULL,
+    role VARCHAR(255) NOT NULL,
+    side ENUM ("Acting", "Directing", "Both") NOT NULL,
+    FOREIGN KEY (movie_id) REFERENCES movies (id) ON DELETE CASCADE,
+    FOREIGN KEY (personality_id) REFERENCES personalities (id) ON DELETE CASCADE,
+    UNIQUE (movie_id, personality_id)
   );
-INSERT INTO movieCasting (
-    movie_id,
-    personality_id,
-    role,
-    side
-  )
-VALUES (
-    "1",
-    "2",
-    "Réalisateur",
-    "Directing"
+
+INSERT INTO
+  movieCasting (movie_id, personality_id, role, side)
+VALUES
+  ("1", "1", "Sharon / Alessa", "Acting");
+
+INSERT INTO
+  movieCasting (movie_id, personality_id, role, side)
+VALUES
+  ("1", "2", "Réalisateur", "Directing");
+
+INSERT INTO
+  movieCasting (movie_id, personality_id, role, side)
+VALUES
+  ("1", "4", "Rose Da Silva", "Acting");
+
+INSERT INTO
+  movieCasting (movie_id, personality_id, role, side)
+VALUES
+  ("1", "3", "Harry Da Silva", "Acting");
+
+CREATE TABLE
+  serieCasting (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    serie_id INT NOT NULL,
+    personality_id INT NOT NULL,
+    role VARCHAR(255) NOT NULL,
+    presence VARCHAR(255) NOT NULL,
+    side ENUM ("Acting", "Directing", "Both") NOT NULL,
+    FOREIGN KEY (serie_id) REFERENCES series (id) ON DELETE CASCADE,
+    FOREIGN KEY (personality_id) REFERENCES personalities (id) ON DELETE CASCADE,
+    UNIQUE (serie_id, personality_id)
   );
-INSERT INTO movieCasting (
-    movie_id,
-    personality_id,
-    role,
-    side
-  )
-VALUES (
-    "1",
-    "4",
-    "Rose Da Silva",
-    "Acting"
-  );
-INSERT INTO movieCasting (
-    movie_id,
-    personality_id,
-    role,
-    side
-  )
-VALUES (
-    "1",
-    "3",
-    "Harry Da Silva",
-    "Acting"
-  );
-CREATE TABLE serieCasting (
-  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  serie_id INT NOT NULL,
-  personality_id INT NOT NULL,
-  role VARCHAR(255) NOT NULL,
-  presence VARCHAR(255) NOT NULL,
-  side ENUM("Acting", "Directing", "Both") NOT NULL,
-  FOREIGN KEY (serie_id) REFERENCES series (id) ON DELETE CASCADE,
-  FOREIGN KEY (personality_id) REFERENCES personalities (id) ON DELETE CASCADE,
-  UNIQUE (serie_id, personality_id)
-);
-INSERT INTO serieCasting (
-    serie_id,
-    personality_id,
-    role,
-    presence,
-    side
-  )
-VALUES (
+
+INSERT INTO
+  serieCasting (serie_id, personality_id, role, presence, side)
+VALUES
+  (
     "2",
     "5",
     "Ash Williams",
     "Saisons 1 à 3",
     "Acting"
   );
-CREATE TABLE users (
-  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  username VARCHAR(255) NOT NULL UNIQUE,
-  email VARCHAR(255) NOT NULL UNIQUE,
-  birthdate DATE NOT NULL,
-  password VARCHAR(255) NOT NULL,
-  avatar VARCHAR(255) NULL,
-  role ENUM("User", "Admin") DEFAULT "User",
-  isValidated BOOLEAN DEFAULT 0,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-INSERT INTO users (
-    username,
-    email,
-    birthdate,
-    password,
-    avatar
-  )
-VALUES (
+
+CREATE TABLE
+  users (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    birthdate DATE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    avatar VARCHAR(255) NULL,
+    role ENUM ("User", "Admin") DEFAULT "User",
+    isValidated BOOLEAN DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  );
+
+INSERT INTO
+  users (username, email, birthdate, password, avatar)
+VALUES
+  (
     "User",
     "6D9bX@example.com",
     "1999-01-01",
@@ -1272,3 +1432,46 @@ VALUES (
 zMOndznzUBsbMoTYjK5is",
     NULL
   );
+
+CREATE TABLE
+  userFavorites (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    user_id INT NOT NULL,
+    favorite_id INT NOT NULL,
+    favorite_type ENUM ("movie", "serie", "personality") NOT NULL,
+    status ENUM (
+      "liked",
+      "favorite",
+      "seen",
+      "toWatch",
+      "isWatching"
+    ) NOT NULL,
+    UNIQUE (user_id, favorite_id, favorite_type, status),
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
+  );
+
+CREATE TABLE
+  userReviews (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    user_id INT NOT NULL,
+    movie_id INT NULL,
+    serie_id INT NULL,
+    personality_id INT NULL,
+    rating INT CHECK (
+      rating >= 1
+      AND rating <= 10
+    ) NULL,
+    review_text TEXT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
+    FOREIGN KEY (movie_id) REFERENCES movies (id) ON DELETE CASCADE,
+    FOREIGN KEY (serie_id) REFERENCES series (id) ON DELETE CASCADE,
+    FOREIGN KEY (personality_id) REFERENCES personalities (id) ON DELETE CASCADE
+  );
+
+/* --- MOVIES INSERTS --- */
+INSERT INTO
+  userReviews (user_id, movie_id, rating, review_text)
+VALUES
+  ("1", "1", "10", "Un film fantastique !");
