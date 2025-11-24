@@ -4,12 +4,14 @@
     display: flex;
     flex-direction: column;
     width: auto;
-    height: auto;
-    overflow: hidden;
+    height: 100%;
+    overflow-y: auto;
+    gap: 10px;
     padding: 10px 10px;
   }
 
   .seriesPage h2 {
+    margin: 0;
     width: fit-content;
     background-color: black;
     color: #ffb20c;
@@ -19,9 +21,8 @@
 
   .seriesContainer {
     display: flex;
-    align-items: center;
     width: auto;
-    height: 100%;
+    height: auto;
     gap: 10px;
   }
 
@@ -83,6 +84,7 @@
   .serieCard a {
     text-decoration: none;
   }
+
   .posterPlaceholder img {
     width: 12rem;
     height: 18rem;
@@ -96,24 +98,26 @@
     display: flex;
     flex-direction: column;
     width: auto;
-    height: auto;
-    overflow: hidden;
+    height: 100%;
+    overflow-y: auto;
+    gap: 15px;
     padding: 10px 10px;
   }
 
   .seriesPage h2 {
+    margin: 0;
     width: fit-content;
     background-color: black;
     color: #ffb20c;
     border: 4px solid #ffb20c;
-    padding: 10px 15px;
+    padding: 10px;
   }
 
   .seriesContainer {
     display: flex;
     align-items: center;
     width: auto;
-    height: 100%;
+    height: auto;
     gap: 10px;
   }
 
@@ -123,10 +127,9 @@
     justify-content: flex-start;
     width: auto;
     overflow-x: auto;
-    gap: 20px;
+    gap: 15px;
     scroll-behavior: smooth;
     flex: 1;
-    padding: 15px 10px;
   }
 
   .seriesList::-webkit-scrollbar {
@@ -188,12 +191,14 @@
     display: flex;
     flex-direction: column;
     width: auto;
-    height: 100vh;
-    overflow: hidden;
-    padding: 20px 20px;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px 10px;
+    gap: 10px;
   }
 
   .seriesPage h2 {
+    margin: 0;
     width: fit-content;
     background-color: black;
     color: #ffb20c;
@@ -231,9 +236,9 @@
     justify-content: center;
     align-items: center;
     width: auto;
-    height: 100%;
+    height: auto;
     text-decoration: none;
-    gap: 20px;
+    gap: 10px;
   }
 
   .serieCard img {
@@ -252,10 +257,10 @@
     color: #ffb20c;
     background-color: black;
     width: 100%;
-    height: 4rem;
+    height: 3rem;
     border: 4px solid #ffb20c;
     font-size: 15px;
-    padding: 10px 15px;
+    padding: 10px;
     margin: 0;
     transition: 0.5s ease;
   }
@@ -279,12 +284,14 @@
     display: flex;
     flex-direction: column;
     width: auto;
-    height: 100vh;
-    overflow: hidden;
-    padding: 20px 20px;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px 10px;
+    gap: 10px;
   }
 
   .seriesPage h2 {
+    margin: 0;
     width: fit-content;
     background-color: black;
     color: #ffb20c;
@@ -309,7 +316,6 @@
     gap: 40px;
     scroll-behavior: smooth;
     flex: 1;
-    padding: 0 10px;
   }
 
   .seriesList::-webkit-scrollbar {
