@@ -61,7 +61,6 @@ function EpisodesContainer({ episodes }) {
           )}
         </Modal.Body>
       </Modal>
-      <FontAwesomeIcon />
     </div>
   );
 }

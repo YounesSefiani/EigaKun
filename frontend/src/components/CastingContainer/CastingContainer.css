@@ -15,7 +15,7 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
+    gap: 10px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffb20c;
@@ -36,13 +36,15 @@
   .cast a {
     display: flex;
     flex-direction: column;
+    width: 18rem;
     align-items: center;
-    gap: 15px;
+    white-space: wrap;
+    gap: 10px;
     text-decoration: none;
     color: #ffb20c;
     background-color: black;
     border: 4px solid #ffb20c;
-    padding: 15px;
+    padding: 10px;
     transition: 0.5s ease;
   }
 
@@ -63,8 +65,8 @@
   }
 
   .cast img {
-    width: 18rem;
-    height: 25rem;
+    width: 16rem;
+    height: 23rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
     border-radius: 25px;
@@ -76,7 +78,7 @@
   }
 
   .cast h3 {
-    font-size: 35px !important;
+    font-size: 30px !important;
     margin: 0 !important;
     padding: 10px !important;
   }
@@ -94,7 +96,7 @@
     margin: 0;
     padding: 10px;
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     border: 4px solid #ffb20c;
     transition: 0.5s ease;
@@ -102,12 +104,12 @@
 }
 /* VERSION DESKTOP */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
-    .casting {
+  .casting {
     display: flex;
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
+    gap: 10px;
     color: #ffb20c;
     text-align: center;
   }
@@ -138,13 +140,15 @@
   .cast a {
     display: flex;
     flex-direction: column;
+    width: 18rem;
     align-items: center;
-    gap: 15px;
+    white-space: wrap;
+    gap: 10px;
     text-decoration: none;
     color: #ffb20c;
     background-color: black;
     border: 4px solid #ffb20c;
-    padding: 15px;
+    padding: 10px;
     transition: 0.5s ease;
   }
 
@@ -165,8 +169,8 @@
   }
 
   .cast img {
-    width: 18rem;
-    height: 25rem;
+    width: 15rem;
+    height: 22rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
     border-radius: 25px;
@@ -178,13 +182,13 @@
   }
 
   .cast h3 {
-    font-size: 35px !important;
+    font-size: 30px !important;
     margin: 0 !important;
     padding: 10px !important;
   }
 
   .cast h4 {
-    font-size: 25px;
+    font-size: 20px;
     margin: 0;
     padding: 5px;
     width: 100%;
@@ -196,16 +200,15 @@
     margin: 0;
     padding: 10px;
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     border: 4px solid #ffb20c;
     transition: 0.5s ease;
   }
-
 }
 /* VERSION TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-      .casting {
+  .casting {
     display: flex;
     flex-direction: column;
     width: auto;
@@ -241,7 +244,9 @@
   .cast a {
     display: flex;
     flex-direction: column;
+    width: 17rem;
     align-items: center;
+    white-space: wrap;
     gap: 15px;
     text-decoration: none;
     color: #ffb20c;
@@ -304,18 +309,17 @@
     border: 4px solid #ffb20c;
     transition: 0.5s ease;
   }
-
 }
 /* VERSION MOBILE */
 @media screen and (max-width: 767px) {
-    .casting {
+  .casting {
     display: flex;
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
-    color: #ffb20c;
     text-align: center;
+    gap: 10px;
+    color: #ffb20c;
   }
 
   .cast {
@@ -323,8 +327,8 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    gap: 20px;
-    padding: 10px;
+    gap: 10px;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffb20c;
   }
@@ -338,59 +342,63 @@
     height: auto;
     overflow-x: auto;
     margin: 0;
-    padding: 10px;
+    margin-bottom: 0;
+    padding-left: 0;
   }
 
   .cast a {
     display: flex;
     flex-direction: column;
+    width: 15rem;
+    height: 100%;
     align-items: center;
-    gap: 15px;
+    white-space: wrap;
+    gap: 10px;
     text-decoration: none;
     color: #ffb20c;
     background-color: black;
     border: 4px solid #ffb20c;
-    padding: 15px;
+    padding: 10px;
     transition: 0.5s ease;
   }
 
-  .cast a:hover {
+  .cast a:active {
     background-color: #ffb20c;
     color: black;
     border: 4px solid black;
   }
 
-  .cast a:hover h4 {
+  .cast a:active h4 {
     color: black;
     border: 4px solid black;
   }
 
-  .cast a:hover p {
+  .cast a:active p {
     color: black;
     border: 4px solid black;
   }
 
   .cast img {
-    width: 12rem;
-    height: 18rem;
+    width: 10rem;
+    height: 15rem;
     object-fit: fill;
     border: 4px solid #ffb20c;
     border-radius: 25px;
     transition: 0.5s ease;
   }
 
-  .cast a:hover img {
+  .cast a:active img {
     border: 4px solid black;
   }
 
   .cast h3 {
-    font-size: 25px !important;
+    font-size: 20px !important;
     margin: 0 !important;
     padding: 10px !important;
   }
 
   .cast h4 {
-    font-size: 1.5rem;
+    font-size: 18px;
     margin: 0;
     padding: 5px;
     width: 100%;
@@ -402,10 +410,9 @@
     margin: 0;
     padding: 10px;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 15px;
     text-align: center;
     border: 4px solid #ffb20c;
     transition: 0.5s ease;
   }
-
 }
