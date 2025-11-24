@@ -219,6 +219,7 @@
     flex-direction: column;
     width: 20%;
     height: auto;
+    gap: 10px;
   }
 
   .onePersonalityPicture img {
