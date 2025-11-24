@@ -1,0 +1,141 @@
+/* VERSION PC */
+@media screen and (min-width: 1441px) {
+  .userInteractionsButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .userInteractionsButtons .Toastify {
+    position: absolute;
+  }
+
+  .userInteractionsButtons button {
+    font-size: 25px;
+    background-color: black;
+    color: #ffb20c;
+    padding: 5px 10px;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+  .userInteractionsButtons button:hover {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .userInteractionsButtons button.active {
+    background-color: #ffb20c;
+    color: red;
+    border: 4px solid black;
+  }
+}
+
+/* VERSION DESKTOP */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .userInteractionsButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .userInteractionsButtons .Toastify {
+    position: absolute;
+  }
+
+  .userInteractionsButtons button {
+    font-size: 20px;
+    background-color: black;
+    color: #ffb20c;
+    padding: 5px 10px;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+  .userInteractionsButtons button:hover {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .userInteractionsButtons button.active {
+    background-color: #ffb20c;
+    color: red;
+    border: 4px solid black;
+  }
+}
+
+/* VERSION TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+          .userInteractionsButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .userInteractionsButtons .Toastify {
+    position: absolute;
+  }
+
+  .userInteractionsButtons button {
+    font-size: 15px;
+    background-color: black;
+    color: #ffb20c;
+    padding: 5px 10px;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+  .userInteractionsButtons button:active {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .userInteractionsButtons button.active {
+    background-color: #ffb20c;
+    color: red;
+    border: 4px solid black;
+  }
+
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 767px) {
+      .userInteractionsButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .userInteractionsButtons .Toastify {
+    position: absolute;
+  }
+
+  .userInteractionsButtons button {
+    font-size: 15px;
+    background-color: black;
+    color: #ffb20c;
+    padding: 5px 10px;
+    border: 4px solid #ffb20c;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+  .userInteractionsButtons button:active {
+    background-color: #ffb20c;
+    color: black;
+    border: 4px solid black;
+  }
+
+  .userInteractionsButtons button.active {
+    background-color: #ffb20c;
+    color: red;
+    border: 4px solid black;
+  }
+
+}
