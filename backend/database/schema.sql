@@ -1238,7 +1238,7 @@ CREATE TABLE
   personalities (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     fullname VARCHAR(255) NOT NULL,
-    image_src VARCHAR(255) NOT NULL,
+    image_src VARCHAR(255) NULL,
     birthdate DATE NOT NULL,
     deathdate DATE NULL,
     origin VARCHAR(255) NOT NULL,
@@ -1461,7 +1461,7 @@ CREATE TABLE
       rating >= 1
       AND rating <= 10
     ) NULL,
-    review_text TEXT NULL,
+    review TEXT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
@@ -1472,6 +1472,6 @@ CREATE TABLE
 
 /* --- MOVIES INSERTS --- */
 INSERT INTO
-  userReviews (user_id, movie_id, rating, review_text)
+  userReviews (user_id, movie_id, rating, review)
 VALUES
   ("1", "1", "10", "Un film fantastique !");
