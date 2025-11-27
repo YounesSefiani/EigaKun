@@ -13,50 +13,72 @@ function CastingContainer({ casting }) {
       <div className="cast">
         <h3>Réalisation</h3>
         <ul>
-          <HorizontalScroll>
-          {realisation.map((cast) => (
-            <li key={cast.id}>
-              <Link to={`/personnalites/${cast.personality_id}`}>
-                <img
-                  src={cast.personality_image}
-                  alt={cast.personality_fullname}
-                />
-                <h4>{cast.personality_fullname}</h4>
-                <p>
-                  <strong>{cast.role}</strong>
-                </p>
-              </Link>
-            </li>
-          ))}
-          </HorizontalScroll>
+          {realisation.length ? (
+            <HorizontalScroll>
+              {realisation.map((cast) => (
+                <li key={cast.id}>
+                  <Link to={`/personnalites/${cast.personality_id}`}>
+                    <img
+                      src={
+                        cast.personality_image &&
+                        cast.personality_image.startsWith("http")
+                          ? cast.personality_image
+                          : cast.personality_image
+                          ? `http://localhost:3994/src/assets/Personalities/Images/${cast.personality_image}`
+                          : ""
+                      }
+                      alt={cast.personality_fullname}
+                    />
+                    <h4>{cast.personality_fullname}</h4>
+                    <p>
+                      <strong>{cast.role}</strong>
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </HorizontalScroll>
+          ) : (
+            <p>Aucun membre de la réalisation renseigné pour cette œuvre pour le moment.</p>
+          )}
         </ul>
       </div>
       <div className="cast">
         <h3>Acteurs & Actrices</h3>
         <ul>
+          {acting.length ? (
           <HorizontalScroll>
-          {acting.map((cast) => (
-            <li key={cast.id}>
-              <Link to={`/personnalites/${cast.personality_id}`}>
-                <img
-                  src={cast.personality_image}
-                  alt={cast.personality_fullname}
-                />
-                <h4>{cast.personality_fullname}</h4>
-                <p>
-                  Role : <br />
-                  <strong>{cast.role}</strong>
-                </p>
-                {cast.presence ? (
+            {acting.map((cast) => (
+              <li key={cast.id}>
+                <Link to={`/personnalites/${cast.personality_id}`}>
+                  <img
+                    src={
+                      cast.personality_image &&
+                      cast.personality_image.startsWith("http")
+                        ? cast.personality_image
+                        : cast.personality_image
+                        ? `http://localhost:3994/src/assets/Personalities/Images/${cast.personality_image}`
+                        : ""
+                    }
+                    alt={cast.personality_fullname}
+                  />
+                  <h4>{cast.personality_fullname}</h4>
                   <p>
-                    Présence : <br />
-                    <strong>{cast.presence}</strong>
+                    Role : <br />
+                    <strong>{cast.role}</strong>
                   </p>
-                ) : null}
-              </Link>
-            </li>
-          ))}
+                  {cast.presence ? (
+                    <p>
+                      Présence : <br />
+                      <strong>{cast.presence}</strong>
+                    </p>
+                  ) : null}
+                </Link>
+              </li>
+            ))}
           </HorizontalScroll>
+          ) : (
+            <p>Aucun acteur ou actrice renseigné pour cette œuvre pour le moment.</p>
+          )}
         </ul>
       </div>
     </div>
